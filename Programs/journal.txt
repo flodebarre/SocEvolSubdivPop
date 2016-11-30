@@ -1,0 +1,6 @@
+# 20161130
+Updated the scripts from the Sigma project to add changes in the intensity of selection.  
+Sent the simulations on the Migale cluster (135 simulations) at 15:30.
+
+
+
