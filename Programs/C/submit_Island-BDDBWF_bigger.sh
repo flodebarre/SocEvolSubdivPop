@@ -13,7 +13,7 @@ for mB in 15.0
 do
 for mp in 0.45
 do
-for mig in 0.01 0.05 0.1 0.2 0.5 0.025 0.075 0.15 0.3 0.4
+for mig in 0.01 0.05 0.1 0.2 0.35 0.5
 do
 for omega in 0.005 0.05 0.5
 do
@@ -33,21 +33,23 @@ sed "s/MMMM/${mutt}/" Scripts/temp2.c > Scripts/temp3.c
 sed "s/GGGG/${mig}/" Scripts/temp3.c > Scripts/temp4.c
 #  Change the Strength of selection parameter
 sed "s/OOOO/${omega}/" Scripts/temp4.c > Scripts/temp5.c
+#  Change the number of demes
+sed "s/NDEMES 4/NDEMES 30/" Scripts/temp5.c > Scripts/temp6.c
 
 # Concatenate scripts to obtain a full simulation file
-cat Scripts/temp5.c island_onestep${updating}.c > Scripts/iscr${updating}_${mig}_${mB}_${mp}_${mutt}_${omega}.c
+cat Scripts/temp6.c island_onestep${updating}.c > Scripts/Biscr${updating}_${mig}_${mB}_${mp}_${mutt}_${omega}.c
 
 # Compile the script
-cc Scripts/iscr${updating}_${mig}_${mB}_${mp}_${mutt}_${omega}.c -o Scripts/iscr${updating}_${mig}_${mB}_${mp}_${mutt}_${omega} -lm
+cc Scripts/Biscr${updating}_${mig}_${mB}_${mp}_${mutt}_${omega}.c -o Scripts/Biscr${updating}_${mig}_${mB}_${mp}_${mutt}_${omega} -lm
 
 # Create the execution file (two lines)
-echo -e "#!/bin/bash\n./${THEPATH}Scripts/iscr${updating}_${mig}_${mB}_${mp}_${mutt}_${omega} > ${THEPATH}Results/s1${updating}_${mig}_${mB}_${mp}_${mutt}_${omega}.txt" > Scripts/is${updating}_${mig}_${mB}_${mp}_${mutt}_${omega}.sh
+echo -e "#!/bin/bash\n./${THEPATH}Scripts/Biscr${updating}_${mig}_${mB}_${mp}_${mutt}_${omega} > ${THEPATH}Results/Bs1${updating}_${mig}_${mB}_${mp}_${mutt}_${omega}.txt" > Scripts/Bis${updating}_${mig}_${mB}_${mp}_${mutt}_${omega}.sh
 
 # Make the execution files executable
-chmod +x Scripts/is${updating}_${mig}_${mB}_${mp}_${mutt}_${omega}.sh
+chmod +x Scripts/Bis${updating}_${mig}_${mB}_${mp}_${mutt}_${omega}.sh
 
 # Submit the job (-q long.q)
-qsub -q long.q Scripts/is${updating}_${mig}_${mB}_${mp}_${mutt}_${omega}.sh
+qsub -q long.q Scripts/Bis${updating}_${mig}_${mB}_${mp}_${mutt}_${omega}.sh
 done # Updating
 
 #---------------------------------------------------------------------------------------------------------
