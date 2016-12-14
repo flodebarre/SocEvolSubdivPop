@@ -1,3 +1,7 @@
+# 20161214
+Most simulations with 30 demes were killed on the cluster before they were finished. -> relaunched with 10 times fewer points; those are done. 
+Sent more data points to the cluster. 
+
 # 20161205
 Curves look nicer. 
 - Started even more simulations to smoothen the curves.

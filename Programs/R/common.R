@@ -23,7 +23,7 @@ updatelist <- c("WF", "BD", "DB")
 plist <- c(0.45) 
 
 # Emigration probability
-miglist <- sort(c(0.01, 0.05, 0.1, 0.2, 0.5, 0.025, 0.075, 0.15, 0.3, 0.4))
+miglist <- sort(c(0.01, 0.05, 0.1, 0.2, 0.5, 0.025, 0.075, 0.15, 0.3, 0.4, 0.125, 0.175, 0.25, 0.35, 0.45))
 
 # Mutation probability
 mulist <- c(0.01, 0.1, 0.25)
