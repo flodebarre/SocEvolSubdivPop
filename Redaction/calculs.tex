@@ -34,6 +34,8 @@
 % FORMATTING
 \usepackage{array} % Tables etc
 \usepackage{longtable} % Break table over pages
+\usepackage{pdflscape} % to turn table in landscape mode
+
 \usepackage{multirow} % Join cells over multiple rows
 \usepackage{paralist} % In-paragraph itemized lists (\begin{inparaenum}\item.... \end{inparaenum})
 \usepackage{lineno} % For line numbering
@@ -61,6 +63,9 @@
 % BIBLIOGRAPHY
 \usepackage[]{natbib} % Package for the bibliography
 
+% Colors
+\usepackage[table]{xcolor}
+
 % FIGURES
 % Package to label the different panels of a figure
 \usepackage[FIGTOPCAP, raggedright, sf, bf, scriptsize, SF, nooneline]{subfigure} 
@@ -69,8 +74,7 @@
 \usetikzlibrary{positioning,shadows,arrows,trees, shapes, fit, calc}
 % Style of the captions
 \usepackage[font={small,sf, doublespacing}, labelfont=bf]{caption}
-% Colors
-\usepackage{xcolor}
+
 
 \usepackage{floatrow}
 
@@ -278,161 +282,218 @@ The expected frequency of altruists in the population is given by
 \end{align}
 
 \begin{align}
-\beta_{\DB}^{I} & = \frac{1-\mu}{N} \sum_{i,j,k,l=1}^N d_{ji} d_{li} e_{kl} Q_{jk} \nonumber \\
+\beta_{\DB}^{I} & = \frac{1-\mu}{N} \sum_{i,j,k,l=1}^N d_{ji} d_{li} e_{kl} Q_{jk} 
+\end{align}
+Presented in the table in the appendix.
+
+\begin{align}
+\gamma_{\DB}^{D} & = 1-\mu = \gamma_{\BD}^{D}.
+\end{align}
+
+\begin{align}
+\gamma_{\DB}^{I} & = (1-\mu) \sum_{i,j,k=1}^N \frac{d_{ji} d_{ki}}{N} Q_{jk} \nonumber \\
 %
-& = \frac{1-\mu}{N} \sum_{i,j,l=1}^N \Bigg[ d_{ji} d_{li} e_{jl} + \sum_{\substack{k\in G_j\\k\neq j} }d_{ji} d_{li} e_{kl} \Qin + \sum_{k \not \in G_j} d_{ji} d_{li} e_{kl} \Qout \Bigg]
-\nonumber\\
+& = \frac{1-\mu}{N} \sum_{j=1}^N \sum_{i=1}^N \Big( d_{ji} d_{ji} + \sum_{\substack{k\neq j\\ k \in G_j}} d_{ji} d_{ki} \Qin + \sum_{k \not \in G_j} d_{ji} d_{ki} \Qout \Big) \nonumber \\
 %
-& = \frac{1-\mu}{N} \sum_{i, j,l=1}^N \Bigg[  d_{ji} d_{li} e_{jl} \nonumber \\
-& \quad+ \sum_{\substack{k\in G_j\\k\neq j} }d_{ji} d_{li} e_{kl} \Qin \nonumber \\ %
-& \quad + \sum_{k \not \in G_j} d_{ji} d_{li} e_{kl} \Qout \Bigg]
+& = \frac{1-\mu}{N} \sum_{j=1}^N \Bigg[ \dself \dself + (n-1) \din \din + (N-n) \dout \dout \nonumber \\
 %
+& \qquad + \Big( \dself \din + \din \dself + (n-2) \din \din + (N-n) \dout \dout \Big) \Qin \nonumber \\
+%
+& \qquad + \Big( \dself \dout + (n-1)\din \dout + \dout \dself + (n-1)\dout \din + (N-2n) \dout \dout
+\Big)\Qout
+\Bigg]
+\end{align}
+
+\end{subequations}
+
+\subsection*{Probabilities of identity by descent}
+\paragraph{Moran}
+\begin{subequations}
+For $i=\neq j$,
+\begin{align}
+Q_{ij} = \frac{1-\mu}{2} \sum_{k=1}^N \left( d_{kj} Q_{ki} + d_{ki} Q_{kj} \right).
+\end{align}
+For $j\neq i$, $j\in G_i$, 
+\begin{align}
+\Qin & = \frac{1-\mu}{2} \Big( \left( \din + \dself \Qin \right)  + \left( \dself \Qin + \din \right) \nonumber \\ 
+& \qquad  + (n-2) \left( \din \Qin + \din \Qin \right) + (N-n) \left( \dout \Qout  + \dout \Qout  \right)  \Big) \nonumber \\
+% 
+& = (1-\mu) \Big( \din + \dself \Qin + (n-2) \din \Qin + (N-n) \dout \Qout  \Big).
+\end{align}
+And for $j \not \in G_i$, 
+\begin{align}
+\Qout & = \frac{1-\mu}{2} \Big( \left( \dout  + \dself \Qout \right) + (n-1) \left( \dout \Qin + \din \Qout \right) \nonumber\\
+& \qquad + \left( \dself \Qout + \dout \right) + (n-1) \left( \din \Qout + \dout \Qin \right) \nonumber \\
+& \qquad + (N-2n)\left( \dout \Qout + \dout \Qout \right)\Big) \nonumber \\
+%
+& = (1-\mu) \Big(  \dout  + \dself \Qout  + (n-1) \left( \dout \Qin + \din \Qout \right) + (N-2n) \dout \Qout \Big)
 \end{align}
 \end{subequations}
 
+\paragraph{Wright-Fisher}
+
+\begin{subequations}
+For $j\neq i$,
+\begin{align}
+Q_{ij} &= (1-\mu)^2 \sum_{k,l=1}^N d_{ki} d_{lj} Q_{kl}.
+\end{align}
+When $j\neq i$, $j\in G_i$, 
+\begin{align}
+\Qin & = (1-\mu)^2 \Bigg[ \Big( \dself \din + \din \dself + (n-2) \din \din + (N-n) \dout \dout \Big)\nonumber\\
+& \qquad + \Big( \dself \dself + (n-2) \dself \din + (n-1) \din \dself + (n-2)(n-2) \din \din  \Big) \Qin + \Big( \Big) \Qout \Bigg]
+\end{align}
+\hl{PAS FINI}
+\end{subequations}
 \clearpage
 \appendix
 \section*{Appendix}
 All combinations for $i$, $j$, $k$, $l$. Notation: $(i, j)$ means that $i$ and $j$ are in the same deme, but are different; $G_i$ refers to the deme containing site $i$.
 
+\begin{landscape}
 
-\begin{longtable}{>{\small $}l<{$} >{\small $}l<{$} >{\small $}l<{$} >{$}l<{$} >{$}l<{$}}
-\hline j & k & l & \textrm{Notation} & \textrm{Count} \\\hline \endhead % all the lines above this will be repeated on every page
+\rowcolors{2}{gray!25}{white}
+\begin{longtable}{>{\small $}l<{$} >{\small $}l<{$} >{\small $}l<{$}   >{$}l<{$}   >{$}l<{$}   >{$}l<{$}   >{$}l<{$}  >{$}l<{$} >{$}l<{$} }
+\rowcolor{gray!60}
+%\hline
+j & k & l & \textrm{Notation} & \textrm{Count}  & d_{ji} & d_{li} & e_{kl} & Q_{jk} \\
+%\hline
+\endhead % all the lines above this will be repeated on every page
 %
-j=i & k=i & l = i & (l = k = j = i) & 1\\*
+j=i & k=i & l = i & (i = j= k =l) & 1 & \dself & \dself & \eself & 1 \\*
 %
-j=i & k=i & l\neq i; l \in G_i & (i=j=k, l) & n-1\\*
+j=i & k=i & l\neq i; l \in G_i & (i=j=k, l) & n-1 & \dself & \din & \ein & 1\\*
 %
-j=i & k=i & l\not \in G_i & (i=j=k), (l) & N-n\\
-%
-%
-j=i & k\neq i; k\in G_i & l=i & (i=j=l, k) & n-1\\*
-%
-j=i & k\neq i; k\in G_i & l=k & (i=j, k=l) & n-1\\*
-%
-j=i & k\neq i; k\in G_i & l\neq i, k; l\in G_i & (i=j, k, l) & (n-1)(n-2) \\*
-%
-j=i & k\neq i; k\in G_i & l\not \in G_i & (i=j, k), (l) & (n-1)(N-n) \\
+j=i & k=i & l\not \in G_i & (i=j=k), (l) & N-n & \dself & \dout & \eout & 1 \\
 %
 %
-j=i & k\not \in G_i & l=i=j & (i=j=l), (k) & (N-n)\\*
+j=i & k\neq i; k\in G_i & l=i & (i=j=l, k) & n-1 & \dself & \dself & \ein & \Qin \\*
 %
-j=i & k\not \in G_i & l\neq i, l\in G_i & (i=j, l), (k) & (N-n)(n-1)\\*
+j=i & k\neq i; k\in G_i & l=k & (i=j, k=l) & n-1 & \dself & \din & \eself & \Qin \\*
 %
-j=i & k\not \in G_i & l=k & (i=j), (k=l) & (N-n)\\*
+j=i & k\neq i; k\in G_i & l\neq i, k; l\in G_i & (i=j, k, l) & (n-1)(n-2) & \dself & \din & \ein & \Qin \\*
 %
-j=i & k\not \in G_i & l\neq k; l\in G_k & (i=j), (k, l) & (N-n)(n-1)\\*
-%
-j=i & k\not \in G_i & l\not \in G_i, G_k & (i=j), (k), (l) & (N-n)(N-2n)\\
+j=i & k\neq i; k\in G_i & l\not \in G_i & (i=j, k), (l) & (n-1)(N-n) & \dself &  \dout & \eout & \Qin \\
 %
 %
+j=i & k\not \in G_i & l=i=j & (i=j=l), (k) & (N-n) & \dself & \dself & \eout & \Qout \\*
+%
+j=i & k\not \in G_i & l\neq i, l\in G_i & (i=j, l), (k) & (N-n)(n-1) & \dself & \din & \eout & \Qout \\*
+%
+j=i & k\not \in G_i & l=k & (i=j), (k=l) & (N-n) & \dself & \dout & \eself & \Qout \\*
+%
+j=i & k\not \in G_i & l\neq k; l\in G_k & (i=j), (k, l) & (N-n)(n-1) & \dself & \dout & \ein & \Qout \\*
+%
+j=i & k\not \in G_i & l\not \in G_i, G_k & (i=j), (k), (l) & (N-n)(N-2n) & \dself & \dout & \eout & \Qout \\
 %
 %
-j\neq i, j\in G_i & k=i & l=i & (i=k=l, j) & (n-1)\\*
-%
-j\neq i, j\in G_i & k=i & l=j & (i=k, j=l) & (n-1)\\*
-%
-j\neq i, j\in G_i & k=i & l\neq i, j; l\in G_i & (i=k, j, l) & (n-1)(n-2)\\*
-%
-j\neq i, j\in G_i & k=i & l\not \in G_i & (i=k, j), (l) & (n-1)(N-n)\\
 %
 %
-j\neq i, j\in G_i & k=j & l=i & (i=l, j=k) & (n-1) \\*
+j\neq i, j\in G_i & k=i & l=i & (i=k=l, j) & (n-1) & \din & \dself & \eself & \Qin \\*
 %
-j\neq i, j\in G_i & k=j & l=j & (i, j=k=l) & (n-1)\\*
+j\neq i, j\in G_i & k=i & l=j & (i=k, j=l) & (n-1) & \din & \din & \ein & \Qin \\*
 %
-j\neq i, j\in G_i & k=j & l\neq i, j; l\in G_i & (i, j=k, l) & (n-1)(n-2)\\*
+j\neq i, j\in G_i & k=i & l\neq i, j; l\in G_i & (i=k, j, l) & (n-1)(n-2) & \din & \din & \ein & \Qin \\*
 %
-j\neq i, j\in G_i & k=j & l\not \in G_i & (i, j=k), (l)& (N-n)\\
+j\neq i, j\in G_i & k=i & l\not \in G_i & (i=k, j), (l) & (n-1)(N-n) & \din & \dout & \eout & \Qin \\
 %
 %
-j\neq i, j\in G_i & k\neq i,j; k\in G_i & l=i & (i=l, j, k) & (n-1)(n-2)\\*
+j\neq i, j\in G_i & k=j & l=i & (i=l, j=k) & (n-1) & \din & \dself & \ein & 1 \\*
 %
-j\neq i, j\in G_i & k\neq i,j; k\in G_i & l=j & (i,j=l,k) & (n-1)(n-2)\\*
+j\neq i, j\in G_i & k=j & l=j & (i, j=k=l) & (n-1) & \din &  \din & \eself & 1\\*
 %
-j\neq i, j\in G_i & k\neq i,j; k\in G_i & l=k & (i,j,k=l) & (n-1)(n-2)\\*
+j\neq i, j\in G_i & k=j & l\neq i, j; l\in G_i & (i, j=k, l) & (n-1)(n-2) & \din & \din & \ein & 1\\*
+%
+j\neq i, j\in G_i & k=j & l\not \in G_i & (i, j=k), (l)& (n-1)(N-n) & \din & \dout & \eout & 1\\
+%
+%
+j\neq i, j\in G_i & k\neq i,j; k\in G_i & l=i & (i=l, j, k) & (n-1)(n-2) & \din & \dself & \ein & \Qin \\*
+%
+j\neq i, j\in G_i & k\neq i,j; k\in G_i & l=j & (i,j=l,k) & (n-1)(n-2) & \din & \din & \ein & \Qin \\*
+%
+j\neq i, j\in G_i & k\neq i,j; k\in G_i & l=k & (i,j,k=l) & (n-1)(n-2) & \din & \din & \eself & \Qin  \\*
 %
 j\neq i, j\in G_i & k\neq i,j; k\in G_i & l\neq i,j,k; l
-\in G_i & (i,j,k,l) & (n-1)(n-2)(n-3)\\*
+\in G_i & (i,j,k,l) & (n-1)(n-2)(n-3) & \din & \din & \ein & \Qin \\*
 %
-j\neq i, j\in G_i & k\neq i,j; k\in G_i & l\not \in G_i & (i, j, k), l & (n-1)(n-2)(N-n) \\
-%
-%
-j\neq i; j\in G_i & k\not\in G_i & l=i & (i=l,j),(k) & (n-1)(N-n)\\*
-%
-j\neq i; j\in G_i & k\not\in G_i & l=j & (i, j=l), (k) & (n-1)(N-n)\\*
-%
-j\neq i; j\in G_i & k\not\in G_i & l\neq i, j; l\in G_i & (i, j, l), (k) & (n-1)(N-n)(n-2)\\*
-%
-j\neq i; j\in G_i & k\not\in G_i & l=k & (i, j), (k=l) & (n-1)(N-n)\\*
-%
-j\neq i; j\in G_i & k\not\in G_i & l\neq k;l\in G_k & (i,j),(k,l) & (n-1)(N-n)(n-1)\\*
-%
-j\neq i; j\in G_i & k\not\in G_i & l\not \in G_i, G_k & (i,j),(k),(l) & (n-1)(N-n)(N-2n)\\
+j\neq i, j\in G_i & k\neq i,j; k\in G_i & l\not \in G_i & (i, j, k), (l) & (n-1)(n-2)(N-n)  & \din & \dout & \eout & \Qin \\
 %
 %
+j\neq i; j\in G_i & k\not\in G_i & l=i & (i=l,j),(k) & (n-1)(N-n) & \din & \dself & \eout & \Qout \\*
+%
+j\neq i; j\in G_i & k\not\in G_i & l=j & (i, j=l), (k) & (n-1)(N-n) & \din & \din & \eout & \Qout \\*
+%
+j\neq i; j\in G_i & k\not\in G_i & l\neq i, j; l\in G_i & (i, j, l), (k) & (n-1)(N-n)(n-2) & \din & \din & \eout & \Qout \\*
+%
+j\neq i; j\in G_i & k\not\in G_i & l=k & (i, j), (k=l) & (n-1)(N-n) & \din & \dout & \eself & \Qout \\*
+%
+j\neq i; j\in G_i & k\not\in G_i & l\neq k;l\in G_k & (i,j),(k,l) & (n-1)(N-n)(n-1) & \din & \dout & \ein & \Qout \\*
+%
+j\neq i; j\in G_i & k\not\in G_i & l\not \in G_i, G_k & (i,j),(k),(l) & (n-1)(N-n)(N-2n) & \din & \dout & \eout & \Qout \\
 %
 %
-j\not\in G_i & k=i & l=i & (i=k=l),(j) & (N-n)\\*
-%
-j\not\in G_i & k=i & l\neq i; l\in G_i & (i=k, l), (j) & (N-n)(n-1)\\*
-%
-j\not\in G_i & k=i & l=j & (i=k), (j=l) & (N-n)\\*
-%
-j\not\in G_i & k=i & l\neq j; l\in G_j & (i=k), (j,l) & (N-n)(n-1)\\*
-%
-j\not\in G_i & k=i & l\not \in G_i, G_j & (i=k), (j), (l) & (N-n)(N-2n) \\
 %
 %
-j\not\in G_i & k\neq i; k\in G_i & l=i & (i=l, k), (j) & (N-n)(n-1)\\*
+j\not\in G_i & k=i & l=i & (i=k=l),(j) & (N-n) & \dout & \dself & \eself & \Qout \\*
 %
-j\not\in G_i & k\neq i; k\in G_i & l=k & (i, k=l), (j) & (N-n)(n-1)\\*
+j\not\in G_i & k=i & l\neq i; l\in G_i & (i=k, l), (j) & (N-n)(n-1) & \dout & \din & \ein & \Qout \\*
 %
-j\not\in G_i & k\neq i; k\in G_i & l\neq i,k; l\in G_i & (i, k, l), (j) & (N-n)(n-1)(n-2)\\*
+j\not\in G_i & k=i & l=j & (i=k), (j=l) & (N-n) & \dout & \dout & \eout & \Qout \\*
 %
-j\not\in G_i & k\neq i; k\in G_i & l=j & (i, k), (j=l) & (N-n)(n-1)\\*
+j\not\in G_i & k=i & l\neq j; l\in G_j & (i=k), (j,l) & (N-n)(n-1) & \dout & \dout & \eout & \Qout \\*
 %
-j\not\in G_i & k\neq i; k\in G_i & l\neq j;l\in G_j & (i, k), (j,l) & (N-n)(n-1)(n-1)\\*
-%
-j\not\in G_i & k\neq i; k\in G_i & l\not \in G_i,G_j & (i, k), (j),(l) & (N-n)(n-1)(N-2n)\\
+j\not\in G_i & k=i & l\not \in G_i, G_j & (i=k), (j), (l) & (N-n)(N-2n) & \dout & \dout & \eout & \Qout \\
 %
 %
-j\not\in G_i & k=j & l=i & (i=l), (j=k) & (N-n)\\*
+j\not\in G_i & k\neq i; k\in G_i & l=i & (i=l, k), (j) & (N-n)(n-1) & \dout & \dself & \ein & \Qout \\*
 %
-j\not\in G_i & k=j & l\neq i; l\in G_i & (i,l), (j=k) & (N-n)(n-1)\\*
+j\not\in G_i & k\neq i; k\in G_i & l=k & (i, k=l), (j) & (N-n)(n-1) & \dout & \din & \eself & \Qout \\*
 %
-j\not\in G_i & k=j & l=j & (i), (j=k=l) & (N-n)\\*
+j\not\in G_i & k\neq i; k\in G_i & l\neq i,k; l\in G_i & (i, k, l), (j) & (N-n)(n-1)(n-2) & \dout & \din & \ein & \Qout \\*
 %
-j\not\in G_i & k=j & l\neq j; l\in G_j & (i), (j=k, l) & (N-n)(n-1)\\*
+j\not\in G_i & k\neq i; k\in G_i & l=j & (i, k), (j=l) & (N-n)(n-1) & \dout & \dout & \eout & \Qout \\*
 %
-j\not\in G_i & k=j & l\not \in G_i, G_j & (i), (j=k) & (N-n)(N-2n)\\
+j\not\in G_i & k\neq i; k\in G_i & l\neq j;l\in G_j & (i, k), (j,l) & (N-n)(n-1)(n-1) & \dout & \dout & \eout & \Qout \\*
 %
-%
-j\not\in G_i & k\neq j; k\in G_j & l=i & (i=l), (j, k) & (N-n)(n-1)\\*
-%
-j\not\in G_i & k\neq j; k\in G_j & l\neq i; l\in G_i & (i, l), (j, k) & (N-n)(n-1)(n-1)\\*
-%
-j\not\in G_i & k\neq j; k\in G_j & l=j & (i), (j=l, k) & (N-n)(n-1)\\*
-%
-j\not\in G_i & k\neq j; k\in G_j & l=k & (i), (j, k=l) & (N-n)(n-1)\\*
-%
-j\not\in G_i & k\neq j; k\in G_j & l\neq j,k; l\in G_j & (i), (j, k, l) & (N-n)(n-1)(n-2)\\*
-%
-j\not\in G_i & k\neq j; k\in G_j & l\not \in G_i, G_j & (i), (j, k), (l) & (N-n)(n-1)(N-2n)\\
+j\not\in G_i & k\neq i; k\in G_i & l\not \in G_i,G_j & (i, k), (j),(l) & (N-n)(n-1)(N-2n) & \dout & \dout & \eout & \Qout \\
 %
 %
-j\not\in G_i & k\not\in G_j & l=i & (i=l), (j), (k) & (N-n)(N-2n)\\*
+j\not\in G_i & k=j & l=i & (i=l), (j=k) & (N-n) & \dout & \dself & \eout & 1 \\*
 %
-j\not\in G_i & k\not\in G_j & l\neq i; l\in G_i& (i, l), (j), (k) & (N-n)(N-2n)(n-1)\\*
+j\not\in G_i & k=j & l\neq i; l\in G_i & (i,l), (j=k) & (N-n)(n-1) & \dout & \din & \eout & 1\\*
 %
-j\not\in G_i & k\not\in G_j & l=j & (i), (j=l), (k) & (N-n)(N-2n)\\*
+j\not\in G_i & k=j & l=j & (i), (j=k=l) & (N-n) & \dout & \dout & \eself & 1\\*
 %
-j\not\in G_i & k\not\in G_j & l\neq j; l\in G_j & (i), (j, l), (k) & (N-n)(N-2n)(n-1)\\*
+j\not\in G_i & k=j & l\neq j; l\in G_j & (i), (j=k, l) & (N-n)(n-1) & \dout & \dout & \ein & 1\\*
 %
-j\not\in G_i & k\not\in G_j & l=k & (i), (j), (k=l) & (N-n)(N-2n)\\*
+j\not\in G_i & k=j & l\not \in G_i, G_j & (i), (j=k), (l) & (N-n)(N-2n) & \dout & \dout & \eout & 1\\
 %
-j\not\in G_i & k\not\in G_j & l\neq k; l\in G_k & (i), (j), (k, l) & (N-n)(N-2n)(n-1)\\*
 %
-j\not\in G_i & k\not\in G_j & l\not \in G_i, G_j, G_k & (i), (j), (k), (l) & (N-n)(N-2n)(N-3n)\\
+j\not\in G_i & k\neq j; k\in G_j & l=i & (i=l), (j, k) & (N-n)(n-1) & \dout & \dself & \eout & \Qin \\*
+%
+j\not\in G_i & k\neq j; k\in G_j & l\neq i; l\in G_i & (i, l), (j, k) & (N-n)(n-1)(n-1) & \dout & \din & \eout & \Qin\\*
+%
+j\not\in G_i & k\neq j; k\in G_j & l=j & (i), (j=l, k) & (N-n)(n-1) & \dout & \dout & \ein & \Qin\\*
+%
+j\not\in G_i & k\neq j; k\in G_j & l=k & (i), (j, k=l) & (N-n)(n-1) & \dout & \dout & \eself & \Qin\\*
+%
+j\not\in G_i & k\neq j; k\in G_j & l\neq j,k; l\in G_j & (i), (j, k, l) & (N-n)(n-1)(n-2) & \dout & \dout & \ein & \Qin\\*
+%
+j\not\in G_i & k\neq j; k\in G_j & l\not \in G_i, G_j & (i), (j, k), (l) & (N-n)(n-1)(N-2n) & \dout & \dout & \eout & \Qin\\
+%
+%
+j\not\in G_i & k\not\in G_i, G_j & l=i & (i=l), (j), (k) & (N-n)(N-2n) & \dout & \dself & \eout & \Qout \\*
+%
+j\not\in G_i & k\not\in G_i, G_j & l\neq i; l\in G_i& (i, l), (j), (k) & (N-n)(N-2n)(n-1) & \dout & \din & \eout & \Qout \\*
+%
+j\not\in G_i & k\not\in G_i, G_j & l=j & (i), (j=l), (k) & (N-n)(N-2n) & \dout & \dout & \eout & \Qout \\*
+%
+j\not\in G_i & k\not\in G_i, G_j & l\neq j; l\in G_j & (i), (j, l), (k) & (N-n)(N-2n)(n-1) & \dout & \dout & \eout & \Qout \\*
+%
+j\not\in G_i & k\not\in G_i, G_j & l=k & (i), (j), (k=l) & (N-n)(N-2n) & \dout & \dout & \eself & \Qout \\*
+%
+j\not\in G_i & k\not\in G_i, G_j & l\neq k; l\in G_k & (i), (j), (k, l) & (N-n)(N-2n)(n-1) & \dout & \dout & \ein & \Qout \\*
+%
+j\not\in G_i & k\not\in G_i, G_j & l\not \in G_i, G_j, G_k & (i), (j), (k), (l) & (N-n)(N-2n)(N-3n) & \dout & \dout & \eout & \Qout \\
 \end{longtable}
+\end{landscape}
 \end{document}
