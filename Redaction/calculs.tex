@@ -307,6 +307,7 @@ Presented in the table in the appendix.
 \end{subequations}
 
 \subsection*{Probabilities of identity by descent}
+\hl{WF est faux. Il faut utiliser les formules Fourier...!}
 \paragraph{Moran}
 \begin{subequations}
 For $i=\neq j$,
@@ -340,7 +341,30 @@ Q_{ij} &= (1-\mu)^2 \sum_{k,l=1}^N d_{ki} d_{lj} Q_{kl}.
 When $j\neq i$, $j\in G_i$, 
 \begin{align}
 \Qin & = (1-\mu)^2 \Bigg[ \Big( \dself \din + \din \dself + (n-2) \din \din + (N-n) \dout \dout \Big)\nonumber\\
-& \qquad + \Big( \dself \dself + (n-2) \dself \din + (n-1) \din \dself + (n-2)(n-2) \din \din  \Big) \Qin + \Big( \Big) \Qout \Bigg]
+%
+& \qquad + \Big( \dself \dself + (n-2) \dself \din \nonumber\\ & \qquad \qquad + (n-1) \din \din + (n-2) \din \dself \nonumber\\
+& \qquad\qquad+ (n-2)(n-2) \din \din + (N-n) (n-1)\dout \dout  \Big) \Qin \nonumber \\
+%
+& \qquad + \Big((N-n) \dself \dout + (N-n)(n-1) \din \dout \nonumber \\ 
+& \qquad\qquad+ (N-n) \dout \dself + (N-n)(n-1) \dout \din \nonumber \\ 
+& \qquad\qquad+ (N-n)(N-2n) \dout \dout \Big) \Qout \Bigg]\nonumber\\
+%
+%
+%
+& = (1-\mu)^2 \Bigg[ \Big( 2 \din \dself + (n-2) \din^2 + (N-n) \dout^2 \Big) \nonumber\\
+&\qquad + \Big( \dself^2 + 2(n-2) \dself \din + (n^2 -3 n +3) \din^2 + + (N-n) (n-1)\dout^2 \Big)\Qin \nonumber \\
+& \qquad + \Big(2(N-n) \dself \dout + 2 (N-n)(n-1) \din \dout \nonumber \\ 
+& \qquad\qquad+ (N-n)(N-2n) \dout \dout \Big)\Qout
+ \Bigg]
+\end{align}
+And when $j\not \in G_i$, we have
+% 
+\begin{align}
+\Qout & = (1-\mu)^2 \Bigg[ \Big( 2\dself \dout + 2(n-1) \din \dout + (N-2n) \dout^2 \Big)\nonumber \\
+& \qquad + \Big( 2(n-1) \dself \dout + 2(n-1)^2 \din \dout + (N-2n)(n-1) \dout^2  \Big)\Qin \nonumber \\
+& \qquad +\Big( \dself \dself + (n-1)\dself \din + (N-2n)\dself \dout \nonumber\\
+& \qquad \qquad+ (n-1) \din \dself + (n-1)^2 \din^2 + (n-1)(N-2n)\din \dout \nonumber \\
+& \qquad \qquad+ (N-n) \dout \dself + (N-n)(n-1) \dout \din + (N-n)(N-2n) \dout \dout \Big) \Qout \Bigg].
 \end{align}
 \hl{PAS FINI}
 \end{subequations}
