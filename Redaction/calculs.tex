@@ -520,4 +520,176 @@ j\not\in G_i & k\not\in G_i, G_j & l\neq k; l\in G_k & (i), (j), (k, l) & (N-n)(
 j\not\in G_i & k\not\in G_i, G_j & l\not \in G_i, G_j, G_k & (i), (j), (k), (l) & (N-n)(N-2n)(N-3n) & \dout & \dout & \eout & \Qout \\
 \end{longtable}
 \end{landscape}
+\section{Island model}
+With self replacement
+\begin{subequations}
+\begin{align}
+\dself &= \din = \frac{1-m}{n},\\
+\dout &= \frac{m}{N-n}. 
+\end{align}
+\end{subequations}
+Without self-replacement
+\begin{subequations}
+\begin{align}
+\dself &=0,\\
+\din &= \frac{1-m}{n-1},\\
+\dout &= \frac{m}{N-n}.
+\end{align}
+\end{subequations}
+\section{IDB}
+\subsection{Moran}
+Using the formulas for a 2D graph in REF Debarre 2017,
+%
+\begin{subequations}
+\begin{align}
+\tilde{\mathcal{D}}_{\substack{q_1 \\ q_2}} & = \sum_{l_1=0}^{N_1 -1} \sum_{l_2=0}^{N_2 -1} \tilde{d}_{\substack{l_1\\l_2}} \exp\left(-\imath \frac{2\pi q_1 l_1}{N_1}\right)\exp\left(-\imath \frac{2\pi q_2 l_2}{N_2}\right)
+\\
+\tilde{\mathcal{Q}}_{\substack{r_1\\r_2}}&= \frac{1}{N}  \sum_{q_1=0}^{N_1 -1} \sum_{q_2=0}^{N_2 -1} \frac{\mu \lambda_M'}{1 - (1-\mu) \tilde{\mathcal{D}}_{\substack{q_1\\ q_2}}} \exp\left(\imath \frac{2\pi q_1 r_1}{N_1}\right)\exp\left(\imath \frac{2\pi q_2 r_2}{N_2}\right)
+\end{align}
+\end{subequations}
+%
+We have
+%
+\begin{subequations}
+\begin{align}
+\tilde{\mathcal{D}}_{\substack{q_1 \\ q_2}} & = \dself + \sum_{l_2=1}^{N_2 -1} \din \exp\left(-\imath \frac{2\pi q_2 l_2}{N_2}\right) 
++ \sum_{l_1=1}^{N_1 -1} \sum_{l_2=0}^{N_2 -1} \dout \exp\left(-\imath \frac{2\pi q_1 l_1}{N_1}\right)\exp\left(-\imath \frac{2\pi q_2 l_2}{N_2}\right) \nonumber \\
+%
+&= \dself + \left(\delta_{q_2} (N_2-1) + (1-\delta_{q_2}) (-1) \right) \din + \left( \delta_{q_1} (N_1 - 1) + (1-\delta_{q_1}) (-1) \right) \left( \delta_{q_2} N_2 \right) \dout \nonumber \\
+%
+&= \dself + \left( \delta_{q_2} N_2 - 1 \right) \din + \left( \delta_{q_1} N_1 - 1 \right) \delta_{q_2} N_2 \dout.
+\end{align}
+\end{subequations}
+%
+Whether there is self-replacement or not, we have $N_1 = D$ and $N_2 = n$, and
+%
+\begin{subequations}
+\begin{align}
+\tilde{\mathcal{D}}_{\substack{0\\0}} & = 1,\\
+%
+\tilde{\mathcal{D}}_{\substack{q_1\\0}} & = 1-m -  \frac{m}{d-1} \quad (q_1 \not \equiv 0 \pmod{N_1}),\\
+%
+\tilde{\mathcal{D}}_{\substack{q_1\\q_2}} & = \dself - \din \quad (q_2 \not \equiv 0 \pmod{N_2}).
+\end{align}
+\end{subequations}
+%
+So for $\tilde{\mathcal{Q}}$,
+%
+\begin{subequations}
+\begin{align}
+\tilde{\mathcal{Q}}_{\substack{r_1\\r_2}}&= \frac{\mu \lambda_M'}{N} \Bigg[  \frac{1}{1 - (1-\mu) \tilde{\mathcal{D}}_{\substack{0\\ 0}}} + \sum_{q_2 = 1}^{N_2-1}\frac{1}{1 - (1-\mu) \tilde{\mathcal{D}}_{\substack{0\\ q_2}}} \exp\left(-\imath \frac{2\pi q_2 r_2}{N_2}\right) %\nonumber \\
+%& \qquad 
++ \sum_{q_1 =1}^{N_1 - 1} \frac{1}{1 - (1-\mu) \tilde{\mathcal{D}}_{\substack{q_1\\ 0}}} \exp\left(-\imath \frac{2\pi q_1 r_1}{N_1}\right) \nonumber \\
+& \qquad 
++ 
+ \sum_{q_1=1}^{N_1 -1} \sum_{q_2=1}^{N_2 -1} \frac{1}{1 - (1-\mu) \tilde{\mathcal{D}}_{\substack{q_1\\ q_2}}} \exp\left(-\imath \frac{2\pi q_1 r_1}{N_1}\right)\exp\left(-\imath \frac{2\pi q_2 r_2}{N_2}\right) \Bigg]\nonumber \\
+ %
+ %
+& = \frac{\mu \lambda_M'}{N} \Bigg[  \frac{1}{1 - (1-\mu) } 
++ \frac{1}{1 - (1-\mu) (\dself - \din)} (\delta_{r_2} N_2 - 1) %\nonumber \\
+%& \qquad 
++  \frac{1}{1 - (1-\mu) (1-m-\frac{m}{d-1})} (\delta_{r_1} N_1 - 1) \nonumber \\
+& \qquad 
++ 
+\frac{1}{1 - (1-\mu) (\dself - \din) } (\delta_{r_1} N_1 - 1) (\delta_{r_2} N_2 - 1) \Bigg].
+% 
+\end{align}
+In particular, 
+\begin{align}
+\tilde{\mathcal{Q}}_{\substack{0\\0}} &= \frac{\mu \lambda_M'}{N} \Bigg[  \frac{1}{\mu } 
++ \frac{1}{1 - (1-\mu) (\dself - \din)} (n - 1) %\nonumber \\
+%& \qquad 
++  \frac{1}{1 - (1-\mu) (1-m-\frac{m}{d-1})} (D - 1) \nonumber \\
+& \qquad 
++ 
+\frac{1}{1 - (1-\mu) (\dself - \din) } (D - 1) (n - 1) \Bigg]\nonumber
+\\
+& = 1.
+\end{align}
+We find $\lambda_M'$ using the above equation. 
+When $r_1=0$, the two individuals are in the same deme. They are different when $r_2 \not \equiv 0$:
+\begin{align}
+\Qin &= \frac{\mu \lambda_M'}{N} \Bigg[  \frac{1}{\mu } 
++ \frac{1}{1 - (1-\mu) (\dself - \din)} ( - 1) %\nonumber \\
+%& \qquad 
++  \frac{1}{1 - (1-\mu) (1-m-\frac{m}{d-1})} (D - 1) \nonumber \\
+& \qquad 
++ 
+\frac{1}{1 - (1-\mu) (\dself - \din) } (D - 1) (- 1) \Bigg].
+\end{align}
+And when $r_1 \not \equiv 0$, the two individuals are in different demes:
+\begin{align}
+\Qout &=  \frac{\mu \lambda_M'}{N} \Bigg[  \frac{1}{\mu } 
++ \frac{1}{1 - (1-\mu) (\dself - \din)} ( - 1) %\nonumber \\
+%& \qquad 
++  \frac{1}{1 - (1-\mu) (1-m-\frac{m}{d-1})} ( - 1) \nonumber \\
+& \qquad 
++ 
+\frac{1}{1 - (1-\mu) (\dself - \din) }  \Bigg].
+\end{align}
+\end{subequations} 
+
+\subsection{Wright-Fisher}
+\begin{align}
+\tilde{\mathcal{Q}}_{\substack{r_1\\r_2}} &= \frac{1}{N} \sum_{q_1=0}^{N_1-1} \sum_{q_2=0}^{N_2 -1} \frac{\mu \lambda_{WF}'}{1-(1-\mu)^2 (\tilde{\mathcal{D}}_{\substack{q_1\\q_2}})^2} \exp\left(-\imath \frac{2\pi q_1 r_1}{N_1}\right)\exp\left(-\imath \frac{2\pi q_2 r_2}{N_2}\right) \nonumber \\
+%
+& = \frac{1}{N} \Bigg[ 
+\frac{\mu \lambda_{WF}'}{1-(1-\mu)^2 (\tilde{\mathcal{D}}_{\substack{0\\0}})^2} 
++ \sum_{q_2=1}^{N_2-1} \frac{\mu \lambda_{WF}'}{1-(1-\mu)^2 (\tilde{\mathcal{D}}_{\substack{0\\q_2}})^2} \exp\left(-\imath \frac{2\pi q_2 r_2}{N_2}\right) \nonumber \\
+& \qquad + \sum_{q_1=1}^{N_1-1} \frac{\mu \lambda_{WF}'}{1-(1-\mu)^2 (\tilde{\mathcal{D}}_{\substack{q_1\\0}})^2} \exp\left(-\imath \frac{2\pi q_1 r_1}{N_1}\right)  \nonumber \\
+& \qquad + \sum_{q_1=1}^{N_1-1} \sum_{q_2=1}^{N_2 -1} \frac{\mu \lambda_{WF}'}{1-(1-\mu)^2 (\tilde{\mathcal{D}}_{\substack{q_1\\q_2}})^2} \exp\left(-\imath \frac{2\pi q_1 r_1}{N_1}\right)\exp\left(-\imath \frac{2\pi q_2 r_2}{N_2}\right)
+ \Bigg] \\
+ %
+ %
+ %
+& = \frac{\mu \lambda_{WF}'}{N} \Bigg[ 
+\frac{1}{1-(1-\mu)^2 } 
+%
++ \frac{1}{1-(1-\mu)^2 (\dself - \din)^2} (\delta_{q_2} N_2 - 1) \nonumber \\
+%
+& \qquad +  \frac{1}{1-(1-\mu)^2 (1-m-\frac{m}{d-1})^2} (\delta_{q_1} N_1 - 1) \nonumber \\
+%
+& \qquad +  \frac{1}{1-(1-\mu)^2 (\dself - \din)^2} (\delta_{q_1} N_1 - 1)(\delta_{q_2} N_2 - 1)
+ \Bigg] \nonumber\\
+ %
+ %
+& = \frac{\mu \lambda_{WF}'}{N} \Bigg[ 
+\frac{1}{1-(1-\mu)^2 } 
+%
++ \frac{1}{1-(1-\mu)^2 (\dself - \din)^2} (\delta_{q_2} N_2 - 1) \delta_{q_1} N_1 \nonumber \\
+%
+& \qquad +  \frac{1}{1-(1-\mu)^2 (1-m-\frac{m}{d-1})^2} (\delta_{q_1} N_1 - 1) 
+\Bigg] .
+ %
+\end{align}
+To find $\lambda_{WF}'$, we solve
+\begin{subequations}
+\begin{equation}
+1 = \frac{\mu \lambda_{WF}'}{N} \Bigg[ 
+\frac{1}{1-(1-\mu)^2 } 
+%
++ \frac{1}{1-(1-\mu)^2 (\dself - \din)^2} (N_2 - 1)  N_1 
+%
+ +  \frac{1}{1-(1-\mu)^2 (1-m-\frac{m}{d-1})^2} ( N_1 - 1) 
+\Bigg] .
+\end{equation}
+Then,
+\begin{equation}
+\Qin = \frac{\mu \lambda_{WF}'}{N} \Bigg[ 
+\frac{1}{1-(1-\mu)^2 } 
+%
+- \frac{1}{1-(1-\mu)^2 (\dself - \din)^2} N_1 
+%
+ +  \frac{1}{1-(1-\mu)^2 (1-m-\frac{m}{d-1})^2} ( N_1 - 1) 
+\Bigg] .
+\end{equation}
+and
+\begin{equation}
+\Qout = \frac{\mu \lambda_{WF}'}{N} \Bigg[ 
+\frac{1}{1-(1-\mu)^2 } 
+%
+-  \frac{1}{1-(1-\mu)^2 (1-m-\frac{m}{d-1})^2}  
+\Bigg] .
+\end{equation}
+\end{subequations}
 \end{document}
