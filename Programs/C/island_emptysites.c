@@ -3,15 +3,15 @@
 #include <math.h>
 #include <time.h>
 
-#define NREP 1000//10000000 // Number of replicates
+#define NREP 100000 // Number of replicates
 #define TIMEINTERVAL 10000 // Time between which measures are taken
 
-#define SMUTATION ((double) 0.01)//MMMM )   // Mutation probability
-#define P ((double) 0.5)//XXXX ) // Proba mutant is mutant
+#define SMUTATION ((double) MMMM )   // Mutation probability
+#define P ((double) XXXX ) // Proba mutant is mutant
 
-#define OMEGA ((double) 0.05) //OOOO)   // Strength of selection (baseline was 0.005)
+#define OMEGA ((double) OOOO)   // Strength of selection (baseline was 0.005)
 
-#define BENEFIT ((double) 5.0) //(BBBB)) // Value of b in the interaction matrix
+#define BENEFIT ((double) (BBBB)) // Value of b in the interaction matrix
 #define COST ((double) 1.0) // Value of c in the interaction matrix
 
 #define BIRTHBASELINE ((double) 1.0) // Baseline fecundity
@@ -20,7 +20,7 @@
 #define DEMESIZE 5 // Number of individuals within each deme
 #define NDEMES 50   // Number of demes
 
-#define MIGRATION ((double) 0.2)//GGGG) // Emigration probability
+#define MIGRATION ((double) GGGG) // Emigration probability
 
 #define noselfinteraction 1  // 1 if there are no benefits provided to self (strict pair interactions),
                              // 0 if there are (public good shared among all group members).
@@ -45,21 +45,10 @@ int newtype; // New type of the replaced individual
 
 int nodeD, nodeB; // Index of the nodes that die/reproduce in a given step
 
-int savepopTot[(DEMESIZE*NDEMES)+1]; // Vector to save results as histogram (0, 1, ..., NNODES), total population size
-int savepopA[(DEMESIZE*NDEMES)+1]; // Vector to save results as histogram (0, 1, ..., NNODES), number of A
-int savepopB[(DEMESIZE*NDEMES)+1]; // Vector to save results as histogram (0, 1, ..., NNODES), number of B
-
 // Cannot save population vector the same way, because need to know the frequency,
 // i.e., joint values of nA and nB.
 double savefreq[NREP];
 int savetotpop[NREP];
-
-// Only needed for the WF updating -----------------------|
-int newn1; // Temporary n1                                |
-int newpop[NDEMES]; // Temporary pop vector               |
-double tmpfecA[NDEMES]; // Temporary fecundity vector (A) |
-double tmpfecB[NDEMES]; // Temporary fecundity vector (B) |
-// -------------------------------------------------------|
 
 /* Simulation-specific stuff */
 int step, replic; // Counters of steps and replicates
@@ -112,9 +101,6 @@ int main(void)
     for (step=0; step<TIMEINTERVAL; step++) {
       OneStep(); // Run simulation for TIMEINTERVAL generations
     }
-    // Store the outcome of this chunk of time in histograms
-    savepopA[nA] += 1;
-    savepopB[nB] += 1;
 
     savefreq[timestep] = ((double) nA)/(nA+nB);
     savetotpop[timestep] = (nA + nB);
@@ -166,11 +152,6 @@ void GlobalInit(void)
   NNODES = DEMESIZE * NDEMES; // Max population size
   mutation = SMUTATION; // Mutation
 
-  /* Initiate savepop vectors */
-  for (iindiv=0; iindiv<(NNODES+1); iindiv++){
-    savepopA[iindiv] = 0;
-    savepopB[iindiv] = 0;
-  }
 }
 
 
