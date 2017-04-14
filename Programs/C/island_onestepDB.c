@@ -3,7 +3,7 @@
 /*
  -------------------------------------------
  DEATH BIRTH UPDATING
- This is a partial script; it will be later 
+ This is a partial script; it will be later
  appended to the main script `islandbase.c`
  -------------------------------------------
  */
@@ -14,7 +14,7 @@ void ChooseD(void)
   // Draw deme where death happens, uniformly at random
   cumD = ((double) NDEMES); // Sum of all death rates
   randnum = drand48() * cumD; // Draw random number
-  
+
   cumsum = 0.0; // Initialize cumulative sum of rates
   for(ideme=0; ideme<NDEMES; ideme++) // For each node,
   {
@@ -25,11 +25,11 @@ void ChooseD(void)
       break;         // and stop the loop since we have the node we want
     }
   }
-  
+
   // Draw ID of who dies: pick one uniformly at random
   cumD = ((double) DEMESIZE);
-  randnum = drand48() * cumD; 
-  
+  randnum = drand48() * cumD;
+
   if(randnum < pop[nodeD]){
     oldtype = 1; // Dead A
   }else{
@@ -55,11 +55,11 @@ void ChooseB(void)
     fecundityB[ideme] = migproba * (1.0 + OMEGA * BENEFIT * pop[ideme] /(DEMESIZE - noselfinteraction)) * (DEMESIZE - pop[ideme]); // For B
 
     cumB += fecundityA[ideme] + fecundityB[ideme];
-    
+
   }
-  
+
   randnum = drand48() * cumB; // Draw random number
-  
+
   cumsum = 0.0; /// Initialize the cumulative sum of rates
   for(ideme=0; ideme<NDEMES; ideme++) // For each potential reproducer
   {
@@ -91,7 +91,7 @@ void ChooseB(void)
 void UpdatePop(void)
 {
   /* UPDATE THE POPULATION */
-  
+
   /* Type of the offspring (possible mutation) */
   randnum = drand48();
   if(randnum < mutation){ // If the offspring mutates, newtype can change
@@ -103,7 +103,7 @@ void UpdatePop(void)
       newtype = 0;
     }
   }
-  
+
   pop[nodeD] += -oldtype + newtype; // Update the population
   n1 += -oldtype + newtype; // Update the counter of type-1 individuals
 }
@@ -119,5 +119,3 @@ void OneStep(void)
     UpdatePop(); // Update the population
   }
 }
-
-

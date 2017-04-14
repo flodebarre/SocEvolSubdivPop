@@ -3,15 +3,15 @@
 #include <math.h>
 #include <time.h>
 
-#define NREP 10000000 // Number of replicates
-#define TIMEINTERVAL 1000 // Time between which measures are taken
+#define NREP 1000//10000000 // Number of replicates
+#define TIMEINTERVAL 10000 // Time between which measures are taken
 
-#define SMUTATION ((double) MMMM )   // Mutation probability
-#define P ((double) XXXX ) // Proba mutant is mutant
+#define SMUTATION ((double) 0.01)//MMMM )   // Mutation probability
+#define P ((double) 0.5)//XXXX ) // Proba mutant is mutant
 
-#define OMEGA ((double) OOOO)   // Strength of selection (baseline was 0.005)
+#define OMEGA ((double) 0.05) //OOOO)   // Strength of selection (baseline was 0.005)
 
-#define BENEFIT ((double) (BBBB)) // Value of b in the interaction matrix
+#define BENEFIT ((double) 5.0) //(BBBB)) // Value of b in the interaction matrix
 #define COST ((double) 1.0) // Value of c in the interaction matrix
 
 #define BIRTHBASELINE ((double) 1.0) // Baseline fecundity
@@ -20,7 +20,7 @@
 #define DEMESIZE 5 // Number of individuals within each deme
 #define NDEMES 50   // Number of demes
 
-#define MIGRATION ((double) GGGG) // Emigration probability
+#define MIGRATION ((double) 0.2)//GGGG) // Emigration probability
 
 #define noselfinteraction 1  // 1 if there are no benefits provided to self (strict pair interactions),
                              // 0 if there are (public good shared among all group members).
@@ -30,7 +30,7 @@ int NNODES; // Total number of individuals
 
 int popTot[NDEMES]; // Population vector, counting the total number of individuals in each deme
 int popA[NDEMES]; // Population vector, counting the number of A individuals in each deme
-int popA[NDEMES]; // Population vector, counting the number of B individuals in each deme
+int popB[NDEMES]; // Population vector, counting the number of B individuals in each deme
 
 double fecundityA[NDEMES]; // Vector of total fecundities of A individuals in each deme
 double fecundityB[NDEMES]; // Vector of total fecundities of B individuals in each deme
@@ -49,6 +49,10 @@ int savepopTot[(DEMESIZE*NDEMES)+1]; // Vector to save results as histogram (0, 
 int savepopA[(DEMESIZE*NDEMES)+1]; // Vector to save results as histogram (0, 1, ..., NNODES), number of A
 int savepopB[(DEMESIZE*NDEMES)+1]; // Vector to save results as histogram (0, 1, ..., NNODES), number of B
 
+// Cannot save population vector the same way, because need to know the frequency,
+// i.e., joint values of nA and nB.
+double savefreq[NREP];
+int savetotpop[NREP];
 
 // Only needed for the WF updating -----------------------|
 int newn1; // Temporary n1                                |
@@ -86,9 +90,8 @@ double accessiblesites; // Where reproduction can occur
 void GlobalInit(void);  // Global initializations (once)
 void InitSim(void);     // Initializations for each simulation
 
-void ChooseD(void);     // Choose who dies
-void ChooseB(void);     // Choose who reproduces
-void UpdatePop(void);   // Update the population
+void EventDeath(void);     // Choose who dies
+void EventBirth(void);     // Choose who reproduces
 
 void OneStep(void);     // One simulation step
 
@@ -112,10 +115,13 @@ int main(void)
     // Store the outcome of this chunk of time in histograms
     savepopA[nA] += 1;
     savepopB[nB] += 1;
+
+    savefreq[timestep] = ((double) nA)/(nA+nB);
+    savetotpop[timestep] = (nA + nB);
   }
 
   /* OUTPUT: Print the result */
-  for (iindiv=0; iindiv<NNODES+1; iindiv++) {
+/*  for (iindiv=0; iindiv<NNODES+1; iindiv++) {
     printf("%d ", savepopA[iindiv]);
   }
   printf("\n");
@@ -123,6 +129,12 @@ int main(void)
     printf("%d ", savepopB[iindiv]);
   }
   printf("\n");
+  */
+  for(timestep=0; timestep<NREP; timestep++){ // For each big chunk of time
+    printf("%5.10f %5.10f\n", savefreq[timestep], ((double)savetotpop[timestep]/NNODES));
+  }
+  printf("\n");
+
   return(0);
 }
 
@@ -227,67 +239,105 @@ void ComputeRates(void)
   cumB = cumBA + cumBB;
 }
 
+/*
+-------------------------------------------
+  DEATH EVENT
+-------------------------------------------
+*/
 void EventDeath(void)
-{
-  // Draw deme where death happens, uniformly at random
-  randnum = drand48() * cumD; // Draw random number
-
-  cumsum = 0.0; // Initialize cumulative sum of rates
-  for(ideme=0; ideme<NDEMES; ideme++) // For each deme,
-  {
-    cumsum += 1.0; // Update the cumulative sum up to ideme
-    if(randnum < cumsum) // If we pick this deme
+{ // randnum has already been drawn, and is < (cumDA + cumDB)
+  if(randnum < cumDA)
+  { /* Death of a A individual */
+    // Find the deme where it is located
+    cumsum = 0.0; // Initialize cumulative sum of rates
+    for(ideme=0; ideme<NDEMES; ideme++) // For each deme,
     {
-      nodeD = ideme; // Save the deme index
-      break;         // and stop the loop since we have the node we want
+      cumsum += 1.0 * DEATHPROBA * popA[ideme]; // Update the cumulative sum up to ideme
+      if(randnum < cumsum) // If we pick this deme
+      {
+        nodeD = ideme; // Save the deme index
+        /* Update the population */
+        popA[nodeD] += -1;
+        nA += -1;
+        break;         // and stop the loop since we have the node we want
+      }
     }
-  }
-
-  // Draw ID of who dies:
-  // pick one uniformly at random among alive individuals in the deme,
-  // and update the population.
-  cumD = ((double) popA[nodeD] + (double) popB[nodeD]);
-  randnum = drand48() * cumD;
-
-  if(randnum < ((double) popA[nodeD]) ){
-    // Dead A
-    popA[nodeD] += -1;
-    nA += -1;
-  }else{
-    // Dead B
-    popB[nodeD] += -1;
-    nB += -1;
+  } else {
+    /* Death of a B individual */
+    // Scale randnum so that 0<= randnum <= cumDB
+    randnum += -1.0*cumDA;
+    // Find the deme where the individual is located
+    cumsum = 0.0; // Initialize cumulative sum of rates
+    for(ideme=0; ideme<NDEMES; ideme++) // For each deme,
+    {
+      cumsum += 1.0 * DEATHPROBA * popB[ideme]; // Update the cumulative sum up to ideme
+      if(randnum < cumsum) // If we pick this deme
+      {
+        nodeD = ideme; // Save the deme index
+        /* Update the population */
+        popB[nodeD] += -1;
+        nB += -1;
+        break;         // and stop the loop since we have the node we want
+      }
+    }
   }
 }
 
-
+/*
+-------------------------------------------
+  BIRTH EVENT
+-------------------------------------------
+*/
 void EventBirth(void)
 {
-  randnum = drand48() * cumB; // Draw random number
+  // Randnum has already been drawn, and rescaled.
 
   if(randnum < cumBA)
-  { // Reproduction of A individual
-
-  } else {
-    // Reproduction of B individual
-    randnum += - cumBA;
-  }
-  cumsum = 0.0; /// Initialize the cumulative sum of rates
-  for(ideme=0; ideme<NDEMES; ideme++) // For each potential reproducer
   {
-    cumsum += fecundityA[ideme]; // Update the cumulative sum (A)
-    if (randnum < cumsum) { // If we pick this node
-      nodeB = ideme; // Index of the reproducer
-      newtype = 1; // ID
-      break;         // and stop the loop since we have the node we want
+  /* Reproduction of A individual */
+    cumsum = 0.0; /// Initialize the cumulative sum of rates
+    for(ideme=0; ideme<NDEMES; ideme++) // For each potential reproducer
+    {
+      cumsum += fecundityA[ideme]; // Update the cumulative sum (A)
+      if (randnum < cumsum) { // If we pick this node
+        nodeB = ideme; // Deme index of the reproducer
+        newtype = 1; // ID of the parent
+        break;         // and stop the loop since we have the node we want
+      }
     }
-    cumsum += fecundityB[ideme]; // Update the cumulative sum (B)
-    if (randnum < cumsum) { // If we pick this node
-      nodeB = ideme; // Index of the reproducer
-      newtype = 0;  // ID
-      break;         // and stop the loop since we have the node we want
+  } else {
+    /* Reproduction of B individual */
+    randnum += - cumBA; // Rescale randnum so that 0<= randnum <= cumBB
+
+    cumsum = 0.0; /// Initialize the cumulative sum of rates
+    for(ideme=0; ideme<NDEMES; ideme++) // For each potential reproducer
+    {
+      cumsum += fecundityB[ideme]; // Update the cumulative sum (A)
+      if (randnum < cumsum) { // If we pick this node
+        nodeB = ideme; // Index of the reproducer
+        newtype = 0; // ID of the parent
+        break;         // and stop the loop since we have the node we want
+      }
     }
   }
+
+    /* Reproduction - does mutation occur? */
+    // Draw new random number
+    randnum = drand48();
+    if(randnum < mutation){ // If the offspring mutates, newtype can change
+      if(randnum < P*mutation){ // Type 1 (more likely when higher P)
+        newtype = 1;
+      }else{           // Type 0
+        newtype = 0;
+      }
+    }
+
+    /* Update the population */
+    popA[nodeB] += newtype; // +1 only if new individual is A (newtype==1)
+    nA += newtype; // Total number of A
+
+    popB[nodeB] += (1-newtype); // +1 only if new individual is B (newtype==0)
+    nB += (1-newtype); // Total number of B
 }
 
 
@@ -297,21 +347,14 @@ void OneStep(void)
   randnum = drand48() * (cumDA + cumDB + cumBA + cumBB);
   if(randnum < (cumDA + cumDB))
   {
+    // Proceed with Death
     EventDeath();
   } else {
     // Rescale randnum for Birth events
+    // so that 0 <= randnum <= cumBA + cumBB
     randnum += -(cumDA + cumDB);
+    // Proceed with Birth
+    EventBirth();
   }
   ComputeRates();
 }
-/*
- -----------------------------------------------------------------------------------
-                **** NOTE ****
-
- The function `OneStep` depends on the updating rule;
- It is defined in another script, `islandonestepUR.c`,
- where UR is the two-letter name of the updating rule (WF, BD, DB).
- This other script is then appended to `islandbase.c`.
-
- -----------------------------------------------------------------------------------
- */
