@@ -1,13 +1,17 @@
 rm(list = ls())
+for (i in dev.list()) dev.off()
+
+set.seed(123456789)
 
 simulation <- function(m=0.01, mutationProba = 0.05, selStrength = 0.05){
+
 # Arguments:
 #  m             emigration probability
 #  mutationProba mutation probability
   
 # Parameters
-demeSize <- 4 # Number of sites in a deme
-nbDemes <- 30 # Number of demes in the population (N = demesize*nbdemes)
+demeSize <- 5 # Number of sites in a deme
+nbDemes <- 50 # Number of demes in the population (N = demesize*nbdemes)
 
 # Demographic parameters
 deathProba <- 0.1
@@ -29,7 +33,7 @@ population <- 1+0*matrix(1:(2*nbDemes), ncol = 2)
 population
   # dimension 1: deme ID
   # dimension 2: type of site (1: type A, 2: type B)
-popInTime <- matrix(1:(ntimesteps*2), ncol = 2)
+popInTime <- 0*matrix(1:(ntimesteps*2), ncol = 2)
 
 global <- colSums(population)
 global
@@ -81,15 +85,7 @@ for (itime in 1:ntimesteps){
     }
   # Update state of the population
     population[locChild, typeChild] <- population[locChild, typeChild] + 1
-  # Recompute birth propensities
-    for(i in 1:nbDemes){
-      iA <- population[i,1]
-      iB <- population[i,2]
-      availableSpaceHome <- (demeSize - iA - iB)/demeSize
-      availableSpaceAway <- ((nbDemes -1)*demeSize - (global[1]+global[2] - iA - iB))/ ((nbDemes -1)*demeSize)
-      birthPropensities[i,1] <- (baselineBirthProba + selStrength * ((population[i,1]-1)*b - c)) * ((1-m)*availableSpaceHome + m * availableSpaceAway) * population[i,1]
-      birthPropensities[i,2] <- (baselineBirthProba + selStrength * ((population[i,1])*b )) * ((1-m)*availableSpaceHome + m * availableSpaceAway) * population[i,2]
-    }
+
     #
     #
     # DEATH
@@ -102,26 +98,64 @@ for (itime in 1:ntimesteps){
     population[locDead, typeDead] <- population[locDead, typeDead] - 1
   }
   global <- colSums(population)
+
+  # Recompute birth propensities
+  for(i in 1:nbDemes){
+    iA <- population[i,1]
+    iB <- population[i,2]
+    availableSpaceHome <- (demeSize - iA - iB)/demeSize
+    availableSpaceAway <- ((nbDemes -1)*demeSize - (global[1]+global[2] - iA - iB))/ ((nbDemes -1)*demeSize)
+    birthPropensities[i,1] <- (baselineBirthProba + selStrength * ((population[i,1]-1)*b - c)) * ((1-m)*availableSpaceHome + m * availableSpaceAway) * population[i,1]
+    birthPropensities[i,2] <- (baselineBirthProba + selStrength * ((population[i,1])*b )) * ((1-m)*availableSpaceHome + m * availableSpaceAway) * population[i,2]
+  }
   popInTime[itime,] <- global
 }
 
 #plot(popInTime[,1], type="l", ylim = c(0,nbDemes*demeSize))
 #lines(popInTime[,2], type="l", col=2)
 
-#plot((popInTime[,1]+popInTime[,2])/(nbDemes*demeSize), type="l", ylim = c(0,1), main="Site occupancy")
+par(mfrow=c(2,1))
+plot((popInTime[,1]+popInTime[,2])/(nbDemes*demeSize), type="l", ylim = c(0,1), main="Site occupancy", xlim=c(0,itime), ylab = "", xlab = "time", sub=paste0("m=", m, ", mut=", mutationProba, ", sel=", selStrength))
 
-#plot((popInTime[,1])/(popInTime[,1]+popInTime[,2]), type="l", ylim=c(0,1), main="Proportion of altruists")
-#abline(h=mutationBias, lty=3)
+plot((popInTime[,1])/(popInTime[,1]+popInTime[,2]), type="l", ylim=c(0,1), main="Proportion of altruists", ylab = "", xlab = "time")
+abline(h=mutationBias, lty=3)
+
 out <- mean((popInTime[,1])/(popInTime[,1]+popInTime[,2]))
 return(out)
+
 }
 
 require(parallel)
-mList <- c(0.001, 0.01, 0.1, 0.15, 0.2)
-mutList <- c(0.001, 0.01, 0.1, 0.5)
+mList <- c(0.001, 0.01, 0.025, 0.05, 0.075, 0.1, 0.125, 0.15, 0.2)
+mutList <- c(0.0001, 0.001, 0.01, 0.1)
 selList <- c(0.05, 0.2)
 
+res <- list()
 pars <- expand.grid(m = mList, mutationProba = mutList, selStrength = selList)
-res <- mclapply(seq_len(nrow(pars)), #
-                function(i) do.call(simulation, pars[i,]))
+for(iparm in 1:nrow(pars)){
+  print(pars[iparm,])
+  res[[iparm]] <- do.call(simulation, pars[iparm,])
+  print(res[[iparm]])
+}
+#res <- mclapply(seq_len(nrow(pars)), function(i) do.call(simulation, pars[i,]))
+save.image("simEmptySpace.RData")
 
+par(mfrow=c(1,1))
+plot(0, type="n", xlim=c(0,max(mList)) , ylim = c(0,1))
+vres <- unlist(res)
+allres <- cbind(pars[1:length(res), ], propA=vres)
+allres
+
+write.table(allres, file="resEmptySpace.txt")
+write.csv(allres, file="resEmptySpace.csv")
+
+
+subvres <- allres[allres$selStrength == selList[1],]
+cols <- seq_along(mutList)
+count <- 1
+for(imut in mutList){
+  ssubvres <- subvres[subvres$mutationProba == imut,]
+  points(ssubvres$m, ssubvres$propA, col=cols[count], type="o")
+  count <- count+1
+}
+abline(h=0.5, lty=3)
