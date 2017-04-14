@@ -1,9 +1,6 @@
 #! /bin/bash
 
 # To run the scripts on my own ComputeRates
-
-export THEPATH=SocEvolSubdivPop/
-
 for mutt in 0.001 0.01 0.1 0.25
 do
 for mB in 15.0
@@ -22,8 +19,9 @@ sed -e "s/XXXX/${mp}/" -e "s/BBBB/${mB}/" -e "s/MMMM/${mutt}/" -e "s/GGGG/${mig}
 # Compile the script
 cc Scripts/EmptySites_${mig}_${mB}_${mp}_${mutt}_${omega}.c -o Scripts/EmptySites_${mig}_${mB}_${mp}_${mutt}_${omega} -lm
 
+printf "Running simulation EmptySites_${mig}_${mB}_${mp}_${mutt}_${omega}\n"
 # Run the script
-./Scripts/EmptySites_${mig}_${mB}_${mp}_${mutt}_${omega} > ${THEPATH}Results/EmptySites_${mig}_${mB}_${mp}_${mutt}_${omega}.txt
+./Scripts/EmptySites_${mig}_${mB}_${mp}_${mutt}_${omega} > Results/EmptySites_${mig}_${mB}_${mp}_${mutt}_${omega}.txt
 
 #---------------------------------------------------------------------------------------------------------
 done # omega
