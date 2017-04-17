@@ -15,10 +15,10 @@
 #define COST ((double) 1.0) // Value of c in the interaction matrix
 
 #define BIRTHBASELINE ((double) 1.0) // Baseline fecundity
-#define DEATHPROBA ((double) 0.1)   // Baseline death probability
+#define DEATHPROBA ((double) DDDD)   // Baseline death probability
 
-#define DEMESIZE 5 // Number of individuals within each deme
-#define NDEMES 50   // Number of demes
+#define DEMESIZE 4 // Number of individuals within each deme
+#define NDEMES 30   // Number of demes
 
 #define MIGRATION ((double) GGGG) // Emigration probability
 

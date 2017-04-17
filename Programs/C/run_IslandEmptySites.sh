@@ -21,7 +21,7 @@ cc Scripts/EmptySites_${mig}_${mB}_${mp}_${mutt}_${omega}.c -o Scripts/EmptySite
 
 printf "Running simulation EmptySites_${mig}_${mB}_${mp}_${mutt}_${omega}\n"
 # Run the script
-./Scripts/EmptySites_${mig}_${mB}_${mp}_${mutt}_${omega} > Results/EmptySites_${mig}_${mB}_${mp}_${mutt}_${omega}.txt
+./Scripts/EmptySites_${mig}_${mB}_${mp}_${mutt}_${omega} > Results/EmptySites2_${mig}_${mB}_${mp}_${mutt}_${omega}.txt
 
 #---------------------------------------------------------------------------------------------------------
 done # omega
