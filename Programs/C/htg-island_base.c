@@ -3,8 +3,8 @@
 #include <math.h>
 #include <time.h>
 
-#define NREP 10000000 // Number of replicates
-#define TIMEINTERVAL 1000 // Time between which measures are taken
+#define NREP 100000 // Number of replicates
+#define TIMEINTERVAL 10000 // Time between which measures are taken
 
 #define SMUTATION ((double) MMMM )   // Mutation probability
 #define P ((double) XXXX ) // Proba mutant is mutant
