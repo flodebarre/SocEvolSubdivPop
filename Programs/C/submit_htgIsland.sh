@@ -18,9 +18,17 @@ do
 for omega in 0.05 0.1 0.5
 do
 for ishtg in 0 1
+do
+
+# BD DB WF ---------------------------------------------------------------------------------------------------
+for updating in DB BD WF
+do
 # Change parameters
 #  Change the mp parameter
-sed -e "s/XXXX/${mp}/" -e "s/NREP 10000000/NREP 1000000/" -e "s/BBBB/${mB}/" -e "s/MMMM/${mutt}/" -e "s/GGGG/${mig}/" -e "s/OOOO/${omega}/"  -e "s/DDDD/${death}/" -e "s/HTG 1/HTG ${ishtg}/" htg-island_base.c > Scripts/Htgisland_${mig}_${mB}_${mp}_${mutt}_${omega}_htg${ishtg}.c
+sed -e "s/XXXX/${mp}/" -e "s/NREP 10000000/NREP 1000000/" -e "s/BBBB/${mB}/" -e "s/MMMM/${mutt}/" -e "s/GGGG/${mig}/" -e "s/OOOO/${omega}/"  -e "s/DDDD/${death}/" -e "s/HTG 1/HTG ${ishtg}/" htg-island_base.c >  Scripts/tmp.c
+
+# Concatenate scripts to obtain a full simulation file
+cat Scripts/tmp.c htg-island_onestep${updating}.c > Scripts/Htgisland_${mig}_${mB}_${mp}_${mutt}_${omega}_htg${ishtg}.c
 
 # Compile the script
 cc Scripts/Htgisland_${mig}_${mB}_${mp}_${mutt}_${omega}_htg${ishtg}.c -o Scripts/Htgisland_${mig}_${mB}_${mp}_${mutt}_${omega}_htg${ishtg} -lm
@@ -34,6 +42,7 @@ chmod +x Scripts/Htgisland_${mig}_${mB}_${mp}_${mutt}_${omega}_htg${ishtg}.sh
 # Submit the job (-q long.q)
 qsub -q long.q Scripts/Htgisland_${mig}_${mB}_${mp}_${mutt}_${omega}_htg${ishtg}.sh
 
+done
 #---------------------------------------------------------------------------------------------------------
 done # htg
 done # omega

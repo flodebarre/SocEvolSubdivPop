@@ -113,7 +113,7 @@ void UpdatePop(void)
 /* ONE DB STEP */
 void OneStep(void)
 {
-  for(microstep=0; microstep<NNODES; microstep++){ // In Moran model, 1 generation = N microupdates
+  for(microstep=0; microstep<totpopsize; microstep++){ // In Moran model, 1 generation = N microupdates
     ChooseD();   // Get nodeD, the index of the dying node
     ChooseB();   // Get nodeB, the index of the reproducing node
     UpdatePop(); // Update the population

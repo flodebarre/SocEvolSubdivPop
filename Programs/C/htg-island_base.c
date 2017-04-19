@@ -41,11 +41,13 @@ int newtype; // New type of the replaced individual
 
 int nodeD, nodeB; // Index of the nodes that die/reproduce in a given step
 
-int savepop[(DEMESIZE*NDEMES)+1]; // Vector to save results as histogram (0, 1, ..., NNODES)
-
 int demesize[NDEMES]; // Vector of deme sizes
 double pbinom; // Parameter to generate deme sizes (p of Binomial)
 int totpopsize; // Total population sizes
+
+// savepop depends on totpopsize that will be specified later
+// -> choose an upper bound
+int savepop[(NDEMES * (NBINOM + 1))+1]; // Vector to save results as histogram (0, 1, ..., totpopsize)
 
 // Only needed for the WF updating -----------------------|
 int newn1; // Temporary n1                                |
@@ -105,7 +107,7 @@ int main(void)
   }
 
   /* OUTPUT: Print the result */
-  for (iindiv=0; iindiv<NNODES+1; iindiv++) {
+  for (iindiv=0; iindiv<totpopsize+1; iindiv++) {
     printf("%d ", savepop[iindiv]);
   }
   printf("\n");
@@ -132,17 +134,14 @@ void GlobalInit(void)
 {
   /* Set random seed */
   // Based on the parameters for more variation
-  int randseed = ((int)floor(10000*SMUTATION + 10*MIGRATION + 1000*BENEFIT + 100*P + NNODES));
+  int randseed = ((int)floor(10000*SMUTATION + 10*MIGRATION + 1000*BENEFIT + 100*P));
   unsigned long seed=123456789 + randseed;
   srand48(seed);
 
   /* Set scaled parameters */
   mutation = SMUTATION; // Mutation
 
-  /* Initiate savepop */
-  for (iindiv=0; iindiv<(totpopsize+1); iindiv++){
-    savepop[iindiv] = 0;
-  }
+
 }
 
 
@@ -200,6 +199,12 @@ void GenerateDemeSizes(void)
   totpopsize = 0;
   for(ideme = 0; ideme<NDEMES; ideme++){
     totpopsize += demesize[ideme];
+  }
+
+  /* INITIALIZE savepop THAT DEPENDS ON POPULATION SIZE */
+  /* Initiate savepop */
+  for (iindiv=0; iindiv<(totpopsize+1); iindiv++){
+    savepop[iindiv] = 0;
   }
 }
 
