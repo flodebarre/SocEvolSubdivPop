@@ -4,7 +4,7 @@
 #include <time.h>
 
 #define NREP 100000 // Number of replicates
-#define TIMEINTERVAL 10000 // Time between which measures are taken
+#define TIMEINTERVAL 1000 // Time between which measures are taken
 
 #define SMUTATION ((double) MMMM )   // Mutation probability
 #define P ((double) XXXX ) // Proba mutant is mutant
@@ -135,7 +135,7 @@ void GlobalInit(void)
   /* Set random seed */
   // Based on the parameters for more variation
   int randseed = ((int)floor(10000*SMUTATION + 10*MIGRATION + 1000*BENEFIT + 100*P));
-  unsigned long seed=123456789 + randseed;
+  unsigned long seed=987564 + randseed;
   srand48(seed);
 
   /* Set scaled parameters */

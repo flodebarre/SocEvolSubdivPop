@@ -213,18 +213,20 @@
 %\usepackage[fighead, nofiglist, nomarkers]{endfloat}
 \renewcommand{\efloatseparator}{}
 
+\newcommand{\defeq}{\mathrel{\mathop:}=}
+
 \begin{document}
 Adaptation of my equations to a subdivided population. Notation, for a quantity $Y$ that depends on two sites ($Y=e$, $d$, $Q$):
 \begin{subequations}
 \begin{align}
-Y_{\textrm{self}} &= Y_{i,i} \\
+Y_{\textrm{self}} &\defeq Y_{i,i} \\
 %
-Y_{\textrm{in}} &= Y_{i,j}, \quad \textrm{$i$ and $j\neq i$ in the same deme;}\\
+Y_{\textrm{in}} &\defeq Y_{i,j}, \quad \textrm{$i$ and $j\neq i$ in the same deme;}\\
 %
-Y_{\textrm{out}} &= Y_{i,j}, \quad \textrm{$i$ and $j$ in different demes.}
+Y_{\textrm{out}} &\defeq Y_{i,j}, \quad \textrm{$i$ and $j$ in different demes.}
 \end{align}
 \end{subequations}
-For a site $i$, $G_i$ denotes the deme it is in, and notation $j \in G_i$ means that sites $i$ and $j$ are in the same deme. 
+For a site $i$, $G_i$ denotes the deme the site belongs to, and notation $j \in G_i$ means that sites $i$ and $j$ are in the same deme. 
 
 The expected frequency of altruists in the population is given by 
 \begin{equation}

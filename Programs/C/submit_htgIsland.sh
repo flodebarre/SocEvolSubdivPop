@@ -28,19 +28,19 @@ do
 sed -e "s/XXXX/${mp}/" -e "s/NREP 10000000/NREP 1000000/" -e "s/BBBB/${mB}/" -e "s/MMMM/${mutt}/" -e "s/GGGG/${mig}/" -e "s/OOOO/${omega}/"  -e "s/DDDD/${death}/" -e "s/HTG 1/HTG ${ishtg}/" htg-island_base.c >  Scripts/tmp.c
 
 # Concatenate scripts to obtain a full simulation file
-cat Scripts/tmp.c htg-island_onestep${updating}.c > Scripts/Htgisland_${mig}_${mB}_${mp}_${mutt}_${omega}_htg${ishtg}.c
+cat Scripts/tmp.c htg-island_onestep${updating}.c > Scripts/HtgIsl${updating}_${mig}_${mB}_${mp}_${mutt}_${omega}_htg${ishtg}.c
 
 # Compile the script
-cc Scripts/Htgisland_${mig}_${mB}_${mp}_${mutt}_${omega}_htg${ishtg}.c -o Scripts/Htgisland_${mig}_${mB}_${mp}_${mutt}_${omega}_htg${ishtg} -lm
+cc Scripts/HtgIsl${updating}_${mig}_${mB}_${mp}_${mutt}_${omega}_htg${ishtg}.c -o Scripts/HtgIsl${updating}_${mig}_${mB}_${mp}_${mutt}_${omega}_htg${ishtg} -lm
 
 # Create the execution file (two lines)
-echo -e "#!/bin/bash\n./${THEPATH}Scripts/Htgisland_${mig}_${mB}_${mp}_${mutt}_${omega}_htg${ishtg} > ${THEPATH}Results/Htgisland_${mig}_${mB}_${mp}_${mutt}_${omega}_htg${ishtg}.txt" > Scripts/Htgisland_${mig}_${mB}_${mp}_${mutt}_${omega}_htg${ishtg}.sh
+echo -e "#!/bin/bash\n./${THEPATH}Scripts/HtgIsl${updating}_${mig}_${mB}_${mp}_${mutt}_${omega}_htg${ishtg} > ${THEPATH}Results/HtgIsl${updating}_${mig}_${mB}_${mp}_${mutt}_${omega}_htg${ishtg}.txt" > Scripts/HtgIsl${updating}_${mig}_${mB}_${mp}_${mutt}_${omega}_htg${ishtg}.sh
 
 # Make the execution files executable
-chmod +x Scripts/Htgisland_${mig}_${mB}_${mp}_${mutt}_${omega}_htg${ishtg}.sh
+chmod +x Scripts/HtgIsl${updating}_${mig}_${mB}_${mp}_${mutt}_${omega}_htg${ishtg}.sh
 
 # Submit the job (-q long.q)
-qsub -q long.q Scripts/Htgisland_${mig}_${mB}_${mp}_${mutt}_${omega}_htg${ishtg}.sh
+qsub -q long.q Scripts/HtgIsl${updating}_${mig}_${mB}_${mp}_${mutt}_${omega}_htg${ishtg}.sh
 
 done
 #---------------------------------------------------------------------------------------------------------
