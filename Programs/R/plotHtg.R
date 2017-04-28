@@ -1,25 +1,49 @@
 for(i in dev.list())dev.off()
 
+bgcol <- "transparent"#"transparent"
+fgcol <- "black"
+
+par(bg=bgcol, fg=fgcol, col=fgcol, col.axis=fgcol, col.lab=fgcol, col.main=fgcol, col.sub=fgcol)
+mygradient <- c("#234BCD", "#5D5B8F", "#976C52", "#D17D15")
+pchs <- c(21,22,23,24,25)
+
+
+# Make color lighter
+lighten <- function(color, factor=1.2){
+  return(rgb(t(factor*col2rgb(color)), maxColorValue=255))
+}
+# Make color transparent
+makeTransparent<-function(someColor, alpha=100)
+{
+  newColor <- col2rgb(someColor)
+  apply(newColor, 2, function(curcoldata){rgb(red=curcoldata[1], green=curcoldata[2],
+                                              blue=curcoldata[3],alpha=alpha, maxColorValue=255)})
+}
+
+
+# Convert cm to in
+cm2in <- function(x){x/2.54}
+
 # for mutt in 0.001 0.01 0.1 0.25
 # do
 # for mB in 15.0
 # do
 # for mp in 0.45
 # do
-# for mig in 0.01 0.1 0.2 0.3 0.4 0.5 0.75 0.9 
+# for mig in 0.01 0.05 0.1 0.15 0.2 0.3 0.4 0.5 0.6 0.7 
 # do
-# for omega in 0.05 0.1 0.5
+# for omega in 0.005 0.1
 # do
 # for ishtg in 0 1
 
-# ProBLem Was Missing UPDATING in file name...
+source("../Mathematica/analytics.R")
 
 specify_decimal <- function(x, k) format(round(x, k), nsmall=k)
 
 # Parameters tested
 mutList <- c(0.001, 0.01, 0.1, 0.25)
-migList <- c(0.01, 0.1, 0.2, 0.3, 0.4, 0.5, 0.75, 0.9)
-selList <- c(0.05, 0.1, 0.5)
+migList <- c(0.01, 0.05, 0.1, 0.15, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7)
+selList <- c(0.005, 0.1)
 mBList <- c(15.0)
 htgList <- c(0, 1)
 updList <- c("WF", "BD", "DB")
@@ -27,11 +51,14 @@ p <- 0.45
 
 pars <- expand.grid(mu=mutList, mig=migList, sel=selList, mB = mBList, htg = htgList, upd = updList)
 
+getwd()
+system("ls *pdf")
 # Load simulation data
 getSimData <- function(mu, mig, sel, mB, htg, upd){
   fileName <- paste0("../C/Results/HtgIsl", upd,"_",mig,"_", specify_decimal(mB, 1), "_", p, "_",mu,"_",sel, "_htg", htg, ".txt")
   sz <- file.info(fileName)$size
-  if(sz>1) m <- read.table(fileName) else m <- NA
+  if(sz>1) m <- read.table(fileName) else m <- NA # Remove empty files to avoid errors
+  #if(sum(m[-c(1, length(m))])/sum(m)<0.25) m <- NA # Remove simulations where did not manage to get variation
   return(m)
 }
 res <- lapply(seq_len(nrow(pars)), function(i) do.call(getSimData, pars[i,]))
@@ -65,7 +92,7 @@ alldata[is.na(alldata$pA),]
 plotDist <- function(i){
   v <- unname(unlist(res[[i]])) # Extract the vector of results
   nn <- length(v)-1 # Max population size
-  nAs <- seq(0, nn) # Vector of abundances
+  nAs <- seq(0, nn)/nn # Vector of abundances
   plot(nAs, v)
 }
 
@@ -75,62 +102,91 @@ plotDist <- function(i){
 
   # PROPORTION OF ALTRUISTS IN THE POPULATION
   # nA / (nA + nB)
-PlotProp <- function(upd, sel, htg, ylim=c(0,1), addAnalysis=FALSE){
-    par(las = 1)
+PlotProp <- function(upd, sel, htg, ylim=c(0,1), addAnalysis=FALSE, pdf = TRUE, addTitle = FALSE, plotData = TRUE){
+
+    # Initializations if not pdf
+    thecex <- cexpoints <- cexlab <- 1
+    if(pdf){
+      thecex <- 1.2 # Global cex value
+      cexpoints <- 1.6 # cex of the points
+      cexlab <- 1.6 # cex of the labels
+      
+      filename <- paste0("EX", upd, "_sel", sel, "_htg", htg) # Name of the pdf file
+
+      pdf(paste0(filename, ".pdf"), width = 4.5, height = 5.5, compress = FALSE) # Open pdf
+      if(addTitle) martit <- 2.5 else martit <- 0
+      par(mar = c(2.5, 2.5, martit, 0)+0.1) # Margins
+      par(mgp=c(3, .6, 0)) # Position of the tick labels
+      par(cex=thecex, cex.lab=0.5*thecex) # Point sizes
+    }
+    par(bg=bgcol, fg=fgcol, col=fgcol, 
+        col.axis=fgcol, col.lab=fgcol, 
+        col.main=fgcol, col.sub=fgcol) # background and foreground colors
+    
+    par(las = 1) # Orientation of labels on axes
+
+    # Initialize the plot window
     plot(0, type = "n", xlim = c(0,max(migList)), ylim = ylim, 
-         xlab = "Emigration m", ylab = "Proportion of altruists", axes = FALSE)
-    title(main = paste0("sel=", sel, ", htg=", htg))
-    colMut <- seq_along(mutList)
-    rect(0, 0, par("usr")[2], par("usr")[4], col = 
-           "grey")
-    for(i in seq(0,1,by=0.01)) abline(h=i, lty=1, col=gray(1))
-    abline(h=0.45, col="black", lty=2)
+         xlab = "", ylab = "", axes = FALSE, frame.plot = FALSE)
+    if (addTitle) title(main = paste0("sel=", sel, ", htg=", htg))
+    colMut <- mygradient
+    
+    # Background of the plot region
+    rect(0, ylim[1], max(migList), 1, col = gray(0.9), border = NA)
+    # Add horizontal lines
+    for(i in seq(0,1,by=0.1)) points(c(0, max(migList)), rep(i,2), col=gray(1), lty=3, type="l")
+
+    # Add horizontal line for the non-selection value
+    points(c(0, max(migList)), rep(p,2), col="black", lty=2, type="l", lwd=1.2)
     for(imu in  seq_along(mutList)){
       if(addAnalysis){ # Add analytical prediction
         # Define a function of mig for the specific set of parameters
         tmpP <- function(x) get(paste0("p", upd))(b=mBList[1], c=1, p=p, sel=sel, mut=mutList[imu], m=x, g=0, n=4, d=30, Idself=1, Ieself=0)
         # Plot it
-        curve(tmpP, from=0, to=max(migList), col=colMut[imu], add = TRUE)
+        curve(tmpP, from=0, to=max(migList)+0.02, col=colMut[imu], add = TRUE, lwd = 2)
       }
-      # Simulation Data: extract the relevant data for the set of parameters
-      subdata <- alldata[alldata$mu == mutList[imu] & alldata$upd == upd,]
-      sub <- subdata[subdata$sel== sel & subdata$htg==htg, ]
-      # Plot estimated frequency
-      points(sub$mig, sub$pA, col = colMut[imu], type="p", pch=4)
-      # Plot CI
-      arrows(sub$mig, sub$pA - sub$dci, sub$mig, sub$pA + sub$dci, col = colMut[imu], angle = 90, length = 0.1, code = 3)
+      if(plotData){
+        # Simulation Data: extract the relevant data for the set of parameters
+        subdata <- alldata[alldata$mu == mutList[imu] & alldata$upd == upd,]
+        sub <- subdata[subdata$sel== sel & subdata$htg==htg, ]
+        # Plot estimated frequency
+        points(sub$mig, sub$pA, col = colMut[imu], type="p", pch=pchs[imu], cex = cexpoints, bg=makeTransparent(colMut[imu]))
+        # Plot CI
+        arrows(sub$mig, sub$pA - sub$dci, sub$mig, sub$pA + sub$dci, 
+               col = colMut[imu], angle = 90, length = 0.075, code = 3)
+      }
     }
-    axis(1, pos = 0)
-    axis(2, pos = 0)
-  }
+    axis(1, pos = ylim[1], col=fgcol)
+    atseq <- seq(0, 1, by = 0.1)
+    axis(2, pos = 0, col=fgcol, at = c(atseq, p), labels = c(atseq, expression(italic(p))))
+    mtext(side = 2, "Proportion of altruists", line = 1.5, las=0, cex=cexlab)
+    mtext(side = 1, expression(paste("Emigration probability (",italic(m),")")), line = 1.5, las=0, cex=cexlab)
+    if(pdf){
+      dev.off()
+#      system(paste0("xdg-open ", paste0(filename, ".pdf")))
+    }
+}
 
-PlotProp("WF", 0.05, 1)
-PlotProp("WF", 0.05, 0, addAnalysis = TRUE)
+PlotProp("WF", 0.005, 1)
+PlotProp("WF", 0.005, 0, addAnalysis = TRUE)
 
 PlotProp("WF", 0.1, 1)
-PlotProp("WF", 0.1, 0, addAnalysis = TRUE)
+PlotProp("WF", 0.1, 0)
 
-PlotProp("WF", 0.5, 1)
-PlotProp("WF", 0.5, 0, addAnalysis = TRUE)
-
-
-PlotProp("BD", 0.05, 1)
-PlotProp("BD", 0.05, 0, addAnalysis = TRUE)
+PlotProp("BD", 0.005, 1)
+PlotProp("BD", 0.005, 0, addAnalysis = TRUE)
 
 PlotProp("BD", 0.1, 1)
-PlotProp("BD", 0.1, 0, addAnalysis = TRUE)
+PlotProp("BD", 0.1, 0, addAnalysis = FALSE)
 
-PlotProp("BD", 0.5, 1)
-PlotProp("BD", 0.5, 0, addAnalysis = TRUE)
-
-PlotProp("DB", 0.05, 1)
-PlotProp("DB", 0.05, 0, addAnalysis = TRUE)
+PlotProp("DB", 0.005, 1)
+PlotProp("DB", 0.005, 0, addAnalysis = TRUE)
 
 PlotProp("DB", 0.1, 1)
-PlotProp("DB", 0.1, 0, addAnalysis = TRUE)
+PlotProp("DB", 0.1, 0, addAnalysis = FALSE)
 
-PlotProp("DB", 0.5, 1)
-PlotProp("DB", 0.5, 0)
+stop()
+
 
 selList
 PlotProp(0.05, 5, 0.01, c(0.4,0.45))  

@@ -216,6 +216,59 @@
 \newcommand{\defeq}{\mathrel{\mathop:}=}
 
 \begin{document}
+Mon titre 
+\clearpage
+% Figure weak selection
+\begin{figure}
+\begin{tabular}{ccc}
+\subfigure[Death-Birth]{\includegraphics[type=pdf,ext=.pdf,read=.pdf, width=5cm]{../Programs/R/EXDB_sel0.005_htg0}}
+&
+\subfigure[Birth-Death]{\includegraphics[type=pdf,ext=.pdf,read=.pdf, width=5cm]{../Programs/R/EXBD_sel0.005_htg0}}
+&
+\subfigure[Wright-Fisher]{\includegraphics[type=pdf,ext=.pdf,read=.pdf, width=5cm]{../Programs/R/EXWF_sel0.005_htg0}}
+\end{tabular}
+\caption{Weak selection}
+\label{fig:island_weaksel}
+\end{figure}
+
+% Figure strong selection
+\begin{figure}
+\begin{tabular}{ccc}
+\subfigure[Death-Birth]{\includegraphics[type=pdf,ext=.pdf,read=.pdf, width=5cm]{../Programs/R/EXDB_sel0.1_htg0}}
+&
+\subfigure[Birth-Death]{\includegraphics[type=pdf,ext=.pdf,read=.pdf, width=5cm]{../Programs/R/EXBD_sel0.1_htg0}}
+&
+\subfigure[Wright-Fisher]{\includegraphics[type=pdf,ext=.pdf,read=.pdf, width=5cm]{../Programs/R/EXWF_sel0.1_htg0}}
+\end{tabular}
+\caption{Strong selection}
+\label{fig:island_strongsel}
+\end{figure}
+
+% Figure heterogeneous population
+\begin{figure}
+\begin{tabular}{ccc}
+\subfigure[Death-Birth]{\includegraphics[type=pdf,ext=.pdf,read=.pdf, width=5cm]{../Programs/R/EXDB_sel0.005_htg1}}
+&
+\subfigure[Birth-Death]{\includegraphics[type=pdf,ext=.pdf,read=.pdf, width=5cm]{../Programs/R/EXBD_sel0.005_htg1}}
+&
+\subfigure[Wright-Fisher]{\includegraphics[type=pdf,ext=.pdf,read=.pdf, width=5cm]{../Programs/R/EXWF_sel0.005_htg1}}\end{tabular}
+\caption{Weak selection, heterogeneous population}
+\label{fig:island_htgpop}
+\end{figure}
+
+% Figure heterogeneous population
+\begin{figure}
+\begin{tabular}{ccc}
+\subfigure[Death-Birth]{\includegraphics[type=pdf,ext=.pdf,read=.pdf, width=5cm]{../Programs/R/EXDB_sel0.1_htg1}}
+&
+\subfigure[Birth-Death]{\includegraphics[type=pdf,ext=.pdf,read=.pdf, width=5cm]{../Programs/R/EXBD_sel0.1_htg1}}
+&
+\subfigure[Wright-Fisher]{\includegraphics[type=pdf,ext=.pdf,read=.pdf, width=5cm]{../Programs/R/EXWF_sel0.1_htg1}}\end{tabular}
+\caption{Weak selection, heterogeneous population}
+\label{fig:island_htgpop}
+\end{figure}
+
+\clearpage
 Adaptation of my equations to a subdivided population. Notation, for a quantity $Y$ that depends on two sites ($Y=e$, $d$, $Q$):
 \begin{subequations}
 \begin{align}
