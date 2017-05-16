@@ -1,29 +1,7 @@
 for(i in dev.list())dev.off()
 
-# Graphical parameters
-bgcol <- "transparent"#"transparent"
-fgcol <- "black"
+source("globalGraphParms.R")
 
-par(bg=bgcol, fg=fgcol, col=fgcol, col.axis=fgcol, col.lab=fgcol, col.main=fgcol, col.sub=fgcol)
-mygradient <- c("#234BCD", "#4E579F", "#7A6471", "#A57043", "#D17D15")
-pchs <- c(21,22,23,24,25)
-
-
-# Make color lighter
-Lighten <- function(color, factor=1.2){
-  return(rgb(t(factor*col2rgb(color)), maxColorValue=255))
-}
-# Make color transparent
-MakeTransparent<-function(someColor, alpha=100)
-{
-  newColor <- col2rgb(someColor)
-  apply(newColor, 2, function(curcoldata){rgb(red=curcoldata[1], green=curcoldata[2],
-                                              blue=curcoldata[3],alpha=alpha, maxColorValue=255)})
-}
-
-
-# Convert cm to in
-Cm2In <- function(x){x/2.54}
 
 source("../Mathematica/analytics.R")
 
@@ -129,9 +107,9 @@ PlotProp <- function(upd, sel, htg, ylim=c(0,1), addAnalysis=FALSE, pdf = TRUE, 
     colMut <- mygradient
     
     # Background of the plot region
-    rect(0, ylim[1], max(migList), 1, col = gray(0.9), border = NA)
+    rect(0, ylim[1], max(migList), 1, col = rectColor, border = NA)
     # Add horizontal lines
-    for(i in seq(0,1,by=0.1)) points(c(0, max(migList)), rep(i,2), col=gray(1), lty=3, type="l")
+    for(i in seq(0,1,by=0.1)) points(c(0, max(migList)), rep(i,2), col=rectLines, lty=rectLlty, type="l")
 
     # Add horizontal line for the non-selection value
     points(c(0, max(migList)), rep(p,2), col="black", lty=2, type="l", lwd=1.2)

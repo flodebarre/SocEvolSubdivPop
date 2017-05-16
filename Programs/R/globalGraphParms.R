@@ -1,0 +1,28 @@
+# Graphical parameters
+bgcol <- "transparent"#"transparent"
+fgcol <- "black"
+
+par(bg=bgcol, fg=fgcol, col=fgcol, col.axis=fgcol, col.lab=fgcol, col.main=fgcol, col.sub=fgcol)
+mygradient <- c("#234BCD", "#4E579F", "#7A6471", "#A57043", "#D17D15")
+pchs <- c(21,22,23,24,25)
+
+
+# Make color lighter
+Lighten <- function(color, factor=1.2){
+  return(rgb(t(factor*col2rgb(color)), maxColorValue=255))
+}
+# Make color transparent
+MakeTransparent<-function(someColor, alpha=100)
+{
+  newColor <- col2rgb(someColor)
+  apply(newColor, 2, function(curcoldata){rgb(red=curcoldata[1], green=curcoldata[2],
+                                              blue=curcoldata[3],alpha=alpha, maxColorValue=255)})
+}
+
+# Convert cm to in
+Cm2In <- function(x){x/2.54}
+
+# Rectangle
+rectColor <- gray(0.9) # Background color
+rectLines <- gray(1)   # Color of the horizontal lines
+rectLlty <- 3          # Line type of the horizontal lines
