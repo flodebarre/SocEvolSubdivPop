@@ -86,7 +86,7 @@ PlotProp <- function(upd, sel, htg, ylim=c(0,1), addAnalysis=FALSE, pdf = TRUE, 
       cexpoints <- 1.6 # cex of the points
       cexlab <- 1.6 # cex of the labels
       
-      filename <- paste0("EX", upd, "_sel", sel, "_htg", htg) # Name of the pdf file
+      filename <- paste0('Pics/', "EX", upd, "_sel", sel, "_htg", htg) # Name of the pdf file
 
       pdf(paste0(filename, ".pdf"), width = 4.5, height = 5.5, compress = FALSE) # Open pdf
       if(addTitle) martit <- 2.5 else martit <- 0
@@ -118,7 +118,8 @@ PlotProp <- function(upd, sel, htg, ylim=c(0,1), addAnalysis=FALSE, pdf = TRUE, 
         # Define a function of mig for the specific set of parameters
         tmpP <- function(x) get(paste0("p", upd))(b=mBList[1], c=1, p=p, sel=sel, mut=mutList[imu], m=x, g=0, n=4, d=30, Idself=1, Ieself=0)
         # Plot it
-        curve(tmpP, from=0, to=max(migList)+0.02, col=colMut[imu], add = TRUE, lwd = 2)
+        curve(tmpP, from=0, to=par("usr")[2], #0.8,#max(migList)+0.02,
+              col=colMut[imu], add = TRUE, lwd = 2)
       }
       if(plotData){
         # Simulation Data: extract the relevant data for the set of parameters
@@ -154,20 +155,22 @@ for(sel in selList){
 }
 }
 
+dylm <- 0.15
+ylm <- p + c(-dylm, dylm)
 PlotProp("WF", 0.005, 1)
-PlotProp("WF", 0.005, 0, addAnalysis = TRUE)
+PlotProp("WF", 0.005, 0, addAnalysis = TRUE, ylim = ylm)
 
 PlotProp("WF", 0.1, 1)
 PlotProp("WF", 0.1, 0)
 
 PlotProp("BD", 0.005, 1)
-PlotProp("BD", 0.005, 0, addAnalysis = TRUE)
+PlotProp("BD", 0.005, 0, addAnalysis = TRUE, ylim = ylm)
 
 PlotProp("BD", 0.1, 1)
 PlotProp("BD", 0.1, 0, addAnalysis = FALSE)
 
 PlotProp("DB", 0.005, 1)
-PlotProp("DB", 0.005, 0, addAnalysis = TRUE)
+PlotProp("DB", 0.005, 0, addAnalysis = TRUE, ylim = ylm)
 
 PlotProp("DB", 0.1, 1)
 PlotProp("DB", 0.1, 0, addAnalysis = FALSE)
