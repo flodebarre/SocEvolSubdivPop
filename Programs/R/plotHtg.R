@@ -77,7 +77,7 @@ plotDist <- function(i){
 
   # PROPORTION OF ALTRUISTS IN THE POPULATION
   # nA / (nA + nB)
-PlotProp <- function(upd, sel, htg, ylim=c(0,1), addAnalysis=FALSE, pdf = TRUE, addTitle = FALSE, plotData = TRUE){
+PlotProp <- function(upd, sel, htg, ylim=c(0,1), addAnalysis=FALSE, pdf = TRUE, addTitle = FALSE, plotData = TRUE, muL = mutList, migL = migList){
 
     # Initializations if not pdf
     thecex <- cexpoints <- cexlab <- 1
@@ -101,35 +101,38 @@ PlotProp <- function(upd, sel, htg, ylim=c(0,1), addAnalysis=FALSE, pdf = TRUE, 
     par(las = 1) # Orientation of labels on axes
 
     # Initialize the plot window
-    plot(0, type = "n", xlim = c(0,max(migList)), ylim = ylim, 
+    plot(0, type = "n", xlim = c(0,max(migL)), ylim = ylim, 
          xlab = "", ylab = "", axes = FALSE, frame.plot = FALSE)
     if (addTitle) title(main = paste0("sel=", sel, ", htg=", htg))
-    colMut <- mygradient
+    colMut <- get(paste0("mygradient", length(muL)))
     
     # Background of the plot region
-    rect(0, ylim[1], max(migList), 1, col = rectColor, border = NA)
+    rect(0, ylim[1], max(migL), 1, col = rectColor, border = NA)
     # Add horizontal lines
-    for(i in seq(0,1,by=0.1)) points(c(0, max(migList)), rep(i,2), col=rectLines, lty=rectLlty, type="l")
+    for(i in seq(0,1,by=0.1)) points(c(0, max(migL)), rep(i,2), col=rectLines, lty=rectLlty, type="l")
 
     # Add horizontal line for the non-selection value
-    points(c(0, max(migList)), rep(p,2), col="black", lty=2, type="l", lwd=1.2)
-    for(imu in  seq_along(mutList)){
+    points(c(0, max(migL)), rep(p,2), col="black", lty=2, type="l", lwd=1.2)
+    for(imu in  seq_along(muL)){
       if(addAnalysis){ # Add analytical prediction
         # Define a function of mig for the specific set of parameters
-        tmpP <- function(x) get(paste0("p", upd))(b=mBList[1], c=1, p=p, sel=sel, mut=mutList[imu], m=x, g=0, n=4, d=30, Idself=1, Ieself=0)
+      tmpP <- function(x) get(paste0("p", upd))(b=mBList[1], c=1, p=p, sel=sel, mut=muL[imu], m=x, g=0, n=4, d=30, Idself=1, Ieself=0)
         # Plot it
-        curve(tmpP, from=0, to=par("usr")[2], #0.8,#max(migList)+0.02,
+        curve(tmpP, from=0, to=0.9,#par("usr")[2], 
               col=colMut[imu], add = TRUE, lwd = 2)
       }
       if(plotData){
         # Simulation Data: extract the relevant data for the set of parameters
-        subdata <- alldata[alldata$mu == mutList[imu] & alldata$upd == upd,]
-        sub <- subdata[subdata$sel== sel & subdata$htg==htg, ]
-        # Plot estimated frequency
-        points(sub$mig, sub$pA, col = colMut[imu], type="p", pch=pchs[imu], cex = cexpoints, bg=MakeTransparent(colMut[imu]))
-        # Plot CI
-        arrows(sub$mig, sub$pA - sub$dci, sub$mig, sub$pA + sub$dci, 
-               col = colMut[imu], angle = 90, length = 0.075, code = 3)
+        subdata <- alldata[alldata$mu == muL[imu] & alldata$upd == upd,]
+        sub1 <- subdata[subdata$sel== sel & subdata$htg==htg, ]
+        for(imig in seq_along(migL)){
+          sub <- sub1[sub1$mig == migL[imig], ]
+          # Plot estimated frequency
+          points(sub$mig, sub$pA, col = colMut[imu], type="p", pch=pchs[imu], cex = cexpoints, bg=MakeTransparent(colMut[imu]))
+          # Plot CI
+          arrows(sub$mig, sub$pA - sub$dci, sub$mig, sub$pA + sub$dci, 
+                 col = colMut[imu], angle = 90, length = 0.075, code = 3)
+        }
       }
     }
     axis(1, pos = ylim[1], col=fgcol)
@@ -155,25 +158,27 @@ for(sel in selList){
 }
 }
 
+themutList <- c(0.005, 0.010, 0.100, 0.250)
+themigList <- c(0.01, 0.05, 0.10, 0.15, 0.20, 0.30, 0.40, 0.50, 0.60, 0.70, 0.80, 0.90)
 dylm <- 0.15
 ylm <- p + c(-dylm, dylm)
-PlotProp("WF", 0.005, 1)
-PlotProp("WF", 0.005, 0, addAnalysis = TRUE, ylim = ylm)
+PlotProp("WF", 0.005, 1, muL = themutList, ylim = ylm)
+PlotProp("WF", 0.005, 0, addAnalysis = TRUE, ylim = ylm, muL = themutList, migL = themigList)
 
-PlotProp("WF", 0.1, 1)
-PlotProp("WF", 0.1, 0)
+PlotProp("WF", 0.1, 1, muL = themutList, migL = themigList)
+PlotProp("WF", 0.1, 0, muL = themutList, migL = themigList)
 
-PlotProp("BD", 0.005, 1)
-PlotProp("BD", 0.005, 0, addAnalysis = TRUE, ylim = ylm)
+PlotProp("BD", 0.005, 1, muL = themutList, migL = themigList)
+PlotProp("BD", 0.005, 0, addAnalysis = TRUE, ylim = ylm, muL = themutList, migL = themigList)
 
-PlotProp("BD", 0.1, 1)
-PlotProp("BD", 0.1, 0, addAnalysis = FALSE)
+PlotProp("BD", 0.1, 1, muL = themutList, migL = themigList)
+PlotProp("BD", 0.1, 0, addAnalysis = FALSE, muL = themutList, migL = themigList)
 
-PlotProp("DB", 0.005, 1)
-PlotProp("DB", 0.005, 0, addAnalysis = TRUE, ylim = ylm)
+PlotProp("DB", 0.005, 1, muL = themutList, migL = themigList)
+PlotProp("DB", 0.005, 0, addAnalysis = TRUE, ylim = ylm, muL = themutList, migL = themigList)
 
-PlotProp("DB", 0.1, 1)
-PlotProp("DB", 0.1, 0, addAnalysis = FALSE)
+PlotProp("DB", 0.1, 1, muL = themutList, migL = themigList)
+PlotProp("DB", 0.1, 0, addAnalysis = FALSE, muL = themutList, migL = themigList)
 
 stop()
 
