@@ -207,6 +207,7 @@
 \newcommand{\Qin}{Q_{\textrm{in}}}
 \newcommand{\Qout}{Q_{\textrm{out}}}
 
+\newcommand{\ndemes}{N_D}
 % FLUSH FIGURES IN THE END
 \usepackage[tablesonly]{endfloat}
 
@@ -227,9 +228,67 @@ Here, we relax the assumption of rare or absent mutation and explore how imperfe
 
 \section{Model and methods}
 
+\subsection{Assumptions}
+
+We consider a population of size $N$, subdivided into $\ndemes$~demes, each hosting exactly $n$ individuals (\ie, containing $n$ sites, each of which is occupied by exactly $1$ individual; we have $n \ndemes = N$). Each site has a unique label $i$, $1\leq i \leq N$. There are two types of individuals in the population, altruists and defectors. Reproduction is asexual. Parents transmit their strategy to their offspring with probability $1-\mu$; this transmission can be genetic or cultural (vertical cultural transmission), but for simplicity, we refer to the parameter $\mu$ as a mutation probability. With probability $\mu$, offspring do not inherit their strategy from their parent but instead get one randomly: with probability $p$, they become altruists, with probability $1-p$ they become defectors. We call the parameter $p$ the mutation bias. 
+
+% Social interactions and effect on fecundity (simple version). 
+Social interactions take place within each deme; each individual interacts with the $n-1$ other deme members. We assume that social interactions affect individual fecundity, whose baseline is set to $1$. Each interaction with an altruist increases an individual's fecundity by $\omega b$, while altruists pay a fecundity cost $\omega c$. The parameter $\omega$ scales the relative effect of social interactions on fecundity, and is assumed to be small ($\omega \ll 1$). For instance, in a deme with $k$ altruists, an altruist has a fecundity equal to $1 + \omega \left( (k-1) b - c \right)$, while a defector has a fecundity equal to $1 + \omega k b$. Although these assumptions may seem restrictive, the same fecundities are obtained with a generic fecundity function, after linearization, under the assumption that altruists and defectors are phenotypically close (see \hl{APPENDIX} for details). \\
+Denoting by $e_{ij}$ the interaction probability between individuals living at sites $i$ and $j$, we have
+\begin{subequations}
+\begin{equation}\label{eq:defE}
+e_{ij} = \begin{cases}
+ 0 & \textrm{if $i=j$;}\\
+ \frac{1}{n-1} & \textrm{if $i\neq j$ and both sites are in the same deme;}\\
+ 0 & \textrm{if the two sites are in different demes.} 
+\end{cases}
+\end{equation}
+
+% Dispersal - emigration
+Offspring remain in the parental deme with probability $1-m$; when they do, they land on any site of the deme with equal probability (including the very site of their parent). With probability $m$, offspring emigrate to a different deme, chosen uniformly at random among the other demes. Denoting by $d_{ij}$ the probability of moving from site $i$ to site $j$, we have
+\begin{equation}\label{eq:defD}
+d_{ij} = \begin{cases}
+ \frac{1-m}{n} & \textrm{if both sites are in the same deme;}\\
+ \frac{m}{(\ndemes-1) n} & \textrm{if the two sites are in different demes.} 
+\end{cases}
+\end{equation}
+\end{subequations}
+
+% Life-cycles
+The way the population is updated from one time step to the next depends on the chosen life-cycle (updating rule). We will specifically explore three different life-cycles. At the beginning of each step of each life-cycle, all individuals produce offspring, that can be mutated; then these juveniles move, within the parental deme or outside of it, and land on a site. The next events occurring during the time step depend on the life-cycle:
+\begin{description}
+\item[Moran Birth-Death]: One of the newly created juveniles is chosen at random; it kills the adult who was living at the site, and replaces it; all other juveniles die. 
+\item[Moran Death-Birth]: One of the adults is chosen to die (uniformly at random among all adults). It is replaced by one of the juveniles who had landed in its site. All other juveniles die. 
+\item[Wright-Fisher]: All the adults die. At each site of the entire population, one of the juveniles that landed there is chosen and establishes at the site. 
+\end{description}
+  
+\section{Results}
+
+\subsection{Expected proportion of altruists}
+
+We want to compute the expected proportion of altruists in the population. Some steps can be done without specifying the life-cycle. We represent the state of the population at a given time $t$ using indicator variables $X_i(t)$, $1\leq i \leq N$, equal to~$1$ if the individual living at site $i$ at time $t$ is an altruist, and equal to~$0$ if it is a defector; these indicator variables are gathered in a $N$-long vector $\mathbf{X}(t)$. The set of all possible population states is $\Omega = \{0,1\}^N$. The proportion of altruists in the population is written $\overline{X}(t) = \sum_{i=1}^N X_i(t)$. We denote by $B_{ji}(X(t), \omega)$, written $B_{ji}$ for simplicity, the probability that the individual at site $j$ at time $t+1$ is the newly established offspring of the individual living at site $i$ at time $t$. We denote by $D_{i}(X(t), \omega)$ ($D_i$ for simplicity) the probability that the individual living at site $i$ at time $t$ has been replaced (\ie, died) at time $t+1$. Both quantities depend on the chosen life-cycle\todo{in a table?}. Since a dead individual is immediately replaced by one new individual, 
+\begin{equation}
+D_i = \sum_{j=1}^N B_{ij}
+\end{equation}
+holds for all sites $i$\todo{really needed?}.
 
 
- 
+Given that the population is in state $\mathbf{X}(t)$ at time $t$, the expected frequency of altruists at time $t+1$ is given by
+\begin{subequations}
+\begin{equation}\label{eq:conditionalchange}
+\Esp{\overline{X}(t+1) | \mathbf{X}(t)} = %
+\frac{1}{N} \sum_{i=1}^N \left[ \sum_{j=1}^N B_{ij} \left( X_j (1-\mu) + \mu p \right) + (1-D_i) X_i \right]. 
+\end{equation}
+\end{subequations}
+The first term within the brackets corresponds to births; the type of the individual living at $i$ at time $t+1$ then depends on the type of its parent (living at site $j$), and on whether mutation occurred. The second term corresponds to the survival of the individual living at site $i$. 
+
+Given that there is no absorbing population state (a lost strategy can always be recreated by mutation), there is a stationary distribution of population states, and the expected frequency of altruists does not change anymore; we denote by $\xi(\mathbf{X}, \omega, \mu)$ the probability that the population is in state $\mathbf{X}$, given the strength of selection $\omega$ and the mutation probability $\mu$. Taking the expectation of \eqref{eq:conditionalchange} ($\Esp{\overline{X}} = \sum_{X \in \Omega} \overline{X}\xi(\mathbf{X}, \omega, \mu)$), we obtain, after reorganizing:
+\begin{equation}\label{eq:statdist}
+0 = \frac{1}{N} \sum_{X\in \Omega} \sum_{i=1}^N \left[ \sum_{j=1}^N B_{ij} \left( X_j (1-\mu) + \mu p \right) -D_i X_i \right] \xi(\mathbf{X}, \omega, \mu). 
+\end{equation}
+
+Now, we use the assumption of weak selection ($\omega \ll 1$)
+
 % Figure weak selection
 \begin{figure}
 \begin{tabular}{ccc}
