@@ -267,10 +267,18 @@ The way the population is updated from one time step to the next depends on the 
 \subsection{Expected proportion of altruists}
 
 We want to compute the expected proportion of altruists in the population. Some steps can be done without specifying the life-cycle. We represent the state of the population at a given time $t$ using indicator variables $X_i(t)$, $1\leq i \leq N$, equal to~$1$ if the individual living at site $i$ at time $t$ is an altruist, and equal to~$0$ if it is a defector; these indicator variables are gathered in a $N$-long vector $\mathbf{X}(t)$. The set of all possible population states is $\Omega = \{0,1\}^N$. The proportion of altruists in the population is written $\overline{X}(t) = \sum_{i=1}^N X_i(t)$. We denote by $B_{ji}(X(t), \omega)$, written $B_{ji}$ for simplicity, the probability that the individual at site $j$ at time $t+1$ is the newly established offspring of the individual living at site $i$ at time $t$. We denote by $D_{i}(X(t), \omega)$ ($D_i$ for simplicity) the probability that the individual living at site $i$ at time $t$ has been replaced (\ie, died) at time $t+1$. Both quantities depend on the chosen life-cycle\todo{in a table?}. Since a dead individual is immediately replaced by one new individual, 
-\begin{equation}
+\begin{subequations}
+\begin{equation}\label{eq:DBequiv}
 D_i = \sum_{j=1}^N B_{ij}
 \end{equation}
-holds for all sites $i$\todo{really needed?}.
+holds for all sites $i$\todo{really needed?}. The structure of the population is also such that in the absence of selection ($\omega = 0$), all individuals have the same probability of dying and the same probability of having successful offspring (\ie, offspring that become adults), so that
+\begin{equation}\label{eq:DBRV}
+D_i^0 = \sum_{j=1}^N B_{ji}^0, 
+\end{equation}
+where the $^0$ subscript means that the quantities are evaluated for $\omega = 0$. 
+(The difference with \eqref{eq:DBequiv} is that we are now considering offspring produced by $i$ landing on $j$).
+
+\end{subequations}
 
 
 Given that the population is in state $\mathbf{X}(t)$ at time $t$, the expected frequency of altruists at time $t+1$ is given by
@@ -287,7 +295,7 @@ Given that there is no absorbing population state (a lost strategy can always be
 0 = \frac{1}{N} \sum_{X\in \Omega} \sum_{i=1}^N \left[ \sum_{j=1}^N B_{ij} \left( X_j (1-\mu) + \mu p \right) -D_i X_i \right] \xi(\mathbf{X}, \omega, \mu). 
 \end{equation}
 
-Now, we use the assumption of weak selection ($\omega \ll 1$)
+Now, we use the assumption of weak selection ($\omega \ll 1$). First, we note that in the absence of selection ($\omega = 0$), the population is at a mutation-drift balance, and the expected state of every site $i$ is then $\Espzero{X_i} = p$. 
 
 % Figure weak selection
 \begin{figure}
