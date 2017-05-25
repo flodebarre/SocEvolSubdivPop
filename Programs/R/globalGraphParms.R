@@ -23,6 +23,7 @@ MakeTransparent<-function(someColor, alpha=100)
                                               blue=curcoldata[3],alpha=alpha, maxColorValue=255)})
 }
 
+mgppdf <- c(3, .6, 0) # length and position of the ticks
 # Convert cm to in
 Cm2In <- function(x){x/2.54}
 

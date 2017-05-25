@@ -161,6 +161,7 @@
 \newcommand{\deriv}[2]{\partial_{#2}\!{#1}\,}
 %\newcommand{\deriv}[2]{\left.\frac{\partial #1}{\partial #2}\right |_{#2=0}}
 \newcommand{\derivv}[3]{\left.\frac{\partial #1}{\partial #2}\right |_{#3=0}} % Version of \deriv with different evaluation
+\newcommand{\derivvv}[3]{\left.\frac{\partial #1}{\partial #2}\right |_{#3}} % Version of \deriv with different evaluation
 \newcommand{\sderivv}[3]{\partial_{#2}\!{#1}\,} % Version of \deriv with different evaluation, shorter
 
 % Expectations and Probabilities
@@ -169,7 +170,8 @@
 \newcommand{\Espt}[2]{\mathbb{E}_{#2}\big[ #1\big]}%{\mathbb{E}\left[ #1\right]}
 \newcommand{\Prob}[1]{\mathbb{P}\left[ #1\right]}
 \newcommand{\Probzero}[1]{\mathbb{P}_0\left[ #1\right]}
-  
+ 
+\newcommand{\bigO}[1]{O\left( #1 \right)}
 \newcommand{\Tr}[1]{\textrm{Tr}\left( #1\right)}
 
 \newcommand{\subst}[1]{\scriptsize \substack{ #1}}
@@ -183,6 +185,9 @@
 \newcommand{\bb}{\mathsf{b}}
 \newcommand{\cc}{\mathsf{c}}
 \newcommand{\dd}{\mathsf{d}}
+
+\newcommand{\direct}{\mathrm{D}}
+\newcommand{\indirect}{\mathrm{I}}
 
 \newcommand{\makemat}[1]{\mathbf{#1}}
 \newcommand{\Pin}{P_{\textrm{in}}}
@@ -219,6 +224,7 @@
 \begin{document}
 Mon titre 
 \clearpage
+\linenumbers
 \section{Introduction}
 smaller groups, smaller emigration probabilites, both leading to increased within group relatedness are more conducive to the evolution of altruistic behavior. Living next to your kin however also means competing against them; the evolution of social traits hence depends on the balance between the positive effects of interactions with related individuals and the detrimental consequences of kin competition. With generations are synchronous (Wright-Fisher model), in infinite populations, Talor REF has shown that compensation + Gardner and Rodrigues. 
 
@@ -233,9 +239,8 @@ Here, we relax the assumption of rare or absent mutation and explore how imperfe
 We consider a population of size $N$, subdivided into $\ndemes$~demes, each hosting exactly $n$ individuals (\ie, containing $n$ sites, each of which is occupied by exactly $1$ individual; we have $n \ndemes = N$). Each site has a unique label $i$, $1\leq i \leq N$. There are two types of individuals in the population, altruists and defectors. Reproduction is asexual. Parents transmit their strategy to their offspring with probability $1-\mu$; this transmission can be genetic or cultural (vertical cultural transmission), but for simplicity, we refer to the parameter $\mu$ as a mutation probability. With probability $\mu$, offspring do not inherit their strategy from their parent but instead get one randomly: with probability $p$, they become altruists, with probability $1-p$ they become defectors. We call the parameter $p$ the mutation bias. 
 
 % Social interactions and effect on fecundity (simple version). 
-Social interactions take place within each deme; each individual interacts with the $n-1$ other deme members. We assume that social interactions affect individual fecundity, whose baseline is set to $1$. Each interaction with an altruist increases an individual's fecundity by $\omega b$, while altruists pay a fecundity cost $\omega c$. The parameter $\omega$ scales the relative effect of social interactions on fecundity, and is assumed to be small ($\omega \ll 1$). For instance, in a deme with $k$ altruists, an altruist has a fecundity equal to $1 + \omega \left( (k-1) b - c \right)$, while a defector has a fecundity equal to $1 + \omega k b$. Although these assumptions may seem restrictive, the same fecundities are obtained with a generic fecundity function, after linearization, under the assumption that altruists and defectors are phenotypically close (see \hl{APPENDIX} for details). \\
-Denoting by $e_{ij}$ the interaction probability between individuals living at sites $i$ and $j$, we have
-\begin{subequations}
+Social interactions take place within each deme; each individual interacts with the $n-1$ other deme members. We assume that social interactions affect individual fecundity, whose baseline is set to $1$. Each interaction with an altruist increases an individual's fecundity by $\omega \bb$, while altruists pay a fecundity cost $\omega \cc$. The parameter $\omega$ scales the relative effect of social interactions on fecundity, and is assumed to be small ($\omega \ll 1$). \\
+Denoting by $e_{ij}$ the interaction probability between individuals living at sites $i$ and $j$, we have\todo{attention, maybe rather $1$ than $1/(n-1)$}
 \begin{equation}\label{eq:defE}
 e_{ij} = \begin{cases}
  0 & \textrm{if $i=j$;}\\
@@ -243,6 +248,11 @@ e_{ij} = \begin{cases}
  0 & \textrm{if the two sites are in different demes.} 
 \end{cases}
 \end{equation}
+Given our assumptions and with this notation, the fecundity of the individual living at site $k$ is given by 
+\begin{equation}
+f_k(\mathbf{X}, \omega) = 1 + \omega \left( \sum_{\ell =1}^N e_{\ell k} \bb X_{\ell} - \cc X_k \right).
+\end{equation}
+Although our assumptions may seem restrictive (unconditional benefits, additive effects), the same fecundities are obtained with a generic fecundity function, after linearization, under the assumption that altruists and defectors are phenotypically close (see \hl{APPENDIX} for details).
 
 % Dispersal - emigration
 Offspring remain in the parental deme with probability $1-m$; when they do, they land on any site of the deme with equal probability (including the very site of their parent). With probability $m$, offspring emigrate to a different deme, chosen uniformly at random among the other demes. Denoting by $d_{ij}$ the probability of moving from site $i$ to site $j$, we have
@@ -252,7 +262,6 @@ d_{ij} = \begin{cases}
  \frac{m}{(\ndemes-1) n} & \textrm{if the two sites are in different demes.} 
 \end{cases}
 \end{equation}
-\end{subequations}
 
 % Life-cycles
 The way the population is updated from one time step to the next depends on the chosen life-cycle (updating rule). We will specifically explore three different life-cycles. At the beginning of each step of each life-cycle, all individuals produce offspring, that can be mutated; then these juveniles move, within the parental deme or outside of it, and land on a site. The next events occurring during the time step depend on the life-cycle:
@@ -273,9 +282,9 @@ D_i = \sum_{j=1}^N B_{ij}
 \end{equation}
 holds for all sites $i$\todo{really needed?}. The structure of the population is also such that in the absence of selection ($\omega = 0$), all individuals have the same probability of dying and the same probability of having successful offspring (\ie, offspring that become adults), so that
 \begin{equation}\label{eq:DBRV}
-D_i^0 = \sum_{j=1}^N B_{ji}^0, 
+D_i^0 = \sum_{j=1}^N B_{ji}^0 = B^*, 
 \end{equation}
-where the $^0$ subscript means that the quantities are evaluated for $\omega = 0$. 
+where the $^0$ subscript means that the quantities are evaluated for $\omega = 0$; this also implies that $B_{ij}^0$ and $D_i^0$ do not depend on the state $\mathbf{X}$ of the population. For the Moran life-cycles, $B^*=1/N$, while for the Wright-Fisher life-cycle, $B^*=1$. 
 (The difference with \eqref{eq:DBequiv} is that we are now considering offspring produced by $i$ landing on $j$).
 
 \end{subequations}
@@ -295,8 +304,96 @@ Given that there is no absorbing population state (a lost strategy can always be
 0 = \frac{1}{N} \sum_{X\in \Omega} \sum_{i=1}^N \left[ \sum_{j=1}^N B_{ij} \left( X_j (1-\mu) + \mu p \right) -D_i X_i \right] \xi(\mathbf{X}, \omega, \mu). 
 \end{equation}
 
-Now, we use the assumption of weak selection ($\omega \ll 1$). First, we note that in the absence of selection ($\omega = 0$), the population is at a mutation-drift balance, and the expected state of every site $i$ is then $\Espzero{X_i} = p$. 
+Now, we use the assumption of weak selection ($\omega \ll 1$) and consider the first-order expansion of \eqref{eq:statdist} for $\omega$ close to $0$. First, we note that in the absence of selection ($\omega = 0$), the population is at a mutation-drift balance, and the expected state of every site $i$ is then $\Espzero{X_i} = \sum_{X\in \Omega} X_i \xi(X, 0, \mu)= p$, the mutation bias. Secondly, we further expand derivatives of $B_{ji}$ and $D_i$ using the chain rule, using the variables $f_k$ ($1\leq k \leq N$), corresponding to individual fecundities (also, recall that $f_k=1$ when $\omega=0$). \hl{Finally, we use the shorthand notation $\deriv{}{x}$ to denote $\derivv{}{x}{x}$}. Thirdly, we note that for all the life-cycles that we consider, the number of deaths in the population during one time step does not depend on population composition (exactly $1$ death for the Moran life-cycles, and exactly $N$ for the Wright-Fisher life-cycle), so that $\deriv{\sum_{i,j=1}^N B_{ij}}{\omega}$ does not depend on $\omega$. 
+After simplification and reorganization, the first order expansion of \eqref{eq:statdist} yields
+%
+%\begin{equation}
+%\begin{split}
+%0 =& \frac{1}{N} \sum_{X\in \Omega} \sum_{i=1}^N \left[ \sum_{j=1}^N B_{ij}^0 \left( X_j (1-\mu) + \mu p \right) -D_i^0 X_i \right] \xi(\mathbf{X}, \omega, 0) \\
+%%
+%& + \frac{1}{N} \sum_{X\in \Omega} \sum_{i=1}^N \left[ \sum_{j=1}^N \deriv{B_{ij}}{\omega} \left( X_j (1-\mu) + \mu p \right) - \deriv{D_i}{\omega} X_i \right] \xi(\mathbf{X}, \omega, 0) \\ 
+%%
+%& + \frac{1}{N} \sum_{X\in \Omega} \sum_{i=1}^N \left[ \sum_{j=1}^N B_{ij}^0 \left( X_j (1-\mu) + \mu p \right) -D_i^0 X_i \right] \deriv{\xi(\mathbf{X}, \omega, \mu)}{\omega} \\
+%%
+%&+ \bigO{\omega^2}. 
+%\end{split}
+%\end{equation}
+%\begin{equation}
+%\begin{split}
+%0 =&  \frac{1}{N} \sum_{X\in \Omega} \sum_{i=1}^N \left( \sum_{j=1}^N \deriv{B_{ji}}{\omega}  - \deriv{D_i}{\omega}  \right) X_i \xi(\mathbf{X}, \omega, 0) \\ 
+%%
+%&+ \frac{1}{N} \sum_{X\in \Omega} \sum_{i=1}^N  \sum_{j=1}^N \deriv{B_{ij}}{\omega} \mu \left( p - X_j\right)  \xi(\mathbf{X}, \omega, 0) \\ 
+%%
+%%& + \frac{1}{N} \sum_{X\in \Omega} \sum_{i=1}^N \left[ \sum_{j=1}^N B_{ji}^0 X_i  -D_i^0 X_i \right] \deriv{\xi(\mathbf{X}, \omega, \mu)}{\omega} 
+%%
+%& + B^* \mu \left( p - \deriv{\Esp{\overline{X}}}{\omega} \right)
+%%
+%+ \bigO{\omega^2}. 
+%\end{split}
+%\end{equation}
+%
+\begin{equation}\label{eq:weaksel1}
+\begin{split}
+0 =&  \frac{1}{N}  \sum_{i,k=1}^N \Bigg[  \derivvv{\left(\sum_{j=1}^N (1-\mu) B_{ji}  - D_i \right)}{f_k}{f_k=1}  \\ 
+%
+&  \qquad \qquad \times \left( \sum_{\ell =1}^N e_{\ell k} \bb \sum_{X\in \Omega} X_{\ell} X_i \xi(\mathbf{X}, 0, \mu) - c \sum_{X\in \Omega} X_k X_i \xi(\mathbf{X}, 0, \mu) \right)  \Bigg] \\ 
+%
+%&- \frac{\mu }{N} \sum_{X\in \Omega} \sum_{i, k=1}^N   \derivvv{\sum_{j=1}^N B_{ji}}{f_k}{f_k=1} \left( \sum_{\ell =1}^N e_{\ell k} X_{\ell} X_i - c X_k X_i\right)   \xi(\mathbf{X}, 0, \mu) \\ 
+%
+%& + \frac{1}{N} \sum_{X\in \Omega} \sum_{i=1}^N \left[ \sum_{j=1}^N B_{ji}^0 X_i  -D_i^0 X_i \right] \deriv{\xi(\mathbf{X}, \omega, \mu)}{\omega} 
+%
+& - B^* \mu \derivv{\Esp{\overline{X}}}{\omega}{\omega} 
+%
++ \bigO{\omega^2}. 
+\end{split}
+\end{equation}
+The terms $\sum_{X\in\Omega} X_i X_j \xi(\mathbf{X}, 0, \mu)$, that we will also denote by $P_{ij}$, correspond to the expected state of the pair of sites ($i$, $j$), evaluated in the absence of selection ($\omega = 0$). We can also replace these terms by 
+\begin{equation}\label{eq:QP}
+Q_{ij} = \frac{P_{ij} - p^2}{p (1-p)};
+\end{equation}
+recursions on $P_{ij}$ will reveal that $Q_{ij}$ can be interpreted as a probability of identity by descent, \ie, the probability that the individuals at sites $i$ and $j$ have a common ancestor and that no mutation has occurred on either lineage since the ancestor. 
 
+Finally, we obtain a first-order approximation of the expected frequency of altruists in the population with 
+\begin{equation}
+\Esp{\overline{X}} = p + \omega \, \deriv{\Esp{\overline{X}}}{\omega} + \bigO{\omega^2},
+\end{equation}
+where $\deriv{\Esp{\overline{X}}}{\omega}$ is a shorthand notation for $\derivv{\Esp{\overline{X}}}{\omega}{\omega}$, which is given by \eqref{eq:weaksel1}. 
+
+For each of the life-cycles that we consider, we can express $\deriv{\Esp{\overline{X}}}{\omega}$ as follows:
+\begin{equation}
+\deriv{\Esp{\overline{X}}}{\omega} = \bb \left( \beta_{\direct} - \beta_{\indirect} \right) - \cc \left( \gamma_{\direct} - \gamma_{\indirect} \right),
+\end{equation} 
+where the subscript $_{\direct}$ refers to ``direct'' effects, and the subscript $_{\indirect}$ to ``indirect'' effects. These indirect effects correspond to (kin) competition: by providing a benefit to a deme-mate and thereby increasing its fecundity, a focal altruist indirectly harms others by reducing their relative fecundity. Similarly, paying a fecundity cost indirectly helps others because it increases their relative fecundities.  
+
+\subsection{Identity by descent}
+
+We need to find equations for the expected state of pairs of sites ($P_{ij}$) and probabilities of identity by descent ($Q_{ij}$), quantities that are evaluated in the absence of selection (\ie, for $\omega=0$). To do so, we follow the same steps as in the previous section: we first write expectations at the next time step given a current state, and we then take the expectation of this\todo{appendix}. Here we focus on identity by descent $Q_{ij}$, but expectations of the state of pairs of sites $P_{ij}$ are simply recovered using \eqref{eq:QP}. 
+
+Because of the structure of the population, there are only three different values of $Q_{ij}$:
+\begin{equation}
+Q_{ij} = 
+\begin{cases}
+1 & \textrm{when $i=j$;}\\
+%
+\Qin & \textrm{when $i\neq j$ and both sites are in the same deme;}\\
+%
+\Qout & \textrm{when sites $i$ and $j$ are in different demes.}
+\end{cases}
+\end{equation}
+
+\subsubsection{Moran model} 
+
+\begin{figure}\label{fig:Q}
+\def \wpic {6cm}
+\begin{tabular}{cc}
+\subfigure[\label{fig:sub:QM}Moran]{\includegraphics[width = \wpic]{../Programs/R/Pics/QplotM.pdf}}
+&
+\subfigure[\label{fig:sub:QWF}Wight-Fisher]{\includegraphics[width = \wpic]{../Programs/R/Pics/QplotWF.pdf}}
+\end{tabular}
+\caption{Probabilities of identity by descent, for two different individuals within the same deme ($\Qin$, full curves) and two individuals in different demes ($\Qout$, dashed curves), for different values of the mutation probability $\mu$ ($10^{-4}$, $0.005$, $0.1$), and for the two types of life-cycles: Moran \subref{fig:sub:QM} and Wright-Fisher \subref{fig:sub:QWF}. Other parameters: $n=4$ individuals per deme, $\ndemes = 30$ demes. }
+\end{figure}
+
+\section{Figures}
 % Figure weak selection
 \begin{figure}
 \begin{tabular}{ccc}
