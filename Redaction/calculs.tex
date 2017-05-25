@@ -193,6 +193,7 @@
 \newcommand{\Pin}{P_{\textrm{in}}}
 \newcommand{\Pout}{P_{\textrm{out}}}
 
+\newcommand{\Moran}{\textrm{M}}
 \newcommand{\BD}{\textrm{BD}}
 \newcommand{\DB}{\textrm{DB}}
 \newcommand{\WF}{\textrm{WF}}
@@ -381,9 +382,43 @@ Q_{ij} =
 \end{cases}
 \end{equation}
 
-\subsubsection{Moran model} 
+\subsubsection{Moran updating} 
 
-\begin{figure}\label{fig:Q}
+\begin{subequations}
+\begin{align}
+\Qin^{\Moran} &= \frac{(1-\mu ) \left(m + \mu  (d (1-m)-1)\right)}{(1-\mu ) m (d \mu  (n-1)+1)+(d-1) \mu  (\mu  (n-1)+1)},\\
+%
+%
+\Qout^{\Moran} & = \frac{(1-\mu ) m}{(1-\mu ) m (d \mu  (n-1)+1)+(d-1) \mu  (\mu  (n-1)+1)}.
+\end{align}
+\end{subequations}
+%
+The probability that two different deme-mates are identical by descent, $\Qin^{\Moran}$, monotonically decreases with the emigration probability $m$, while  $\Qout^{\Moran}$ monotonically increases with $m$ (see figure~\ref{fig:Q}\subref{fig:sub:QM}). 
+
+We confirm that $\Qin^{\Moran}$ and $\Qout^{\Moran}$ are equal to $1$ when the mutation probability $\mu$ tends to $0$; in the absence of mutation indeed, the population ends up fixed for one of the two types, and all individuals are identical by descent. However, trouble arises if we also want to consider infinite population (when the number of demes $\ndemes \to \infty$), because the order of limits matters. %  ($\lim_{d\to\infty} \lim_{\mu\to0} \Qin^{M} \neq  \lim_{\mu\to0} \lim_{d\to\infty}   \Qin^{M}$).
+For instance, $\lim_{d\to \infty} \Qout^{M}=0$. 
+
+\subsubsection{Wright-Fisher updating}
+
+\begin{subequations}
+\begin{align}
+\Qin^{\WF} &= \frac{-d + M_1 + M_2}{(n-1) d +M_1 + M_2}, \\
+\Qout^{\WF} & = \frac{-\frac{1}{d-1}M_1 + M2}{(n-1) d +M_1 + M_2},
+\end{align}
+with
+\begin{align}
+M_1 &= \frac{d-1}{1-\frac{(1-\mu )^2 (d (1-m)-1)^2}{(d-1)^2}} \textrm{, and}\\ 
+M_2 &= \frac{1}{1-(1-\mu)^2}.
+\end{align}
+\end{subequations}
+
+Here, $\Qin^{\WF}$ decreases until $m=m_c = \frac{d-1}{d}$, then increases again, while $\Qout^{WF}$ follows the opposite pattern. The threshold value $m_c$ corresponds to an emigration probability so high that an individual's offspring is as likely to land in its parent's deme as in any other deme.
+
+The two probabilities of identity by descent go to $1$ when $\mu \to 1$. When the number of demes is very large ($d\to \infty$) \hl{blabal}
+
+Also, because more sites (all of them, actually) are updated at each time step, $\Qin$ is lower for the Wright-Fisher updating than for a Moran updating, under which only one site is updated at each time step (see figure~\ref{fig:Q}). 
+
+\begin{figure}
 \def \wpic {6cm}
 \begin{tabular}{cc}
 \subfigure[\label{fig:sub:QM}Moran]{\includegraphics[width = \wpic]{../Programs/R/Pics/QplotM.pdf}}
@@ -391,6 +426,7 @@ Q_{ij} =
 \subfigure[\label{fig:sub:QWF}Wight-Fisher]{\includegraphics[width = \wpic]{../Programs/R/Pics/QplotWF.pdf}}
 \end{tabular}
 \caption{Probabilities of identity by descent, for two different individuals within the same deme ($\Qin$, full curves) and two individuals in different demes ($\Qout$, dashed curves), for different values of the mutation probability $\mu$ ($10^{-4}$, $0.005$, $0.1$), and for the two types of life-cycles: Moran \subref{fig:sub:QM} and Wright-Fisher \subref{fig:sub:QWF}. Other parameters: $n=4$ individuals per deme, $\ndemes = 30$ demes. }
+\label{fig:Q}
 \end{figure}
 
 \section{Figures}
