@@ -155,8 +155,8 @@
 %\geometry{textwidth=0.65\paperwidth}
 %%%
 
-\newcommand{\ie}{\textit{i.\ e.\ }}
-\newcommand{\eg}{\textit{e.\ g.\ }}
+\newcommand{\ie}{\textit{i.\!e.\!}}
+\newcommand{\eg}{\textit{e.\!g.\!}}
 
 \newcommand{\deriv}[2]{\partial_{#2}\!{#1}\,}
 %\newcommand{\deriv}[2]{\left.\frac{\partial #1}{\partial #2}\right |_{#2=0}}
@@ -227,12 +227,16 @@ Mon titre
 \clearpage
 \linenumbers
 \section{Introduction}
-Hamilton 1964 viscous (low dispersal) ``giving-traits'' more common in viscous population. Notion that tighter links between individuals favors the evolution of altruism has been shown to hold (othsuki et autres). The rationale behind this is that altruism is favored when altruists interact more with altruists than defectors do; the more viscous the population, the more likely it is that.
+In his pioneering work on the evolution of social behavior, Hamilton REF 1964 suggested that limited dispersal would favor the evolution of altruism. This notion, that tighter links between individuals favor altruistic behavior, has been shown to hold in a number of population structures (?subdivided pops?? graphs Ohtsuki etc. The rationale behind this is that altruism is favored when altruists interact more with altruists than defectors do (are related or assorted REF Fletcher Doebeli correlated Hamilton 1975 in Okasha)
+%http://www.jstor.org/stable/10.1086/338945?seq=6#page_scan_tab_contents
+; the more viscous the population, the more likely it is that.
 
 Yet, living next to your kin also implies competing against them; the evolution of social traits hence depends on the balance between the positive effects of interactions with related individuals and the detrimental consequences of kin competition. With generations are synchronous (Wright-Fisher model), in infinite populations, Talor REF has shown that compensation + Gardner and Rodrigues + other Taylor.
 
-Deriving analytical results often implies making simplifying assumptions. A large number of studies on the evolution of altruistic behavior assume simple population structures (typically, homogeneous populations REF TDW + infinite population sizes\eg, regular structures but see Allen), weak selection approximations, and rare or absent mutation. Simple population structures help reduce the dimensionality of the system that one has to study; weak selection approximations allow a decomposition of time scales expliquer. Say what mutation means, fidelity of parent-offspring transmission. 
-Here, we relax the assumption of rare or absent mutation and explore how imperfect strategy transmission from parents to their offspring affect the evolution of altruistic behavior in subdivided populations. 
+Deriving analytical results often implies making simplifying assumptions. A large number of studies on the evolution of altruistic behavior assume simple population structures (typically, homogeneous populations REF TDW + infinite population sizes (\eg, regular structures but see Allen), weak selection approximations, and rare or absent mutation. Simple population structures help reduce the dimensionality of the system that one has to study: for instance, if the structure of the population is homogeneous such that all sites behave the same way in expectation, then we only need to consider how one site behaves. Weak selection approximations allow a decomposition of time scales expliquer. Finally, parent-offspring strategy transmission is commonly assumed to be perfect, a probability of mutation being sometimes introduced in finite populations, under the assumption that it is vanishingly small, in order to compute key quantities such as probabilities of identity by descent REF TAYLOR. \todo{Tarnita Taylor quelquepart}. 
+Say what mutation means, fidelity of parent-offspring transmission. 
+
+Here, we relax the assumption of rare or absent mutation and explore how imperfect strategy transmission from parents to their offspring affect the evolution of altruistic behavior in subdivided populations, focusing on the effect of population viscosity. 
 
 
 \section{Model and methods}
@@ -557,6 +561,11 @@ Go back to the decomposition of the different terms, we see that increase of $\E
 % Order of limits
 Problems of orders of limits, especially when $d \to \infty$ and $\mu \to 0$. Need to specify how small the mutation probability is compared to the size of the population. 
 
+% Steve Frank
+Difference with Steve Frank: $R$ was a model parameter, \ie, the same for different emigration probabilities. 
+
+% Links votant
+Voter model
 \clearpage
 % Start the appendix
 \appendix
