@@ -1,0 +1,1815 @@
+% This file was created with JabRef 2.10.
+% Encoding: UTF-8
+
+
+@Article{Abbot2011,
+  Title                    = {Inclusive fitness theory and eusociality},
+  Author                   = {Abbot, Patrick and Abe, Jun and Alcock, John and Alizon, Samuel and Alpedrinha, Joao A. C. and Andersson, Malte and Andre, Jean-Baptiste and van Baalen, Minus and Balloux, Francois and Balshine, Sigal and Barton, Nick and Beukeboom, Leo W. and Biernaskie, Jay M. and Bilde, Trine and Borgia, Gerald and Breed, Michael and Brown, Sam and Bshary, Redouan and Buckling, Angus and Burley, Nancy T. and Burton-Chellew, Max N. and Cant, Michael A. and Chapuisat, Michel and Charnov, Eric L. and Clutton-Brock, Tim and Cockburn, Andrew and Cole, Blaine J. and Colegrave, Nick and Cosmides, Leda and Couzin, Iain D. and Coyne, Jerry A. and Creel, Scott and Crespi, Bernard and Curry, Robert L. and Dall, Sasha R. X. and Day, Troy and Dickinson, Janis L. and Dugatkin, Lee Alan and Mouden, Claire El and Emlen, Stephen T. and Evans, Jay and Ferriere, Regis and Field, Jeremy and Foitzik, Susanne and Foster, Kevin and Foster, William A. and Fox, Charles W. and Gadau, Juergen and Gandon, Sylvain and Gardner, Andy and Gardner, Michael G. and Getty, Thomas and Goodisman, Michael A. D. and Grafen, Alan and Grosberg, Rick and Grozinger, Christina M. and Gouyon, Pierre-Henri and Gwynne, Darryl and Harvey, Paul H. and Hatchwell, Ben J. and Heinze, Jurgen and Helantera, Heikki and Helms, Ken R. and Hill, Kim and Jiricny, Natalie and Johnstone, Rufus A. and Kacelnik, Alex and Kiers, E. Toby and Kokko, Hanna and Komdeur, Jan and Korb, Judith and Kronauer, Daniel and Kummerli, Rolf and Lehmann, Laurent and Linksvayer, Timothy A. and Lion, Sebastien and Lyon, Bruce and Marshall, James A. R. and McElreath, Richard and Michalakis, Yannis and Michod, Richard E. and Mock, Douglas and Monnin, Thibaud and Montgomerie, Robert and Moore, Allen J. and Mueller, Ulrich G. and Noe, Ronald and Okasha, Samir and Pamilo, Pekka and Parker, Geoff A. and Pedersen, Jes S. and Pen, Ido and Pfennig, David and Queller, David C. and Rankin, Daniel J. and Reece, Sarah E. and Reeve, Hudson K. and Reuter, Max and Roberts, Gilbert and Robson, Simon K. A. and Roze, Denis and Rousset, Francois and Rueppell, Olav and Sachs, Joel L. and Santorelli, Lorenzo and Schmid-Hempel, Paul and Schwarz, Michael P. and Scott-Phillips, Tom and Shellmann-Sherman, Janet and Sherman, Paul W. and Shuker, David M. and Smith, Jeff and Spagna, Joseph C. and Strassmann, Beverly and Suarez, Andrew V. and Sundstrom, Liselotte and Taborsky, Michael and Taylor, Peter and Thompson, Graham and Tooby, John and Tsutsui, Neil D. and Tsuji, Kazuki and Turillazzi, Stefano and Ubeda, Francisco and Vargo, Edward L. and Voelkl, Bernard and Wenseleers, Tom and West, Stuart A. and West-Eberhard, Mary Jane and Westneat, David F. and Wiernasz, Diane C. and Wild, Geoff and Wrangham, Richard and Young, Andrew J. and Zeh, David W. and Zeh, Jeanne A. and Zink, Andrew},
+  Journal                  = {Nature},
+  Year                     = {2011},
+
+  Month                    = mar,
+  Number                   = {7339},
+  Pages                    = {E1--E4},
+  Volume                   = {471},
+
+  Comment                  = {10.1038/nature09831},
+  ISSN                     = {0028-0836},
+  Owner                    = {flo},
+  Publisher                = {Nature Publishing Group, a division of Macmillan Publishers Limited. All Rights Reserved.},
+  Timestamp                = {2012.07.24}
+}
+
+@Article{Alizon2008,
+  Title                    = {Empty sites can promote altruistic behavior},
+  Author                   = {Alizon, Samuel and Taylor, Peter},
+  Journal                  = {Evolution},
+  Year                     = {2008},
+  Number                   = {6},
+  Pages                    = {1335--1344},
+  Volume                   = {62},
+
+  Abstract                 = {Spatial structure has been shown to promote altruistic behavior, however, it also increases the intensity of competition among relatives. Our purpose here is to develop a model in which this competition is minimized, more precisely a local increase in fecundity has a minimal competitive effect on the fitness of nearby individuals. We work with an island model in which sites are allowed to be empty, choosing our demographic rules so that in patches with higher fecundity, empty sites are filled at a higher rate. We also allow dispersal rates to evolve in response to the proportion of empty sites in the patch. Patches with different numbers of empty sites differ in frequency, in within-patch consanguinity, and in reproductive value. Using an inclusive fitness argument, we show that our model does promote altruism; indeed Hamilton's Rule is shown to hold. The only negative effect on an actor of a gift of fecundity to a patchmate turns out to be a slight decrease in reproductive value due to an increased probability of an empty site being occupied. We show that altruists are most favored in islands with an intermediate number of empty sites.},
+  Bdsk-url-1               = {http://dx.doi.org/10.1111/j.1558-5646.2008.00369.x},
+  Doi                      = {10.1111/j.1558-5646.2008.00369.x},
+  ISSN                     = {1558-5646},
+  Keywords                 = {Altruism, dispersal, empty sites, inclusive fitness, kin selection, spatial structure},
+  Owner                    = {flo},
+  Publisher                = {Blackwell Publishing Inc},
+  Timestamp                = {2012.07.24}
+}
+
+@Article{AllenNowak2014,
+  Title                    = {Games on graphs},
+  Author                   = {Allen, Benjamin and Nowak, Martin A},
+  Journal                  = {EMS surveys in mathematical sciences},
+  Year                     = {2014},
+  Number                   = {1},
+  Pages                    = {113--151},
+  Volume                   = {1},
+
+  Date-added               = {2016-08-30 10:13:52 +0000},
+  Date-modified            = {2016-08-30 10:14:00 +0000}
+}
+
+@Article{Allen2013,
+  Title                    = {Adaptive Dynamics with Interaction Structure.},
+  Author                   = {Allen, Benjamin and Nowak,, Martin A. and Dieckmann, Ulf},
+  Journal                  = {The American Naturalist},
+  Year                     = {2013},
+  Number                   = {6},
+  Pages                    = {E139-E163},
+  Volume                   = {181},
+
+  Abstract                 = {Abstract Evolutionary dynamics depend critically on a population's interaction structure---the pattern of which individuals interact with which others, depending on the state of the population and the environment. Previous research has shown, for example, that cooperative behaviors disfavored in well-mixed populations can be favored when interactions occur only between spatial neighbors or group members. Combining the adaptive dynamics approach with recent advances in evolutionary game theory, we here introduce a general mathematical framework for analyzing the long-term evolution of continuous game strategies for a broad class of evolutionary models, encompassing many varieties of interaction structure. Our main result, the canonical equation of adaptive dynamics with interaction structure, characterizes expected evolutionary trajectories resulting from any such model, thereby generalizing a central tool of adaptive dynamics theory. Interestingly, the effects of different interaction structures and update rules on evolutionary trajectories are fully captured by just two real numbers associated with each model, which are independent of the considered game. The first, a structure coefficient, quantifies the effects on selection pressures and thus on the shapes of expected evolutionary trajectories. The second, an effective population size, quantifies the effects on selection responses and thus on the expected rates of adaptation. Applying our results to two social dilemmas, we show how the range of evolutionarily stable cooperative behaviors systematically varies with a model's structure coefficient.},
+  Bdsk-url-1               = {http://www.jstor.org/stable/10.1086/670192},
+  ISSN                     = {00030147},
+  Jstor_articletype        = {research-article},
+  Jstor_formatteddate      = {June 2013},
+  Language                 = {English},
+  Publisher                = {The University of Chicago Press for The American Society of Naturalists},
+  Url                      = {http://www.jstor.org/stable/10.1086/670192}
+}
+
+@Article{Allen2015,
+  Title                    = {The Molecular Clock of Neutral Evolution Can Be Accelerated or Slowed by Asymmetric Spatial Structure},
+  Author                   = {Allen, Benjamin AND Sample, Christine AND Dementieva, Yulia AND Medeiros, Ruben C. AND Paoletti, Christopher AND Nowak, Martin A.},
+  Journal                  = {PLoS Comput Biol},
+  Year                     = {2015},
+
+  Month                    = {02},
+  Number                   = {2},
+  Pages                    = {1-32},
+  Volume                   = {11},
+
+  Abstract                 = {<title>Author Summary</title> <p>Evolution is driven by genetic mutations. While some mutations affect an organism?s ability to survive and reproduce, most are neutral and have no effect. Neutral mutations play an important role in the study of evolution because they generally accrue at a consistent rate over time. This result, first discovered 50 years ago, allows neutral mutations to be used as a ?molecular clock? to estimate, for example, how long ago humans diverged from chimpanzees and bonobos. We used mathematical modeling to study how the rates of these molecular clocks are affected by the spatial arrangement of a population in its habitat. We find that asymmetry in this spatial structure can either slow down or speed up the rate at which neutral mutations accrue. This effect could potentially skew our estimates of past events from genetic data. It also has implications for a number of other fields. For example, we show that the architecture of intestinal tissue can limit the rate of genetic substitutions leading to cancer. We also show that the structure of social networks affects the rate at which new ideas replace old ones. Surprisingly, we find that most Twitter networks slow down the rate of idea replacement.</p>},
+  Bdsk-url-1               = {http://dx.doi.org/10.1371%2Fjournal.pcbi.1004108},
+  Bdsk-url-2               = {http://dx.doi.org/10.1371/journal.pcbi.1004108},
+  Date-added               = {2016-03-11 15:26:21 +0000},
+  Date-modified            = {2016-03-11 15:26:31 +0000},
+  Doi                      = {10.1371/journal.pcbi.1004108},
+  Publisher                = {Public Library of Science},
+  Url                      = {http://dx.doi.org/10.1371%2Fjournal.pcbi.1004108}
+}
+
+@Article{Allen2012,
+  Title                    = {How mutation affects evolutionary games on graphs},
+  Author                   = {Benjamin Allen and Arne Traulsen and Corina E. Tarnita and Martin A. Nowak},
+  Journal                  = {Journal of Theoretical Biology},
+  Year                     = {2012},
+  Note                     = {Evolution of Cooperation},
+  Pages                    = {97 - 105},
+  Volume                   = {299},
+
+  Abstract                 = {Evolutionary dynamics are affected by population structure, mutation rates and update rules. Spatial or network structure facilitates the clustering of strategies, which represents a mechanism for the evolution of cooperation. Mutation dilutes this effect. Here we analyze how mutation influences evolutionary clustering on graphs. We introduce new mathematical methods to evolutionary game theory, specifically the analysis of coalescing random walks via generating functions. These techniques allow us to derive exact identity-by-descent (IBD) probabilities, which characterize spatial assortment on lattices and Cayley trees. From these {IBD} probabilities we obtain exact conditions for the evolution of cooperation and other game strategies, showing the dual effects of graph topology and mutation rate. High mutation rates diminish the clustering of cooperators, hindering their evolutionary success. Our model can represent either genetic evolution with mutation, or social imitation processes with random strategy exploration. },
+  Bdsk-url-1               = {http://www.sciencedirect.com/science/article/pii/S0022519311001809},
+  Bdsk-url-2               = {http://dx.doi.org/10.1016/j.jtbi.2011.03.034},
+  Date-added               = {2016-04-18 15:14:07 +0000},
+  Date-modified            = {2016-04-18 15:14:51 +0000},
+  Doi                      = {http://dx.doi.org/10.1016/j.jtbi.2011.03.034},
+  ISSN                     = {0022-5193},
+  Keywords                 = {Population structure},
+  Url                      = {http://www.sciencedirect.com/science/article/pii/S0022519311001809}
+}
+
+@Article{vanBaalen1998,
+  Title                    = {The unit of selection in viscous populations and the evolution of altruism},
+  Author                   = {van Baalen, M. and Rand, D. A.},
+  Journal                  = {J Theor Biol},
+  Year                     = {1998},
+  Number                   = {4},
+  Pages                    = {631--648},
+  Volume                   = {193},
+
+  Ap                       = {ISSN 0022-5193},
+  File                     = {vanBaalen_Rand_1998_jtb.pdf:C\:\\Florence\\My documents\\Biblio\\vanBaalen_Rand_1998_jtb.pdf:PDF},
+  Keywords                 = {Lattice},
+  Owner                    = {0108},
+  Tc                       = {71},
+  Timestamp                = {2008.03.20},
+  Ut                       = {WOS:000075771300008}
+}
+
+@Article{Brockhurst2007,
+  Title                    = {Cooperation peaks at intermediate disturbance},
+  Author                   = {Brockhurst, Michael A and Buckling, Angus and Gardner, Andy},
+  Journal                  = {Current Biology},
+  Year                     = {2007},
+  Number                   = {9},
+  Pages                    = {761--765},
+  Volume                   = {17},
+
+  Date-added               = {2016-08-04 12:36:46 +0000},
+  Date-modified            = {2016-08-04 12:36:52 +0000},
+  Publisher                = {Elsevier}
+}
+
+@Book{Caswell2001,
+  Title                    = {Matrix population models},
+  Author                   = {Caswell, Hal},
+  Publisher                = {Wiley Online Library},
+  Year                     = {2001},
+
+  Date-added               = {2016-03-09 09:34:59 +0000},
+  Date-modified            = {2016-03-09 09:35:08 +0000}
+}
+
+@Article{Champagnat2006,
+  Title                    = {Unifying evolutionary dynamics: from individual stochastic processes to macroscopic models},
+  Author                   = {Champagnat, Nicolas and Ferri{\`e}re, R{\'e}gis and M{\'e}l{\'e}ard, Sylvie},
+  Journal                  = {Theoretical population biology},
+  Year                     = {2006},
+  Number                   = {3},
+  Pages                    = {297--321},
+  Volume                   = {69},
+
+  Date-added               = {2016-04-27 12:51:40 +0000},
+  Date-modified            = {2016-04-27 12:51:46 +0000},
+  Publisher                = {Elsevier}
+}
+
+@Article{Champagnat2007,
+  Title                    = {Evolution of discrete populations and the canonical diffusion of adaptive dynamics},
+  Author                   = {Champagnat, Nicolas and Lambert, Amaury},
+  Journal                  = {The Annals of Applied Probability},
+  Year                     = {2007},
+  Number                   = {1},
+  Pages                    = {102--155},
+  Volume                   = {17},
+
+  Publisher                = {Institute of Mathematical Statistics}
+}
+
+@Article{CockerhamWeir1993,
+  Title                    = {Estimation of Gene Flow from {F}-Statistics},
+  Author                   = {Cockerham, C. Clark and Weir, Bruce S.},
+  Journal                  = {Evolution},
+  Year                     = {1993},
+  Number                   = {3},
+  Pages                    = {855-863},
+  Volume                   = {47},
+
+  Abstract                 = {We present theory clarifying the general behavior of FST-based and GST-based estimators of gene flow, and confirm these predictions with simulations. In particular, we use the correlation of genes within groups within populations to define an estimator. The theoretical value of the correlation doe not depend on the number of groups in a population, and properties of the estimated correlation do not depend on the number of groups sampled or the number of individuals sampled per group. This invariance is in contrast to properties of GST. For a complete census of a population, bias and variance considerations would suggest the use of the GST-based estimator of gene flow, but lack of knowledge of population size or group number in practice suggests preference be given to the correlation-based estimator. We acknowledge that these estimators require that several conditions of a population-genetic model be met, since they do not make use of direct observations on the flow of genes. Our results differ from some of those based on simulation in a series of recent papers by M. Slatkin.},
+  Bdsk-url-1               = {http://www.jstor.org/stable/2410189},
+  Date-added               = {2016-04-05 13:01:38 +0000},
+  Date-modified            = {2016-04-05 18:32:47 +0000},
+  ISSN                     = {00143820, 15585646},
+  Publisher                = {[Society for the Study of Evolution, Wiley]},
+  Url                      = {http://www.jstor.org/stable/2410189}
+}
+
+@Article{Debarre2015evo,
+  Title                    = {Fitness costs in spatially structured environments.},
+  Author                   = {D\'ebarre, F.},
+  Journal                  = {Evolution},
+  Year                     = {2015},
+  Pages                    = {1329--1335},
+  Volume                   = {69},
+
+  Date-added               = {2016-08-11 19:28:24 +0000},
+  Date-modified            = {2016-08-11 19:29:25 +0000}
+}
+
+@Article{DebarreHD2014,
+  Title                    = {Social evolution in structured populations},
+  Author                   = {D\'ebarre, F. and Hauert, C. and Doebeli, M.},
+  Journal                  = {Nature Communications},
+  Year                     = {2014},
+
+  Month                    = {03},
+  Volume                   = {5},
+
+  Abstract                 = {Understanding the evolution of social behaviours such as altruism and spite is a long-standing problem that has generated thousands of articles and heated debates. Previous theoretical studies showed that whether altruism and spite evolve may be contingent on seemingly artificial model features, such as which rule is chosen to update the population (for example, birth--death or death--birth), and whether the benefits and costs of sociality affect fecundity or survival. Here we unify these features in a single comprehensive framework. We derive a general condition for social behaviour to be favoured over non-social behaviour, which is applicable in a large class of models for structured populations of fixed size. We recover previous results as special cases, and we are able to evaluate the relative effects of benefits and costs of social interactions on fecundity and survival. Our results highlight the crucial importance of identifying the relative scale at which competition occurs.},
+  Annote                   = {Supplementary information available for this article at http://www.nature.com/ncomms/2014/140306/ncomms4409/suppinfo/ncomms4409{\_}S1.html},
+  Bdsk-url-1               = {http://dx.doi.org/10.1038/ncomms4409},
+  Date                     = {2014/03/06/online},
+  Date-added               = {2016-03-23 14:36:14 +0000},
+  Date-modified            = {2016-03-23 14:36:14 +0000},
+  Day                      = {06},
+  L3                       = {10.1038/ncomms4409},
+  M3                       = {Article},
+  Publisher                = {Nature Publishing Group, a division of Macmillan Publishers Limited. All Rights Reserved.},
+  Ty                       = {JOUR},
+  Url                      = {http://dx.doi.org/10.1038/ncomms4409}
+}
+
+@InBook{Durrett2008,
+  Title                    = {{Probability Models for DNA Sequence Evolution}},
+  Author                   = {Durrett, Richard},
+  Chapter                  = {1. Basic Models},
+  Year                     = {2008},
+  Edition                  = {2nd},
+  Series                   = {Probability and Its Applications},
+  Volume                   = {XII},
+
+  Owner                    = {flo},
+  Timestamp                = {2012.07.27}
+}
+
+@Article{Fletcher2009,
+  Title                    = {{A simple and general explanation for the evolution of altruism}},
+  Author                   = {Fletcher, Jeffrey A and Doebeli, Michael},
+  Journal                  = {Proceedings of the Royal Society B: Biological Sciences},
+  Year                     = {2009},
+  Number                   = {1654},
+  Pages                    = {13-19},
+  Volume                   = {276},
+
+  Abstract                 = {We present a simple framework that highlights the most fundamental requirement for the evolution of altruism: assortment between individuals carrying the cooperative genotype and the helping behaviours of others with which these individuals interact. We partition the fitness effects on individuals into those due to self and those due to the {\^a}€˜interaction environment{\^a}€{\texttrademark}, and show that it is the latter that is most fundamental to understanding the evolution of altruism. We illustrate that while kinship or genetic similarity among those interacting may generate a favourable structure of interaction environments, it is not a fundamental requirement for the evolution of altruism, and even suicidal aid can theoretically evolve without help ever being exchanged among genetically similar individuals. Using our simple framework, we also clarify a common confusion made in the literature between alternative fitness accounting methods (which may equally apply to the same biological circumstances) and unique causal mechanisms for creating the assortment necessary for altruism to be favoured by natural selection.},
+  Bdsk-url-1               = {http://dx.doi.org/10.1098/rspb.2008.0829},
+  Doi                      = {10.1098/rspb.2008.0829},
+  File                     = {:Fletcher-Doebeli_2009.pdf:PDF},
+  Owner                    = {debarre},
+  Timestamp                = {2010.11.30}
+}
+
+@Article{Flood1958,
+  Title                    = {Some Experimental Games},
+  Author                   = {Flood, Merrill M.},
+  Journal                  = {Management Science},
+  Year                     = {1958},
+  Number                   = {1},
+  Pages                    = {pp. 5-26},
+  Volume                   = {5},
+
+  Abstract                 = {This paper reports the results of six experiments and analyses performed to explore the applicability of the non-constant-sum case of the theories of von Neumann-Morgenstern, and others, to the actual behavior of people playing games or involved in bargaining situations. The paper suggests directions in which the theory of games might be modified and extended to improve its applicability and usefulness. A "split-the-difference principle" is suggested to augment the usual theory, so as to specify the exact amount of payments to be made in an ordinary two-person bargaining situation such as the sale of a used car. The application of this principle seems satisfactory in the experiments. One experiment suggests that, in a sequence of trials in the same game situation, people tend to start near an equilibrium point and then try to find a better equilibrium, if there is one. The experiments show examples of non-optimal behavior of the bargainers when the judgment necessary to estimate the relevant payoff is obscure. A fair division of five parcels of objects among five players when each player attaches different values to the parcels is out-lined and computed, and the effect of coalitions is discussed.},
+  ISSN                     = {00251909},
+  Language                 = {English},
+  Publisher                = {INFORMS}
+}
+
+@Article{Frank2012Price,
+  Title                    = {Natural selection. IV. The Price equation},
+  Author                   = {Frank, Steven A},
+  Journal                  = {Journal of evolutionary biology},
+  Year                     = {2012},
+  Number                   = {6},
+  Pages                    = {1002--1019},
+  Volume                   = {25},
+
+  Date-added               = {2016-06-23 13:58:09 +0000},
+  Date-modified            = {2016-06-23 13:58:16 +0000},
+  Publisher                = {Wiley Online Library}
+}
+
+@Article{Frank2010,
+  Title                    = {Microbial secretor--cheater dynamics},
+  Author                   = {Frank, Steven A},
+  Journal                  = {Philosophical Transactions of the Royal Society of London B: Biological Sciences},
+  Year                     = {2010},
+  Number                   = {1552},
+  Pages                    = {2515--2522},
+  Volume                   = {365},
+
+  Date-added               = {2016-08-04 12:37:43 +0000},
+  Date-modified            = {2016-08-04 12:37:48 +0000},
+  Publisher                = {The Royal Society}
+}
+
+@Book{Frank1998,
+  Title                    = {Foundations of social evolution},
+  Author                   = {Frank, Steven A},
+  Publisher                = {Princeton University Press},
+  Year                     = {1998}
+}
+
+@Article{Frank1997,
+  Title                    = {The Price Equation, Fisher's Fundamental Theorem, Kin Selection, and Causal Analysis},
+  Author                   = {Steven A. Frank},
+  Journal                  = {Evolution},
+  Year                     = {1997},
+  Number                   = {6},
+  Pages                    = {1712-1729},
+  Volume                   = {51},
+
+  Abstract                 = {A general framework is presented to unify diverse models of natural selection. This framework is based on the Price Equation, with two additional steps. First, characters are described by their multiple regression on a set of predictor variables. The most common predictors in genetics are alleles and their interactions, but any predictor may be used. The second step is to describe fitness by multiple regression on characters. Once again, characters may be chosen arbitrarily. This expanded Price Equation provides an exact description of total evolutionary change under all conditions, and for all systems of inheritance and selection. The model is first used for a new proof of Fisher's fundamental theorem of natural selection. The relations are then made clear among Fisher's theorem, Robertson's covariance theorem for quantitative genetics, the Lande-Arnold model for the causal analysis of natural selection, and Hamilton's rule for kin selection. Each of these models is a partial analysis of total evolutionary change. The Price Equation extends each model to an exact, total analysis of evolutionary change for any system of inheritance and selection. This exact analysis is used to develop an expanded Hamilton's rule for total change. The expanded rule clarifies the distinction between two types of kin selection coefficients. The first measures components of selection caused by correlated phenotypes of social partners. The second measures components of heritability via transmission by direct and indirect components of fitness.},
+  Bdsk-url-1               = {http://www.jstor.org/stable/2410995},
+  Date-added               = {2016-04-20 17:51:28 +0000},
+  Date-modified            = {2016-04-20 17:51:35 +0000},
+  ISSN                     = {00143820, 15585646},
+  Publisher                = {[Society for the Study of Evolution, Wiley]},
+  Url                      = {http://www.jstor.org/stable/2410995}
+}
+
+@Article{Fu2009,
+  Title                    = {Evolutionary dynamics on graphs: Efficient method for weak selection},
+  Author                   = {Fu, Feng and Wang, Long and Nowak, Martin A. and Hauert, Christoph},
+  Journal                  = {Phys. Rev. E},
+  Year                     = {2009},
+
+  Month                    = {Apr},
+  Pages                    = {046707},
+  Volume                   = {79},
+
+  Abstract                 = {Investigating the evolutionary dynamics of game theoretical interactions in populations where individuals are arranged on a graph can be challenging in terms of computation time. Here, we propose an efficient method to study any type of game on arbitrary graph structures for weak selection. In this limit, evolutionary game dynamics represents a first-order correction to neutral evolution. Spatial correlations can be empirically determined under neutral evolution and provide the basis for formulating the game dynamics as a discrete Markov process by incorporating a detailed description of the microscopic dynamics based on the neutral correlations. This framework is then applied to one of the most intriguing questions in evolutionary biology: the evolution of cooperation. We demonstrate that degree-heterogeneity of a graph impedes cooperation and that the success of Tit-for-Tat not only depends on the number of rounds but also on the degree of the graph. Moreover, considering the mutation-selection equilibrium shows that the symmetry of the stationary distribution of states under weak selection is skewed in favor of defectors for larger selection strengths. In particular, degree heterogeneity -- a prominent feature of scale-free networks -- generally results in a more pronounced increase of the critical benefit-to-cost ratio required for evolution to favor cooperation as compared to regular graphs. This conclusion is corroborated by an analysis of the effects of population structures on the fixation probabilities of strategies in general 2 × 2 games for different types of graphs. Computer simulations confirm the predictive power of our method and illustrate the improved accuracy as compared to previous studies.},
+  Bdsk-url-1               = {http://link.aps.org/doi/10.1103/PhysRevE.79.046707},
+  Bdsk-url-2               = {http://dx.doi.org/10.1103/PhysRevE.79.046707},
+  Doi                      = {10.1103/PhysRevE.79.046707},
+  Issue                    = {4},
+  Numpages                 = {10},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevE.79.046707}
+}
+
+@Article{GandonRousset1999,
+  Title                    = {Evolution of stepping-stone dispersal rates},
+  Author                   = {Gandon, Sylvain and Rousset, Fran{\c{c}}ois},
+  Journal                  = {Proceedings of the Royal Society of London B: Biological Sciences},
+  Year                     = {1999},
+  Number                   = {1437},
+  Pages                    = {2507--2513},
+  Volume                   = {266},
+
+  Date-added               = {2016-03-22 15:30:26 +0000},
+  Date-modified            = {2016-03-22 15:30:33 +0000},
+  Publisher                = {The Royal Society}
+}
+
+@Article{GardnerWest2006,
+  Title                    = {Spite},
+  Author                   = {Gardner, A and West, S A},
+  Journal                  = {Current Biology},
+  Year                     = {2006},
+  Pages                    = {R662--R664},
+  Volume                   = {16},
+
+  Owner                    = {flo},
+  Timestamp                = {2012.07.25}
+}
+
+@Article{GardnerWest2006open,
+  Title                    = {Demography, altruism, and the benefits of budding},
+  Author                   = {Gardner, A. and West, S. A.},
+  Journal                  = {Journal of Evolutionary Biology},
+  Year                     = {2006},
+  Number                   = {5},
+  Pages                    = {1707--1716},
+  Volume                   = {19},
+
+  Abstract                 = {It is now widely appreciated that competition between kin inhibits the evolution of altruism. In standard population genetics models, it is difficult for indiscriminate altruism towards social partners to be favoured at all. The reason is that while limited dispersal increases the kinship of social partners it also intensifies local competition. One solution that has received very little attention is if individuals disperse as groups (budding dispersal), as this relaxes local competition without reducing kinship. Budding behaviour is widespread through all levels of biological organization, from early protocellular life to cooperatively breeding vertebrates. We model the effects of individual dispersal, budding dispersal, soft selection and hard selection to examine the conditions under which altruism is favoured. More generally, we examine how these various demographic details feed into relatedness and scale of competition parameters that can be included into Hamilton's rule.},
+  Bdsk-url-1               = {http://dx.doi.org/10.1111/j.1420-9101.2006.01104.x},
+  Doi                      = {10.1111/j.1420-9101.2006.01104.x},
+  ISSN                     = {1420-9101},
+  Keywords                 = {Hamilton's rule, hard selection, island model, kin selection, limited dispersal, major transitions, scale of competition, soft selection, relatedness, viscosity},
+  Publisher                = {Blackwell Publishing Ltd},
+  Url                      = {http://dx.doi.org/10.1111/j.1420-9101.2006.01104.x}
+}
+
+@Article{Gardner2011,
+  Title                    = {The genetical theory of kin selection},
+  Author                   = {Gardner, A. and West, S. A. and Wild, G.},
+  Journal                  = {Journal of Evolutionary Biology},
+  Year                     = {2011},
+  Number                   = {5},
+  Pages                    = {1020--1043},
+  Volume                   = {24},
+
+  Abstract                 = {Natural selection operates both directly, via the impact of a trait upon the individual's own fitness, and indirectly, via the impact of the trait upon the fitness of the individual's genetically related social partners. These effects are often framed in terms of Hamilton's rule, rb − c > 0, which provides the central result of social-evolution theory. However, a number of studies have questioned the generality of Hamilton's rule, suggesting that it requires restrictive assumptions. Here, we use Fisher's genetical paradigm to demonstrate the generality of Hamilton's rule and to clarify links between different studies. We show that confusion has arisen owing to researchers misidentifying model parameters with the b and c terms in Hamilton's rule, and misidentifying measures of genotypic similarity or genealogical relationship with the coefficient of genetic relatedness, r. More generally, we emphasize the need to distinguish between general kin-selection theory that forms the foundations of social evolution, and streamlined kin-selection methodology that is used to solve specific problems.},
+  Bdsk-url-1               = {http://dx.doi.org/10.1111/j.1420-9101.2011.02236.x},
+  Doi                      = {10.1111/j.1420-9101.2011.02236.x},
+  ISSN                     = {1420-9101},
+  Keywords                 = {adaptation, genetic value, Hamilton's rule, inclusive fitness, least-squares regression, natural selection, Price equation, relatedness, reproductive value, social evolution},
+  Publisher                = {Blackwell Publishing Ltd}
+}
+
+@Article{Geritz1997,
+  Title                    = {Evolutionarily singular strategies and the adaptive growth and branching of the evolutionary tree},
+  Author                   = {Geritz, S.A.H. and Kisdi, E. and Meszena, G. and Metz, J.A.J.},
+  Journal                  = {Evolutionary Ecology},
+  Year                     = {1997},
+  Number                   = {1},
+  Pages                    = {35-57},
+  Volume                   = {12},
+
+  Bdsk-url-1               = {http://dx.doi.org/10.1023/A%3A1006554906681},
+  Bdsk-url-2               = {http://dx.doi.org/10.1023/A:1006554906681},
+  Date-modified            = {2016-04-28 15:00:15 +0000},
+  Doi                      = {10.1023/A:1006554906681},
+  ISSN                     = {0269-7653},
+  Keywords                 = {adaptive dynamics; evolutionarily singular strategy; evolutionary branching; evolutionary modelling},
+  Language                 = {English},
+  Publisher                = {Kluwer Academic Publishers},
+  Url                      = {http://dx.doi.org/10.1023/A%3A1006554906681}
+}
+
+@Article{GrafenArchetti2008,
+  Title                    = {Natural selection of altruism in inelastic viscous homogeneous populations},
+  Author                   = {Alan Grafen and Marco Archetti},
+  Journal                  = {Journal of Theoretical Biology},
+  Year                     = {2008},
+  Number                   = {4},
+  Pages                    = {694 - 710},
+  Volume                   = {252},
+
+  Abstract                 = {Biological explanations are given of three main uninterpreted theoretical results on the selection of altruism in inelastic viscous homogeneous populations, namely that non-overlapping generations hinder the evolution of altruism, fecundity effects are more conducive to altruism than survival effects, and one demographic regime (so-called deathdeath) does not. The central idea is , which measure how far the effects of density dependence extend from a focal individual. Relatednesses can then be calculated that compensate for density dependence. There is very generally a , at which the viscosity of the population slows up selection of altruism, but does not affect its direction, and this holds for altruism towards any individual, not just immediate neighbours. These explanations are possible because of recent advances in the theory of inclusive fitness on graphs. The assumption of node bitransitivity in that recent theory is relaxed to node transitivity and symmetry of the dispersal matrix, and new formulae show how to calculate relatedness from dispersal and vice versa.},
+  Bdsk-url-1               = {http://dx.doi.org/10.1016/j.jtbi.2008.01.021},
+  Date-modified            = {2016-08-03 13:56:08 +0000},
+  Doi                      = {10.1016/j.jtbi.2008.01.021},
+  ISSN                     = {0022-5193},
+  Keywords                 = {Inclusive fitness},
+  Owner                    = {flo},
+  Timestamp                = {2012.07.18}
+}
+
+@Article{Hamilton1964,
+  Title                    = {The genetical evolution of social behaviour. I},
+  Author                   = {W.D. Hamilton},
+  Journal                  = {Journal of Theoretical Biology},
+  Year                     = {1964},
+  Number                   = {1},
+  Pages                    = {1 - 16},
+  Volume                   = {7},
+
+  Abstract                 = {A genetical mathematical model is described which allows for interactions between relatives on one another's fitness. Making use of Wright's Coefficient of Relationship as the measure of the proportion of replica genes in a relative, a quantity is found which incorporates the maximizing property of Darwinian fitness. This quantity is named . Species following the model should tend to evolve behaviour such that each organism appears to be attempting to maximize its inclusive fitness. This implies a limited restraint on selfish competitive behaviour and possibility of limited self-sacrifices.
+Special cases of the model are used to show (a) that selection in the social situations newly covered tends to be slower than classical selection, (b) how in populations of rather non-dispersive organisms the model may apply to genes affecting dispersion, and (c) how it may apply approximately to competition between relatives, for example, within sibships. Some artificialities of the model are discussed.},
+  Bdsk-url-1               = {http://dx.doi.org/10.1016/0022-5193(64)90038-4},
+  Doi                      = {10.1016/0022-5193(64)90038-4},
+  ISSN                     = {0022-5193},
+  Owner                    = {flo},
+  Timestamp                = {2012.07.24}
+}
+
+@Article{HauertDoebeli2004,
+  Title                    = {Spatial structure often inhibits the evolution of cooperation in the snowdrift game},
+  Author                   = {Hauert, Christoph and Doebeli, Michael},
+  Journal                  = {Nature},
+  Year                     = {2004},
+
+  Month                    = apr,
+  Number                   = {6983},
+  Pages                    = {643--646},
+  Volume                   = {428},
+
+  Comment                  = {10.1038/nature02360},
+  ISSN                     = {1476-1122},
+  Owner                    = {flo},
+  Timestamp                = {2012.10.28}
+}
+
+@Article{HindersinTraulsen2015,
+  Title                    = {Most Undirected Random Graphs Are Amplifiers of Selection for Birth-Death Dynamics, but Suppressors of Selection for Death-Birth Dynamics},
+  Author                   = {Hindersin, Laura and Traulsen, Arne},
+  Journal                  = {PLoS Comput Biol},
+  Year                     = {2015},
+
+  Month                    = {11},
+  Number                   = {11},
+  Pages                    = {1-14},
+  Volume                   = {11},
+
+  Abstract                 = {<title>Author Summary</title> <p>Evolutionary dynamics describes the spread of individuals with different features within a population. This spreading process can be strongly influenced by the population structure?if a highly successful individual can only displace a few neighbors, it may take more time to spread than an individual that can displace all other individuals from the population. In particular, a population structure can also amplify the evolutionary success of a type. We show that almost all random population structures lead to such an amplification. However, if we change a presumably minor detail of the evolutionary model, almost all random population structures have the opposite effect and suppress the evolutionary success of a type. Thus, it is crucial to consider the underlying assumptions of such models when discussing their possible implications for real biological systems.</p>},
+  Bdsk-url-1               = {http://dx.doi.org/10.1371%2Fjournal.pcbi.1004437},
+  Bdsk-url-2               = {http://dx.doi.org/10.1371/journal.pcbi.1004437},
+  Date-added               = {2016-04-21 08:15:50 +0000},
+  Date-modified            = {2016-04-21 08:16:05 +0000},
+  Doi                      = {10.1371/journal.pcbi.1004437},
+  Publisher                = {Public Library of Science},
+  Url                      = {http://dx.doi.org/10.1371%2Fjournal.pcbi.1004437}
+}
+
+@Article{HuangTraulsen2010,
+  Title                    = {Fixation probabilities of random mutants under frequency dependent selection},
+  Author                   = {Weini Huang and Arne Traulsen},
+  Journal                  = {Journal of Theoretical Biology},
+  Year                     = {2010},
+  Number                   = {2},
+  Pages                    = {262 - 268},
+  Volume                   = {263},
+
+  Abstract                 = {Evolutionary game dynamics describes frequency dependent selection in asexual, haploid populations. It typically considers predefined strategies and fixed payoff matrices. Mutations occur between these known types only. Here, we consider a situation in which a mutation has produced an entirely new type which is characterized by a random payoff matrix that does not change during the fixation or extinction of the mutant. Based on the probability distribution underlying the payoff values, we address the fixation probability of the new mutant. It turns out that for weak selection, only the first moments of the distribution matter. For strong selection, the probability that a new payoff entry is larger than the wild type's payoff against itself is the crucial quantity.},
+  Bdsk-url-1               = {http://www.sciencedirect.com/science/article/pii/S0022519309005670},
+  Bdsk-url-2               = {http://dx.doi.org/10.1016/j.jtbi.2009.11.025},
+  Doi                      = {10.1016/j.jtbi.2009.11.025},
+  ISSN                     = {0022-5193},
+  Keywords                 = {Moran process},
+  Url                      = {http://www.sciencedirect.com/science/article/pii/S0022519309005670}
+}
+
+@Article{Huberman1993,
+  Title                    = {Evolutionary games and computer simulations},
+  Author                   = {Huberman, B A and Glance, N S},
+  Journal                  = {Proceedings of the National Academy of Sciences},
+  Year                     = {1993},
+  Number                   = {16},
+  Pages                    = {7716-7718},
+  Volume                   = {90},
+
+  Abstract                 = {The Prisoner's Dilemma has long been considered the paradigm for studying the emergence of cooperation among selfish individuals. Because of its importance, it has been studied through computer experiments as well as in the laboratory and by analytical means. However, there are important differences between the way a system composed of many interacting elements is simulated by a digital machine and the manner in which it behaves when studied in real experiments. In some instances, these disparities can be marked enough so as to cast doubt on the implications of cellular automata-type simulations for the study of cooperation in social systems. In particular, if such a simulation imposes space-time granularity, then its ability to describe the real world may be compromised. Indeed, we show that the results of digital simulations regarding territoriality and cooperation differ greatly when time is discrete as opposed to continuous.}
+}
+
+@Article{ImhofNowak2006,
+  Title                    = {Evolutionary game dynamics in a Wright-Fisher process},
+  Author                   = {Imhof, Lorens A. and Nowak, Martin A.},
+  Journal                  = {Journal of Mathematical Biology},
+  Year                     = {2006},
+  Pages                    = {667-681},
+  Volume                   = {52},
+
+  Abstract                 = {Evolutionary game dynamics in finite populations can be described by a frequency dependent, stochastic Wright-Fisher process. We consider a symmetric game between two strategies, A and B. There are discrete generations. In each generation, individuals produce offspring proportional to their payoff. The next generation is sampled randomly from this pool of offspring. The total population size is constant. The resulting Markov process has two absorbing states corresponding to homogeneous populations of all A or all B. We quantify frequency dependent selection by comparing the absorption probabilities to the corresponding probabilities under random drift. We derive conditions for selection to favor one strategy or the other by using the concept of total positivity. In the limit of weak selection, we obtain the 1/3 law: if A and B are strict Nash equilibria then selection favors replacement of B by A, if the unstable equilibrium occurs at a frequency of A which is less than 1/3.},
+  Bdsk-url-1               = {http://dx.doi.org/10.1007/s00285-005-0369-8},
+  Doi                      = {10.1007/s00285-005-0369-8},
+  ISSN                     = {0303-6812},
+  Issue                    = {5},
+  Keywords                 = {Frequency dependent process; Stochastic game dynamics; Finite populations},
+  Language                 = {English},
+  Publisher                = {Springer-Verlag},
+  Url                      = {http://dx.doi.org/10.1007/s00285-005-0369-8}
+}
+
+@Article{JansenvanBaalen2006,
+  Title                    = {Altruism through beard chromodynamics},
+  Author                   = {Jansen, Vincent A. A. and van Baalen, Minus},
+  Journal                  = {Nature},
+  Year                     = {2006},
+
+  Month                    = mar,
+  Number                   = {7084},
+  Pages                    = {663--666},
+  Volume                   = {440},
+
+  Comment                  = {10.1038/nature04387},
+  ISSN                     = {0028-0836},
+  Owner                    = {flo},
+  Timestamp                = {2012.09.20}
+}
+
+@Article{Kerr2004,
+  Title                    = {What is altruism?},
+  Author                   = {Benjamin Kerr and Peter Godfrey-Smith and Marcus W. Feldman},
+  Journal                  = {Trends in Ecology \& Evolution},
+  Year                     = {2004},
+  Number                   = {3},
+  Pages                    = {135 - 140},
+  Volume                   = {19},
+
+  Abstract                 = {Altruism is generally understood to be behavior that benefits others at a personal cost to the behaving individual. However, within evolutionary biology, different authors have interpreted the concept of altruism differently, leading to dissimilar predictions about the evolution of altruistic behavior. Generally, different interpretations diverge on which party receives the benefit from altruism and on how the cost of altruism is assessed. Using a simple trait-group framework, we delineate the assumptions underlying different interpretations and show how they relate to one another. We feel that a thorough examination of the connections between interpretations not only reveals why different authors have arrived at disparate conclusions about altruism, but also illuminates the conditions that are likely to favor the evolution of altruism.},
+  Bdsk-url-1               = {http://dx.doi.org/10.1016/j.tree.2003.10.004},
+  Doi                      = {10.1016/j.tree.2003.10.004},
+  ISSN                     = {0169-5347},
+  Owner                    = {flo},
+  Timestamp                = {2012.07.24}
+}
+
+@Article{KimuraCrow1964,
+  Title                    = {The number of alleles that can be maintained in a finite population},
+  Author                   = {Kimura, Motoo and Crow, James F.},
+  Journal                  = {Genetics},
+  Year                     = {1964},
+  Number                   = {4},
+  Pages                    = {725--738},
+  Volume                   = {49},
+
+  Bdsk-url-1               = {http://www.genetics.org/content/49/4/725},
+  Date-added               = {2016-08-04 13:44:24 +0000},
+  Date-modified            = {2016-08-04 13:44:54 +0000},
+  Eprint                   = {http://www.genetics.org/content/49/4/725.full.pdf},
+  ISSN                     = {0016-6731},
+  Publisher                = {Genetics},
+  Url                      = {http://www.genetics.org/content/49/4/725}
+}
+
+@InBook{LawDiekmann2000,
+  Title                    = {The Geometry of Ecological Interactions: Simplifying Spatial Complexity},
+  Author                   = {Law, R and Dieckmann, U},
+  Chapter                  = {Relaxation Projections and the Method of Moments},
+  Editor                   = {Dieckmann, U and Law, R and Metz, JAJ},
+  Pages                    = {252--270},
+  Publisher                = {Cambridge University Press},
+  Year                     = {2000},
+
+  Owner                    = {flo},
+  Timestamp                = {2012.07.27}
+}
+
+@Article{Lehmann2012,
+  Title                    = {The stationary distribution of a continuously varying strategy in a class-structured population under mutation--selection--drift balance},
+  Author                   = {Lehmann, L..},
+  Journal                  = {Journal of Evolutionary Biology},
+  Year                     = {2012},
+  Number                   = {4},
+  Pages                    = {770--787},
+  Volume                   = {25},
+
+  Bdsk-url-1               = {http://dx.doi.org/10.1111/j.1420-9101.2012.02472.x},
+  Date-added               = {2016-04-27 13:03:28 +0000},
+  Date-modified            = {2016-04-27 13:03:28 +0000},
+  Doi                      = {10.1111/j.1420-9101.2012.02472.x},
+  ISSN                     = {1420-9101},
+  Keywords                 = {adaptive dynamics, adaptive landscape, convergence stability, evolutionary stability, game theory, inclusive fitness, kin selection, mutation--selection--drift balance, quantitative phenotypes, stochastic stability},
+  Publisher                = {Blackwell Publishing Ltd},
+  Url                      = {http://dx.doi.org/10.1111/j.1420-9101.2012.02472.x}
+}
+
+@Article{Lehmann2006,
+  Title                    = {The evolution of cooperation and altruism -- a general framework and a classification of models},
+  Author                   = {Lehmann, L. and Keller, L.},
+  Journal                  = {Journal of Evolutionary Biology},
+  Year                     = {2006},
+  Number                   = {5},
+  Pages                    = {1365--1376},
+  Volume                   = {19},
+
+  Abstract                 = {One of the enduring puzzles in biology and the social sciences is the origin and persistence of intraspecific cooperation and altruism in humans and other species. Hundreds of theoretical models have been proposed and there is much confusion about the relationship between these models. To clarify the situation, we developed a synthetic conceptual framework that delineates the conditions necessary for the evolution of altruism and cooperation. We show that at least one of the four following conditions needs to be fulfilled: direct benefits to the focal individual performing a cooperative act; direct or indirect information allowing a better than random guess about whether a given individual will behave cooperatively in repeated reciprocal interactions; preferential interactions between related individuals; and genetic correlation between genes coding for altruism and phenotypic traits that can be identified. When one or more of these conditions are met, altruism or cooperation can evolve if the cost-to-benefit ratio of altruistic and cooperative acts is greater than a threshold value. The cost-to-benefit ratio can be altered by coercion, punishment and policing which therefore act as mechanisms facilitating the evolution of altruism and cooperation. All the models proposed so far are explicitly or implicitly built on these general principles, allowing us to classify them into four general categories.},
+  Bdsk-url-1               = {http://dx.doi.org/10.1111/j.1420-9101.2006.01119.x},
+  Doi                      = {10.1111/j.1420-9101.2006.01119.x},
+  ISSN                     = {1420-9101},
+  Keywords                 = {altruism, cooperation, kin selection, group selection, punishment, strong reciprocity},
+  Owner                    = {flo},
+  Publisher                = {Blackwell Publishing Ltd},
+  Timestamp                = {2012.07.24}
+}
+
+@Article{Lehmann2007,
+  Title                    = {The evolution of helping and harming on graphs: the return of the inclusive fitness effect},
+  Author                   = {Lehmann, L. and Keller, L. and Sumpter, D. J. T.},
+  Journal                  = {Journal of Evolutionary Biology},
+  Year                     = {2007},
+  Number                   = {6},
+  Pages                    = {2284--2295},
+  Volume                   = {20},
+
+  Abstract                 = {Evolutionary graph theory has been proposed as providing new fundamental rules for the evolution of co-operation and altruism. But how do these results relate to those of inclusive fitness theory? Here, we carry out a retrospective analysis of the models for the evolution of helping on graphs of Ohtsuki et al. [Nature (2006) 441, 502] and Ohtsuki & Nowak [Proc. R. Soc. Lond. Ser. B Biol. Sci (2006) 273, 2249]. We show that it is possible to translate evolutionary graph theory models into classical kin selection models without disturbing at all the mathematics describing the net effect of selection on helping. Model analysis further demonstrates that costly helping evolves on graphs through limited dispersal and overlapping generations. These two factors are well known to promote relatedness between interacting individuals in spatially structured populations. By allowing more than one individual to live at each node of the graph and by allowing interactions to vary with the distance between nodes, our inclusive fitness model allows us to consider a wider range of biological scenarios leading to the evolution of both helping and harming behaviours on graphs.},
+  Bdsk-url-1               = {http://dx.doi.org/10.1111/j.1420-9101.2007.01414.x},
+  Doi                      = {10.1111/j.1420-9101.2007.01414.x},
+  ISSN                     = {1420-9101},
+  Keywords                 = {graph theory, harming, helping, kin selection, population structure},
+  Owner                    = {flo},
+  Publisher                = {Blackwell Publishing Ltd},
+  Timestamp                = {2012.07.24}
+}
+
+@Article{LehmannRousset2014,
+  Title                    = {The genetical theory of social behaviour},
+  Author                   = {Lehmann, Laurent and Rousset, Fran{\c c}ois},
+  Journal                  = {Philosophical Transactions of the Royal Society of London B: Biological Sciences},
+  Year                     = {2014},
+  Number                   = {1642},
+  Volume                   = {369},
+
+  Abstract                 = {We survey the population genetic basis of social evolution, using a logically consistent set of arguments to cover a wide range of biological scenarios. We start by reconsidering Hamilton{\textquoteright}s (Hamilton 1964 J. Theoret. Biol. 7, 1{\textendash}16 (doi:10.1016/0022-5193(64)90038-4)) results for selection on a social trait under the assumptions of additive gene action, weak selection and constant environment and demography. This yields a prediction for the direction of allele frequency change in terms of phenotypic costs and benefits and genealogical concepts of relatedness, which holds for any frequency of the trait in the population, and provides the foundation for further developments and extensions. We then allow for any type of gene interaction within and between individuals, strong selection and fluctuating environments and demography, which may depend on the evolving trait itself. We reach three conclusions pertaining to selection on social behaviours under broad conditions. (i) Selection can be understood by focusing on a one-generation change in mean allele frequency, a computation which underpins the utility of reproductive value weights; (ii) in large populations under the assumptions of additive gene action and weak selection, this change is of constant sign for any allele frequency and is predicted by a phenotypic selection gradient; (iii) under the assumptions of trait substitution sequences, such phenotypic selection gradients suffice to characterize long-term multi-dimensional stochastic evolution, with almost no knowledge about the genetic details underlying the coevolving traits. Having such simple results about the effect of selection regardless of population structure and type of social interactions can help to delineate the common features of distinct biological processes. Finally, we clarify some persistent divergences within social evolution theory, with respect to exactness, synergies, maximization, dynamic sufficiency and the role of genetic arguments.},
+  Bdsk-url-1               = {http://rstb.royalsocietypublishing.org/content/369/1642/20130357},
+  Bdsk-url-2               = {http://dx.doi.org/10.1098/rstb.2013.0357},
+  Date-added               = {2016-04-05 12:07:56 +0000},
+  Date-modified            = {2016-04-05 12:08:04 +0000},
+  Doi                      = {10.1098/rstb.2013.0357},
+  Eprint                   = {http://rstb.royalsocietypublishing.org/content/369/1642/20130357.full.pdf},
+  ISSN                     = {0962-8436},
+  Publisher                = {The Royal Society},
+  Url                      = {http://rstb.royalsocietypublishing.org/content/369/1642/20130357}
+}
+
+@Article{LehmannRousset2010,
+  Title                    = {How life history and demography promote or inhibit the evolution of helping behaviours},
+  Author                   = {Lehmann, Laurent and Rousset, Fran{\c c}ois},
+  Journal                  = {Philosophical Transactions of the Royal Society B: Biological Sciences},
+  Year                     = {2010},
+  Number                   = {1553},
+  Pages                    = {2599-2617},
+  Volume                   = {365},
+
+  Abstract                 = {In natural populations, dispersal tends to be limited so that individuals are in local competition with their neighbours. As a consequence, most behaviours tend to have a social component, e.g. they can be selfish, spiteful, cooperative or altruistic as usually considered in social evolutionary theory. How social behaviours translate into fitness costs and benefits depends considerably on life-history features, as well as on local demographic and ecological conditions. Over the last four decades, evolutionists have been able to explore many of the consequences of these factors for the evolution of social behaviours. In this paper, we first recall the main theoretical concepts required to understand social evolution. We then discuss how life history, demography and ecology promote or inhibit the evolution of helping behaviours, but the arguments developed for helping can be extended to essentially any social trait. The analysis suggests that, on a theoretical level, it is possible to contrast three critical benefit-to-cost ratios beyond which costly helping is selected for (three quantitative rules for the evolution of altruism). But comparison between theoretical results and empirical data has always been difficult in the literature, partly because of the perennial question of the scale at which relatedness should be measured under localized dispersal. We then provide three answers to this question.},
+  Bdsk-url-1               = {http://rstb.royalsocietypublishing.org/content/365/1553/2599.abstract},
+  Bdsk-url-2               = {http://dx.doi.org/10.1098/rstb.2010.0138},
+  Date-modified            = {2016-08-03 10:21:54 +0000},
+  Doi                      = {10.1098/rstb.2010.0138},
+  Eprint                   = {http://rstb.royalsocietypublishing.org/content/365/1553/2599.full.pdf+html},
+  Url                      = {http://rstb.royalsocietypublishing.org/content/365/1553/2599.abstract}
+}
+
+@Article{LeturqueRousset2002,
+  Title                    = {Dispersal, Kin Competition, and the Ideal Free Distribution in a Spatially Heterogeneous Population},
+  Author                   = {Henri Leturque and Fran{\c c}ois Rousset},
+  Journal                  = {Theoretical Population Biology},
+  Year                     = {2002},
+  Number                   = {2},
+  Pages                    = {169 - 180},
+  Volume                   = {62},
+
+  Abstract                 = {In this paper, we reanalyze simple models of the evolution of dispersal in a heterogeneous landscape. Previous analyses concluded that without temporal variability, dispersal can evolve only if it is not costly and if it is conditional on the habitat. If both conditions hold, these models predict that selection on dispersal should lead to balanced dispersal between habitats (the number of immigrants equals the number of emigrants in each habitat). To evaluate the generality of these conclusions, we extended the analysis of these models to finite populations. This requires us to establish fitness measures for finite class-structured populations. These fitness measures allow us to take kin competition into account. Our analysis shows that even without temporal variability, conditional dispersal and the absence of a dispersal cost are not necessary conditions for dispersal to evolve. In the absence of a dispersal cost, we predict that selection on conditional dispersal will always lead to panmixia and not simply to balanced dispersal. When dispersal is costly, we show that the ideal free distribution (IFD) and balanced dispersal do not occur. Our results show that the deviations from \{IFD\} are of the order of the dispersal cost. We propose an approach to test our predictions. },
+  Bdsk-url-1               = {http://www.sciencedirect.com/science/article/pii/S004058090291600X},
+  Bdsk-url-2               = {http://dx.doi.org/10.1006/tpbi.2002.1600},
+  Doi                      = {10.1006/tpbi.2002.1600},
+  ISSN                     = {0040-5809},
+  Keywords                 = {class-structured population},
+  Url                      = {http://www.sciencedirect.com/science/article/pii/S004058090291600X}
+}
+
+@Article{Lieberman2005,
+  Title                    = {Evolutionary dynamics on graphs},
+  Author                   = {Lieberman, Erez and Hauert, Christoph and Nowak, Martin A},
+  Journal                  = {Nature},
+  Year                     = {2005},
+  Number                   = {7023},
+  Pages                    = {312--316},
+  Volume                   = {433},
+
+  Date-added               = {2016-04-15 12:14:54 +0000},
+  Date-modified            = {2016-04-15 12:15:00 +0000},
+  Publisher                = {Nature Publishing Group}
+}
+
+@Article{Lion2009,
+  Title                    = {The evolution of juvenile-adult interactions in populations structured in age and space},
+  Author                   = {Lion, S. and van Baalen, M.},
+  Journal                  = {Theoretical Population Biology},
+  Year                     = {2009},
+  Number                   = {2},
+  Pages                    = {132--145},
+  Volume                   = {76},
+
+  Di                       = {10.1016/j.tpb.2009.05.005},
+  File                     = {Lion_vanBaalen_2009_TPB.pdf:C\:\\Florence\\My documents\\Biblio\\Lion_vanBaalen_2009_TPB.pdf:PDF},
+  Owner                    = {debarre},
+  Sn                       = {0040-5809},
+  Tc                       = {0},
+  Timestamp                = {2010.06.15},
+  Ut                       = {WOS:000268737400006}
+}
+
+@Article{Lion2008,
+  Title                    = {Self-structuring in spatial evolutionary ecology},
+  Author                   = {Lion, S. and van Baalen, M.},
+  Journal                  = {Ecol Lett},
+  Year                     = {2008},
+
+  Month                    = mar,
+  Number                   = {3},
+  Pages                    = {277--295},
+  Volume                   = {11},
+
+  Af                       = {Lion, SebastienEOLEOLvan Baalen, Minus},
+  File                     = {Lion_vanBaalen_2008_el.pdf:C\:\\Florence\\My documents\\Biblio\\Lion_vanBaalen_2008_el.pdf:PDF},
+  Keywords                 = {Lattice},
+  Owner                    = {0113},
+  Sn                       = {1461-023X},
+  Timestamp                = {2008.03.20},
+  Ut                       = {ISI:000252807500009}
+}
+
+@Article{Lion2007,
+  Title                    = {From infanticide to parental care: why spatial structure can help adults be good parents.},
+  Author                   = {Sebastien Lion and Minus van Baalen},
+  Journal                  = {Am Nat},
+  Year                     = {2007},
+
+  Month                    = {Aug},
+  Number                   = {2},
+  Pages                    = {E26--E46},
+  Volume                   = {170},
+
+  Abstract                 = {We investigate the evolution of parental care and cannibalism in a spatially structured population where adults can either help or kill juveniles in their neighborhood. We show that spatial structure can reverse the selective pressures on adult behavior, leading to the evolution of parental care, whereas the nonspatial model predicts that cannibalism is the sole evolutionary outcome. Our analysis emphasizes that evolution of such spatially structured populations is best understood at the level of the cluster of invading mutants, and we define invasion fitness as the growth rate of that cluster. We derive an analytical expression for the selective pressures on the trait and show that relatedness and Hamilton's rule are recovered as emergent properties of the spatial ecological dynamics. When adults can also help other adults, the benefits to each class of recipients are weighted by the class reproductive value, a result consistent with that of other models of kin selection. Finally, we advocate a different approach to moment equations and argue that even though the development of moment closure approximations is a necessary line of research, much-needed ecological and evolutionary insight can be gained by studying the unclosed moment equations.},
+  Bdsk-url-1               = {http://dx.doi.org/10.1086/519462},
+  Doi                      = {10.1086/519462},
+  File                     = {Lion_vanBaalen_2007_amnat.pdf:C\:\\Florence\\My documents\\Biblio\\Lion_vanBaalen_2007_amnat.pdf:PDF},
+  Keywords                 = {Animals; Behavior, Animal; Cannibalism; Evolution; Models, Biological; Population Dynamics},
+  Owner                    = {0039},
+  Pii                      = {AN42306},
+  Pmid                     = {17874366},
+  Timestamp                = {2008.03.20}
+}
+
+@Article{LionGandon2009,
+  Title                    = {Habitat saturation and the spatial evolutionary ecology of altruism},
+  Author                   = {Lion, S. and Gandon, S.},
+  Journal                  = {Journal of Evolutionary Biology},
+  Year                     = {2009},
+  Number                   = {7},
+  Pages                    = {1487--1502},
+  Volume                   = {22},
+
+  File                     = {Lion-Gandon_2009_JEB.pdf:C\:\\Florence\\My documents\\Biblio\\Lion-Gandon_2009_JEB.pdf:PDF},
+  Owner                    = {debarre},
+  Timestamp                = {2010.06.17}
+}
+
+@Article{LionGandon2010,
+  Title                    = {Life history, habitat saturation and the evolution of fecundity and survival altruism},
+  Author                   = {Lion, S{\'e}bastien and Gandon, Sylvain},
+  Journal                  = {Evolution},
+  Year                     = {2010},
+  Number                   = {6},
+  Pages                    = {1594--1606},
+  Volume                   = {64},
+
+  Owner                    = {debarre},
+  Timestamp                = {2010.06.17}
+}
+
+@Article{Lion2011,
+  Title                    = {Evolution in structured populations: beyond the kin versus group debate},
+  Author                   = {S{\'e}bastien Lion and Vincent A.A. Jansen and Troy Day},
+  Journal                  = {Trends in Ecology \& Evolution},
+  Year                     = {2011},
+  Number                   = {4},
+  Pages                    = {193 - 201},
+  Volume                   = {26},
+
+  Abstract                 = {Much of the literature on social evolution is pervaded by the old debate about the relative merits of kin and group selection. In this debate, the biological interpretation of processes occurring in real populations is often conflated with the mathematical methodology used to describe these processes. Here, we highlight the distinction between the two by placing this discussion within the broader context of evolution in structured populations. In this review we show that the current debate overlooks important aspects of the interplay between genetic and demographic structuring, and argue that a continued focus on the relative merits of kin versus group selection distracts attention from moving the field forward.},
+  Bdsk-url-1               = {http://dx.doi.org/10.1016/j.tree.2011.01.006},
+  Doi                      = {10.1016/j.tree.2011.01.006},
+  ISSN                     = {0169-5347},
+  Owner                    = {flo},
+  Timestamp                = {2012.07.24}
+}
+
+@Article{Maciejewski2014,
+  Title                    = {Reproductive value in graph-structured populations},
+  Author                   = {Wes Maciejewski},
+  Journal                  = {Journal of Theoretical Biology},
+  Year                     = {2014},
+  Pages                    = {285 - 293},
+  Volume                   = {340},
+
+  Abstract                 = {Abstract Evolutionary graph theory has grown to be an area of intense study. Despite the amount of interest in the field, it seems to have grown separate from other subfields of population genetics and evolution. In the current work I introduce the concept of Fisher's (1930) reproductive value into the study of evolution on graphs. Reproductive value is a measure of the expected genetic contribution of an individual to a distant future generation. In a heterogeneous graph-structured population, differences in the number of connections among individuals translate into differences in the expected number of offspring, even if all individuals have the same fecundity. These differences are accounted for by reproductive value. The introduction of reproductive value permits the calculation of the fixation probability of a mutant in a neutral evolutionary process in any graph-structured population for either the moran birth--death or death--birth process. },
+  Bdsk-url-1               = {http://www.sciencedirect.com/science/article/pii/S0022519313004785},
+  Bdsk-url-2               = {http://dx.doi.org/10.1016/j.jtbi.2013.09.032},
+  Date-added               = {2016-03-09 09:31:08 +0000},
+  Date-modified            = {2016-03-09 09:31:12 +0000},
+  Doi                      = {http://dx.doi.org/10.1016/j.jtbi.2013.09.032},
+  ISSN                     = {0022-5193},
+  Keywords                 = {Reproductive value},
+  Url                      = {http://www.sciencedirect.com/science/article/pii/S0022519313004785}
+}
+
+@Article{Malecot1975,
+  Title                    = {Heterozygosity and relationship in regularly subdivided populations},
+  Author                   = {Gustave Mal\'ecot},
+  Journal                  = {Theoretical Population Biology},
+  Year                     = {1975},
+  Number                   = {2},
+  Pages                    = {212 - 241},
+  Volume                   = {8},
+
+  Abstract                 = {The problems about regularly subdivided populations (with either finite or infinite number of subdivisions) may be unified by using Fourier or Laplace transforms. It is shown that some general theorems give (in unidimensional and in bidimensional cases) approximate values of: 1.1. the rate of decrease of heterozygosity when there are no mutations.2.2. the rate of decrease of kinship as a function of distance, in the asymptotic stationary situation, when there are mutations towards an allele already existing or towards a new allele. When σ2, variance of migration in some direction, is sufficiently large with respect to number of subdivisions, it is shown that the population behaves as a wholly panmictic one.},
+  Bdsk-url-1               = {http://www.sciencedirect.com/science/article/pii/0040580975900337},
+  Bdsk-url-2               = {http://dx.doi.org/10.1016/0040-5809(75)90033-7},
+  Date-added               = {2016-03-22 15:29:55 +0000},
+  Date-modified            = {2016-03-22 15:29:55 +0000},
+  Doi                      = {http://dx.doi.org/10.1016/0040-5809(75)90033-7},
+  ISSN                     = {0040-5809},
+  Url                      = {http://www.sciencedirect.com/science/article/pii/0040580975900337}
+}
+
+@Article{Matsuda1992,
+  Title                    = {Statistical Mechanics of Population},
+  Author                   = {Hirotsugu Matsuda and Naofumi Ogita and Akira Sasaki and Kazunori Sat\={o}},
+  Journal                  = {Progress Of Theoretical Physics},
+  Year                     = {1992},
+  Number                   = {6},
+  Pages                    = {1035-1049},
+  Volume                   = {88},
+
+  Bdsk-url-1               = {http://dx.doi.org/10.1143/PTP.88.1035},
+  Doi                      = {10.1143/PTP.88.1035},
+  File                     = {Matsuda_etal_1992.pdf:C\:\\Florence\\My documents\\Biblio\\Matsuda_etal_1992.pdf:PDF},
+  Numpages                 = {14},
+  Owner                    = {debarre},
+  Publisher                = {Progress of Theoretical Physics},
+  Timestamp                = {2010.06.25}
+}
+
+@Article{McAvoyHauert2015,
+  Title                    = {Structural symmetry in evolutionary games},
+  Author                   = {McAvoy, Alex and Hauert, Christoph},
+  Journal                  = {Journal of The Royal Society Interface},
+  Year                     = {2015},
+  Number                   = {111},
+  Volume                   = {12},
+
+  Abstract                 = {In evolutionary game theory, an important measure of a mutant trait (strategy) is its ability to invade and take over an otherwise-monomorphic population. Typically, one quantifies the success of a mutant strategy via the probability that a randomly occurring mutant will fixate in the population. However, in a structured population, this fixation probability may depend on where the mutant arises. Moreover, the fixation probability is just one quantity by which one can measure the success of a mutant; fixation time, for instance, is another. We define a notion of homogeneity for evolutionary games that captures what it means for two single-mutant states, i.e. two configurations of a single mutant in an otherwise-monomorphic population, to be {\textquoteleft}evolutionarily equivalent{\textquoteright} in the sense that all measures of evolutionary success are the same for both configurations. Using asymmetric games, we argue that the term {\textquoteleft}homogeneous{\textquoteright} should apply to the evolutionary process as a whole rather than to just the population structure. For evolutionary matrix games in graph-structured populations, we give precise conditions under which the resulting process is homogeneous. Finally, we show that asymmetric matrix games can be reduced to symmetric games if the population structure possesses a sufficient degree of symmetry.},
+  Bdsk-url-1               = {http://rsif.royalsocietypublishing.org/content/12/111/20150420},
+  Bdsk-url-2               = {http://dx.doi.org/10.1098/rsif.2015.0420},
+  Date-added               = {2016-08-16 17:39:34 +0000},
+  Date-modified            = {2016-08-16 17:39:43 +0000},
+  Doi                      = {10.1098/rsif.2015.0420},
+  Eprint                   = {http://rsif.royalsocietypublishing.org/content/12/111/20150420.full.pdf},
+  ISSN                     = {1742-5689},
+  Publisher                = {The Royal Society},
+  Url                      = {http://rsif.royalsocietypublishing.org/content/12/111/20150420}
+}
+
+@Article{MichodHamilton1980,
+  Title                    = {Coefficients of relatedness in sociobiology},
+  Author                   = {Michod, Richard E. and Hamilton, W. D.},
+  Journal                  = {Nature},
+  Year                     = {1980},
+
+  Month                    = dec,
+  Number                   = {5792},
+  Pages                    = {694--697},
+  Volume                   = {288},
+
+  Comment                  = {10.1038/288694a0},
+  Owner                    = {flo},
+  Timestamp                = {2012.08.27}
+}
+
+@Book{Moran1962,
+  Title                    = {The statistical processes of evolutionary theory.},
+  Author                   = {Moran, P.},
+  Publisher                = {Clarendon Press; Oxford University Press.},
+  Year                     = {1962},
+
+  Date-added               = {2016-04-05 15:44:59 +0000},
+  Date-modified            = {2016-04-05 15:45:18 +0000},
+  Journal                  = {The statistical processes of evolutionary theory.}
+}
+
+@Article{Moran1958,
+  Title                    = {Random processes in genetics},
+  Author                   = {Moran,P. A. P.},
+  Journal                  = {Mathematical Proceedings of the Cambridge Philosophical Society},
+  Year                     = {1958},
+  Number                   = {01},
+  Pages                    = {60-71},
+  Volume                   = {54},
+
+  Abstract                 = { ABSTRACT ABSTRACTWright's model of a random process in genetica is modified by supposing that births and deaths occur individually at random so that the generations are no longer simultaneous. An exact solution is then obtained for the distribution of the number of a-genes in a haploid organism when mutation is occurring in both directions. When there is no mutation, the rate of approach to homozygosity is found in more complicated models with two sexes and diploid individuate. This rate is twice that occurring in Wright's models. },
+  Bdsk-url-1               = {http://dx.doi.org/10.1017/S0305004100033193},
+  Doi                      = {10.1017/S0305004100033193},
+  Eprint                   = {http://journals.cambridge.org/article_S0305004100033193},
+  Owner                    = {flo},
+  Timestamp                = {2012.05.15}
+}
+
+@Article{Nakamaru2006,
+  Title                    = {The coevolution of altruism and punishment: Role of the selfish punisher},
+  Author                   = {Mayuko Nakamaru and Yoh Iwasa},
+  Journal                  = {Journal of Theoretical Biology},
+  Year                     = {2006},
+  Number                   = {3},
+  Pages                    = {475 - 488},
+  Volume                   = {240},
+
+  Abstract                 = {Punishment is an important mechanism promoting the evolution of altruism among non-relatives. We investigate the coevolution of altruism and punitive behavior, considering four possible strategies: the altruist punisher (AP, a cooperator who punishes defectors), the altruist non-punisher (AN, a pure cooperator), the selfish punisher (SP, a defector who punishes defectors), and the selfish non-punisher (SN, a pure defector). The SP uses a paradoxical strategy as it punishes other defectors. We analyse the effects of SP and AN on the coevolution of altruism and punishment. We study both the score-dependent viability model (whereby the game's score affects survivorship only) and the score-dependent fertility model (whereby the score affects fertility only). In the viability model of a completely mixed population, SP first drives out SN, and hence it helps cooperators (AP and AN) to evolve. In contrast, in the fertility model of a completely mixed population, neither SP nor AN helps the evolution of cooperation. In both the viability and fertility models of a lattice-structured population, SP promotes the spread of AP. In contrast, AN discourages the evolution of AP. These results can be understood that punishment is a form of spite behavior, paying a cost to reduce the fitness of the opponents, and that different models give different magnitude of advantage to spite behavior.},
+  Bdsk-url-1               = {http://dx.doi.org/10.1016/j.jtbi.2005.10.011},
+  Doi                      = {10.1016/j.jtbi.2005.10.011},
+  ISSN                     = {0022-5193},
+  Keywords                 = {Altruism},
+  Owner                    = {flo},
+  Timestamp                = {2011.11.03}
+}
+
+@Article{Nowak2006,
+  Title                    = {Five Rules for the Evolution of Cooperation},
+  Author                   = {Nowak, Martin A.},
+  Journal                  = {Science},
+  Year                     = {2006},
+  Number                   = {5805},
+  Pages                    = {1560-1563},
+  Volume                   = {314},
+
+  Abstract                 = {Cooperation is needed for evolution to construct new levels of organization. Genomes, cells, multicellular organisms, social insects, and human society are all based on cooperation. Cooperation means that selfish replicators forgo some of their reproductive potential to help one another. But natural selection implies competition and therefore opposes cooperation unless a specific mechanism is at work. Here I discuss five mechanisms for the evolution of cooperation: kin selection, direct reciprocity, indirect reciprocity, network reciprocity, and group selection. For each mechanism, a simple rule is derived that specifies whether natural selection can lead to cooperation.},
+  Bdsk-url-1               = {http://dx.doi.org/10.1126/science.1133755},
+  Doi                      = {10.1126/science.1133755},
+  Owner                    = {flo},
+  Timestamp                = {2012.07.24}
+}
+
+@Article{NowakMay1992,
+  Title                    = {Evolutionary games and spatial chaos},
+  Author                   = {Nowak, Martin A. and May, Robert M.},
+  Journal                  = {Nature},
+  Year                     = {1992},
+
+  Month                    = oct,
+  Number                   = {6398},
+  Pages                    = {826--829},
+  Volume                   = {359},
+
+  Abstract                 = {MUCH attention has been given to the Prisoners' Dilemma as a metaphor for the problems surrounding the evolution of coopera-tive behaviour1--6. This work has dealt with the relative merits of various strategies (such as tit-for-tat) when players who recognize each other meet repeatedly, and more recently with ensembles of strategies and with the effects of occasional errors. Here we neglect all strategical niceties or memories of past encounters, considering only two simple kinds of players: those who always cooperate and those who always defect. We explore the consequences of placing these players in a two-dimensional spatial array: in each round, every individual 'plays the game' with the immediate neighbours; after this, each site is occupied either by its original owner or by one of the neighbours, depending on who scores the highest total in that round; and so to the next round of the game. This simple, and purely deterministic, spatial version of the Prisoners' Dilemma, with no memories among players and no strategical elaboration, can generate chaotically changing spatial patterns, in which cooperators and defectors both persist indefinitely (in fluctuating proportions about predictable long-term averages). If the starting configurations are sufficiently symmetrical, these ever-changing sequences of spatial patterns---dynamic fractals---can be extraordinarily beautiful, and have interesting mathematical properties. There are potential implications for the dynamics of a wide variety of spatially extended systems in physics and biology.},
+  Comment                  = {10.1038/359826a0},
+  Owner                    = {flo},
+  Timestamp                = {2012.05.15}
+}
+
+@Article{Nowaketal2009,
+  Title                    = {Evolutionary dynamics in structured populations},
+  Author                   = {Nowak, Martin A. and Tarnita, Corina E. and Antal, Tibor},
+  Journal                  = {Philosophical Transactions of the Royal Society of London B: Biological Sciences},
+  Year                     = {2009},
+  Number                   = {1537},
+  Pages                    = {19--30},
+  Volume                   = {365},
+
+  Abstract                 = {Evolutionary dynamics shape the living world around us. At the centre of every evolutionary process is a population of reproducing individuals. The structure of that population affects evolutionary dynamics. The individuals can be molecules, cells, viruses, multicellular organisms or humans. Whenever the fitness of individuals depends on the relative abundance of phenotypes in the population, we are in the realm of evolutionary game theory. Evolutionary game theory is a general approach that can describe the competition of species in an ecosystem, the interaction between hosts and parasites, between viruses and cells, and also the spread of ideas and behaviours in the human population. In this perspective, we review the recent advances in evolutionary game dynamics with a particular emphasis on stochastic approaches in finite sized and structured populations. We give simple, fundamental laws that determine how natural selection chooses between competing strategies. We study the well-mixed population, evolutionary graph theory, games in phenotype space and evolutionary set theory. We apply these results to the evolution of cooperation. The mechanism that leads to the evolution of cooperation in these settings could be called {\textquoteleft}spatial selection{\textquoteright}: cooperators prevail against defectors by clustering in physical or other spaces. {\textcopyright} 2010 The Royal Society},
+  Bdsk-url-1               = {http://rstb.royalsocietypublishing.org/content/365/1537/19},
+  Bdsk-url-2               = {http://dx.doi.org/10.1098/rstb.2009.0215},
+  Date-added               = {2016-03-04 14:30:49 +0000},
+  Date-modified            = {2016-03-04 14:30:49 +0000},
+  Doi                      = {10.1098/rstb.2009.0215},
+  Eprint                   = {http://rstb.royalsocietypublishing.org/content/365/1537/19.full.pdf},
+  ISSN                     = {0962-8436},
+  Publisher                = {The Royal Society},
+  Url                      = {http://rstb.royalsocietypublishing.org/content/365/1537/19}
+}
+
+@Article{Nowak2010,
+  Title                    = {The evolution of eusociality},
+  Author                   = {Nowak, Martin A. and Tarnita, Corina E. and Wilson, Edward O.},
+  Journal                  = {Nature},
+  Year                     = {2010},
+
+  Month                    = aug,
+  Number                   = {7310},
+  Pages                    = {1057--1062},
+  Volume                   = {466},
+
+  Comment                  = {10.1038/nature09205},
+  ISSN                     = {0028-0836},
+  Owner                    = {flo},
+  Publisher                = {Nature Publishing Group, a division of Macmillan Publishers Limited. All Rights Reserved.},
+  Timestamp                = {2012.07.24}
+}
+
+@Article{Nowak2004,
+  Title                    = {Emergence of cooperation and evolutionary stability in finite populations},
+  Author                   = {Nowak, M.A. and Sasaki, A. and Taylor, C. and Fudenberg, D.},
+  Journal                  = {Nature},
+  Year                     = {2004},
+  Number                   = {6983},
+  Pages                    = {646--650},
+  Volume                   = {428},
+
+  Publisher                = {Nature Publishing Group}
+}
+
+@Article{Nowak1990,
+  Title                    = {The evolution of stochastic strategies in the Prisoner's Dilemma},
+  Author                   = {Nowak, Martin and Sigmund, Karl},
+  Journal                  = {Acta Applicandae Mathematicae},
+  Year                     = {1990},
+  Note                     = {10.1007/BF00049570},
+  Pages                    = {247-265},
+  Volume                   = {20},
+
+  Abstract                 = {The evolution of reactive strategies for repeated 2×2-games occurring in biology is investigated by means of an adaptive dynamics.},
+  ISSN                     = {0167-8019},
+  Issue                    = {3},
+  Keyword                  = {Mathematics and Statistics},
+  Owner                    = {flo},
+  Publisher                = {Springer Netherlands},
+  Timestamp                = {2012.07.25}
+}
+
+@Article{Ohtsuki2012,
+  Title                    = {Does synergy rescue the evolution of cooperation? An analysis for homogeneous populations with non-overlapping generations},
+  Author                   = {Hisashi Ohtsuki},
+  Journal                  = {Journal of Theoretical Biology},
+  Year                     = {2012},
+  Number                   = {0},
+  Pages                    = {20 - 28},
+  Volume                   = {307},
+
+  Abstract                 = {Recent developments of social evolution theory have revealed conditions under which cooperation is favored by natural selection. Effects of population structure on the evolution of cooperation have been one of the central questions in this issue, and inclusive fitness analyses have unveiled two different selective forces that favor cooperation; the direct fitness effect to the helper and the indirect fitness benefit to the helper via its kin. Although these theoretical frameworks have made a significant contribution to our understanding of cooperative traits, there is still one factor to be taken into account, synergy. Synergy means a nonlinear effect that arises when two individuals help each other. In other words, it represents deviation from additivity, to which inclusive fitness theory has paid relatively little attention. Here I provide a theoretical result on the possibility that synergy favors the evolution of cooperation. For homogeneously structured populations with non-overlapping generations, I show that incorporating synergistic effects does not rescue the evolution of cooperation. Potential factors that could enable synergy to rescue the evolution of cooperation are also discussed.},
+  Bdsk-url-1               = {http://dx.doi.org/10.1016/j.jtbi.2012.04.030},
+  Doi                      = {10.1016/j.jtbi.2012.04.030},
+  ISSN                     = {0022-5193},
+  Keywords                 = {Evolutionary game theory}
+}
+
+@Article{Ohtsuki2010,
+  Title                    = {Evolutionary games in {W}right's Island model: kin selection meets evolutionary game theory},
+  Author                   = {Ohtsuki, Hisashi},
+  Journal                  = {Evolution},
+  Year                     = {2010},
+  Number                   = {12},
+  Pages                    = {3344--3353},
+  Volume                   = {64},
+
+  Abstract                 = {This article studies evolutionary game dynamics in Wright's infinite island model. I study a general n×n matrix game and derive a basic equation that describes the change in frequency of strategies. A close observation of this equation reveals that three distinct effects are at work: direct benefit to a focal individual, kin-selected indirect benefit to the focal individual via its relatives, and the cost caused by increased kin competition in the focal individual's natal deme. Crucial parameters are the coefficient of relatedness between two individuals and its analogue for three individuals. I provide a number of examples and show when the traditional inclusive fitness measure is recovered and when not. Results demonstrate how evolutionary game theory fits into the framework of kin selection.},
+  Bdsk-url-1               = {http://dx.doi.org/10.1111/j.1558-5646.2010.01117.x},
+  Doi                      = {10.1111/j.1558-5646.2010.01117.x},
+  ISSN                     = {1558-5646},
+  Keywords                 = {Coefficient of relatedness, identity by descent, inclusive fitness, matrix game, spatial structure},
+  Owner                    = {flo},
+  Publisher                = {Blackwell Publishing Inc},
+  Timestamp                = {2012.07.24}
+}
+
+@Article{Ohtsuki2006,
+  Title                    = {A simple rule for the evolution of cooperation on graphs and social networks},
+  Author                   = {Ohtsuki, Hisashi and Hauert, Christoph and Lieberman, Erez and Nowak, Martin A.},
+  Journal                  = {Nature},
+  Year                     = {2006},
+
+  Month                    = {May},
+  Number                   = {7092},
+  Pages                    = {502--505},
+  Volume                   = {441},
+
+  Abstract                 = {A fundamental aspect of all biological systems is cooperation. Cooperative interactions are required for many levels of biological organization ranging from single cells to groups of animals. Human society is based to a large extent on mechanisms that promote cooperation. It is well known that in unstructured populations, natural selection favours defectors over cooperators. There is much current interest, however, in studying evolutionary games in structured populations and on graphs. These efforts recognize the fact that who-meets-whom is not random, but determined by spatial relationships or social networks. Here we describe a surprisingly simple rule that is a good approximation for all graphs that we have analysed, including cycles, spatial lattices, random regular graphs, random graphs and scale-free networks: natural selection favours cooperation, if the benefit of the altruistic act, b, divided by the cost, c, exceeds the average number of neighbours, k, which means b/c > k. In this case, cooperation can evolve as a consequence of 'social viscosity' even in the absence of reputation effects or strategic complexity.},
+  Comment                  = {10.1038/nature04605},
+  ISSN                     = {0028-0836},
+  Owner                    = {flo},
+  Timestamp                = {2011.11.03}
+}
+
+@Article{OhtsukiNowak2006,
+  Title                    = {Evolutionary games on cycles},
+  Author                   = {Ohtsuki, Hisashi and Nowak, Martin A},
+  Journal                  = {Proceedings of the Royal Society B: Biological Sciences},
+  Year                     = {2006},
+  Number                   = {1598},
+  Pages                    = {2249-2256},
+  Volume                   = {273},
+
+  Abstract                 = {Traditional evolutionary game theory explores frequency-dependent selection in well-mixed populations without spatial or stochastic effects. But recently there has been much interest in studying the evolutionary game dynamics in spatial settings, on lattices and other graphs. Here, we present an analytic approach for the stochastic evolutionary game dynamics on the simplest possible graph, the cycle. For three different update rules, called `birth--death' (BD), `death--birth' (DB) and `imitation' (IM), we derive exact conditions for natural selection to favour one strategy over another. As specific examples, we consider a coordination game and Prisoner's Dilemma. In the latter case, selection can favour cooperators over defectors for DB and IM updating. We also study the case where the replacement graph of evolutionary updating remains a cycle, but the interaction graph for playing the game is a complete graph. In this setting, all three update rules lead to identical conditions in the limit of weak selection, where we find the `1/3-law' of well-mixed populations.},
+  Bdsk-url-1               = {http://dx.doi.org/10.1098/rspb.2006.3576},
+  Doi                      = {10.1098/rspb.2006.3576},
+  Eprint                   = {http://rspb.royalsocietypublishing.org/content/273/1598/2249.full.pdf+html},
+  Owner                    = {flo},
+  Timestamp                = {2012.05.15}
+}
+
+@Article{OhtsukiNowak2006JTB,
+  Title                    = {The replicator equation on graphs},
+  Author                   = {Hisashi Ohtsuki and Martin A. Nowak},
+  Journal                  = {Journal of Theoretical Biology},
+  Year                     = {2006},
+  Number                   = {1},
+  Pages                    = {86 - 97},
+  Volume                   = {243},
+
+  Abstract                 = {We study evolutionary games on graphs. Each player is represented by a vertex of the graph. The edges denote who meets whom. A player can use any one of n strategies. Players obtain a payoff from interaction with all their immediate neighbors. We consider three different update rules, called `birth--death', `death--birth' and `imitation'. A fourth update rule, `pairwise comparison', is shown to be equivalent to birth--death updating in our model. We use pair approximation to describe the evolutionary game dynamics on regular graphs of degree k. In the limit of weak selection, we can derive a differential equation which describes how the average frequency of each strategy on the graph changes over time. Remarkably, this equation is a replicator equation with a transformed payoff matrix. Therefore, moving a game from a well-mixed population (the complete graph) onto a regular graph simply results in a transformation of the payoff matrix. The new payoff matrix is the sum of the original payoff matrix plus another matrix, which describes the local competition of strategies. We discuss the application of our theory to four particular examples, the Prisoner's Dilemma, the Snow-Drift game, a coordination game and the Rock--Scissors--Paper game. },
+  Bdsk-url-1               = {http://www.sciencedirect.com/science/article/pii/S0022519306002426},
+  Bdsk-url-2               = {http://dx.doi.org/10.1016/j.jtbi.2006.06.004},
+  Date-added               = {2016-03-23 17:20:18 +0000},
+  Date-modified            = {2016-03-23 17:20:41 +0000},
+  Doi                      = {http://dx.doi.org/10.1016/j.jtbi.2006.06.004},
+  ISSN                     = {0022-5193},
+  Keywords                 = {Mathematical biology},
+  Url                      = {http://www.sciencedirect.com/science/article/pii/S0022519306002426}
+}
+
+@Article{Ohtsuki2007,
+  Title                    = {Breaking the Symmetry between Interaction and Replacement in Evolutionary Dynamics on Graphs},
+  Author                   = {Ohtsuki, Hisashi and Nowak, Martin A. and Pacheco, Jorge M.},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2007},
+
+  Month                    = {Mar},
+  Pages                    = {108106},
+  Volume                   = {98},
+
+  Bdsk-url-1               = {http://dx.doi.org/10.1103/PhysRevLett.98.108106},
+  Doi                      = {10.1103/PhysRevLett.98.108106},
+  File                     = {:/home/flo/Dropbox/PostDoc_CostLattice/Biblio/Ohtsuki-etal_2007.pdf:PDF},
+  Issue                    = {10},
+  Numpages                 = {4},
+  Publisher                = {American Physical Society}
+}
+
+@Book{Okasha2006,
+  Title                    = {Evolution and the Levels of Selection},
+  Author                   = {Okasha, S.},
+  Publisher                = {Oxford University Press, USA},
+  Year                     = {2006},
+
+  Owner                    = {flo},
+  Timestamp                = {2012.07.25}
+}
+
+@Article{Price1970,
+  Title                    = {Selection and Covariance},
+  Author                   = {Price, George R.},
+  Journal                  = {Nature},
+  Year                     = {1970},
+
+  Month                    = aug,
+  Number                   = {5257},
+  Pages                    = {520--521},
+  Volume                   = {227},
+
+  Bdsk-url-1               = {http://dx.doi.org/10.1038/227520a0},
+  Comment                  = {10.1038/227520a0},
+  Owner                    = {flo},
+  Timestamp                = {2012.03.20},
+  Url                      = {http://dx.doi.org/10.1038/227520a0}
+}
+
+@Article{Queller1994,
+  Title                    = {Genetic relatedness in viscous populations},
+  Author                   = {Queller, David C.},
+  Journal                  = {Evolutionary Ecology},
+  Year                     = {1994},
+  Note                     = {10.1007/BF01237667},
+  Pages                    = {70-73},
+  Volume                   = {8},
+
+  Abstract                 = {Summary Hamilton's inclusive fitness rule shows that the evolution of altruism is facilitated by high genetic relatedness of altruists to their beneficiaries. But the evolution of altruism is inhibited when the beneficiaries are also close competitors of the altruist, as will often be true in structured or viscous populations. However, Hamilton's rule still gives the correct condition for the evolution of altruism if relatedness is measured with respect to the local competitive neighbourhood.},
+  Affiliation              = {Department of Ecology and Evolutionary Biology Rice University PO Box 1892 77251 Houston TX USA},
+  ISSN                     = {0269-7653},
+  Issue                    = {1},
+  Keyword                  = {Biomedical and Life Sciences},
+  Owner                    = {flo},
+  Publisher                = {Springer Netherlands},
+  Timestamp                = {2012.05.15}
+}
+
+@Article{Queller1985,
+  Title                    = {Kinship, reciprocity and synergism in the evolution of social behaviour},
+  Author                   = {Queller, David C.},
+  Journal                  = {Nature},
+  Year                     = {1985},
+
+  Month                    = nov,
+  Number                   = {6044},
+  Pages                    = {366--367},
+  Volume                   = {318},
+
+  Comment                  = {10.1038/318366a0},
+  File                     = {:/home/flo/Dropbox/PostDoc_CostLattice/Biblio/Queller_1985.pdf:PDF},
+  Owner                    = {flo},
+  Timestamp                = {2012.10.07}
+}
+
+@Manual{R2015,
+  Title                    = {R: A Language and Environment for Statistical Computing},
+
+  Address                  = {Vienna, Austria},
+  Author                   = {{R Core Team}},
+  Organization             = {R Foundation for Statistical Computing},
+  Year                     = {2015},
+
+  Bdsk-url-1               = {https://www.R-project.org/},
+  Date-added               = {2016-04-20 08:31:38 +0000},
+  Date-modified            = {2016-04-20 08:31:46 +0000},
+  Url                      = {https://www.R-project.org/}
+}
+
+@Book{Rapoport1965,
+  Title                    = {Prisoner's dilemma: A study in conflict and cooperation},
+  Author                   = {Rapoport, A. and Chammah, A.M.},
+  Publisher                = {Univ of Michigan Press},
+  Year                     = {1965},
+  Volume                   = {165},
+
+  Owner                    = {flo},
+  Timestamp                = {2012.07.24}
+}
+
+@Article{Ravigne2004,
+  Title                    = {Implications of habitat choice for protected polymorphisms},
+  Author                   = {Ravign{\'e}, V. and Olivieri, I. and Dieckmann, U.},
+  Journal                  = {Evol Ecol Res},
+  Year                     = {2004},
+  Number                   = {1},
+  Pages                    = {125--145},
+  Volume                   = {6},
+
+  Ap                       = {ISSN 1522-0613},
+  File                     = {Ravigne_etal_2004_EER.pdf:C\:\\Florence\\My documents\\Biblio\\Ravigne_etal_2004_EER.pdf:PDF},
+  Owner                    = {0144},
+  Tc                       = {10},
+  Timestamp                = {2008.03.20},
+  Ut                       = {WOS:000188743500009}
+}
+
+@Article{Rousset2015,
+  Title                    = {Regression, least squares, and the general version of inclusive fitness},
+  Author                   = {Rousset, Fran{\c c}ois},
+  Journal                  = {Evolution},
+  Year                     = {2015},
+  Number                   = {11},
+  Pages                    = {2963--2970},
+  Volume                   = {69},
+
+  Bdsk-url-1               = {http://dx.doi.org/10.1111/evo.12791},
+  Date-added               = {2016-06-23 14:23:23 +0000},
+  Date-modified            = {2016-06-23 14:23:29 +0000},
+  Doi                      = {10.1111/evo.12791},
+  ISSN                     = {1558-5646},
+  Keywords                 = {Altruism, evolutionary game theory, Hamilton's rule, personal fitness, synergies},
+  Url                      = {http://dx.doi.org/10.1111/evo.12791}
+}
+
+@Book{Rousset2004Book,
+  Title                    = {Genetic Structure and Selection in Subdivided Populations.},
+  Author                   = {Rousset, Fran{\c{c}}ois},
+  Publisher                = {Princeton University Press},
+  Year                     = {2004},
+
+  Address                  = {Princeton, NJ},
+
+  Date-added               = {2016-04-05 12:00:53 +0000},
+  Date-modified            = {2016-04-18 14:08:41 +0000}
+}
+
+@Article{Rousset2003,
+  Title                    = {A Minimal Derivation of Convergence Stability Measures},
+  Author                   = {Fran\c{c}ois Rousset},
+  Journal                  = {Journal of Theoretical Biology},
+  Year                     = {2003},
+  Number                   = {4},
+  Pages                    = {665 - 668},
+  Volume                   = {221},
+
+  Bdsk-url-1               = {http://www.sciencedirect.com/science/article/pii/S0022519303932103},
+  Bdsk-url-2               = {http://dx.doi.org/10.1006/jtbi.2003.3210},
+  Doi                      = {10.1006/jtbi.2003.3210},
+  ISSN                     = {0022-5193},
+  Url                      = {http://www.sciencedirect.com/science/article/pii/S0022519303932103}
+}
+
+@Article{RoussetBilliard2000,
+  Title                    = {A theoretical basis for measures of kin selection in subdivided populations: finite populations and localized dispersal},
+  Author                   = {Rousset, Fran{\c{c}}ois and Billiard, Sylvain},
+  Journal                  = {Journal of Evolutionary Biology},
+  Year                     = {2000},
+  Number                   = {5},
+  Pages                    = {814--825},
+  Volume                   = {13},
+
+  Owner                    = {florencedebarre},
+  Publisher                = {Wiley Online Library},
+  Timestamp                = {2017.02.09}
+}
+
+@Article{Rousset2011,
+  Title                    = {Much ado about nothing: Nowak et al.'s charge against inclusive fitness theory},
+  Author                   = {Rousset, F. and Lion, S.},
+  Journal                  = {Journal of Evolutionary Biology},
+  Year                     = {2011},
+  Number                   = {6},
+  Pages                    = {1386--1392},
+  Volume                   = {24},
+
+  Abstract                 = {In a recent article, Nowak etal. claim that the mathematical basis of inclusive fitness theory does not stand to scrunity and to have found an alternative explanation for eusociality. We show that these claims are based on false premises, many of which have been exposed more than 25 years ago, such as misrepresentations of the basic components of inclusive fitness and fallacious distinctions between individual fitness and inclusive fitness. Moreover, some limitations ascribed to inclusive fitness are actually limitations of current evolutionary theory, for which Nowak et al. propose no new solution. Likewise, their assertedly `common sense' empirical alternative to estimating inclusive fitness is not applicable in cases of interest. Finally, their eusociality model merely confirms the importance of all the components of inclusive fitness. We conclude by discussing how rhetorical devices and editorial practices can impede scientific endeavours.},
+  Bdsk-url-1               = {http://dx.doi.org/10.1111/j.1420-9101.2011.02251.x},
+  Doi                      = {10.1111/j.1420-9101.2011.02251.x},
+  ISSN                     = {1420-9101},
+  Keywords                 = {altruism, editorial policies, eusociality, evolutionary theory, inclusive fitness},
+  Owner                    = {flo},
+  Publisher                = {Blackwell Publishing Ltd},
+  Timestamp                = {2012.07.24}
+}
+
+@Article{Schneider2016,
+  Title                    = {The mutation--drift balance in spatially structured populations},
+  Author                   = {Schneider, David M and Martins, Ayana B and de Aguiar, Marcus AM},
+  Journal                  = {Journal of theoretical biology},
+  Year                     = {2016},
+  Pages                    = {9--17},
+  Volume                   = {402},
+
+  Owner                    = {florencedebarre},
+  Publisher                = {Elsevier},
+  Timestamp                = {2017.02.10}
+}
+
+@Article{Slatkin1993,
+  Title                    = {Isolation by Distance in Equilibrium and Non-Equilibrium Populations},
+  Author                   = {Slatkin, Montgomery},
+  Journal                  = {Evolution},
+  Year                     = {1993},
+  Number                   = {1},
+  Pages                    = {264-279},
+  Volume                   = {47},
+
+  Abstract                 = {It is shown that for allele frequency data a useful measure of the extent of gene flow between a pair of populations is M̂ = (1/FST - 1)/4, which is the estimated level of gene flow in an island model at equilibrium. For DNA sequence data, the same formula can be used if FST is replaced by NST. In a population with restricted dispersal, analytic theory shows that there is a simple relationship between M and geographic distance in both equilibrium and non-equilibrium populations and that this relationship is approximately independent of mutation rate when the mutation rate is small. Simulation results show that with reasonable sample sizes, isolation by distance can indeed be detected and that, at least in some cases, non-equilibrium patterns can be distinguished. This approach to analyzing isolation by distance is used for two allozyme data sets, one from gulls and one from pocket gophers.},
+  Bdsk-url-1               = {http://www.jstor.org/stable/2410134},
+  Date-added               = {2016-04-18 15:21:15 +0000},
+  Date-modified            = {2016-04-18 15:21:31 +0000},
+  ISSN                     = {00143820, 15585646},
+  Publisher                = {[Society for the Study of Evolution, Wiley]},
+  Url                      = {http://www.jstor.org/stable/2410134}
+}
+
+@Article{Slatkin1991,
+  Title                    = {Inbreeding coefficients and coalescence times},
+  Author                   = {Slatkin, Montgomery},
+  Journal                  = {Genetical research},
+  Year                     = {1991},
+  Number                   = {02},
+  Pages                    = {167--175},
+  Volume                   = {58},
+
+  Date-added               = {2016-04-18 14:24:58 +0000},
+  Date-modified            = {2016-04-18 14:25:10 +0000},
+  Publisher                = {Cambridge Univ Press}
+}
+
+@Article{Szamado2008,
+  Title                    = {The effect of dispersal and neighbourhood in games of cooperation},
+  Author                   = {Szabolcs Sz{\`a}mad{\'o} and Ferenc Szalai and Istv{\`a}n Scheuring},
+  Journal                  = {Journal of Theoretical Biology},
+  Year                     = {2008},
+  Number                   = {2},
+  Pages                    = {221 - 227},
+  Volume                   = {253},
+
+  Abstract                 = {The prisoner's dilemma (PD) and the snowdrift (SD) games are paradigmatic tools to investigate the origin of cooperation. Whereas spatial structure (e.g. nonrandom spatial distribution of strategies) present in the spatially explicit models facilitates the emergence of cooperation in the PD game, recent investigations have suggested that spatial structure can be unfavourable for cooperation in the SD game. The frequency of cooperators in a spatially explicit SD game can be lower than it would be in an infinitely large well-mixed population. However, the source of this effect cannot be identified with certainty as spatially explicit games differ from well-mixed games in two aspects: (i) they introduce spatial correlations, (ii) and limited neighbourhood. Here we extend earlier investigations to identify the source of this effect, and thus accordingly we study a spatially explicit version of the PD and SD games with varying degrees of dispersal and neighbourhood size. It was found that dispersal favours selfish individuals in both games. We calculated the frequency of cooperators at strong dispersal limit, which in concordance with the numerical results shows that it is the short range of interactions (i.e. limited neighbourhood) and not spatial correlations that decreases the frequency of cooperators in spatially explicit models of populations. Our results demonstrate that spatial correlations are always beneficial to cooperators in both the PD and SD games. We explain the opposite effect of dispersal and neighbourhood structure, and discuss the relevance of distinguishing the two effects in general.},
+  Bdsk-url-1               = {http://www.sciencedirect.com/science/article/pii/S0022519308001112},
+  Bdsk-url-2               = {http://dx.doi.org/10.1016/j.jtbi.2008.02.037},
+  Doi                      = {10.1016/j.jtbi.2008.02.037},
+  ISSN                     = {0022-5193},
+  Keywords                 = {Cooperation},
+  Url                      = {http://www.sciencedirect.com/science/article/pii/S0022519308001112}
+}
+
+@Article{Tarnita2009,
+  Title                    = {Strategy selection in structured populations},
+  Author                   = {Corina E. Tarnita and Hisashi Ohtsuki and Tibor Antal and Feng Fu and Martin A. Nowak},
+  Journal                  = {Journal of Theoretical Biology},
+  Year                     = {2009},
+  Number                   = {3},
+  Pages                    = {570 - 581},
+  Volume                   = {259},
+
+  Abstract                 = {Evolutionary game theory studies frequency dependent selection. The fitness of a strategy is not constant, but depends on the relative frequencies of strategies in the population. This type of evolutionary dynamics occurs in many settings of ecology, infectious disease dynamics, animal behavior and social interactions of humans. Traditionally evolutionary game dynamics are studied in well-mixed populations, where the interaction between any two individuals is equally likely. There have also been several approaches to study evolutionary games in structured populations. In this paper we present a simple result that holds for a large variety of population structures. We consider the game between two strategies, A and B , described by the payoff matrix ( a c b d ) . We study a mutation and selection process. For weak selection strategy A is favored over B if and only if σ a + b &gt; c + σ d . This means the effect of population structure on strategy selection can be described by a single parameter, σ . We present the values of σ for various examples including the well-mixed population, games on graphs, games in phenotype space and games on sets. We give a proof for the existence of such a σ , which holds for all population structures and update rules that have certain (natural) properties. We assume weak selection, but allow any mutation rate. We discuss the relationship between σ and the critical benefit to cost ratio for the evolution of cooperation. The single parameter, σ , allows us to quantify the ability of a population structure to promote the evolution of cooperation or to choose efficient equilibria in coordination games.},
+  File                     = {:/home/flo/Dropbox/PostDoc_CostLattice/Biblio/Tarnita-etal_2009.pdf:PDF},
+  ISSN                     = {0022-5193},
+  Keywords                 = {Evolutionary dynamics},
+  Owner                    = {flo},
+  Timestamp                = {2012.10.07}
+}
+
+@Article{TarnitaTaylor2014,
+  Title                    = {Measures of Relative Fitness of Social Behaviors in Finite Structured Population Models},
+  Author                   = {Corina E. Tarnita and Peter D. Taylor},
+  Journal                  = {The American Naturalist},
+  Year                     = {2014},
+  Number                   = {4},
+  Pages                    = {477-488},
+  Volume                   = {184},
+
+  Abstract                 = {AbstractHow should we measure the relative selective advantage of different behavioral strategies? The various approaches to this question have fallen into one of the following categories: the fixation probability of a mutant allele in a wild type population, some measures of gene frequency and gene frequency change, and a formulation of the inclusive fitness effect. Countless theoretical studies have examined the relationship between these approaches, and it has generally been thought that, under standard simplifying assumptions, they yield equivalent results. Most of this theoretical work, however, has assumed homogeneity of the population interaction structure---that is, that all individuals are equivalent. We explore the question of selective advantage in a general (heterogeneous) population and show that, although appropriate measures of fixation probability and gene frequency change are equivalent, they are not, in general, equivalent to the inclusive fitness effect. The latter does not reflect effects of selection acting via mutation, which can arise on heterogeneous structures, even for low mutation. Our theoretical framework provides a transparent analysis of the different biological factors at work in the comparison of these fitness measures and suggests that their theoretical and empirical use needs to be revised and carefully grounded in a more general theory.},
+  Bdsk-url-1               = {http://www.jstor.org/stable/10.1086/677924},
+  Date-added               = {2016-03-05 07:39:27 +0000},
+  Date-modified            = {2016-03-05 07:40:40 +0000},
+  ISSN                     = {00030147, 15375323},
+  Publisher                = {[University of Chicago Press, American Society of Naturalists]},
+  Url                      = {http://www.jstor.org/stable/10.1086/677924}
+}
+
+@Article{Taylor2010,
+  Title                    = {Birth--death symmetry in the evolution of a social trait},
+  Author                   = {Taylor, P.},
+  Journal                  = {Journal of Evolutionary Biology},
+  Year                     = {2010},
+  Number                   = {12},
+  Pages                    = {2569--2578},
+  Volume                   = {23},
+
+  Abstract                 = {Studies of the evolution of a social trait often make ecological assumptions (of population structure, life history), and thus a trait can be studied many different times with different assumptions. Here, I consider a Moran model of continuous reproduction and use an inclusive fitness analysis to investigate the relationships between fecundity or survival selection and birth--death (BD) or death--birth (DB) demography on the evolution of a social trait. A simple symmetry obtains: fecundity (respectively survival) effects under BD behave the same as survival (respectively fecundity) effects under DB. When these results are specialized to a homogeneous population, greatly simplified conditions for a positive inclusive fitness effect are obtained in both a finite and an infinite population. The results are established using the elegant formalism of mathematical group theory and are illustrated with an example of a finite population arranged in a cycle with asymmetric offspring dispersal.},
+  Bdsk-url-1               = {http://dx.doi.org/10.1111/j.1420-9101.2010.02122.x},
+  Doi                      = {10.1111/j.1420-9101.2010.02122.x},
+  ISSN                     = {1420-9101},
+  Keywords                 = {altruism, fecundity, inclusive fitness, Moran model, survival homogeneous population},
+  Owner                    = {flo},
+  Publisher                = {Blackwell Publishing Ltd},
+  Timestamp                = {2012.05.15}
+}
+
+@Article{Taylor1992islandmodel,
+  Title                    = {Altruism in viscous populations---an inclusive fitness model},
+  Author                   = {Taylor, PD},
+  Journal                  = {Evolutionary ecology},
+  Year                     = {1992},
+  Number                   = {4},
+  Pages                    = {352--356},
+  Volume                   = {6},
+
+  Date-added               = {2016-04-15 15:10:20 +0000},
+  Date-modified            = {2016-04-15 15:11:35 +0000},
+  Publisher                = {Springer}
+}
+
+@Article{Taylor2011,
+  Title                    = {Inclusive fitness analysis on mathematical groups},
+  Author                   = {Taylor, Peter and Lillicrap, Timothy and Cownden, Daniel},
+  Journal                  = {Evolution},
+  Year                     = {2011},
+  Number                   = {3},
+  Pages                    = {849--859},
+  Volume                   = {65},
+
+  Abstract                 = {Recent work on the evolution of behaviour is set in a structured population, providing a systematic way to describe gene flow and behavioural interactions. To obtain analytical results one needs a structure with considerable regularity. Our results apply to such ``homogeneous'' structures (e.g., lattices, cycles, and island models). This regularity has been formally described by a ``node-transitivity'' condition but in mathematics, such internal symmetry is powerfully described by the theory of mathematical groups. Here, this theory provides elegant direct arguments for a more general version of a number of existing results. Our main result is that in large ``group-structured'' populations, primary fitness effects on others play no role in the evolution of the behaviour. The competitive effects of such a trait cancel the primary effects, and the inclusive fitness effect is given by the direct effect of the actor on its own fitness. This result is conditional on a number of assumptions such as (1) whether generations overlap, (2) whether offspring dispersal is symmetric, (3) whether the trait affects fecundity or survival, and (4) whether the underlying group is abelian. We formulate a number of results of this type in finite and infinite populations for both Moran and Wright--Fisher demographies.},
+  Bdsk-url-1               = {http://dx.doi.org/10.1111/j.1558-5646.2010.01162.x},
+  Doi                      = {10.1111/j.1558-5646.2010.01162.x},
+  ISSN                     = {1558-5646},
+  Keywords                 = {Allele frequency, group theory, homogeneous, population structure, relatedness, selection},
+  Owner                    = {flo},
+  Publisher                = {Blackwell Publishing Inc},
+  Timestamp                = {2012.07.18}
+}
+
+@Article{TaylorMaciejewski2012,
+  Title                    = {An inclusive fitness analysis of synergistic interactions in structured populations},
+  Author                   = {Taylor, Peter and Maciejewski, Wes},
+  Journal                  = {Proceedings of the Royal Society B: Biological Sciences},
+  Year                     = {2012},
+
+  Abstract                 = {We study the evolution of a pair of competing behavioural alleles in a structured population when there are non-additive or `synergistic' fitness effects. Under a form of weak selection and with a simple symmetry condition between a pair of competing alleles, Tarnita et al. provide a surprisingly simple condition for one allele to dominate the other. Their condition can be obtained from an analysis of a corresponding simpler model in which fitness effects are additive. Their result uses an average measure of selective advantage where the average is taken over the long-term--that is, over all possible allele frequencies--and this precludes consideration of any frequency dependence the allelic fitness might exhibit. However, in a considerable body of work with non-additive fitness effects---for example, hawk--dove and prisoner's dilemma games---frequency dependence plays an essential role in the establishment of conditions for a stable allele-frequency equilibrium. Here, we present a frequency-dependent generalization of their result that provides an expression for allelic fitness at any given allele frequency p. We use an inclusive fitness approach and provide two examples for an infinite structured population. We illustrate our results with an analysis of the hawk--dove game.},
+  Bdsk-url-1               = {http://dx.doi.org/10.1098/rspb.2012.1408},
+  Doi                      = {10.1098/rspb.2012.1408},
+  Owner                    = {flo},
+  Timestamp                = {2012.09.20}
+}
+
+@Article{Taylor1992,
+  Title                    = {Inclusive Fitness in a Homogeneous Environment},
+  Author                   = {Taylor, Peter D.},
+  Journal                  = {Proceedings of the Royal Society of London. Series B: Biological Sciences},
+  Year                     = {1992},
+  Number                   = {1326},
+  Pages                    = {299-302},
+  Volume                   = {249},
+
+  Abstract                 = {A general formulation of inclusive fitness is proposed which specifically accounts for competitive effects between relatives. As an example, for an asexual population in a homogeneous inelastic environment, such as is found in a stepping-stone model of dispersal, the inclusive fitness of a breeding female, under weak selection, is independent of her direct effect on the fitness of other individuals in the population. More precisely, suppose a female acts in a way that changes not only her own fitness but the fitness of several other females in the population who may be relatives (i.e. she changes the number of their offspring). I call these changes the direct effects of the action. There will also be indirect effects on the fitness of these and other females which come from the competitive impact of the extra offspring in the next generation. The principal result is that these indirect effects exactly cancel all the direct effects except the direct effect of the actor on herself.},
+  Bdsk-url-1               = {http://dx.doi.org/10.1098/rspb.1992.0118},
+  Doi                      = {10.1098/rspb.1992.0118},
+  Owner                    = {flo},
+  Timestamp                = {2012.05.15}
+}
+
+@Article{Taylor1990,
+  Title                    = {Allele-Frequency Change in a Class-Structured Population},
+  Author                   = {Taylor, Peter D.},
+  Journal                  = {The American Naturalist},
+  Year                     = {1990},
+  Number                   = {1},
+  Pages                    = {pp. 95-106},
+  Volume                   = {135},
+
+  Abstract                 = {Suppose that in a population with a class structure, we wish to calculate the change in frequency of an allele under the action of selection. If the allele affects the behavior of individuals in different classes differently and if parents of different classes have different class distributions of offspring, then the allele frequencies in different classes may be different, and any overall calculation of allele-frequency change must decide how to weight the different class frequencies. I show that the correct weights to use are the class reproductive values, and, using these, I formulate a covariance equation for allele-frequency change. This equation also provides the classical inclusive-fitness formulation if benefits (increased numbers of offspring) are calculated by weighting each offspring by the individual reproductive value that pertains to his class.},
+  Bdsk-url-1               = {http://www.jstor.org/stable/2462140},
+  ISSN                     = {00030147},
+  Jstor_articletype        = {research-article},
+  Jstor_formatteddate      = {Jan., 1990},
+  Language                 = {English},
+  Publisher                = {The University of Chicago Press for The American Society of Naturalists},
+  Url                      = {http://www.jstor.org/stable/2462140}
+}
+
+@Article{Taylor2007JTB,
+  Title                    = {From inclusive fitness to fixation probability in homogeneous structured populations},
+  Author                   = {Peter D. Taylor and Troy Day and Geoff Wild},
+  Journal                  = {Journal of Theoretical Biology},
+  Year                     = {2007},
+  Number                   = {1},
+  Pages                    = {101 - 110},
+  Volume                   = {249},
+
+  Abstract                 = {The methods of inclusive fitness provide a powerful analysis of the action of selection on social behaviour. The key component of this analysis is the concept of relatedness R. In infinite populations, a standard method of calculating relatedness coefficients is through coefficients of consanguinity using the notion of genetic identity by descent. In this paper, we show that this approach can also be made to work in finite populations and we assume here that the population has a homogeneous structure, such as an island model. We demonstrate that, under the assumption that genetic effects are small and additive, the resulting formulation of inclusive fitness is equivalent to other significant measures of selection in finite populations, including the change in average allele frequency and fixation probability. The results are illustrated for a model of the evolution of cooperation in a finite island population.},
+  Bdsk-url-1               = {http://dx.doi.org/10.1016/j.jtbi.2007.07.006},
+  Doi                      = {10.1016/j.jtbi.2007.07.006},
+  ISSN                     = {0022-5193},
+  Keywords                 = {Relatedness}
+}
+
+@Article{TaylorDayWild2007,
+  Title                    = {Evolution of cooperation in a finite homogeneous graph},
+  Author                   = {Taylor, Peter D. and Day, Troy and Wild, Geoff},
+  Journal                  = {Nature},
+  Year                     = {2007},
+
+  Month                    = may,
+  Number                   = {7143},
+  Pages                    = {469--472},
+  Volume                   = {447},
+
+  Comment                  = {10.1038/nature05784},
+  ISSN                     = {0028-0836},
+  Owner                    = {flo},
+  Publisher                = {Nature Publishing Group},
+  Timestamp                = {2012.05.17}
+}
+
+@Article{TaylorFrank1996,
+  Title                    = {How to Make a Kin Selection Model},
+  Author                   = {Peter D. Taylor and Steven A. Frank},
+  Journal                  = {Journal of Theoretical Biology},
+  Year                     = {1996},
+  Number                   = {1},
+  Pages                    = {27 - 37},
+  Volume                   = {180},
+
+  Abstract                 = {Kin selection arguments, based on Hamilton's (1964) concept of inclusive fitness, provide a powerful heuristic and can therefore give us valuable insights into the different pathways through which natural selection acts. Buttheir formulation can be quite tricky, requiring as they do, a close accounting of all the fitness effects of a particular item of behaviour. Here we propose a ``direct fitness'' formulation of inclusive fitness which often has a more straightforward derivation. Our method finds \{ESS\} trait values by the standard optimization techniques of simple differentiation plus two additional steps. First, slopes of group phenotype on individual genotype arise naturally during differentiation, and these slopes are replaced by coefficients by relatedness. Second, when behaviours influence different classes such as age, sex of recipient, or other life history components of fitness, the fitness effects on each component are weighted by reproductive value. We illustrate this technique first in a homogeneous population, with examples of group competition and partial dispersal behaviour, and then in a class-structured population, with examples of sex allocation and altruism between age classes. },
+  Bdsk-url-1               = {http://www.sciencedirect.com/science/article/pii/S0022519396900752},
+  Bdsk-url-2               = {http://dx.doi.org/10.1006/jtbi.1996.0075},
+  Doi                      = {10.1006/jtbi.1996.0075},
+  ISSN                     = {0022-5193},
+  Url                      = {http://www.sciencedirect.com/science/article/pii/S0022519396900752}
+}
+
+@Article{TaylorIrwin2000,
+  Title                    = {Overlapping generations can promote altruistic behavior},
+  Author                   = {Taylor, Peter D. and Irwin, Andrew J.},
+  Journal                  = {Evolution},
+  Year                     = {2000},
+  Number                   = {4},
+  Pages                    = {1135--1141},
+  Volume                   = {54},
+
+  Abstract                 = {Abstract. We use an inclusive fitness model to study the evolution of altruism in a patch-structured population in which there is positive probability of breeder survival from one generation to the next. We find first that breeder survival promotes altruism and second that there is a marked difference between benefits of fecundity and benefits of survival. Under the first altruism is more strongly favored, and under the second altruism is less strongly favored than in a randomly mixing population.},
+  Bdsk-url-1               = {http://dx.doi.org/10.1111/j.0014-3820.2000.tb00549.x},
+  Doi                      = {10.1111/j.0014-3820.2000.tb00549.x},
+  ISSN                     = {1558-5646},
+  Keywords                 = {Altruism, fecundity, overlapping generations, population structure, prisoner's dilemma, survival},
+  Owner                    = {flo},
+  Publisher                = {Blackwell Publishing Ltd},
+  Timestamp                = {2012.07.25}
+}
+
+@Article{VanCleve2015,
+  Title                    = {Social evolution and genetic interactions in the short and long term},
+  Author                   = {Jeremy {Van Cleve}},
+  Journal                  = {Theoretical Population Biology},
+  Year                     = {2015},
+  Pages                    = {2 - 26},
+  Volume                   = {103},
+
+  Abstract                 = {Abstract The evolution of social traits remains one of the most fascinating and feisty topics in evolutionary biology even after half a century of theoretical research. W.D. Hamilton shaped much of the field initially with his 1964 papers that laid out the foundation for understanding the effect of genetic relatedness on the evolution of social behavior. Early theoretical investigations revealed two critical assumptions required for Hamilton's rule to hold in dynamical models: weak selection and additive genetic interactions. However, only recently have analytical approaches from population genetics and evolutionary game theory developed sufficiently so that social evolution can be studied under the joint action of selection, mutation, and genetic drift. We review how these approaches suggest two timescales for evolution under weak mutation: (i) a short-term timescale where evolution occurs between a finite set of alleles, and (ii) a long-term timescale where a continuum of alleles are possible and populations evolve continuously from one monomorphic trait to another. We show how Hamilton's rule emerges from the short-term analysis under additivity and how non-additive genetic interactions can be accounted for more generally. This short-term approach reproduces, synthesizes, and generalizes many previous results including the one-third law from evolutionary game theory and risk dominance from economic game theory. Using the long-term approach, we illustrate how trait evolution can be described with a diffusion equation that is a stochastic analogue of the canonical equation of adaptive dynamics. Peaks in the stationary distribution of the diffusion capture classic notions of convergence stability from evolutionary game theory and generally depend on the additive genetic interactions inherent in Hamilton's rule. Surprisingly, the peaks of the long-term stationary distribution can predict the effects of simple kinds of non-additive interactions. Additionally, the peaks capture both weak and strong effects of social payoffs in a manner difficult to replicate with the short-term approach. Together, the results from the short and long-term approaches suggest both how Hamilton's insight may be robust in unexpected ways and how current analytical approaches can expand our understanding of social evolution far beyond Hamilton's original work. },
+  Bdsk-url-1               = {http://www.sciencedirect.com/science/article/pii/S0040580915000544},
+  Bdsk-url-2               = {http://dx.doi.org/10.1016/j.tpb.2015.05.002},
+  Date-added               = {2016-03-05 07:12:49 +0000},
+  Date-modified            = {2016-03-05 07:40:49 +0000},
+  Doi                      = {http://dx.doi.org/10.1016/j.tpb.2015.05.002},
+  ISSN                     = {0040-5809},
+  Keywords                 = {Cooperation},
+  Url                      = {http://www.sciencedirect.com/science/article/pii/S0040580915000544}
+}
+
+@Article{VanDyken2010,
+  Title                    = {The components of kin competition},
+  Author                   = {Van Dyken, J. David},
+  Journal                  = {Evolution},
+  Year                     = {2010},
+  Number                   = {10},
+  Pages                    = {2840--2854},
+  Volume                   = {64},
+
+  Abstract                 = {It is well known that competition among kin alters the rate and often the direction of evolution in subdivided populations. Yet much remains unclear about the ecological and demographic causes of kin competition, or what role life cycle plays in promoting or ameliorating its effects. Using the multilevel Price equation, I derive a general equation for evolution in structured populations under an arbitrary intensity of kin competition. This equation partitions the effects of selection and demography, and recovers numerous previous models as special cases. I quantify the degree of kin competition, α, which explicitly depends on life cycle. I show how life cycle and demographic assumptions can be incorporated into kin selection models via α, revealing life cycles that are more or less permissive of altruism. As an example, I give closed-form results for Hamilton's rule in a three-stage life cycle. Although results are sensitive to life cycle in general, I identify three demographic conditions that give life cycle invariant results. Under the infinite island model, α is a function of the scale of density regulation and dispersal rate, effectively disentangling these two phenomena. Population viscosity per se does not impede kin selection.},
+  Bdsk-url-1               = {http://dx.doi.org/10.1111/j.1558-5646.2010.01033.x},
+  Doi                      = {10.1111/j.1558-5646.2010.01033.x},
+  ISSN                     = {1558-5646},
+  Keywords                 = {Altruism, density dependence, dispersal, hard selection, kin selection, population viscosity, Price equation, scale of competition, soft selection, subdivided populations},
+  Owner                    = {flo},
+  Publisher                = {Blackwell Publishing Inc},
+  Timestamp                = {2012.07.24}
+}
+
+@Article{vanVeelen2012,
+  Title                    = {Group selection and inclusive fitness are not equivalent; the Price equation vs. models and statistics},
+  Author                   = {Matthijs van Veelen and Juli{\'a}n Garc\'{i}a and Maurice W. Sabelis and Martijn Egas},
+  Journal                  = {Journal of Theoretical Biology},
+  Year                     = {2012},
+  Note                     = {<ce:title>Evolution of Cooperation</ce:title>},
+  Number                   = {0},
+  Pages                    = {64 - 80},
+  Volume                   = {299},
+
+  Bdsk-url-1               = {http://www.sciencedirect.com/science/article/pii/S0022519311003754},
+  Bdsk-url-2               = {http://dx.doi.org/10.1016/j.jtbi.2011.07.025},
+  Doi                      = {10.1016/j.jtbi.2011.07.025},
+  ISSN                     = {0022-5193},
+  Keywords                 = {Group selection},
+  Url                      = {http://www.sciencedirect.com/science/article/pii/S0022519311003754}
+}
+
+@Article{WakanoLehmann2014,
+  Title                    = {Evolutionary branching in deme-structured populations},
+  Author                   = {Wakano, Joe Yuichiro and Lehmann, Laurent},
+  Journal                  = {Journal of theoretical biology},
+  Year                     = {2014},
+  Pages                    = {83--95},
+  Volume                   = {351},
+
+  Date-added               = {2016-04-05 12:52:17 +0000},
+  Date-modified            = {2016-04-05 12:52:17 +0000},
+  Publisher                = {Elsevier}
+}
+
+@Article{West2007,
+  Title                    = {Social semantics: altruism, cooperation, mutualism, strong reciprocity and group selection},
+  Author                   = {West, S. A. and Griffin, A. S. and Gardner, A.},
+  Journal                  = {Journal of Evolutionary Biology},
+  Year                     = {2007},
+  Number                   = {2},
+  Pages                    = {415--432},
+  Volume                   = {20},
+
+  Abstract                 = {From an evolutionary perspective, social behaviours are those which have fitness consequences for both the individual that performs the behaviour, and another individual. Over the last 43 years, a huge theoretical and empirical literature has developed on this topic. However, progress is often hindered by poor communication between scientists, with different people using the same term to mean different things, or different terms to mean the same thing. This can obscure what is biologically important, and what is not. The potential for such semantic confusion is greatest with interdisciplinary research. Our aim here is to address issues of semantic confusion that have arisen with research on the problem of cooperation. In particular, we: (i) discuss confusion over the terms kin selection, mutualism, mutual benefit, cooperation, altruism, reciprocal altruism, weak altruism, altruistic punishment, strong reciprocity, group selection and direct fitness; (ii) emphasize the need to distinguish between proximate (mechanism) and ultimate (survival value) explanations of behaviours. We draw examples from all areas, but especially recent work on humans and microbes.},
+  Bdsk-url-1               = {http://dx.doi.org/10.1111/j.1420-9101.2006.01258.x},
+  Doi                      = {10.1111/j.1420-9101.2006.01258.x},
+  ISSN                     = {1420-9101},
+  Keywords                 = {direct fitness, Hamilton's rule, inclusive fitness, kin selection, reciprocal altruism, social evolution, social selection},
+  Owner                    = {flo},
+  Publisher                = {Blackwell Publishing Ltd},
+  Timestamp                = {2012.09.20}
+}
+
+@Article{West2002,
+  Title                    = {Cooperation and Competition Between Relatives},
+  Author                   = {West, Stuart A. and Pen, Ido and Griffin, Ashleigh S.},
+  Journal                  = {Science},
+  Year                     = {2002},
+  Number                   = {5565},
+  Pages                    = {72--75},
+  Volume                   = {296},
+
+  Abstract                 = {Individuals are predicted to behave more altruistically and less competitively toward their relatives, because they share a relatively high proportion of their genes (e.g., one-half for siblings and one-eighth for cousins). Consequently, by helping a relative reproduce, an individual passes its genes to the next generation, increasing their Darwinian fitness. This idea, termed kin selection, has been applied to a wide range of phenomena in systems ranging from replicating molecules to humans. Nevertheless, competition between relatives can reduce, and even totally negate, the kin-selected benefits of altruism toward relatives. Recent theoretical work has clarified the processes and selective forces underlying this effect and has demonstrated the generality of the effect of competition between relatives.},
+  Bdsk-url-1               = {http://dx.doi.org/10.1126/science.1065507},
+  Doi                      = {10.1126/science.1065507},
+  Eprint                   = {http://www.sciencemag.org/content/296/5565/72.full.pdf},
+  Owner                    = {flo},
+  Timestamp                = {2012.05.15}
+}
+
+@Article{WildTraulsen2007,
+  Title                    = {The different limits of weak selection and the evolutionary dynamics of finite populations},
+  Author                   = {Geoff Wild and Arne Traulsen},
+  Journal                  = {Journal of Theoretical Biology},
+  Year                     = {2007},
+  Number                   = {2},
+  Pages                    = {382 - 390},
+  Volume                   = {247},
+
+  Abstract                 = {Evolutionary theory often resorts to weak selection, where different individuals have very similar fitness. Here, we relate two ways to introduce weak selection. The first considers evolutionary games described by payoff matrices with similar entries. This approach has recently attracted a lot of interest in the context of evolutionary game dynamics in finite populations. The second way to introduce weak selection is based on small distances in phenotype space and is a standard approach in kin-selection theory. Whereas both frameworks are interchangeable for constant fitness, frequency-dependent selection shows significant differences between them. We point out the difference between both limits of weak selection and discuss the condition under which the differences vanish. It turns out that this condition is fulfilled by the popular parametrization of the prisoner's dilemma in benefits and costs. However, for general payoff matrices differences between the two frameworks prevail.},
+  Bdsk-url-1               = {http://dx.doi.org/10.1016/j.jtbi.2007.03.015},
+  Doi                      = {10.1016/j.jtbi.2007.03.015},
+  ISSN                     = {0022-5193},
+  Keywords                 = {Evolutionary game theory},
+  Owner                    = {flo},
+  Timestamp                = {2012.05.15}
+}
+
+@Manual{Mathematica2015,
+  Title                    = {Mathematica Edition: Version 10.1},
+
+  Address                  = {Champaign, Illinois},
+  Author                   = {{Wolfram Research, Inc.}},
+  Organization             = {Wolfram Research, Inc.},
+  Year                     = {2015},
+
+  Date-added               = {2016-04-20 08:33:16 +0000},
+  Date-modified            = {2016-04-20 08:34:05 +0000}
+}
+
+@Article{Zukewich2013,
+  Title                    = {{Consolidating Birth-Death and Death-Birth Processes in Structured Populations}},
+  Author                   = {Zukewich, Joshua AND Kurella, Venu AND Doebeli, Michael AND Hauert, Christoph},
+  Journal                  = {PLoS ONE},
+  Year                     = {2013},
+
+  Month                    = {01},
+  Number                   = {1},
+  Pages                    = {e54639},
+  Volume                   = {8},
+
+  Abstract                 = {<p>Network models extend evolutionary game theory to settings with spatial or social structure and have provided key insights on the mechanisms underlying the evolution of cooperation. However, network models have also proven sensitive to seemingly small details of the model architecture. Here we investigate two popular biologically motivated models of evolution in finite populations: Death-Birth (DB) and Birth-Death (BD) processes. In both cases reproduction is proportional to fitness and death is random; the only difference is the order of the two events at each time step. Although superficially similar, under DB cooperation may be favoured in structured populations, while under BD it never is. This is especially troubling as natural populations do not follow a strict one birth then one death regimen (or vice versa); such constraints are introduced to make models more tractable. Whether structure can promote the evolution of cooperation should not hinge on a simplifying assumption. Here, we propose a mixed rule where in each time step DB is used with probability <inline-formula><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="info:doi/10.1371/journal.pone.0054639.e001" xlink:type="simple"/></inline-formula> and BD is used with probability <inline-formula><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="info:doi/10.1371/journal.pone.0054639.e002" xlink:type="simple"/></inline-formula>. We derive the conditions for selection favouring cooperation under the mixed rule for all social dilemmas. We find that the only qualitatively different outcome occurs when using just BD (<inline-formula><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="info:doi/10.1371/journal.pone.0054639.e003" xlink:type="simple"/></inline-formula>). This case admits a natural interpretation in terms of kin competition counterbalancing the effect of kin selection. Finally we show that, for any mixed BD-DB update and under weak selection, cooperation is never inhibited by population structure for any social dilemma, including the Snowdrift Game.</p>},
+  Bdsk-url-1               = {http://dx.doi.org/10.1371/journal.pone.0054639},
+  Doi                      = {10.1371/journal.pone.0054639},
+  Publisher                = {Public Library of Science}
+}
+
+@comment{jabref-meta: selector_keywords:}
+
+@comment{jabref-meta: selector_journal:}
+
+@comment{jabref-meta: selector_publisher:}
+
+@comment{jabref-meta: selector_author:}
+

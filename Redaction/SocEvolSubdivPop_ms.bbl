@@ -1,0 +1,24 @@
+\begin{thebibliography}{4}
+\providecommand{\natexlab}[1]{#1}
+
+\bibitem[{Hamilton(1964)}]{Hamilton1964}
+Hamilton, W. 1964: The genetical evolution of social behaviour. i.
+\newblock Journal of Theoretical Biology 7(1):1 -- 16.
+
+\bibitem[{Lehmann et~al.(2007)Lehmann, Keller \& Sumpter}]{Lehmann2007}
+Lehmann, L.; Keller, L. \& Sumpter, D. J.~T. 2007: The evolution of helping and
+  harming on graphs: the return of the inclusive fitness effect.
+\newblock Journal of Evolutionary Biology 20(6):2284--2295.
+
+\bibitem[{Ohtsuki et~al.(2006)Ohtsuki, Hauert, Lieberman \&
+  Nowak}]{Ohtsuki2006}
+Ohtsuki, H.; Hauert, C.; Lieberman, E. \& Nowak, M.~A. 2006: A simple rule for
+  the evolution of cooperation on graphs and social networks.
+\newblock Nature 441(7092):502--505.
+
+\bibitem[{Taylor et~al.(2007)Taylor, Day \& Wild}]{TaylorDayWild2007}
+Taylor, P.~D.; Day, T. \& Wild, G. 2007: Evolution of cooperation in a finite
+  homogeneous graph.
+\newblock Nature 447(7143):469--472.
+
+\end{thebibliography}

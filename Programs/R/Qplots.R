@@ -48,7 +48,7 @@ plotlinesQ <- function(LC){
     if(yI[[i]][npts] > 0.95) adjy <- 1.25 else adjy <- -0.3
     text(1, yI[[i]][npts], labels = substitute(mu * "=" * MM, list(MM = muts[i])), adj = c(1, adjy), col = colmut[i])
   }
-  midpt <- floor(npts/4)
+  midpt <- floor(npts/2.5)
   deltaadj <- 0.5
   text(migpoints[midpt], yI[[2]][midpt], labels = "Qin", adj = c(0, 0 - deltaadj))
   text(migpoints[midpt], yO[[2]][midpt], labels = "Qout", adj = c(0, 1 + deltaadj))
