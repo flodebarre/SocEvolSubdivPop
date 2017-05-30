@@ -39,6 +39,20 @@
   Timestamp                = {2012.07.24}
 }
 
+@Article{Allen2017,
+  Title                    = {Evolutionary dynamics on any population structure},
+  Author                   = {Allen, Benjamin and Lippner, Gabor and Chen, Yu-Ting and Fotouhi, Babak and Momeni, Naghmeh and Yau, Shing-Tung and Nowak, Martin A},
+  Journal                  = {Nature},
+  Year                     = {2017},
+  Number                   = {7649},
+  Pages                    = {227--230},
+  Volume                   = {544},
+
+  Owner                    = {florencedebarre},
+  Publisher                = {Nature Research},
+  Timestamp                = {2017.05.30}
+}
+
 @Article{AllenNowak2014,
   Title                    = {Games on graphs},
   Author                   = {Allen, Benjamin and Nowak, Martin A},
@@ -196,6 +210,23 @@
   ISSN                     = {00143820, 15585646},
   Publisher                = {[Society for the Study of Evolution, Wiley]},
   Url                      = {http://www.jstor.org/stable/2410189}
+}
+
+@Article{Debarre2017,
+  Title                    = {Fidelity of parent-offspring transmission and the evolution of social behavior in structured populations },
+  Author                   = {F. D\'ebarre},
+  Journal                  = {Journal of Theoretical Biology },
+  Year                     = {2017},
+  Pages                    = {26 - 35},
+  Volume                   = {420},
+
+  Abstract                 = {Abstract The theoretical investigation of how spatial structure affects the evolution of social behavior has mostly been done under the assumption that parent-offspring strategy transmission is perfect, i.e., for genetically transmitted traits, that mutation is very weak or absent. Here, we investigate the evolution of social behavior in structured populations under arbitrary mutation probabilities. We consider populations of fixed size N, structured such that in the absence of selection, all individuals have the same probability of reproducing or dying (neutral reproductive values are the all same). Two types of individuals, A and B, corresponding to two types of social behavior, are competing; the fidelity of strategy transmission from parent to offspring is tuned by a parameter μ. Social interactions have a direct effect on individual fecundities. Under the assumption of small phenotypic differences (implying weak selection), we provide a formula for the expected frequency of type A individuals in the population, and deduce conditions for the long-term success of one strategy against another. We then illustrate our results with three common life-cycles (Wright-Fisher, Moran Birth-Death and Moran Death-Birth), and specific population structures (graph-structured populations). Qualitatively, we find that some life-cycles (Moran Birth-Death, Wright-Fisher) prevent the evolution of altruistic behavior, confirming previous results obtained with perfect strategy transmission. We also show that computing the expected frequency of altruists on a regular graph may require knowing more than just the graph's size and degree. },
+  Doi                      = {https://doi.org/10.1016/j.jtbi.2017.02.027},
+  ISSN                     = {0022-5193},
+  Keywords                 = {Mutation},
+  Owner                    = {florencedebarre},
+  Timestamp                = {2017.05.30},
+  Url                      = {http://www.sciencedirect.com/science/article/pii/S0022519317300826}
 }
 
 @Article{Debarre2015evo,
@@ -467,6 +498,18 @@ Special cases of the model are used to show (a) that selection in the social sit
   ISSN                     = {0022-5193},
   Owner                    = {flo},
   Timestamp                = {2012.07.24}
+}
+
+@Article{Hamilton1975,
+  Title                    = {Innate social aptitudes of man: an approach from evolutionary genetics},
+  Author                   = {Hamilton, William D},
+  Journal                  = {Biosocial anthropology},
+  Year                     = {1975},
+  Pages                    = {133--55},
+  Volume                   = {53},
+
+  Owner                    = {florencedebarre},
+  Timestamp                = {2017.05.30}
 }
 
 @Article{HauertDoebeli2004,
@@ -820,6 +863,19 @@ Special cases of the model are used to show (a) that selection in the social sit
   File                     = {Lion-Gandon_2009_JEB.pdf:C\:\\Florence\\My documents\\Biblio\\Lion-Gandon_2009_JEB.pdf:PDF},
   Owner                    = {debarre},
   Timestamp                = {2010.06.17}
+}
+
+@Article{Lion2016,
+  Title                    = {Moment equations in spatial evolutionary ecology},
+  Author                   = {Lion, S{\'e}bastien},
+  Journal                  = {Journal of theoretical biology},
+  Year                     = {2016},
+  Pages                    = {46--57},
+  Volume                   = {405},
+
+  Owner                    = {florencedebarre},
+  Publisher                = {Elsevier},
+  Timestamp                = {2017.05.30}
 }
 
 @Article{LionGandon2010,
@@ -1306,6 +1362,24 @@ Special cases of the model are used to show (a) that selection in the social sit
   Ut                       = {WOS:000188743500009}
 }
 
+@Article{RodriguesGardner2012,
+  Title                    = {Evolution of helping and harming in heterogeneous populations},
+  Author                   = {Rodrigues, Ant\'onio M. M. and Gardner, Andy},
+  Journal                  = {Evolution},
+  Year                     = {2012},
+  Number                   = {7},
+  Pages                    = {2065--2079},
+  Volume                   = {66},
+
+  Doi                      = {10.1111/j.1558-5646.2012.01594.x},
+  ISSN                     = {1558-5646},
+  Keywords                 = {dispersal, facultative behavior, kin selection, obligate behavior, reproductive value, scale of competition},
+  Owner                    = {florencedebarre},
+  Publisher                = {Blackwell Publishing Inc},
+  Timestamp                = {2017.05.30},
+  Url                      = {http://dx.doi.org/10.1111/j.1558-5646.2012.01594.x}
+}
+
 @Article{Rousset2015,
   Title                    = {Regression, least squares, and the general version of inclusive fitness},
   Author                   = {Rousset, Fran{\c c}ois},
@@ -1774,6 +1848,25 @@ Special cases of the model are used to show (a) that selection in the social sit
   Keywords                 = {Evolutionary game theory},
   Owner                    = {flo},
   Timestamp                = {2012.05.15}
+}
+
+@Article{Wilson1992,
+  Title                    = {Can altruism evolve in purely viscous populations?},
+  Author                   = {Wilson, D. S.
+and Pollock, G. B.
+and Dugatkin, L. A.},
+  Journal                  = {Evolutionary Ecology},
+  Year                     = {1992},
+  Number                   = {4},
+  Pages                    = {331--341},
+  Volume                   = {6},
+
+  Abstract                 = {Limited dispersal is often thought to facilitate the evolution of altruism by increasing the degree of relatedness among interacting individuals. Limited dispersal can have additional effects, however, such as local population regulation, that inhibits the evolution of altruism. Many models of structured populations assume that a viscous stage of the life cycle alternates with a global mixing stage, which allows the advantages of interactions among close relatives without the disadvantages of local population regulation. Here we analyse a computer simulation model of `pure' population viscosity, in which offspring are always deposited close to parents and no global mixing stage exists. As expected, limited dispersal generates a high coefficient of relatedness among interacting individuals. Patches of altruists, however, are unable to `export' their productivity to other regions of the landscape and are easily invaded by selfish types from neighbouring patches. Unlike models of alternating viscosity, in which high relatedness and local population regulation can be decoupled, these two opposing effects are inextricably linked in purely viscous populations, which therefore are not conducive to the evolution of altruistic traits.},
+  Doi                      = {10.1007/BF02270969},
+  ISSN                     = {1573-8477},
+  Owner                    = {florencedebarre},
+  Timestamp                = {2017.05.30},
+  Url                      = {http://dx.doi.org/10.1007/BF02270969}
 }
 
 @Manual{Mathematica2015,

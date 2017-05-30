@@ -1,14 +1,66 @@
-\begin{thebibliography}{4}
+\begin{thebibliography}{20}
 \providecommand{\natexlab}[1]{#1}
+
+\bibitem[{Alizon \& Taylor(2008)}]{Alizon2008}
+Alizon, S. \& Taylor, P. 2008: Empty sites can promote altruistic behavior.
+\newblock Evolution 62(6):1335--1344.
+
+\bibitem[{Allen et~al.(2017)Allen, Lippner, Chen, Fotouhi, Momeni, Yau \&
+  Nowak}]{Allen2017}
+Allen, B.; Lippner, G.; Chen, Y.-T.; Fotouhi, B.; Momeni, N.; Yau, S.-T. \&
+  Nowak, M.~A. 2017: Evolutionary dynamics on any population structure.
+\newblock Nature 544(7649):227--230.
+
+\bibitem[{Allen et~al.(2012)Allen, Traulsen, Tarnita \& Nowak}]{Allen2012}
+Allen, B.; Traulsen, A.; Tarnita, C.~E. \& Nowak, M.~A. 2012: How mutation
+  affects evolutionary games on graphs.
+\newblock Journal of Theoretical Biology 299:97 -- 105.
+\newblock Evolution of Cooperation.
+
+\bibitem[{Brockhurst et~al.(2007)Brockhurst, Buckling \&
+  Gardner}]{Brockhurst2007}
+Brockhurst, M.~A.; Buckling, A. \& Gardner, A. 2007: Cooperation peaks at
+  intermediate disturbance.
+\newblock Current Biology 17(9):761--765.
+
+\bibitem[{D\'ebarre(2017)}]{Debarre2017}
+D\'ebarre, F. 2017: Fidelity of parent-offspring transmission and the evolution
+  of social behavior in structured populations.
+\newblock Journal of Theoretical Biology 420:26 -- 35.
+
+\bibitem[{Fletcher \& Doebeli(2009)}]{Fletcher2009}
+Fletcher, J.~A. \& Doebeli, M. 2009: {A simple and general explanation for the
+  evolution of altruism}.
+\newblock Proceedings of the Royal Society B: Biological Sciences
+  276(1654):13--19.
+
+\bibitem[{Frank(1997)}]{Frank1997}
+Frank, S.~A. 1997: The price equation, fisher's fundamental theorem, kin
+  selection, and causal analysis.
+\newblock Evolution 51(6):1712--1729.
+
+\bibitem[{Frank(2010)}]{Frank2010}
+Frank, S.~A. 2010: Microbial secretor--cheater dynamics.
+\newblock Philosophical Transactions of the Royal Society of London B:
+  Biological Sciences 365(1552):2515--2522.
 
 \bibitem[{Hamilton(1964)}]{Hamilton1964}
 Hamilton, W. 1964: The genetical evolution of social behaviour. i.
 \newblock Journal of Theoretical Biology 7(1):1 -- 16.
 
+\bibitem[{Hamilton(1975)}]{Hamilton1975}
+Hamilton, W.~D. 1975: Innate social aptitudes of man: an approach from
+  evolutionary genetics.
+\newblock Biosocial anthropology 53:133--55.
+
 \bibitem[{Lehmann et~al.(2007)Lehmann, Keller \& Sumpter}]{Lehmann2007}
 Lehmann, L.; Keller, L. \& Sumpter, D. J.~T. 2007: The evolution of helping and
   harming on graphs: the return of the inclusive fitness effect.
 \newblock Journal of Evolutionary Biology 20(6):2284--2295.
+
+\bibitem[{Lion(2016)}]{Lion2016}
+Lion, S. 2016: Moment equations in spatial evolutionary ecology.
+\newblock Journal of theoretical biology 405:46--57.
 
 \bibitem[{Ohtsuki et~al.(2006)Ohtsuki, Hauert, Lieberman \&
   Nowak}]{Ohtsuki2006}
@@ -16,9 +68,38 @@ Ohtsuki, H.; Hauert, C.; Lieberman, E. \& Nowak, M.~A. 2006: A simple rule for
   the evolution of cooperation on graphs and social networks.
 \newblock Nature 441(7092):502--505.
 
+\bibitem[{Rodrigues \& Gardner(2012)}]{RodriguesGardner2012}
+Rodrigues, A. M.~M. \& Gardner, A. 2012: Evolution of helping and harming in
+  heterogeneous populations.
+\newblock Evolution 66(7):2065--2079.
+
+\bibitem[{Tarnita \& Taylor(2014)}]{TarnitaTaylor2014}
+Tarnita, C.~E. \& Taylor, P.~D. 2014: Measures of relative fitness of social
+  behaviors in finite structured population models.
+\newblock The American Naturalist 184(4):477--488.
+
+\bibitem[{Taylor(1992)}]{Taylor1992islandmodel}
+Taylor, P. 1992: Altruism in viscous populations---an inclusive fitness model.
+\newblock Evolutionary ecology 6(4):352--356.
+
+\bibitem[{Taylor et~al.(2011)Taylor, Lillicrap \& Cownden}]{Taylor2011}
+Taylor, P.; Lillicrap, T. \& Cownden, D. 2011: Inclusive fitness analysis on
+  mathematical groups.
+\newblock Evolution 65(3):849--859.
+
 \bibitem[{Taylor et~al.(2007)Taylor, Day \& Wild}]{TaylorDayWild2007}
 Taylor, P.~D.; Day, T. \& Wild, G. 2007: Evolution of cooperation in a finite
   homogeneous graph.
 \newblock Nature 447(7143):469--472.
+
+\bibitem[{Taylor \& Irwin(2000)}]{TaylorIrwin2000}
+Taylor, P.~D. \& Irwin, A.~J. 2000: Overlapping generations can promote
+  altruistic behavior.
+\newblock Evolution 54(4):1135--1141.
+
+\bibitem[{Wilson et~al.(1992)Wilson, Pollock \& Dugatkin}]{Wilson1992}
+Wilson, D.~S.; Pollock, G.~B. \& Dugatkin, L.~A. 1992: Can altruism evolve in
+  purely viscous populations?
+\newblock Evolutionary Ecology 6(4):331--341.
 
 \end{thebibliography}
