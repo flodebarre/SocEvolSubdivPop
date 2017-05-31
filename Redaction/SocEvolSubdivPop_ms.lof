@@ -1,0 +1,19 @@
+\contentsline {figure}{\numberline {S1}{\ignorespaces Probabilities of identity by descent, for two different individuals within the same deme ($Q_{\textrm {in}}$, full curves) and two individuals in different demes ($Q_{\textrm {out}}$, dashed curves), for different values of the mutation probability $\mu $ ($10^{-4}$, $0.005$, $0.1$), and for the two types of life-cycles: Moran \ref {sub@fig:sub:QM} and Wright-Fisher \ref {sub@fig:sub:QWF}. Other parameters: $n=4$ individuals per deme, $N_D= 30$ demes. \relax }}{33}{figure.caption.20}
+\contentsline {figure}{\numberline {S2}{\ignorespaces Weak selection. Parameters: $\omega = 0.005$, $b = 15$, $c = 1$, \texthl {ndemes, size, nreps}. NOTE simulations running with 0.005 for mu and with 0.8 for mig. \relax }}{33}{figure.caption.21}
+\contentsline {figure}{\numberline {S3}{\ignorespaces Equivalent of figure\nobreakspace {}\ref {fig:EX} but with strong selection ($\omega = 0.1$); all other parameters and legend are identical to those of figure\nobreakspace {}\ref {fig:EX}. \relax }}{34}{figure.caption.22}
+\contentsline {figure}{\numberline {S4}{\ignorespaces Equivalent of figure\nobreakspace {}\ref {fig:EX} but with a heterogeneous population structure: deme sizes range form $1$ to $5$ individuals per deme, the average deme size is $4$ as in figure\nobreakspace {}\ref {fig:EX}; all other parameters and legend are identical to those of figure\nobreakspace {}\ref {fig:EX}. \relax }}{34}{figure.caption.23}
+\contentsline {figure}{\numberline {S5}{\ignorespaces Strong selection, heterogeneous population\relax }}{35}{figure.caption.24}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Moran}}}{36}{figure.caption.20}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Wight-Fisher}}}{36}{figure.caption.20}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Death-Birth }}}{36}{figure.caption.21}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Birth-Death }}}{36}{figure.caption.21}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Wright-Fisher }}}{36}{figure.caption.21}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Death-Birth}}}{36}{figure.caption.22}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Birth-Death}}}{36}{figure.caption.22}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Wright-Fisher}}}{36}{figure.caption.22}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Death-Birth}}}{36}{figure.caption.23}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Birth-Death}}}{36}{figure.caption.23}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Wright-Fisher}}}{36}{figure.caption.23}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Death-Birth}}}{36}{figure.caption.24}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Birth-Death}}}{36}{figure.caption.24}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Wright-Fisher}}}{36}{figure.caption.24}

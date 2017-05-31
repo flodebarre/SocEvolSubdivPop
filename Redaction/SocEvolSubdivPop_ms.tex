@@ -216,18 +216,20 @@
 
 \newcommand{\ndemes}{N_D}
 % FLUSH FIGURES IN THE END
-\usepackage[tablesonly]{endfloat}
+%\usepackage[tablesonly]{endfloat}
 
 %\usepackage[fighead, nofiglist, nomarkers]{endfloat}
-\renewcommand{\efloatseparator}{}
+%\renewcommand{\efloatseparator}{}
 
 \newcommand{\defeq}{\mathrel{\mathop:}=}
+
+\newcommand{\myphantom}{\phantom{\overline{f}}}
 
 \begin{document}
 Mon titre 
 \clearpage
 \linenumbers
-\section{Introduction}
+\section{Introduction}%
 In his pioneering work on the evolution of social behavior, \citeauthor{Hamilton1964} suggested that altruistic behavior would be associated to limited dispersal \citep[p.~10]{Hamilton1964}. This notion, that tighter links between individuals favor the evolution of altruism, has been shown to hold in a number of population structures  \citep[see \eg][]{Ohtsuki2006, TaylorDayWild2007, Lehmann2007}. The rationale that altruism is favored when altruists interact more with altruists than defectors do (\citealp[p.~141]{Hamilton1975}; \citealp{Fletcher2009})%http://www.jstor.org/stable/10.1086/338945?seq=6#page_scan_tab_contents
 , a condition that is met in viscous populations, \ie, populations with limited dispersal.
 
@@ -262,7 +264,7 @@ e_{ij} = \begin{cases}
 \end{cases}
 \end{equation}
 Given our assumptions and with this notation, the fecundity of the individual living at site $k$ is given by 
-\begin{equation}
+\begin{equation}\label{eq:deff}
 f_k(\mathbf{X}, \omega) = 1 + \omega \left( \sum_{\ell =1}^N e_{\ell k} \bb X_{\ell} - \cc X_k \right).
 \end{equation}
 Although our assumptions may seem restrictive (fecundity benefits are unconditional, \ie, the same which ever the type of the recipient; the fecundity effects are additive, \ie, the effect of interacting with $k$ altruists is $k$ times the effect of interacting with one altruist), the same fecundities are obtained with a generic fecundity function, after linearization, under the assumption that altruists and defectors are phenotypically close (see \hl{APPENDIX} for details).
@@ -299,90 +301,6 @@ We also run stochastic simulations (coded in \texttt{C}). The simulations are ru
 \section{Results}
 
 \subsection{Expected proportion of altruists}
-
-We want to compute the expected proportion of altruists in the population. Some steps can be done without specifying the life-cycle. We represent the state of the population at a given time $t$ using indicator variables $X_i(t)$, $1\leq i \leq N$, equal to~$1$ if the individual living at site $i$ at time $t$ is an altruist, and equal to~$0$ if it is a defector; these indicator variables are gathered in a $N$-long vector $\mathbf{X}(t)$. The set of all possible population states is $\Omega = \{0,1\}^N$. The proportion of altruists in the population is written $\overline{X}(t) = \sum_{i=1}^N X_i(t)$. We denote by $B_{ji}(X(t), \omega)$, written $B_{ji}$ for simplicity, the probability that the individual at site $j$ at time $t+1$ is the newly established offspring of the individual living at site $i$ at time $t$. We denote by $D_{i}(X(t), \omega)$ ($D_i$ for simplicity) the probability that the individual living at site $i$ at time $t$ has been replaced (\ie, died) at time $t+1$. Both quantities depend on the chosen life-cycle\todo{in a table?}. Since a dead individual is immediately replaced by one new individual, 
-\begin{subequations}
-\begin{equation}\label{eq:DBequiv}
-D_i = \sum_{j=1}^N B_{ij}
-\end{equation}
-holds for all sites $i$\todo{really needed?}. The structure of the population is also such that in the absence of selection ($\omega = 0$), all individuals have the same probability of dying and the same probability of having successful offspring (\ie, offspring that become adults), so that
-\begin{equation}\label{eq:DBRV}
-D_i^0 = \sum_{j=1}^N B_{ji}^0 = B^*, 
-\end{equation}
-where the $^0$ subscript means that the quantities are evaluated for $\omega = 0$; this also implies that $B_{ij}^0$ and $D_i^0$ do not depend on the state $\mathbf{X}$ of the population. For the Moran life-cycles, $B^*=1/N$, while for the Wright-Fisher life-cycle, $B^*=1$. 
-(The difference with \eqref{eq:DBequiv} is that we are now considering offspring produced by $i$ landing on $j$).
-
-\end{subequations}
-
-
-Given that the population is in state $\mathbf{X}(t)$ at time $t$, the expected frequency of altruists at time $t+1$ is given by
-\begin{subequations}
-\begin{equation}\label{eq:conditionalchange}
-\Esp{\overline{X}(t+1) | \mathbf{X}(t)} = %
-\frac{1}{N} \sum_{i=1}^N \left[ \sum_{j=1}^N B_{ij} \left( X_j (1-\mu) + \mu p \right) + (1-D_i) X_i \right]. 
-\end{equation}
-\end{subequations}
-The first term within the brackets corresponds to births; the type of the individual living at $i$ at time $t+1$ then depends on the type of its parent (living at site $j$), and on whether mutation occurred. The second term corresponds to the survival of the individual living at site $i$. 
-
-Given that there is no absorbing population state (a lost strategy can always be recreated by mutation), there is a stationary distribution of population states, and the expected frequency of altruists does not change anymore; we denote by $\xi(\mathbf{X}, \omega, \mu)$ the probability that the population is in state $\mathbf{X}$, given the strength of selection $\omega$ and the mutation probability $\mu$. Taking the expectation of \eqref{eq:conditionalchange} ($\Esp{\overline{X}} = \sum_{X \in \Omega} \overline{X}\xi(\mathbf{X}, \omega, \mu)$), we obtain, after reorganizing:
-\begin{equation}\label{eq:statdist}
-0 = \frac{1}{N} \sum_{X\in \Omega} \sum_{i=1}^N \left[ \sum_{j=1}^N B_{ij} \left( X_j (1-\mu) + \mu p \right) -D_i X_i \right] \xi(\mathbf{X}, \omega, \mu). 
-\end{equation}
-
-Now, we use the assumption of weak selection ($\omega \ll 1$) and consider the first-order expansion of \eqref{eq:statdist} for $\omega$ close to $0$. First, we note that in the absence of selection ($\omega = 0$), the population is at a mutation-drift balance, and the expected state of every site $i$ is then $\Espzero{X_i} = \sum_{X\in \Omega} X_i \xi(X, 0, \mu)= p$, the mutation bias. Secondly, we further expand derivatives of $B_{ji}$ and $D_i$ using the chain rule, using the variables $f_k$ ($1\leq k \leq N$), corresponding to individual fecundities (also, recall that $f_k=1$ when $\omega=0$). \hl{Finally, we use the shorthand notation $\deriv{}{x}$ to denote $\derivv{}{x}{x}$}. Thirdly, we note that for all the life-cycles that we consider, the number of deaths in the population during one time step does not depend on population composition (exactly $1$ death for the Moran life-cycles, and exactly $N$ for the Wright-Fisher life-cycle), so that $\deriv{\sum_{i,j=1}^N B_{ij}}{\omega}$ does not depend on $\omega$. 
-After simplification and reorganization, the first order expansion of \eqref{eq:statdist} yields
-%
-%\begin{equation}
-%\begin{split}
-%0 =& \frac{1}{N} \sum_{X\in \Omega} \sum_{i=1}^N \left[ \sum_{j=1}^N B_{ij}^0 \left( X_j (1-\mu) + \mu p \right) -D_i^0 X_i \right] \xi(\mathbf{X}, \omega, 0) \\
-%%
-%& + \frac{1}{N} \sum_{X\in \Omega} \sum_{i=1}^N \left[ \sum_{j=1}^N \deriv{B_{ij}}{\omega} \left( X_j (1-\mu) + \mu p \right) - \deriv{D_i}{\omega} X_i \right] \xi(\mathbf{X}, \omega, 0) \\ 
-%%
-%& + \frac{1}{N} \sum_{X\in \Omega} \sum_{i=1}^N \left[ \sum_{j=1}^N B_{ij}^0 \left( X_j (1-\mu) + \mu p \right) -D_i^0 X_i \right] \deriv{\xi(\mathbf{X}, \omega, \mu)}{\omega} \\
-%%
-%&+ \bigO{\omega^2}. 
-%\end{split}
-%\end{equation}
-%\begin{equation}
-%\begin{split}
-%0 =&  \frac{1}{N} \sum_{X\in \Omega} \sum_{i=1}^N \left( \sum_{j=1}^N \deriv{B_{ji}}{\omega}  - \deriv{D_i}{\omega}  \right) X_i \xi(\mathbf{X}, \omega, 0) \\ 
-%%
-%&+ \frac{1}{N} \sum_{X\in \Omega} \sum_{i=1}^N  \sum_{j=1}^N \deriv{B_{ij}}{\omega} \mu \left( p - X_j\right)  \xi(\mathbf{X}, \omega, 0) \\ 
-%%
-%%& + \frac{1}{N} \sum_{X\in \Omega} \sum_{i=1}^N \left[ \sum_{j=1}^N B_{ji}^0 X_i  -D_i^0 X_i \right] \deriv{\xi(\mathbf{X}, \omega, \mu)}{\omega} 
-%%
-%& + B^* \mu \left( p - \deriv{\Esp{\overline{X}}}{\omega} \right)
-%%
-%+ \bigO{\omega^2}. 
-%\end{split}
-%\end{equation}
-%
-\begin{equation}\label{eq:weaksel1}
-\begin{split}
-0 =&  \frac{1}{N}  \sum_{i,k=1}^N \Bigg[  \derivvv{\left(\sum_{j=1}^N (1-\mu) B_{ji}  - D_i \right)}{f_k}{f_k=1}  \\ 
-%
-&  \qquad \qquad \times \left( \sum_{\ell =1}^N e_{\ell k} \bb \sum_{X\in \Omega} X_{\ell} X_i \xi(\mathbf{X}, 0, \mu) - c \sum_{X\in \Omega} X_k X_i \xi(\mathbf{X}, 0, \mu) \right)  \Bigg] \\ 
-%
-%&- \frac{\mu }{N} \sum_{X\in \Omega} \sum_{i, k=1}^N   \derivvv{\sum_{j=1}^N B_{ji}}{f_k}{f_k=1} \left( \sum_{\ell =1}^N e_{\ell k} X_{\ell} X_i - c X_k X_i\right)   \xi(\mathbf{X}, 0, \mu) \\ 
-%
-%& + \frac{1}{N} \sum_{X\in \Omega} \sum_{i=1}^N \left[ \sum_{j=1}^N B_{ji}^0 X_i  -D_i^0 X_i \right] \deriv{\xi(\mathbf{X}, \omega, \mu)}{\omega} 
-%
-& - B^* \mu \derivv{\Esp{\overline{X}}}{\omega}{\omega} 
-%
-+ \bigO{\omega^2}. 
-\end{split}
-\end{equation}
-The terms $\sum_{X\in\Omega} X_i X_j \xi(\mathbf{X}, 0, \mu)$, that we will also denote by $P_{ij}$, correspond to the expected state of the pair of sites ($i$, $j$), evaluated in the absence of selection ($\omega = 0$). We can also replace these terms by 
-\begin{equation}\label{eq:QP}
-Q_{ij} = \frac{P_{ij} - p^2}{p (1-p)};
-\end{equation}
-recursions on $P_{ij}$ will reveal that $Q_{ij}$ can be interpreted as a probability of identity by descent, \ie, the probability that the individuals at sites $i$ and $j$ have a common ancestor and that no mutation has occurred on either lineage since the ancestor. 
-
-Finally, we obtain a first-order approximation of the expected frequency of altruists in the population with 
-\begin{equation}\label{eq:EXgeneric}
-\Esp{\overline{X}} = p + \omega \, \deriv{\Esp{\overline{X}}}{\omega} + \bigO{\omega^2},
-\end{equation}
-where $\deriv{\Esp{\overline{X}}}{\omega}$ is a shorthand notation for $\derivv{\Esp{\overline{X}}}{\omega}{\omega}$, which is given by \eqref{eq:weaksel1}. 
 
 
 
@@ -664,6 +582,155 @@ Voter model Ayana Graphs et dire que on peut avoir e = d. Faire figure.
 \label{fig:island_htgpop}
 \end{figure}
 
+
+\clearpage
+
+% Start the appendix
+\appendix
+ 
+% Redefine counters
+% Equations
+%  Redefine the command that creates the equation number.
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+%  Reset the counter
+\setcounter{equation}{0}  % reset counter
+ 
+% Figures
+%  Redefine the command that creates the figure number: adds an S.
+\renewcommand{\thefigure}{S\arabic{figure}}
+%  Reset the counter  
+\setcounter{figure}{0}
+
+% Tables
+\renewcommand{\thetable}{S\arabic{table}}
+%  Reset the counter  
+\setcounter{table}{0} 
+% And the same can be done for tables, theorems, etc.
+
+\section{Expected frequency of altruists in the population\label{sec:app:EX}}
+
+Note: The calculation steps are the same as the ones presented in \citet{Debarre2017}; they are presented here so that the article is self-contained, but there are no new results in section XXX. 
+
+\subsection{For a generic life-cycle \label{sec:app:generic}}
+
+We want to compute the expected proportion of altruists in the population. Some steps can be done without specifying the life-cycle. We represent the state of the population at a given time $t$ using indicator variables $X_i(t)$, $1\leq i \leq N$, equal to~$1$ if the individual living at site $i$ at time $t$ is an altruist, and equal to~$0$ if it is a defector; these indicator variables are gathered in a $N$-long vector $\mathbf{X}(t)$. The set of all possible population states is $\Omega = \{0,1\}^N$. The proportion of altruists in the population is written $\overline{X}(t) = \sum_{i=1}^N X_i(t)$. We denote by $B_{ji}(X(t), \omega)$, written $B_{ji}$ for simplicity, the probability that the individual at site $j$ at time $t+1$ is the newly established offspring of the individual living at site $i$ at time $t$. We denote by $D_{i}(X(t), \omega)$ ($D_i$ for simplicity) the probability that the individual living at site $i$ at time $t$ has been replaced (\ie, died) at time $t+1$. Both quantities depend on the chosen life-cycle and on the state of the population; they are given in table~\ref{tab:BD} for each of the life-cycles that we consider. 
+
+\begin{table}[h!]
+\begin{tabular}{lcc}
+\textsf{Life-cycle} & $B_{ij}$ & $D_i$ \vspace{0.75em} \\  
+%
+\textsf{Moran Birth-Death} & %
+$d_{ji} \dfrac{\myphantom f_{j} \myphantom}{\sum_{k =1}^N f_{k}}$  & %
+$\dfrac{\myphantom \sum_{j=1}^N d_{ji} f_j\myphantom }{\sum_{k=1}^N f_k}$ \vspace{0.75em}\\
+%
+%
+\textsf{Moran Death-Birth} & %
+$\dfrac{1}{N}\dfrac{d_{ji} f_j}{\sum_{k=1}^N d_{ki} f_k}$ & %
+$\dfrac{1}{N}$ \vspace{0.75em}
+\\
+%
+%
+\textsf{Wright-Fisher} & %
+$\dfrac{d_{ji} f_j}{\sum_{k=1}^N d_{ki} f_k}$ & $1$
+\end{tabular}
+\caption{Formulas of $B_{ij}$ and $D_{i}$ for each of the life-cycle that we consider; $f_i$ (shorthand notation for $f_i(X, \omega)$) is the fecundity of the individual living at site $i$, as defined in \eqref{eq:deff}. }
+\label{tab:BD}
+\end{table}
+Since a dead individual is immediately replaced by one new individual, 
+\begin{subequations}
+\begin{equation}\label{eq:DBequiv}
+D_i = \sum_{j=1}^N B_{ij}
+\end{equation}
+holds for all sites $i$. The structure of the population is also such that in the absence of selection ($\omega = 0$, so that $f_i=1$ for all sites $1\leq i\leq N$), all individuals have the same probability of dying and the same probability of having successful offspring (\ie, offspring that become adults), so that
+\begin{equation}\label{eq:DBRV}
+D_i^0 = \sum_{j=1}^N B_{ji}^0 = B^*, 
+\end{equation}
+where the $^0$ subscript means that the quantities are evaluated for $\omega = 0$; this also implies that $B_{ij}^0$ and $D_i^0$ do not depend on the state $\mathbf{X}$ of the population. For the Moran life-cycles, $B^*=1/N$, while for the Wright-Fisher life-cycle, $B^*=1$. 
+(The difference with \eqref{eq:DBequiv} is that we are now considering offspring produced by $i$ landing on $j$).
+
+\end{subequations}
+
+
+Given that the population is in state $\mathbf{X}(t)$ at time $t$, the expected frequency of altruists at time $t+1$ is given by
+\begin{subequations}
+\begin{equation}\label{eq:conditionalchange}
+\Esp{\overline{X}(t+1) | \mathbf{X}(t)} = %
+\frac{1}{N} \sum_{i=1}^N \left[ \sum_{j=1}^N B_{ij} \left( X_j (1-\mu) + \mu p \right) + (1-D_i) X_i \right]. 
+\end{equation}
+\end{subequations}
+The first term within the brackets corresponds to births: the type of the individual living at $i$ at time $t+1$ depends on the type of its parent (living at site $j$), and on whether mutation occurred. The second term in the brackets of \eqref{eq:conditionalchange} corresponds to the survival of the individual living at site $i$. 
+
+Given that there is no absorbing population state (a lost strategy can always be recreated by mutation), there is a stationary distribution of population states, so that the expected frequency of altruists does not change anymore for large times~$t$ (realized frequencies of course keep changing). We denote by $\xi(\mathbf{X}, \omega, \mu)$ the probability that the population is in state $\mathbf{X}$, given the strength of selection $\omega$ and the mutation probability $\mu$. Taking the expectation of \eqref{eq:conditionalchange} ($\Esp{\overline{X}} = \sum_{X \in \Omega} \overline{X}\xi(\mathbf{X}, \omega, \mu)$), we obtain, after reorganizing:
+\begin{equation}\label{eq:statdist}
+0 = \frac{1}{N} \sum_{X\in \Omega} \sum_{i=1}^N \left[ \sum_{j=1}^N B_{ij} \left( X_j (1-\mu) + \mu p \right) -D_i X_i \right] \xi(\mathbf{X}, \omega, \mu). 
+\end{equation}
+
+Now, we use the assumption of weak selection ($\omega \ll 1$) and consider the first-order expansion of \eqref{eq:statdist} for $\omega$ close to $0$. First, we note that in the absence of selection ($\omega = 0$), the population is at a mutation-drift balance, and the expected state of every site $i$ is then $\Espzero{X_i} = \sum_{X\in \Omega} X_i \xi(X, 0, \mu)= p$, the mutation bias. Secondly, we further expand derivatives of $B_{ji}$ and $D_i$ thanks to the chain rule, using the variables $f_k$ ($1\leq k \leq N$), corresponding to individual fecundities (also, recall that $f_k=1$ when $\omega=0$). Thirdly, we note that for all the life-cycles that we consider, the number of deaths in the population during one time step does not depend on population composition (exactly $1$ death for the Moran life-cycles, and exactly $N$ for the Wright-Fisher life-cycle), so that $\partial\sum_{i,j=1}^N B_{ij}/\partial \omega$ does not depend on $\omega$. 
+After simplification and reorganization, the first order expansion of \eqref{eq:statdist} yields
+%
+%\begin{equation}
+%\begin{split}
+%0 =& \frac{1}{N} \sum_{X\in \Omega} \sum_{i=1}^N \left[ \sum_{j=1}^N B_{ij}^0 \left( X_j (1-\mu) + \mu p \right) -D_i^0 X_i \right] \xi(\mathbf{X}, \omega, 0) \\
+%%
+%& + \frac{1}{N} \sum_{X\in \Omega} \sum_{i=1}^N \left[ \sum_{j=1}^N \deriv{B_{ij}}{\omega} \left( X_j (1-\mu) + \mu p \right) - \deriv{D_i}{\omega} X_i \right] \xi(\mathbf{X}, \omega, 0) \\ 
+%%
+%& + \frac{1}{N} \sum_{X\in \Omega} \sum_{i=1}^N \left[ \sum_{j=1}^N B_{ij}^0 \left( X_j (1-\mu) + \mu p \right) -D_i^0 X_i \right] \deriv{\xi(\mathbf{X}, \omega, \mu)}{\omega} \\
+%%
+%&+ \bigO{\omega^2}. 
+%\end{split}
+%\end{equation}
+%\begin{equation}
+%\begin{split}
+%0 =&  \frac{1}{N} \sum_{X\in \Omega} \sum_{i=1}^N \left( \sum_{j=1}^N \deriv{B_{ji}}{\omega}  - \deriv{D_i}{\omega}  \right) X_i \xi(\mathbf{X}, \omega, 0) \\ 
+%%
+%&+ \frac{1}{N} \sum_{X\in \Omega} \sum_{i=1}^N  \sum_{j=1}^N \deriv{B_{ij}}{\omega} \mu \left( p - X_j\right)  \xi(\mathbf{X}, \omega, 0) \\ 
+%%
+%%& + \frac{1}{N} \sum_{X\in \Omega} \sum_{i=1}^N \left[ \sum_{j=1}^N B_{ji}^0 X_i  -D_i^0 X_i \right] \deriv{\xi(\mathbf{X}, \omega, \mu)}{\omega} 
+%%
+%& + B^* \mu \left( p - \deriv{\Esp{\overline{X}}}{\omega} \right)
+%%
+%+ \bigO{\omega^2}. 
+%\end{split}
+%\end{equation}
+%
+\begin{equation}\label{eq:weaksel1}
+\begin{split}
+0 =&  \frac{1}{N}  \sum_{i,k=1}^N \Bigg[  \derivvv{\left(\sum_{j=1}^N (1-\mu) B_{ji}  - D_i \right)}{f_k}{f_k=1}  \\ 
+%
+&  \qquad \qquad \times \left( \sum_{\ell =1}^N e_{\ell k} \bb \sum_{X\in \Omega} X_{\ell} X_i \xi(\mathbf{X}, 0, \mu) - c \sum_{X\in \Omega} X_k X_i \xi(\mathbf{X}, 0, \mu) \right)  \Bigg] \\ 
+%
+%&- \frac{\mu }{N} \sum_{X\in \Omega} \sum_{i, k=1}^N   \derivvv{\sum_{j=1}^N B_{ji}}{f_k}{f_k=1} \left( \sum_{\ell =1}^N e_{\ell k} X_{\ell} X_i - \cc X_k X_i\right)   \xi(\mathbf{X}, 0, \mu) \\ 
+%
+%& + \frac{1}{N} \sum_{X\in \Omega} \sum_{i=1}^N \left[ \sum_{j=1}^N B_{ji}^0 X_i  -D_i^0 X_i \right] \deriv{\xi(\mathbf{X}, \omega, \mu)}{\omega} 
+%
+& - B^* \mu \derivv{\Esp{\overline{X}}}{\omega}{\omega} 
+%
++ \bigO{\omega^2}. 
+\end{split}
+\end{equation}
+The terms $\sum_{X\in\Omega} X_i X_j \xi(\mathbf{X}, 0, \mu)$, that we will also denote by $P_{ij}$, correspond to the expected state of the pair of sites ($i$, $j$), evaluated in the absence of selection ($\omega = 0$). We can also replace these terms by 
+\begin{equation}\label{eq:QP}
+P_{ij} = p^2 + p (1-p) Q_{ij}.
+\end{equation}
+%\begin{equation}\label{eq:QP}
+%Q_{ij} = \frac{P_{ij} - p^2}{p (1-p)};
+%\end{equation}
+Recursions on $P_{ij}$ will reveal that $Q_{ij}$ can be interpreted\todo{Add ref} as a probability of identity by descent, \ie, the probability that the individuals at sites $i$ and $j$ have a common ancestor and that no mutation has occurred on either lineage since the ancestor. 
+
+Finally, we obtain a first-order approximation of the expected frequency of altruists in the population with 
+\begin{equation}\label{eq:EXgeneric}
+\Esp{\overline{X}} = p + \omega \,  \derivv{\Esp{\overline{X}}}{\omega}{\omega} + \bigO{\omega^2},
+\end{equation}
+where $\derivv{\Esp{\overline{X}}}{\omega}{\omega}$ is obtained from \eqref{eq:weaksel1}. We then need to replace the $B_{ij}$ and $D_{j}$ terms by their formulas for each life-cycle (given in table~\ref{tab:BD}), and the $d_{ij}$ and $e_{ij}$ terms by their formulas (given in \eqref{eq:defD}) and \eqref{eq:defE}, respectively). For each life-cycle we can group terms as
+\begin{equation}
+\derivv{\Esp{\overline{X}}}{\omega}{\omega} 
+\approx 
+\frac{p (1-p)}{\mu} \left[ \bb \, (\beta_{D} - \beta_{I}) - \cc \, (\gamma_{D} - \gamma_{I}) \right],
+\end{equation}
+where $\direct$ terms come from the numerators of $B_{ij}$ and $D_i$, and $\indirect$ terms come from the denominator of $B_{ij}$ and $D_i$. 
+The values of the different terms for each life-cycle are given in the main text. 
+
+\subsection{Probabilities of identity by descent}
 \clearpage
 Adaptation of my equations to a subdivided population. Notation, for a quantity $Y$ that depends on two sites ($Y=e$, $d$, $Q$):
 \begin{subequations}
@@ -679,7 +746,7 @@ For a site $i$, $G_i$ denotes the deme the site belongs to, and notation $j \in 
 
 The expected frequency of altruists in the population is given by 
 \begin{equation}
-\Esp{\overline{X}} = p + \delta \frac{p (1-p)}{\mu} \left[ \bb \, (\beta^{D} - \beta^{I}) - \cc \, (\gamma^{D} - \gamma^{I}) \right].
+\Esp{\overline{X}} = p + \delta \frac{p (1-p)}{\mu} \left[ \bb \, (\beta_{D} - \beta_{I}) - \cc \, (\gamma_{D} - \gamma_{I}) \right].
 \end{equation}
 
 \paragraph{Moran, Birth-Death}

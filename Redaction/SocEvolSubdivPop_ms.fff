@@ -1,0 +1,62 @@
+\begin{figure}
+\def \wpic {6cm}
+\begin{tabular}{cc}
+\subfigure[\label{fig:sub:QM}Moran]{\includegraphics[width = \wpic]{../Programs/R/Pics/QplotM.pdf}}
+&
+\subfigure[\label{fig:sub:QWF}Wight-Fisher]{\includegraphics[width = \wpic]{../Programs/R/Pics/QplotWF.pdf}}
+\end{tabular}
+\caption{Probabilities of identity by descent, for two different individuals within the same deme ($\Qin$, full curves) and two individuals in different demes ($\Qout$, dashed curves), for different values of the mutation probability $\mu$ ($10^{-4}$, $0.005$, $0.1$), and for the two types of life-cycles: Moran \subref{fig:sub:QM} and Wright-Fisher \subref{fig:sub:QWF}. Other parameters: $n=4$ individuals per deme, $\ndemes = 30$ demes. }
+\label{fig:Q}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}
+\begin{tabular}{ccc}
+\subfigure[Death-Birth \label{fig:EXDB}]{\includegraphics[type=pdf,ext=.pdf,read=.pdf, width=5cm]{../Programs/R/Pics/EXDB_sel0.005_htg0}}
+&
+\subfigure[Birth-Death \label{fig:EXBD}]{\includegraphics[type=pdf,ext=.pdf,read=.pdf, width=5cm]{../Programs/R/Pics/EXBD_sel0.005_htg0}}
+&
+\subfigure[Wright-Fisher \label{fig:EXWF}]{\includegraphics[type=pdf,ext=.pdf,read=.pdf, width=5cm]{../Programs/R/Pics/EXWF_sel0.005_htg0}}
+\end{tabular}
+\caption{Weak selection. Parameters: $\omega = 0.005$, $b = 15$, $c = 1$, \hl{ndemes, size, nreps}. NOTE simulations running with 0.005 for mu and with 0.8 for mig. }
+\label{fig:EX}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[h!]
+\begin{tabular}{ccc}
+\subfigure[Death-Birth]{\includegraphics[type=pdf,ext=.pdf,read=.pdf, width=5cm]{../Programs/R/Pics/EXDB_sel0.1_htg0}}
+&
+\subfigure[Birth-Death]{\includegraphics[type=pdf,ext=.pdf,read=.pdf, width=5cm]{../Programs/R/Pics/EXBD_sel0.1_htg0}}
+&
+\subfigure[Wright-Fisher]{\includegraphics[type=pdf,ext=.pdf,read=.pdf, width=5cm]{../Programs/R/Pics/EXWF_sel0.1_htg0}}
+\end{tabular}
+\caption{Equivalent of figure~\ref{fig:EX} but with strong selection ($\omega = 0.1$); all other parameters and legend are identical to those of figure~\ref{fig:EX}. }
+\label{fig:ESstrongsel}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}
+\begin{tabular}{ccc}
+\subfigure[Death-Birth]{\includegraphics[type=pdf,ext=.pdf,read=.pdf, width=5cm]{../Programs/R/Pics/EXDB_sel0.005_htg1}}
+&
+\subfigure[Birth-Death]{\includegraphics[type=pdf,ext=.pdf,read=.pdf, width=5cm]{../Programs/R/Pics/EXBD_sel0.005_htg1}}
+&
+\subfigure[Wright-Fisher]{\includegraphics[type=pdf,ext=.pdf,read=.pdf, width=5cm]{../Programs/R/Pics/EXWF_sel0.005_htg1}}\end{tabular}
+\caption{Equivalent of figure~\ref{fig:EX} but with a heterogeneous population structure: deme sizes range form $1$ to $5$ individuals per deme, the average deme size is $4$ as in figure~\ref{fig:EX};  all other parameters and legend are identical to those of figure~\ref{fig:EX}. }
+\label{fig:EXhtg}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}
+\begin{tabular}{ccc}
+\subfigure[Death-Birth]{\includegraphics[type=pdf,ext=.pdf,read=.pdf, width=5cm]{../Programs/R/Pics/EXDB_sel0.1_htg1}}
+&
+\subfigure[Birth-Death]{\includegraphics[type=pdf,ext=.pdf,read=.pdf, width=5cm]{../Programs/R/Pics/EXBD_sel0.1_htg1}}
+&
+\subfigure[Wright-Fisher]{\includegraphics[type=pdf,ext=.pdf,read=.pdf, width=5cm]{../Programs/R/Pics/EXWF_sel0.1_htg1}}\end{tabular}
+\caption{Strong selection, heterogeneous population}
+\label{fig:island_htgpop}
+\end{figure}
+\efloatseparator
+ 

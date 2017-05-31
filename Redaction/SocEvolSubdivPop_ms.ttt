@@ -1,0 +1,10 @@
+\begin{table}[h!]
+\begin{tabular}{lcl}
+Life-cycle & $B_{ij}$ & $D_i$ \\
+%
+Moran Birth-Death & %
+$d_{ji} \dfrac{f_{j}}{\sum_{k =1}^N f_{k}}$
+\end{tabular}
+\end{table}
+\efloatseparator
+ 
