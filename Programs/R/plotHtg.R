@@ -77,7 +77,11 @@ plotDist <- function(i){
 
   # PROPORTION OF ALTRUISTS IN THE POPULATION
   # nA / (nA + nB)
-PlotProp <- function(upd, sel, htg, ylim=c(0,1), addAnalysis=FALSE, pdf = TRUE, addTitle = FALSE, plotData = TRUE, muL = mutList, migL = migList){
+PlotProp <- function(upd, sel, htg, ylim=c(0,1), addAnalysis=FALSE, pdf = TRUE, addTitle = FALSE, plotData = TRUE, muL = mutList, migL = migList, ids = 1, ies = 0){
+  
+  # upd Update rule ("BD", "DB", "WF")
+  # ids Idself, whether self-replacement (d_{ii})
+  # ies Ieself, whether interactions with oneself (e_{ii})
 
     # Initializations if not pdf
     thecex <- cexpoints <- cexlab <- 1
@@ -116,7 +120,7 @@ PlotProp <- function(upd, sel, htg, ylim=c(0,1), addAnalysis=FALSE, pdf = TRUE, 
     for(imu in  seq_along(muL)){
       if(addAnalysis){ # Add analytical prediction
         # Define a function of mig for the specific set of parameters
-      tmpP <- function(x) get(paste0("p", upd))(b=mBList[1], c=1, p=p, sel=sel, mut=muL[imu], m=x, g=0, n=4, d=30, Idself=1, Ieself=0)
+      tmpP <- function(x) get(paste0("p", upd))(b=mBList[1], c=1, p=p, sel=sel, mut=muL[imu], m=x, g=0, n=4, d=30, Idself=ids, Ieself=ies)
         # Plot it
         curve(tmpP, from=0, to=0.9,#par("usr")[2], 
               col=colMut[imu], add = TRUE, lwd = 2)
@@ -162,6 +166,7 @@ themutList <- c(0.005, 0.010, 0.100, 0.250)
 themigList <- c(0.01, 0.05, 0.10, 0.15, 0.20, 0.30, 0.40, 0.50, 0.60, 0.70, 0.80, 0.90)
 dylm <- 0.15
 ylm <- p + c(-dylm, dylm)
+
 PlotProp("WF", 0.005, 1, muL = themutList, ylim = ylm)
 PlotProp("WF", 0.005, 0, addAnalysis = TRUE, ylim = ylm, muL = themutList, migL = themigList)
 
@@ -179,6 +184,8 @@ PlotProp("DB", 0.005, 0, addAnalysis = TRUE, ylim = ylm, muL = themutList, migL 
 
 PlotProp("DB", 0.1, 1, muL = themutList, migL = themigList)
 PlotProp("DB", 0.1, 0, addAnalysis = FALSE, muL = themutList, migL = themigList)
+
+
 
 stop()
 

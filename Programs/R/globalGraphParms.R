@@ -4,6 +4,7 @@ fgcol <- "black"
 
 par(bg=bgcol, fg=fgcol, col=fgcol, col.axis=fgcol, col.lab=fgcol, col.main=fgcol, col.sub=fgcol)
 # http://www.perbang.dk/rgbgradient/ for the gradients
+mygradient6 <- c("#234BCD", "#4E579F", "#7A6471", "#A57043", "#D17D15", "black")
 mygradient5 <- c("#234BCD", "#4E579F", "#7A6471", "#A57043", "#D17D15")
 mygradient4 <- c("#234BCD", "#5D5B8F", "#976C52", "#D17D15")
 mygradient3 <- c("#234BCD", "#7A6471", "#D17D15")
