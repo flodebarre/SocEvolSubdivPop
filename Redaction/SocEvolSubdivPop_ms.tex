@@ -45,11 +45,12 @@
 \usepackage{chngcntr} % For equation counter in the appendix
 
 % HEAD AND FOOT
+\usepackage{lastpage}
 \usepackage{fancyhdr}
 \fancypagestyle{maintext}{
 \fancyhf{}
 \fancyhead[C]{}
-\fancyfoot[C]{\thepage}
+\fancyfoot[C]{\thepage/\pageref{LastPage}}
 \renewcommand{\headrulewidth}{0.pt}
 }
 
@@ -229,6 +230,7 @@
 Mon titre 
 \clearpage
 \linenumbers
+\pagestyle{maintext}
 \section{Introduction}%
 In his pioneering work on the evolution of social behavior, \citeauthor{Hamilton1964} suggested that altruistic behavior would be associated to limited dispersal \citep[p.~10]{Hamilton1964}. This notion, that tighter links between individuals favor the evolution of altruism, has been shown to hold in a number of population structures  \citep[see \eg][]{Ohtsuki2006, TaylorDayWild2007, Lehmann2007}. The rationale that altruism is favored when altruists interact more with altruists than defectors do (\citealp[p.~141]{Hamilton1975}; \citealp{Fletcher2009})%http://www.jstor.org/stable/10.1086/338945?seq=6#page_scan_tab_contents
 , a condition that is met in viscous populations, \ie, populations with limited dispersal.
@@ -496,10 +498,11 @@ Parameters: $\omega = 0.005$, $p=0.45$, $b = 15$, $c = 1$, $n=4$ individuals per
 
 \subsection{Relaxing key assumptions}
 
-To derive our analytical results, we had to make a number of simplifying assumptions, such as the fact that selection is weak ($\omega \ll 1$), and the fact that the structure of the population is regular (all demes have the same size $n$). We explored with numerical simulations the effect of relaxing these key assumptions. The patterns that we identified hold when selection is strong (see figure~\ref{fig:EXstrongsel}, done with $\omega = 0.1$), but also when the demes have different sizes. Deme sizes are drawn randomly at the beginning of a simulation; the range from $1$ to $5$ individuals per deme and the average size is $4$ individuals as in the other figures.\todo{le pb c'est ptet simplement que 1 individu ca pose probleme!}. Here as well, the same patterns hold as those obtained with a homogeneous structure (figure~\ref{fig:EXhtg}). Add\todo{todo} effect of $\dself$.
+To derive our analytical results, we had to make a number of simplifying assumptions, such as the fact that selection is weak ($\omega \ll 1$), and the fact that the structure of the population is regular (all demes have the same size $n$). We explored with numerical simulations the effect of relaxing these key assumptions. The patterns that we identified hold when selection is strong (see figure~\ref{fig:EXstrongsel}, done with $\omega = 0.1$), but also when the demes have different sizes. Deme sizes are drawn randomly at the beginning of a simulation; the range from $1$ to $5$ individuals per deme and the average size is $4$ individuals as in the other figures. Here as well, the same patterns hold as those obtained with a homogeneous structure (figure~\ref{fig:EXhtg}). 
+
+For the Moran model, it may seem odd that an individual can replace its parent. We can do the same analysis assuming that for all sites $i$, $d_{ii}=\dself=0$ (and so $\din = (1-m)/(n-1)$ for two different sites in the same deme, $\dout$ remaining unchanged). Figure~\ref{fig:EXdself} confirms that this does affect our conclusions. 
 
 \section{Discussion}
-
 % Summary
 Assuming that the transmission of a social strategy (being an altruist or a defector) from a parent to its offspring could be imperfect, we found that the expected frequency of altruists maintained in the population could increase with the probability of emigration out of the parental deme, a parameter tuning population viscosity. This result can seem surprising, because it contradicts the conclusions obtained under the assumption of nearly perfect strategy transmission (\ie, in the case of genetic transmission, that mutation is very weak or absent), where increased population viscosity (decreased emigration probability) is either neutral \citep{Taylor1992islandmodel} or favorable \citep{TaylorDayWild2007} to the evolution of altruistic behavior. 
 
@@ -515,8 +518,11 @@ Go back to the decomposition of the different terms, we see that increase of $\E
 % Order of limits
 Problems of orders of limits, especially when $d \to \infty$ and $\mu \to 0$. Need to specify how small the mutation probability is compared to the size of the population. 
 
-% Steve Frank
-Our model bears resemblance to the Rebellious Child Model by \citet{Frank1997}, who studied the evolution of a vertically transmitted cultural trait in an asexually reproducing population. In his analysis however, and as acknowledged in the legend of his Figure~7, the model is not fully dynamic because relatedness $r$ is treated as a fixed parameter, which does not depend on mutation. In our mechanistic treatment, $r$ does depend on the mutation probability $\mu$ because probabilities of identity by descent do. Mutation was also previously included in models investigating the maintenance of cooperative microorganisms in the presence of cheaters \citep{Brockhurst2007, Frank2010}. In both of these models however, only loss-of-function mutation was considered (in our model, this is obtained by setting the mutation biais at $p=0$). This means that the all-cheaters state is absorbing, and that no matter how favored cooperators may otherwise be, in the long run a finite population will only consist of cheaters. 
+% Steve Frank and other models
+Our model bears resemblance to the Rebellious Child Model by \citet{Frank1997}, who studied the evolution of a vertically transmitted cultural trait in an asexually reproducing population. In his analysis however, and as acknowledged in the legend of his Figure~7, the model is not fully dynamic because relatedness $r$ is treated as a fixed parameter, which does not depend on mutation. In our mechanistic treatment, $r$ does depend on the mutation probability $\mu$ because probabilities of identity by descent do. Mutation was also previously included in models investigating the maintenance of cooperative microorganisms in the presence of cheaters \citep{Brockhurst2007, Frank2010}. In both of these models however, only loss-of-function mutation was considered (in our model, this is obtained by setting the mutation bias at $p=0$). This means that the all-cheaters state is absorbing, and that no matter how favored cooperators may otherwise be, in the long run a finite population will only consist of cheaters. 
+
+% Allen et al
+\Citet{Allen2012} investigated the evolution of altruism on graph-structured populations for any mutation probability, and used a . 
 
 % Links votant
 Voter model Ayana Graphs et dire que on peut avoir e = d. Faire figure. 
@@ -530,6 +536,10 @@ Voter model Ayana Graphs et dire que on peut avoir e = d. Faire figure.
 
 \clearpage
 % Start the appendix
+
+%TC:ignore 
+% Ignore word count after this point
+
 \appendix
  
 % Redefine counters
@@ -556,7 +566,7 @@ Voter model Ayana Graphs et dire que on peut avoir e = d. Faire figure.
 &
 \subfigure[Wright-Fisher]{\includegraphics[type=pdf,ext=.pdf,read=.pdf, width=5cm]{../Programs/R/Pics/EXWF_sel0.1_htg0}}
 \end{tabular}
-\caption{Equivalent of figure~\ref{fig:EX} but with strong selection ($\omega = 0.1$); all other parameters and legend are identical to those of figure~\ref{fig:EX}. }
+\caption{Equivalent of figure~\ref{fig:EX} (simulations only) but with strong selection ($\omega = 0.1$); please note the change of scale on the vertical axis. All other parameters and legends are identical to those of figure~\ref{fig:EX} (increasing mutation probabilities from blue dots to orange triangles). }
 \label{fig:EXstrongsel}
 \end{figure}
 
@@ -568,25 +578,39 @@ Voter model Ayana Graphs et dire que on peut avoir e = d. Faire figure.
 \subfigure[Birth-Death]{\includegraphics[type=pdf,ext=.pdf,read=.pdf, width=5cm]{../Programs/R/Pics/EXBD_sel0.005_htg1}}
 &
 \subfigure[Wright-Fisher]{\includegraphics[type=pdf,ext=.pdf,read=.pdf, width=5cm]{../Programs/R/Pics/EXWF_sel0.005_htg1}}\end{tabular}
-\caption{Equivalent of figure~\ref{fig:EX} but with a heterogeneous population structure: deme sizes range form $1$ to $5$ individuals per deme, the average deme size is $4$ as in figure~\ref{fig:EX};  all other parameters and legend are identical to those of figure~\ref{fig:EX}. }
+\caption{Equivalent of figure~\ref{fig:EX} (simulations only) but with a heterogeneous population structure: deme sizes range form $1$ to $5$ individuals per deme, the average deme size is $4$ as in figure~\ref{fig:EX};  all other parameters and legend are identical to those of figure~\ref{fig:EX}. }
 \label{fig:EXhtg}
 \end{figure}
 
 
  
-\clearpage
-% Figure heterogeneous population
+%\clearpage
+%% Figure heterogeneous population
+%\begin{figure}
+%\begin{tabular}{ccc}
+%\subfigure[Death-Birth]{\includegraphics[type=pdf,ext=.pdf,read=.pdf, width=5cm]{../Programs/R/Pics/EXDB_sel0.1_htg1}}
+%&
+%\subfigure[Birth-Death]{\includegraphics[type=pdf,ext=.pdf,read=.pdf, width=5cm]{../Programs/R/Pics/EXBD_sel0.1_htg1}}
+%&
+%\subfigure[Wright-Fisher]{\includegraphics[type=pdf,ext=.pdf,read=.pdf, width=5cm]{../Programs/R/Pics/EXWF_sel0.1_htg1}}\end{tabular}
+%\caption{Strong selection, heterogeneous population}
+%\label{fig:island_htgpop}
+%\end{figure}
+
+
+
+% Figure dself = 0
 \begin{figure}
 \begin{tabular}{ccc}
-\subfigure[Death-Birth]{\includegraphics[type=pdf,ext=.pdf,read=.pdf, width=5cm]{../Programs/R/Pics/EXDB_sel0.1_htg1}}
+\subfigure[Death-Birth \label{fig:EXDB}]{\includegraphics[type=pdf,ext=.pdf,read=.pdf, width=5cm]{../Programs/R/Pics/EXDB_sel0.005_htg0_nodself}}
 &
-\subfigure[Birth-Death]{\includegraphics[type=pdf,ext=.pdf,read=.pdf, width=5cm]{../Programs/R/Pics/EXBD_sel0.1_htg1}}
+\subfigure[Birth-Death \label{fig:EXBD}]{\includegraphics[type=pdf,ext=.pdf,read=.pdf, width=5cm]{../Programs/R/Pics/EXBD_sel0.005_htg0_nodself}}
 &
-\subfigure[Wright-Fisher]{\includegraphics[type=pdf,ext=.pdf,read=.pdf, width=5cm]{../Programs/R/Pics/EXWF_sel0.1_htg1}}\end{tabular}
-\caption{Strong selection, heterogeneous population}
-\label{fig:island_htgpop}
+\subfigure[Wright-Fisher \label{fig:EXWF}]{\includegraphics[type=pdf,ext=.pdf,read=.pdf, width=5cm]{../Programs/R/Pics/EXWF_sel0.005_htg0_nodself}}
+\end{tabular}
+\caption{Equivalent of figure~\ref{fig:EX} (analysis only), with no self-replacement ($d_{ii} = \dself = 0$ for all sites). }
+\label{fig:EXdself}
 \end{figure}
-
 
 \clearpage
 
@@ -611,6 +635,9 @@ Voter model Ayana Graphs et dire que on peut avoir e = d. Faire figure.
 %  Reset the counter  
 \setcounter{table}{0} 
 % And the same can be done for tables, theorems, etc.
+\begin{center}
+{\LARGE \bfseries\sffamily  \appname}
+\end{center}
 
 \section{Fecundity and weak selection approximation\label{sec:app:F}}
 
@@ -744,7 +771,7 @@ P_{ij} = p^2 + p (1-p) Q_{ij}.
 %\begin{equation}\label{eq:QP}
 %Q_{ij} = \frac{P_{ij} - p^2}{p (1-p)};
 %\end{equation}
-In \hl{appendix}~\ref{sec:app:IBD}, we will see that recursions on $P_{ij}$ will reveal that $Q_{ij}$ can be interpreted as a probability of identity by descent, \ie, the probability that the individuals at sites $i$ and $j$ have a common ancestor and that no mutation has occurred on either lineage since the ancestor. 
+In \appname~\ref{sec:app:IBD}, we will see that recursions on $P_{ij}$ will reveal that $Q_{ij}$ can be interpreted as a probability of identity by descent, \ie, the probability that the individuals at sites $i$ and $j$ have a common ancestor and that no mutation has occurred on either lineage since the ancestor. 
 
 Finally, we obtain a first-order approximation of the expected frequency of altruists in the population with 
 \begin{equation}\label{eq:EXgeneric}
@@ -847,7 +874,7 @@ Again, $Q_{ij}$ corresponds to a probability of identity by descent: the individ
 \section{In a subdivided population}
 
 \subsection{$\beta$ and $\gamma$}
-Now, we need to adapt the results presented in \hl{appendix}~\ref{sec:app:EX} to our structure of interest, a subdivided population, with dispersal and interaction probabilities given by \eqref{eq:defD} and \eqref{eq:defE}. For the $\beta$ and $\gamma$ terms, we use a brute-force approach, replacing $d_{ij}$ and $e_{ij}$ by their values in a subdivided population, and simplifying the equations (for instance, there are $60$ different cases to consider for the four sums that appear in $\beta_{\indirect}^{\DB}$). The calculations are detailed in an accompanying Mathematica file\todo{todo}, and the results are presented in the main text. 
+Now, we need to adapt the results presented in \appname~\ref{sec:app:EX} to our structure of interest, a subdivided population, with dispersal and interaction probabilities given by \eqref{eq:defD} and \eqref{eq:defE}. For the $\beta$ and $\gamma$ terms, we use a brute-force approach, replacing $d_{ij}$ and $e_{ij}$ by their values in a subdivided population, and simplifying the equations (for instance, there are $60$ different cases to consider for the four sums that appear in $\beta_{\indirect}^{\DB}$). The calculations are detailed in an accompanying Mathematica file\todo{todo}, and the results are presented in the main text. 
 
 \subsection{Probabilities of identity by descent}
 For the probabilities of identity by descent, we could also use a brute-force approach, but calculations are faster if we use formulas derived in \citet{Debarre2017} for ``two-dimensional population structures''. The name comes from the fact that we only need two types of transformations to go from any site to any other site in the population: permutations on the deme index, and permutations on the within-deme index.  We introduce notations $\tilde{d}_i$ and $\tilde{Q}_i$, that correspond to the dispersal probability to a site at distance $i$ (\eg, for all $j, 1\leq j\leq N$, $\tilde{d}_1 = d_{j,j+1}$) and the probability of identity by descent with a site at distance $i$ (\eg, for all $j, 1\leq j\leq N$, $\tilde{Q}_1 = Q_{j,j+1}$), respectively. Finally, we can rewrite site labels ($1\leq i \leq N$) as $(l_1, l_2)$, where $l_1$ is the number of the deme ($1\leq l_1 \leq \ndemes$) and $l_2$ the position of the site within the deme ($1\leq l_2 \leq n$).
@@ -1017,7 +1044,10 @@ and
 \Bigg] .
 \end{equation}
 \end{subequations}
-With $\dself = \din = (1-m)/n$, we recover the equations given in the main text (\sysref{eq:QWF}). 
+With $\dself = \din = (1-m)/n$, we recover the equations given in the main text (\sysref{eq:QWF}).
+
+%TC:endignore 
+
 \end{document}
 
 \clearpage

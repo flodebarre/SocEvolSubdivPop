@@ -90,9 +90,11 @@ PlotProp <- function(upd, sel, htg, ylim=c(0,1), addAnalysis=FALSE, pdf = TRUE, 
       cexpoints <- 1.6 # cex of the points
       cexlab <- 1.6 # cex of the labels
       
-      filename <- paste0('Pics/', "EX", upd, "_sel", sel, "_htg", htg) # Name of the pdf file
+      ext <- ""
+      if(ids!=1) ext <- "_nodself"
+      filename <- paste0('Pics/', "EX", upd, "_sel", sel, "_htg", htg, ext) # Name of the pdf file
 
-      pdf(paste0(filename, ".pdf"), width = 4.5, height = 5.5, compress = FALSE) # Open pdf
+      pdf(paste0(filename, ".pdf"), width = 4.5, height = 5., compress = FALSE) # Open pdf
       if(addTitle) martit <- 2.5 else martit <- 0
       par(mar = c(2.5, 2.5, martit, 0)+0.1) # Margins
       par(mgp=c(3, .6, 0)) # Position of the tick labels
@@ -123,7 +125,7 @@ PlotProp <- function(upd, sel, htg, ylim=c(0,1), addAnalysis=FALSE, pdf = TRUE, 
       tmpP <- function(x) get(paste0("p", upd))(b=mBList[1], c=1, p=p, sel=sel, mut=muL[imu], m=x, g=0, n=4, d=30, Idself=ids, Ieself=ies)
         # Plot it
         curve(tmpP, from=0, to=0.9,#par("usr")[2], 
-              col=colMut[imu], add = TRUE, lwd = 2)
+              col=colMut[imu], add = TRUE, lwd = 2.5)
       }
       if(plotData){
         # Simulation Data: extract the relevant data for the set of parameters
@@ -146,47 +148,50 @@ PlotProp <- function(upd, sel, htg, ylim=c(0,1), addAnalysis=FALSE, pdf = TRUE, 
     mtext(side = 1, expression(paste("Emigration probability (",italic(m),")")), line = 1.5, las=0, cex=cexlab)
     if(pdf){
       dev.off()
-      system(paste0("xdg-open ", paste0(filename, ".pdf")))
+      #system(paste0("xdg-open ", paste0(filename, ".pdf")))
     }
 }
 
-selList
-
-for(sel in selList){
-  for(upd in updList){
-    PlotProp(upd, sel, 1)
-    addA <- FALSE
-    if(sel<0.01) 
-      addA <- TRUE
-    PlotProp(upd, sel, 0, addAnalysis = addA)
-}
-}
+# selList
+# 
+# for(sel in selList){
+#   for(upd in updList){
+#     PlotProp(upd, sel, 1)
+#     addA <- FALSE
+#     if(sel<0.01) 
+#       addA <- TRUE
+#     PlotProp(upd, sel, 0, addAnalysis = addA)
+# }
+# }
 
 themutList <- c(0.005, 0.010, 0.100, 0.250)
 themigList <- c(0.01, 0.05, 0.10, 0.15, 0.20, 0.30, 0.40, 0.50, 0.60, 0.70, 0.80, 0.90)
-dylm <- 0.15
+dylm <- 0.2
 ylm <- p + c(-dylm, dylm)
 
-PlotProp("WF", 0.005, 1, muL = themutList, ylim = ylm)
-PlotProp("WF", 0.005, 0, addAnalysis = TRUE, ylim = ylm, muL = themutList, migL = themigList)
-
-PlotProp("WF", 0.1, 1, muL = themutList, migL = themigList)
-PlotProp("WF", 0.1, 0, muL = themutList, migL = themigList)
-
-PlotProp("BD", 0.005, 1, muL = themutList, migL = themigList)
-PlotProp("BD", 0.005, 0, addAnalysis = TRUE, ylim = ylm, muL = themutList, migL = themigList)
-
-PlotProp("BD", 0.1, 1, muL = themutList, migL = themigList)
-PlotProp("BD", 0.1, 0, addAnalysis = FALSE, muL = themutList, migL = themigList)
-
-PlotProp("DB", 0.005, 1, muL = themutList, migL = themigList)
+# FIGURE 2
 PlotProp("DB", 0.005, 0, addAnalysis = TRUE, ylim = ylm, muL = themutList, migL = themigList)
 
-PlotProp("DB", 0.1, 1, muL = themutList, migL = themigList)
+PlotProp("BD", 0.005, 0, addAnalysis = TRUE, ylim = ylm, muL = themutList, migL = themigList)
+
+PlotProp("WF", 0.005, 0, addAnalysis = TRUE, ylim = ylm, muL = themutList, migL = themigList)
+
+# FIGURE S1
 PlotProp("DB", 0.1, 0, addAnalysis = FALSE, muL = themutList, migL = themigList)
+PlotProp("BD", 0.1, 0, addAnalysis = FALSE, muL = themutList, migL = themigList)
+PlotProp("WF", 0.1, 0, muL = themutList, migL = themigList)
 
+# FIGURE S2
+PlotProp("DB", 0.005, 1, muL = themutList, migL = themigList, ylim = ylm)
+PlotProp("BD", 0.005, 1, muL = themutList, migL = themigList, ylim = ylm)
+PlotProp("WF", 0.005, 1, muL = themutList, migL = themigList, ylim = ylm)
 
+# FIGURE S3
+PlotProp("DB", 0.005, 0, muL = themutList, migL = themigList, ids = 0, plotData = FALSE, addAnalysis = TRUE, ylim = ylm)
 
+PlotProp("BD", 0.005, 0, muL = themutList, migL = themigList, ids = 0, plotData = FALSE, addAnalysis = TRUE, ylim = ylm)
+
+PlotProp("WF", 0.005, 0, muL = themutList, migL = themigList, ids = 0, plotData = FALSE, addAnalysis = TRUE, ylim = ylm)
 stop()
 
 

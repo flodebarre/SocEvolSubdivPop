@@ -29,6 +29,6 @@ mgppdf <- c(3, .6, 0) # length and position of the ticks
 Cm2In <- function(x){x/2.54}
 
 # Rectangle
-rectColor <- gray(0.9) # Background color
-rectLines <- gray(1)   # Color of the horizontal lines
+rectColor <- gray(1) # Background color
+rectLines <- gray(0.6)   # Color of the horizontal lines
 rectLlty <- 3          # Line type of the horizontal lines
