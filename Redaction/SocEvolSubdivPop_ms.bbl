@@ -1,4 +1,4 @@
-\begin{thebibliography}{20}
+\begin{thebibliography}{24}
 \providecommand{\natexlab}[1]{#1}
 
 \bibitem[{Alizon \& Taylor(2008)}]{Alizon2008}
@@ -58,9 +58,19 @@ Lehmann, L.; Keller, L. \& Sumpter, D. J.~T. 2007: The evolution of helping and
   harming on graphs: the return of the inclusive fitness effect.
 \newblock Journal of Evolutionary Biology 20(6):2284--2295.
 
+\bibitem[{Leturque \& Rousset(2002)}]{LeturqueRousset2002}
+Leturque, H. \& Rousset, F. 2002: Dispersal, kin competition, and the ideal
+  free distribution in a spatially heterogeneous population.
+\newblock Theoretical Population Biology 62(2):169 -- 180.
+
 \bibitem[{Lion(2016)}]{Lion2016}
 Lion, S. 2016: Moment equations in spatial evolutionary ecology.
 \newblock Journal of theoretical biology 405:46--57.
+
+\bibitem[{Mullon \& Lehmann(2014)}]{MullonLehmann2014}
+Mullon, C. \& Lehmann, L. 2014: The robustness of the weak selection
+  approximation for the evolution of altruism against strong selection.
+\newblock Journal of evolutionary biology 27(10):2272--2282.
 
 \bibitem[{Ohtsuki et~al.(2006)Ohtsuki, Hauert, Lieberman \&
   Nowak}]{Ohtsuki2006}
@@ -87,15 +97,26 @@ Taylor, P.; Lillicrap, T. \& Cownden, D. 2011: Inclusive fitness analysis on
   mathematical groups.
 \newblock Evolution 65(3):849--859.
 
-\bibitem[{Taylor et~al.(2007)Taylor, Day \& Wild}]{TaylorDayWild2007}
-Taylor, P.~D.; Day, T. \& Wild, G. 2007: Evolution of cooperation in a finite
-  homogeneous graph.
+\bibitem[{Taylor et~al.(2007{\natexlab{a}})Taylor, Day \&
+  Wild}]{TaylorDayWild2007}
+Taylor, P.~D.; Day, T. \& Wild, G. 2007{\natexlab{a}}: Evolution of cooperation
+  in a finite homogeneous graph.
 \newblock Nature 447(7143):469--472.
+
+\bibitem[{Taylor et~al.(2007{\natexlab{b}})Taylor, Day \& Wild}]{Taylor2007JTB}
+Taylor, P.~D.; Day, T. \& Wild, G. 2007{\natexlab{b}}: From inclusive fitness
+  to fixation probability in homogeneous structured populations.
+\newblock Journal of Theoretical Biology 249(1):101 -- 110.
 
 \bibitem[{Taylor \& Irwin(2000)}]{TaylorIrwin2000}
 Taylor, P.~D. \& Irwin, A.~J. 2000: Overlapping generations can promote
   altruistic behavior.
 \newblock Evolution 54(4):1135--1141.
+
+\bibitem[{West et~al.(2002)West, Pen \& Griffin}]{West2002}
+West, S.~A.; Pen, I. \& Griffin, A.~S. 2002: Cooperation and competition
+  between relatives.
+\newblock Science 296(5565):72--75.
 
 \bibitem[{Wilson et~al.(1992)Wilson, Pollock \& Dugatkin}]{Wilson1992}
 Wilson, D.~S.; Pollock, G.~B. \& Dugatkin, L.~A. 1992: Can altruism evolve in

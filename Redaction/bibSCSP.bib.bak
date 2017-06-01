@@ -1881,6 +1881,20 @@ and Dugatkin, L. A.},
   Date-modified            = {2016-04-20 08:34:05 +0000}
 }
 
+@Article{Wright1943,
+  Title                    = {Isolation by distance},
+  Author                   = {Wright, Sewall},
+  Journal                  = {Genetics},
+  Year                     = {1943},
+  Number                   = {2},
+  Pages                    = {114},
+  Volume                   = {28},
+
+  Owner                    = {florencedebarre},
+  Publisher                = {Genetics Society of America},
+  Timestamp                = {2017.05.30}
+}
+
 @Article{Zukewich2013,
   Title                    = {{Consolidating Birth-Death and Death-Birth Processes in Structured Populations}},
   Author                   = {Zukewich, Joshua AND Kurella, Venu AND Doebeli, Michael AND Hauert, Christoph},

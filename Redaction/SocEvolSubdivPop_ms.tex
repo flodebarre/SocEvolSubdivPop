@@ -233,10 +233,10 @@ Mon titre
 In his pioneering work on the evolution of social behavior, \citeauthor{Hamilton1964} suggested that altruistic behavior would be associated to limited dispersal \citep[p.~10]{Hamilton1964}. This notion, that tighter links between individuals favor the evolution of altruism, has been shown to hold in a number of population structures  \citep[see \eg][]{Ohtsuki2006, TaylorDayWild2007, Lehmann2007}. The rationale that altruism is favored when altruists interact more with altruists than defectors do (\citealp[p.~141]{Hamilton1975}; \citealp{Fletcher2009})%http://www.jstor.org/stable/10.1086/338945?seq=6#page_scan_tab_contents
 , a condition that is met in viscous populations, \ie, populations with limited dispersal.
 
-Yet, living next to your kin also implies competing against them. The evolution of social traits hence depends on the balance between the positive effects of interactions with related individuals and the detrimental consequences of kin competition. Under specific conditions, the two effects can even compensate each other, thereby annihilating the impact of population viscosity on the evolution of altruism. First identified with computer simulations \citep{Wilson1992}, this cancellation result was analyzed by \citet{Taylor1992islandmodel} in a model with synchronous generations (Wright-Fisher model) and a subdivided population of constant, infinite size, and was later extended to heterogeneous populations \citep[][with synchronous generations and infinite population size]{RodriguesGardner2012}, and other life-cycles and regular population structures \citep[][with synchronous generations but also with continuous generations and Birth-Death updating]{Taylor2011}. However, small changes in the model's assumptions, such as overlapping generations \citep{TaylorIrwin2000} or the presence of empty sites \citep{Alizon2008} can tip the balance back in the favor of altruism. This high dependence on life-cycle specificities highlights the difficulty of making general statements about the role of spatial structure on the evolution of altruism. 
+Yet, living next to your kin also implies competing against them \citep{West2002}. The evolution of social traits hence depends on the balance between the positive effects of interactions with related individuals and the detrimental consequences of kin competition. Under specific conditions, the two effects can even compensate each other, thereby annihilating the impact of population viscosity on the evolution of altruism. First identified with computer simulations \citep{Wilson1992}, this cancellation result was analyzed by \citet{Taylor1992islandmodel} in a model with synchronous generations (Wright-Fisher model) and a subdivided population of constant, infinite size, and was later extended to heterogeneous populations \citep[][with synchronous generations and infinite population size]{RodriguesGardner2012}, and other life-cycles and regular population structures \citep[][with synchronous generations but also with continuous generations and Birth-Death updating]{Taylor2011}. However, small changes in the model's assumptions, such as overlapping generations \citep{TaylorIrwin2000} or the presence of empty sites \citep{Alizon2008} can tip the balance back in the favor of altruism. This high dependence on life-cycle specificities highlights the difficulty of making general statements about the role of spatial structure on the evolution of altruism. 
 
-Another limitation of mechanistic models is the necessity of simplifying assumptions to obtain analytical results. A large number of studies on the evolution of social behavior consider simple population structures (typically, homogeneous populations \textit{sensu} \citet[][]{TaylorDayWild2007}) and often also infinite population sizes \citep[but see][for results on any structure]{Allen2017}; they make use of weak selection approximations, and commonly assume rare or absent mutation. 
-Simple population structures (\eg, regular graphs, or subdivided populations with demes of equal sizes) help reduce the dimensionality of the system under study: this is for instance the case when the structure of the population displays symmetries such that all sites behave the same way in expectation. Weak selection approximations are also crucial for disentangling spatial moments \citep{Lion2016}, that is, changes in global \vs local frequencies. Finally, as highlighted by \citet{TarnitaTaylor2014}, classical models of inclusive fitness assume infinite population sizes, which maintains diversity; this effect is obtained thanks to (rare) mutation in finite populations. The aim of this study is to explore whether and how imperfect strategy transmission from parents to their offspring affects the impact of population viscosity on the evolution of altruistic behavior in subdivided populations\todo{cite somewhere \citep{Allen2012,Debarre2017}}. 
+Another limitation of mechanistic models is the necessity of simplifying assumptions to obtain analytical results. A large number of studies on the evolution of social behavior consider simple population structures (typically, homogeneous populations \textit{sensu} \citet[][]{TaylorDayWild2007}) and often also infinite population sizes \citep[but see][for results on any structure]{Allen2017}; they make use of weak selection approximations, and commonly assume rare \citep[\eg,][]{LeturqueRousset2002, Taylor2007JTB, TarnitaTaylor2014} or absent mutation (models assuming infinite population sizes, or models concentrating on fixation probabilities). 
+Simple population structures (\eg, regular graphs, or subdivided populations with demes of equal sizes) help reduce the dimensionality of the system under study: this is for instance the case when the structure of the population displays symmetries such that all sites behave the same way in expectation. Weak selection approximations are also crucial for disentangling spatial moments \citep{Lion2016}, that is, changes in global \vs local frequencies \citep[though they can in some cases be relaxed][]{MullonLehmann2014}. Finally, as highlighted by \citet{TarnitaTaylor2014}, classical models of inclusive fitness assume infinite population sizes, which maintains diversity; in finite population this effect is obtained thanks to (rare) mutation. The aim of this study is to explore whether and how imperfect strategy transmission from parents to their offspring affects the impact of population viscosity on the evolution of altruistic behavior in subdivided populations\todo{cite somewhere \citep{Allen2012,Debarre2017}}. 
 
 When strategy transmission is purely genetic, it makes sense to assume that mutation is relatively weak. A social strategy can however also be culturally transmitted from parent to offspring, in which case ``rebellion'' (as in \citeauthor{Frank1997}'s Rebellious Child Model \citep{Frank1997}) can be frequent. For simplicity though, we will keep using the word ``mutation'', keeping in mind that strategy transmission does not have to be genetic. 
 
@@ -251,11 +251,14 @@ In this study, we consider three different life-cycles (Wright-Fisher, Moran Bir
 
 \subsection{Assumptions}
 
-We consider a population of size $N$, subdivided into $\ndemes$~demes, each hosting exactly $n$ individuals (\ie, containing $n$ sites, each of which is occupied by exactly one individual; we have $n \ndemes = N$). Each site has a unique label $i$, $1\leq i \leq N$. There are two types of individuals in the population, altruists and defectors. Reproduction is asexual. Parents transmit their strategy to their offspring with probability $1-\mu$; this transmission can be genetic or cultural (vertical cultural transmission), but for simplicity, we refer to the parameter $\mu$ as a mutation probability. With probability $\mu$, offspring do not inherit their strategy from their parent but instead get one randomly: with probability $p$, they become altruists, with probability $1-p$ they become defectors. We call the parameter $p$ the mutation bias. 
+We consider a population of size $N$, subdivided into $\ndemes$~demes, each hosting exactly $n$ individuals (\ie, containing $n$ sites, each of which is occupied by exactly one individual; we have $n \ndemes = N$). Each site has a unique label $i$, $1\leq i \leq N$. There are two types of individuals in the population, altruists and defectors. The type of the individual living at site $i$ ($1\leq i \leq N$) is given by an indicator variable $X_i$, equal to $1$ if the individual is an altruist, and to $0$ if it is a defector. The state of the entire population is given by a $N$-long vector $\mathbf{X}$. For a given population state $\mathbf{X}$, the proportion of altruists is $\overline{X} = \sum_{i=1}^N X_i$. 
+
+Reproduction is asexual. Parents transmit their strategy to their offspring with probability $1-\mu$; this transmission can be genetic or cultural (vertical cultural transmission), but for simplicity, we refer to the parameter $\mu$ as a mutation probability. With probability $\mu$, offspring do not inherit their strategy from their parent but instead get one randomly: with probability $p$, they become altruists, with probability $1-p$ they become defectors. We call the parameter $p$ the mutation bias. 
 
 % Social interactions and effect on fecundity (simple version). 
 Social interactions take place within each deme; each individual interacts with the $n-1$ other deme members. We assume that social interactions affect individual fecundity, whose baseline is set equal to $1$. Each interaction with an altruist increases an individual's fecundity by $\omega \bb$; altruists pay a fecundity cost $\omega \cc$ ($\cc \leq \bb$). The parameter $\omega$ scales the relative effect of social interactions on fecundity, and is assumed to be small ($\omega \ll 1$). \\
-Denoting by $e_{ij}$ the interaction probability between individuals living at sites $i$ and $j$, we have\todo{attention, maybe rather $1$ than $1/(n-1)$}
+Denoting by $e_{ij}$ the interaction probability between individuals living at sites $i$ and $j$, we have
+%
 \begin{equation}\label{eq:defE}
 e_{ij} = \begin{cases}
  0 & \textrm{if $i=j$;}\\
@@ -267,7 +270,7 @@ Given our assumptions and with this notation, the fecundity of the individual li
 \begin{equation}\label{eq:deff}
 f_k(\mathbf{X}, \omega) = 1 + \omega \left( \sum_{\ell =1}^N e_{\ell k} \bb X_{\ell} - \cc X_k \right).
 \end{equation}
-Although our assumptions may seem restrictive (fecundity benefits are unconditional, \ie, the same which ever the type of the recipient; the fecundity effects are additive, \ie, the effect of interacting with $k$ altruists is $k$ times the effect of interacting with one altruist), the same fecundities are obtained with a generic fecundity function, after linearization, under the assumption that altruists and defectors are phenotypically close (see \hl{APPENDIX} for details).
+Although our assumptions may seem restrictive (fecundity benefits are unconditional, \ie, the same which ever the type of the recipient; the fecundity effects are additive, \ie, the effect of interacting with $k$ altruists is $k$ times the effect of interacting with one altruist), the same fecundities are obtained with a generic fecundity function, after linearization, under the assumption that altruists and defectors are phenotypically close (see \appname~\ref{sec:app:F} for details).
 
 % Dispersal - emigration
 Offspring remain in the parental deme with probability $1-m$; when they do, they land on any site of the deme with equal probability (including the very site of their parent). With probability $m$, offspring emigrate to a different deme, chosen uniformly at random among the other demes. Denoting by $d_{ij}$ the probability of moving from site $i$ to site $j$, we have
@@ -279,7 +282,7 @@ d_{ij} = \begin{cases}
 \end{equation}
 
 % Life-cycles
-The way the population is updated from one time step to the next depends on the chosen life-cycle (updating rule). We will specifically explore three different life-cycles. At the beginning of each step of each life-cycle, all individuals produce offspring, that can be mutated; then these juveniles move, within the parental deme or outside of it, and land on a site. The next events occurring during the time step depend on the life-cycle:
+The way the population is updated from one time step to the next depends on the chosen life-cycle (also called updating rule). We will specifically explore three different life-cycles. At the beginning of each step of each life-cycle, all individuals produce offspring, that can be mutated; then these juveniles move, within the parental deme or outside of it, and land on a site. The next events occurring during the time step depend on the life-cycle:
 \begin{description}
 \item[Moran Birth-Death]: One of the newly created juveniles is chosen at random; it kills the adult who was living at the site, and replaces it; all other juveniles die. 
 \item[Moran Death-Birth]: One of the adults is chosen to die (uniformly at random among all adults). It is replaced by one of the juveniles who had landed in its site. All other juveniles die. 
@@ -373,7 +376,7 @@ Also, because more sites (all of them, actually) are updated at each time step, 
 &
 \subfigure[\label{fig:sub:QWF}Wight-Fisher]{\includegraphics[width = \wpic]{../Programs/R/Pics/QplotWF.pdf}}
 \end{tabular}
-\caption{Probabilities of identity by descent, for two different individuals within the same deme ($\Qin$, full curves) and two individuals in different demes ($\Qout$, dashed curves), for different values of the mutation probability $\mu$ ($10^{-4}$, $0.005$, $0.1$), and for the two types of life-cycles: Moran \subref{fig:sub:QM} and Wright-Fisher \subref{fig:sub:QWF}. Other parameters: $n=4$ individuals per deme, $\ndemes = 30$ demes. }
+\caption{Probabilities of identity by descent, for two different individuals within the same deme ($\Qin$, full curves) and two individuals in different demes ($\Qout$, dashed curves), as a function of the emigration probability $m$, for different values of the mutation probability $\mu$ ($10^{-4}$, $0.005$, $0.1$), and for the two types of life-cycles: Moran \subref{fig:sub:QM} and Wright-Fisher \subref{fig:sub:QWF}. Other parameters: $n=4$ individuals per deme, $\ndemes = 30$ demes. }
 \label{fig:Q}
 \end{figure}
 
@@ -486,7 +489,8 @@ and it is a minimum otherwise (see figure~\ref{fig:EX}\subref{fig:EXWF}).
 &
 \subfigure[Wright-Fisher \label{fig:EXWF}]{\includegraphics[type=pdf,ext=.pdf,read=.pdf, width=5cm]{../Programs/R/Pics/EXWF_sel0.005_htg0}}
 \end{tabular}
-\caption{Weak selection. Parameters: $\omega = 0.005$, $b = 15$, $c = 1$, \hl{ndemes, size, nreps}. NOTE simulations running with 0.005 for mu and with 0.8 for mig. }
+\caption{Expected proportion of altruists under weak selection, as a function of the emigration probability $m$, for different mutation values $\mu = 0.005$ (blue, dots), $0.01$ (purple, squares), $0.1$ (brown, diamonds), and $0.25$ (orange, triangles) and life-cycles (\subref{fig:EXDB} Moran Death-Birth, \subref{fig:EXBD} Moran Birth Death, \subref{fig:EXWF} Wright-Fisher). The curves are the analytical results, the points are the output of numerical simulations. 
+Parameters: $\omega = 0.005$, $p=0.45$, $b = 15$, $c = 1$, $n=4$ individuals per deme, $\ndemes=30$ demes.}
 \label{fig:EX}
 \end{figure}
 
@@ -497,6 +501,8 @@ To derive our analytical results, we had to make a number of simplifying assumpt
 \section{Discussion}
 
 % Summary
+Assuming that the transmission of a social strategy (being an altruist or a defector) from a parent to its offspring could be imperfect, we found that the expected frequency of altruists maintained in the population could increase with the probability of emigration out of the parental deme, a parameter tuning population viscosity. This result can seem surprising, because it contradicts the conclusions obtained under the assumption of nearly perfect strategy transmission (\ie, in the case of genetic transmission, that mutation is very weak or absent), where increased population viscosity (decreased emigration probability) is either neutral \citep{Taylor1992islandmodel} or favorable \citep{TaylorDayWild2007} to the evolution of altruistic behavior. 
+
 Adding non zero mutation probability altruism increases with emigration. 
 
 % Measure of altruism
@@ -605,6 +611,30 @@ Voter model Ayana Graphs et dire que on peut avoir e = d. Faire figure.
 %  Reset the counter  
 \setcounter{table}{0} 
 % And the same can be done for tables, theorems, etc.
+
+\section{Fecundity and weak selection approximation\label{sec:app:F}}
+
+Here we show that the fecundity function presented in \eqref{eq:deff} can be obtained from a generic fecundity function, under the assumption of small phenotypic differences between altruists and defectors. Let us denote by $\phi_i$ the phenotype of the individual living at site $i$, and assume that the phenotypic value of altruists and defectors differs by $\omega\ll 1$, so that 
+\begin{equation}\label{eq:app:phidef}
+\phi_i = \phi^{(0)} + \omega X_i,
+\end{equation}
+where $\phi^{(0)}$ is the phenotype of defectors (and $\phi_0 + \omega$ the phenotype of altruists). Then we consider a generic fecundity function, that depends on the focal individual's phenotype, and on the phenotype of all the individuals that it interacts with, weighted by the probability of interaction ($e_{ki}$ for an individual at site $k$, $1\leq k\leq N$). For instance, the fecundity of an individual at site $i$ is given by a function with $N+1$ arguments
+\begin{align}
+F_i &= \mathcal{F}(e_{1,i} \phi_1, \dots, e_{N,i} \phi_N; \phi_i) \nonumber , \\
+\intertext{which, using \eqref{eq:app:phidef}, becomes}
+F_i & = \mathcal{F}\left(e_{1,i} (\phi^{(0)} + \omega X_1), \dots, e_{N,i} (\phi^{(0)} + \omega X_N); \phi^{(0)} + \omega X_i\right). \label{eq:app:Fi}
+\end{align} 
+%
+We then write a first-order expansion of \eqref{eq:app:Fi} for $\omega \ll 1$:
+\begin{align}\label{eq:app:DLF}
+F_i & = \mathcal{F}\left(e_{1,i} \phi^{(0)}, \dots, e_{N,i} \phi^{(0)}; \phi^{(0)} \right) \nonumber \\
+& \qquad + \omega \left[ \sum_{k=1}^N e_{ki} X_k \, \partial_{(k)}\mathcal{F}|_{\omega=0}  + X_i \, \partial_{(N+1)}\mathcal{F}|_{\omega=0} \right] + \bigO{\omega^2}, 
+\end{align}
+where $\partial_{(k)}\mathcal{F}|_{\omega=0}$ is the derivative of $\mathcal{F}$ with respect to its $k^{\textrm{th}}$ argument, evaluated at $\omega=0$. The first term in \eqref{eq:app:DLF} is the fecundity of individual $i$ when there is not a single altruist in the population. Given the chosen structure of the population, all individuals have the same number of social interactions, so they end up having the same fecundity when the population is fixed for the defector type. Without loss of generality, we set this baseline fecundity equal to $1$. If we now consider that it does not matter where the benefits of social interactions come from, only that they are received by the focal individual, then $\partial_{(k)} \mathcal{F}$ is the same for all $k$, $1\leq k \leq N$; let us denote it by $\bb$. If we denote by $-\cc$ the marginal effect of the focal individual's phenotype on its own fecundity (\ie, $-\cc = \partial_{N+1}\mathcal{F}|_{\omega = 0}$), then we obtain
+\begin{equation}
+F_i = 1 + \omega \left(\bb \sum_{k=1}^N e_{ki} X_i - \cc X_i \right) + \bigO{\omega^2}, 
+\end{equation}
+which is equal to $f_i$ as defined in \eqref{eq:deff}, neglecting terms in $\omega^2$ and higher. 
 
 \section{Expected frequency of altruists\label{sec:app:EX}}
 
