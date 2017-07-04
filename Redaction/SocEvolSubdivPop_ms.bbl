@@ -1,4 +1,4 @@
-\begin{thebibliography}{24}
+\begin{thebibliography}{25}
 \providecommand{\natexlab}[1]{#1}
 
 \bibitem[{Alizon \& Taylor(2008)}]{Alizon2008}
@@ -82,6 +82,11 @@ Ohtsuki, H.; Hauert, C.; Lieberman, E. \& Nowak, M.~A. 2006: A simple rule for
 Rodrigues, A. M.~M. \& Gardner, A. 2012: Evolution of helping and harming in
   heterogeneous populations.
 \newblock Evolution 66(7):2065--2079.
+
+\bibitem[{Sample \& Allen(2016)}]{SampleAllen2016}
+Sample, C. \& Allen, B. 2016: {The limits of weak selection and large
+  population size in evolutionary game theory}.
+\newblock ArXiv .
 
 \bibitem[{Tarnita \& Taylor(2014)}]{TarnitaTaylor2014}
 Tarnita, C.~E. \& Taylor, P.~D. 2014: Measures of relative fitness of social

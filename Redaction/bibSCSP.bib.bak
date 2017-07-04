@@ -1028,6 +1028,20 @@ Special cases of the model are used to show (a) that selection in the social sit
   Timestamp                = {2012.05.15}
 }
 
+@Article{MullonLehmann2014,
+  Title                    = {The robustness of the weak selection approximation for the evolution of altruism against strong selection},
+  Author                   = {Mullon, C and Lehmann, L},
+  Journal                  = {Journal of evolutionary biology},
+  Year                     = {2014},
+  Number                   = {10},
+  Pages                    = {2272--2282},
+  Volume                   = {27},
+
+  Owner                    = {florencedebarre},
+  Publisher                = {Wiley Online Library},
+  Timestamp                = {2017.06.01}
+}
+
 @Article{Nakamaru2006,
   Title                    = {The coevolution of altruism and punishment: Role of the selfish punisher},
   Author                   = {Mayuko Nakamaru and Yoh Iwasa},
@@ -1457,6 +1471,22 @@ Special cases of the model are used to show (a) that selection in the social sit
   Owner                    = {flo},
   Publisher                = {Blackwell Publishing Ltd},
   Timestamp                = {2012.07.24}
+}
+
+@Article{SampleAllen2016,
+  Title                    = {{The limits of weak selection and large population size in evolutionary game theory}},
+  Author                   = {Sample, Christine and Allen, Benjamin},
+  Journal                  = {ArXiv},
+  Year                     = {2016},
+
+  Abstract                 = {Evolutionary game theory is a mathematical approach to studying how social behaviors evolve. In many recent works, evolutionary competition between strategies is modeled as a stochastic process in a finite population. In this context, two limits are both mathematically convenient and biologically relevant: weak selection and large population size. These limits can be combined in different ways, leading to potentially different results. We consider two orderings: the wN limit, in which weak selection is applied before the large population limit, and the Nw limit, in which the order is reversed. Formal mathematical definitions of the Nw and wN limits are provided. Applying these definitions to the Moran process of evolutionary game theory, we obtain asymptotic expressions for fixation probability and conditions for success in these limits. We find that the asymptotic expressions for fixation probability, and the conditions for a strategy to be favored over a neutral mutation, are different in the Nw and wN limits. However, the ordering of limits does not affect the conditions for one strategy to be favored over another.},
+  Archiveprefix            = {arXiv},
+  Arxivid                  = {1610.07081},
+  Eprint                   = {1610.07081},
+  File                     = {:home/florencedebarre/ownCloud/Biblio/Articles/Sample-Allen{\_}2016{\_}arXiv{\_}ws.pdf:pdf},
+  Owner                    = {florencedebarre},
+  Timestamp                = {2017.07.04},
+  Url                      = {http://arxiv.org/abs/1610.07081}
 }
 
 @Article{Schneider2016,

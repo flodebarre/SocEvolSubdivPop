@@ -66,6 +66,8 @@
 
 % Colors
 \usepackage[table]{xcolor}
+\definecolor{dgray}{gray}{0.3}
+
 
 % FIGURES
 % Package to label the different panels of a figure
@@ -93,19 +95,19 @@
 
 %% Section
 \titleformat{\section}[block]
-  {\needspace{2in}\Large \bfseries\sffamily}
+  {\needspace{2in}\Large \bfseries\sffamily \color{dgray}}
   {\thesection}
   {1em}
   {}
 % Subsection
 \titleformat{\subsection}[block]
-  {\large\bfseries\sffamily}
+  {\large\bfseries\sffamily \color{dgray}}
   {\thesubsection}
   {1em}
   {} 
 % Subsubsection
 \titleformat{\subsubsection}[block]
-  {\bfseries\sffamily}
+  {\bfseries\sffamily \color{dgray}}
   {\thesubsubsection}
   {1em}
   {} 
@@ -426,7 +428,7 @@ Indirect effects are collateral effects on other individuals; they depend on the
 %
 The formulas are the same for the indirect effects associated to $\bb$ and to $\cc$; in other words, the balance between the two indirect effects remains the same when the emigration probability changes. The term $\left(\frac{n-1}{n} \Qin^{\Moran} + \frac{1}{n}\right)$, which will appear again later, corresponds to the probability that two individuals sampled with replacement from the same deme are identical by descent. Indirect effects are indeed also felt by the focal individual itself (\eg, increasing the fecundity of another individual implies decreasing one's own relative fecundity). 
 
-Replacing $\Qin$ and $\Qout$ by their formula for the Moran life-cycle (\eqref{eq:QM}), we conclude that both are decreasing functions of the emigration probability $m$.
+Replacing $\Qin$ and $\Qout$ by their formula for the Moran life-cycle (\eqref{eq:QM}), we conclude that $\beta_{\indirect}^{\BD}=\gamma_{\indirect}^{\BD}$ are decreasing functions of the emigration probability~$m$.
 
 \subsubsection{Moran Death-Birth} With this life-cycle,  death comes first and every individual in the population has the same survival probability ($1/N$). The indirect consequences of changing a focal individual's fecundity affect all individuals who can send their offspring to the same locations as the focal, and who are identical by descent to it. We obtain
 \begin{equation}\label{eq:bDBI}
@@ -440,9 +442,9 @@ Replacing $\Qin$ and $\Qout$ by their formula for the Moran life-cycle (\eqref{e
 \end{equation}
 The first term within the brackets in \eqref{eq:bDBI} corresponds individuals from the same deme whose offspring either does not emigrate, or emigrate to the same deme. The second term corresponds to individuals from different demes who end up in the same deme (either one of their demes, or a third deme). 
 
-Here again, $\beta_{\indirect}=\gamma_{\indirect}$, so the balance between indirect benefits and indirect costs does not change when the emigration probability $m$ increases.
+Here again, $\beta_{\indirect} = \gamma_{\indirect}$, so the balance between indirect benefits and indirect costs does not change when the emigration probability $m$ increases.
 
-Replacing $\Qin$ and $\Qout$ by their formulas given in \eqref{eq:QM}, we can conclude that  $\beta_{\indirect}=\gamma_{\indirect}$ first decreases with the emigration probability $m$, and increases again after a threshold value $m_c'$ (given in the appendix\todo{Mathematica}; $m_c' < (d-1)/d$)\todo{name}.  
+Replacing $\Qin$ and $\Qout$ by their formulas given in \eqref{eq:QM}, we can conclude that  $\beta_{\indirect}^{\DB}=\gamma_{\indirect}^{\DB}$ first decreases with the emigration probability $m$, and increases again after a threshold value $m_c'$ (given in the appendix\todo{Mathematica}; $m_c' < (d-1)/d$)\todo{name}.  
 
 \subsubsection{Wright-Fisher} With this life-cycle, generations are synchronous and all individuals again all have the same survival probability (now equal to $0$). As a result, the formulas for $\beta_{\indirect}^{\WF}$ and $\gamma_{\indirect}^{\WF}$ are the same as $\beta_{\indirect}^{\DB}$ and $\gamma_{\indirect}^{\WF}$, except that instead of $\Qin^{\Moran}$ and $\Qout^{\Moran}$, we need to use $\Qin^{\WF}$ and $\Qout^{\WF}$ (given in \eqref{eq:QWF}). Once this is done, we see that $\beta_{\indirect}^{\WF} = \gamma_{\indirect}^{\WF}$ first decreases with the emigration probability $m$, and increases again after the threshold value $m_c^{\WF} = (d-1)/d$ (which was identified previously as the emigration probability such that offspring have an equal chance of landing in their natal deme or in any other deme, \ie, $\din=\dout$). 
 \end{subequations}
@@ -504,26 +506,32 @@ For the Moran model, it may seem odd that an individual can replace its parent. 
 
 \section{Discussion}
 % Summary
+\subsection*{The expected frequency of altruists in a subdivided population can increase with the probability of emigration}
 Assuming that the transmission of a social strategy (being an altruist or a defector) from a parent to its offspring could be imperfect, we found that the expected frequency of altruists maintained in a population could increase with the probability of emigration out of the parental deme, a parameter tuning population viscosity. This result can seem surprising, because it contradicts the conclusions obtained under the assumption of nearly perfect strategy transmission (\ie, in the case of genetic transmission, when mutation is very weak or absent). Under nearly perfect strategy transmission indeed, increased population viscosity (decreased emigration probability) is either neutral \citep{Taylor1992islandmodel} or favorable \citep{TaylorDayWild2007} to the evolution of altruistic behavior. 
 
+\subsection*{Quantitative vs. qualitative measures}
 % Measure of altruism: quanti vs quali
 We used a quantitative measure, the expected frequency of altruists in the population ($\Esp{\overline{X}}$), to explore how non-zero mutation probabilities altered the impact of population viscosity. Often however, evolutionary success is measured qualitatively, by comparing a quantity (an expected frequency, or, in models with no mutation, a probability of fixation) to the value it would have in the absence of selection. In our model, this amounts to saying that altruism is favored whenever $\Esp{\overline{X}} > p$ ($p$ is plotted as a horizontal dashed line in figure~\ref{fig:EX}). 
 Some of our conclusions change if we switch to this qualitative measure of evolutionary success: Under the Moran Birth-Death and Wright-Fisher life-cycles, population viscosity does not promote the evolution of altruism -- actually, these two life-cycles cannot ever promote altruistic behavior for any regular population structure \citep{Taylor2011}, whichever the probability of mutation \citep{Debarre2017}. 
 However, under a Moran Death-Birth life-cycle, altruism can be favored only at intermediate emigration probabilities (figure~\ref{fig:EX}\subref{fig:EXDB}).  
 
 % How to explain the result
-To explain how the frequency of altruists can increase with the emigration probability $m$, let us go back to the decomposition of the expected frequency of altruists in the population $\Esp{\overline{X}}$ into different terms (equation~\ref{eq:EXapprox}). For all the life-cycles that we consider, the direct effect of helping others ($\beta_{\direct}$) decreases with emigration $m$, while the direct effect of the cost of helping ($\gamma_{\direct}$) does not change with $m$. If we considered only direct effects, \todo{ici}
-, we note that the increase of $\Esp{\overline{X}}$ with $m$ is driven by $\beta_{\indirect}$, that scales the indirect consequences of helping others. 
+\subsection*{The result is due to indirect effects}
+To explain how the frequency of altruists can increase with the emigration probability $m$, let us go back to the decomposition of the expected frequency of altruists in the population $\Esp{\overline{X}}$ into different terms (equation~\ref{eq:EXapprox}). 
+For all the life-cycles that we consider, the direct effect of helping others ($\beta_{\direct}$) decreases with emigration $m$, while the direct effect of the cost of helping ($\gamma_{\direct}$) does not change with $m$. 
+If we (erroneously) considered only direct effects, we would conclude that the expected proportion of altruists decreases with the emigration probability $m$, because an increase in $m$ reduces the probability that two interactants (two deme-mates in this model) are identical by descent. 
+But there are also indirect effects at play. In the three life-cycles that we considered, $\beta_{\indirect} = \gamma_{\indirect}$, so the overall indirect effects are given by $(-(\bb-\cc) \beta_{\indirect})$. Hence, any increase of $\Esp{\overline{X}}$ with $m$ is driven by $\beta_{\indirect}$. Indirect effects correspond to competition: helping another individual indirectly harms others -- including the individual who is providing help. Increasing the emigration probability $m$ can dilute this competition. 
+The overall effect of $m$ on the expected frequency of altruists depends on the balance between direct and indirect effects. This balance depends on the fidelity of parent-offspring transmission ($\mu$), in particular because probabilities of identity by descent depend on $\mu$. 
+
   To simplify the explanations, let us consider that the number of demes is large: in this case, $\Qout$ is vanishingly small. Let us also assume that there is no direct cost to being an altruist ($\cc = 0$). 
 
 % Order of limits
-Problems of orders of limits, especially when $d \to \infty$ and $\mu \to 0$. Need to specify how small the mutation probability is compared to the size of the population. 
+\subsection*{How small is small and how large is large?}
+Our results were derived under the assumption of weak selection, assuming that the phenotypic difference between altruists and defectors is small ($\delta \ll 0$). We considered any fidelity of transmission (any $\mu$ between $0$ and $1$) and population size. However, most models considering subdivided populations assume nearly perfect strategy transmission ($\mu \to 0$) and infinite population sizes (number of demes $\ndemes \to \infty$). The order in which these limits are taken matters, \ie, one needs to specify how small $\mu$ is compared to the inverse size of the population. This complements findings by \citet{SampleAllen2016}, who highlighted the quantitative differences between different orders of weak selection and large population limits. 
 
 % Steve Frank and other models
+\subsection*{Imperfect transmission and Rebellious Children}
 Our model bears resemblance to the Rebellious Child Model by \citet{Frank1997}, who studied the evolution of a vertically transmitted cultural trait in an asexually reproducing population. In his analysis however, and as acknowledged in the legend of his Figure~7, the model is not fully dynamic because relatedness $r$ is treated as a fixed parameter, which does not depend on mutation. In our mechanistic treatment, $r$ does depend on the mutation probability $\mu$ because probabilities of identity by descent do. Mutation was also previously included in models investigating the maintenance of cooperative microorganisms in the presence of cheaters \citep{Brockhurst2007, Frank2010}. In both of these models however, only loss-of-function mutation was considered (in our model, this is obtained by setting the mutation bias at $p=0$). This means that the all-cheaters state is absorbing, and that no matter how favored cooperators may otherwise be, in the long run a finite population will only consist of cheaters. 
-
-% Allen et al
-\Citet{Allen2012} investigated the evolution of altruism on graph-structured populations for any mutation probability, and used a . 
 
 % Links votant
 Voter model Ayana Graphs et dire que on peut avoir e = d. Faire figure. 
