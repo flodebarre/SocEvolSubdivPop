@@ -420,7 +420,7 @@ Indirect effects are collateral effects on other individuals; they depend on the
 \begin{split}
 \beta_{\indirect}^{\BD} &=  (1-m) \left(\frac{n-1}{n} \Qin^{\Moran} + \frac{1}{n}\right) + m \, \Qout^{\Moran} %
 - \mu \frac{ 1 + (n-1) \Qin^{\Moran} + n (d-1) \Qout^{\Moran}}{n d} \\
-&= \gamma_{\direct}^{\BD}.
+&= \gamma_{\indirect}^{\BD}.
 \end{split}
 \end{equation}
 %
@@ -504,16 +504,17 @@ For the Moran model, it may seem odd that an individual can replace its parent. 
 
 \section{Discussion}
 % Summary
-Assuming that the transmission of a social strategy (being an altruist or a defector) from a parent to its offspring could be imperfect, we found that the expected frequency of altruists maintained in the population could increase with the probability of emigration out of the parental deme, a parameter tuning population viscosity. This result can seem surprising, because it contradicts the conclusions obtained under the assumption of nearly perfect strategy transmission (\ie, in the case of genetic transmission, that mutation is very weak or absent), where increased population viscosity (decreased emigration probability) is either neutral \citep{Taylor1992islandmodel} or favorable \citep{TaylorDayWild2007} to the evolution of altruistic behavior. 
+Assuming that the transmission of a social strategy (being an altruist or a defector) from a parent to its offspring could be imperfect, we found that the expected frequency of altruists maintained in a population could increase with the probability of emigration out of the parental deme, a parameter tuning population viscosity. This result can seem surprising, because it contradicts the conclusions obtained under the assumption of nearly perfect strategy transmission (\ie, in the case of genetic transmission, when mutation is very weak or absent). Under nearly perfect strategy transmission indeed, increased population viscosity (decreased emigration probability) is either neutral \citep{Taylor1992islandmodel} or favorable \citep{TaylorDayWild2007} to the evolution of altruistic behavior. 
 
-Adding non zero mutation probability altruism increases with emigration. 
-
-% Measure of altruism
-We used a quantitative measure, $\Esp{\overline{X}}$, to explore how non-zero mutation probabilities altered the impact of population viscosity. Often, evolutionary success is measured qualitatively, by comparing a quantity (an expected frequency, or, in models with no mutation, a probability of fixation) to the value it would have in the absence of selection; in our case, this amount to saying that altruism is favored whenever $\Esp{\overline{X}} > p$. Under this condition, population viscosity does not promote the evolution of altruism under the Moran Birth-Death and Wright-Fisher (actually, these two life-cycles cannot ever promote altruistic behavior for any regular population structure \citep{Taylor2011}, whichever the probability of mutation \citep{Debarre2017}). However, under a Moran Death-Birth life-cycle, altruism can be only favored at intermediate emigration probabilities.  
-
+% Measure of altruism: quanti vs quali
+We used a quantitative measure, the expected frequency of altruists in the population ($\Esp{\overline{X}}$), to explore how non-zero mutation probabilities altered the impact of population viscosity. Often however, evolutionary success is measured qualitatively, by comparing a quantity (an expected frequency, or, in models with no mutation, a probability of fixation) to the value it would have in the absence of selection. In our model, this amounts to saying that altruism is favored whenever $\Esp{\overline{X}} > p$ ($p$ is plotted as a horizontal dashed line in figure~\ref{fig:EX}). 
+Some of our conclusions change if we switch to this qualitative measure of evolutionary success: Under the Moran Birth-Death and Wright-Fisher life-cycles, population viscosity does not promote the evolution of altruism -- actually, these two life-cycles cannot ever promote altruistic behavior for any regular population structure \citep{Taylor2011}, whichever the probability of mutation \citep{Debarre2017}. 
+However, under a Moran Death-Birth life-cycle, altruism can be favored only at intermediate emigration probabilities (figure~\ref{fig:EX}\subref{fig:EXDB}).  
 
 % How to explain the result
-Go back to the decomposition of the different terms, we see that increase of $\Esp{\overline{X}}$ with $m$ is driven by the $\beta_{\indirect}$ term. To simplify the explanations, let us consider that the number of demes is large: in this case, $\Qout$ is vanishingly small and so terms involving it can be omitted. Let us also assume that there is no direct cost to being an altruist ($\cc = 0$). 
+To explain how the frequency of altruists can increase with the emigration probability $m$, let us go back to the decomposition of the expected frequency of altruists in the population $\Esp{\overline{X}}$ into different terms (equation~\ref{eq:EXapprox}). For all the life-cycles that we consider, the direct effect of helping others ($\beta_{\direct}$) decreases with emigration $m$, while the direct effect of the cost of helping ($\gamma_{\direct}$) does not change with $m$. If we considered only direct effects, \todo{ici}
+, we note that the increase of $\Esp{\overline{X}}$ with $m$ is driven by $\beta_{\indirect}$, that scales the indirect consequences of helping others. 
+  To simplify the explanations, let us consider that the number of demes is large: in this case, $\Qout$ is vanishingly small. Let us also assume that there is no direct cost to being an altruist ($\cc = 0$). 
 
 % Order of limits
 Problems of orders of limits, especially when $d \to \infty$ and $\mu \to 0$. Need to specify how small the mutation probability is compared to the size of the population. 
