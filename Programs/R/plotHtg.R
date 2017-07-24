@@ -141,6 +141,14 @@ PlotProp <- function(upd, sel, htg, ylim=c(0,1), addAnalysis=FALSE, pdf = TRUE, 
         }
       }
     }
+    # Add mu = 0
+    epsmu <- 0.0000000000001
+    tmpP <- function(x) get(paste0("p", upd))(b=mBList[1], c=1, p=p, sel=sel, mut=epsmu, m=x, g=0, n=4, d=30, Idself=ids, Ieself=ies)
+    # Plot it
+    curve(tmpP, from=0, to=0.9,#par("usr")[2], 
+          col='blue', add = TRUE, lwd = 2.5, lty = 2)
+
+    # Add axes
     axis(1, pos = ylim[1], col=fgcol)
     atseq <- seq(0, 1, by = 0.1)
     axis(2, pos = 0, col=fgcol, at = c(atseq, p), labels = c(atseq, expression(italic(p))))
