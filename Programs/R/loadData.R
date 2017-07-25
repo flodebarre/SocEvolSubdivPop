@@ -1,5 +1,5 @@
 # List all data files that have been generated
-myFiles <- list.files(path = "../C/Results/", pattern="HtgIsl*")
+myFiles <- list.files(path = paste0("../C/Results/HtgIsld", thed, "/"), pattern="HtgIsl*")
 
 ##
 ## Generate table of all parameter combinations
@@ -33,7 +33,7 @@ allParms <- cbind(updPars, numPars)
 ##
 getSimData <- function(fN){
   # Prepend path to file
-  fileName <- paste0("../C/Results/", fN)
+  fileName <- paste0("../C/Results/HtgIsld", thed, "/", fN)
   # Check that the file exists and has size>0
   if(file.exists(fileName)){
     sz <- file.info(fileName)$size
