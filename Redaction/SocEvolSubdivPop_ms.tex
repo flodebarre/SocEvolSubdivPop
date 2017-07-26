@@ -447,7 +447,7 @@ The formulas are the same for the indirect effects associated to $\bb$ and to $\
 
 Replacing $\Qin$ and $\Qout$ by their formula for the Moran life-cycle (\eqref{eq:QM}), we conclude that $\beta_{\indirect}^{\BD}=\gamma_{\indirect}^{\BD}$ are decreasing functions of the emigration probability~$m$\todo{Add Mathematica}.
 
-\subsubsection{Moran Death-Birth} With this life-cycle,  death comes first and every individual in the population has the same survival probability ($1/N$). The indirect consequences of changing a focal individual's fecundity affect all individuals who can send their offspring to the same locations as the focal, and who are identical by descent to it. We obtain
+\paragraph{Moran Death-Birth} With this life-cycle,  death comes first and every individual in the population has the same survival probability ($1/N$). The indirect consequences of changing a focal individual's fecundity affect all individuals who can send their offspring to the same locations as the focal, and who are identical by descent to it. We obtain
 \begin{equation}\label{eq:bDBI}
 \begin{split}
 \beta_{\indirect}^{\DB} & = (1-\mu ) \Bigg[ \left( \frac{1}{n} + \frac{ (n-1) \Qin^{\Moran} }{n} \right) \left( (1-m)^2 +  \frac{m^2}{ (d-1)} \right) \\ 
@@ -464,7 +464,7 @@ Here again, $\beta_{\indirect} = \gamma_{\indirect}$, so the balance between ind
 
 Replacing $\Qin$ and $\Qout$ by their formulas given in \eqref{eq:QM}, we can conclude that  $\beta_{\indirect}^{\DB}=\gamma_{\indirect}^{\DB}$ first decreases with the emigration probability $m$, and increases again after a threshold value $m_c'$ (given in the appendix\todo{Mathematica}; $m_c' < (d-1)/d$)\todo{name}.  
 
-\subsubsection{Wright-Fisher} With this life-cycle, generations are synchronous and all individuals again all have the same survival probability (now equal to $0$ at all sites). As a result, the formulas for $\beta_{\indirect}^{\WF}$ and $\gamma_{\indirect}^{\WF}$ are the same as $\beta_{\indirect}^{\DB}$ and $\gamma_{\indirect}^{\WF}$, except that instead of $\Qin^{\Moran}$ and $\Qout^{\Moran}$, we need to use $\Qin^{\WF}$ and $\Qout^{\WF}$ (given in \eqref{eq:QWF}). Once this is done, we see that $\beta_{\indirect}^{\WF} = \gamma_{\indirect}^{\WF}$ first decreases with the emigration probability $m$, and increases again after the threshold value $m_c^{\WF} = (d-1)/d$ (which was identified previously as the emigration probability such that offspring have an equal chance of landing in their natal deme or in any other deme, \ie, $\din=\dout$). 
+\paragraph{Wright-Fisher} With this life-cycle, generations are synchronous and all individuals again all have the same survival probability (now equal to $0$ at all sites). As a result, the formulas for $\beta_{\indirect}^{\WF}$ and $\gamma_{\indirect}^{\WF}$ are the same as $\beta_{\indirect}^{\DB}$ and $\gamma_{\indirect}^{\WF}$, except that instead of $\Qin^{\Moran}$ and $\Qout^{\Moran}$, we need to use $\Qin^{\WF}$ and $\Qout^{\WF}$ (given in \eqref{eq:QWF}). Once this is done, we see that $\beta_{\indirect}^{\WF} = \gamma_{\indirect}^{\WF}$ first decreases with the emigration probability $m$, and increases again after the threshold value $m_c^{\WF} = (d-1)/d$ (which was identified previously as the emigration probability such that offspring have an equal chance of landing in their natal deme or in any other deme, \ie, $\din=\dout$). 
 \end{subequations}
 
 \subsection{Identifying threshold values of the mutation probability $\mu$}
