@@ -3,14 +3,14 @@
 .RData
 .Ruserdata
 
-EmptySites.tar.gz
+# Compressed folders
+*.tar.gz
 
 
 *.log
 
 
-# OS generated files #
-######################
+# OS generated files (Mac)
 .DS_Store
 .DS_Store?
 ._*
