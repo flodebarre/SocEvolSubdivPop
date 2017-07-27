@@ -1,7 +1,6 @@
-Social Evolution in Subdivided Populations
+# Contents
 
-ATTENTION scripts changed on the cluster, don't forget to dl them!
+- `Redaction/` contains the paper,
+- `Programs/` the scritps used for it. 
 
-Branched off the Sigma project to focus on subdivided populations (island model). 
-
-
+Each folder has its own `README` files.
