@@ -1,8 +1,7 @@
 #! /bin/bash
 
 #
-# This script submits jobs for the simulations on island-structured populations,
-# with empty sites and a birth-death process (not Moran)
+# This script submits jobs for the simulations on island-structured populations.
 #
 
 export THEPATH=SocEvolSubdivPop/

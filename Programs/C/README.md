@@ -24,11 +24,16 @@ To execute the scripts:
 - Update the value of `THEPATH` in the two `submit_*.sh` files,
   so that the path matches the path to the scripts in your system.
 - Type
+```
     ./submit_all.sh
+```    
    to submit all the jobs for all simulations to the cluster.
 - The results (`.txt` files) are stored in the `Results/` folder.
 
 # `.c` scripts =
 
 The simulation scripts are split into different parts.
-The `submit*.sh` program combines these different sub-scripts into new scripts stored in the `Scripts/` folder. The `_base.c` script contains the part common to all programs. Then each life-cycle (WF, BD, DB) has its own specific part (`onestep*.c`).
+The `submit*.sh` program combines these different sub-scripts into new scripts stored in the `Scripts/` folder.
+
+- `_base.c` contains the part common to all programs.
+- `onestep*.c` is the specific part for each life-cycle (WF, BD, DB).

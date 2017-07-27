@@ -4,7 +4,7 @@
  -------------------------------------------
  DEATH BIRTH UPDATING
  This is a partial script; it will be later
- appended to the main script `islandbase.c`
+ appended to the main script `htg-island_base.c`
  -------------------------------------------
  */
 
