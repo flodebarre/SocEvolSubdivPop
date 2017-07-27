@@ -1,51 +1,53 @@
 This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: SocEvolSubdivPop_ms.aux
-The style file: amnat.bst
+The style file: bibstyle.bst
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 Reallocated str_pool (elt_size=1) to 195000 items from 130000.
 Reallocated str_pool (elt_size=1) to 260000 items from 195000.
 Reallocated str_pool (elt_size=1) to 325000 items from 260000.
 Reallocated str_pool (elt_size=1) to 390000 items from 325000.
 Database file #1: bibSCSP.bib
-You've used 26 entries,
+Warning--I didn't find a database entry for "Debarre2015"
+You've used 36 entries,
             2782 wiz_defined-function locations,
-            13316 strings with 350768 characters,
-and the built_in function-call counts, 15301 in all, are:
-= -- 1340
-> -- 532
-< -- 17
-+ -- 219
-- -- 180
-* -- 1125
-:= -- 2454
-add.period$ -- 79
-call.type$ -- 26
-change.case$ -- 191
-chr.to.int$ -- 25
-cite$ -- 26
-duplicate$ -- 1088
-empty$ -- 1155
-format.name$ -- 258
-if$ -- 3007
+            13389 strings with 352286 characters,
+and the built_in function-call counts, 20364 in all, are:
+= -- 1799
+> -- 672
+< -- 27
++ -- 278
+- -- 225
+* -- 1458
+:= -- 3286
+add.period$ -- 110
+call.type$ -- 36
+change.case$ -- 257
+chr.to.int$ -- 35
+cite$ -- 36
+duplicate$ -- 1465
+empty$ -- 1550
+format.name$ -- 333
+if$ -- 4010
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 242
-newline$ -- 109
-num.names$ -- 104
-pop$ -- 398
+missing$ -- 321
+newline$ -- 150
+num.names$ -- 144
+pop$ -- 529
 preamble$ -- 1
-purify$ -- 164
+purify$ -- 219
 quote$ -- 0
-skip$ -- 351
+skip$ -- 483
 stack$ -- 0
-substring$ -- 951
-swap$ -- 581
+substring$ -- 1247
+swap$ -- 763
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 234
+type$ -- 324
 warning$ -- 0
-while$ -- 123
+while$ -- 164
 width$ -- 0
-write$ -- 317
+write$ -- 438
+(There was 1 warning)

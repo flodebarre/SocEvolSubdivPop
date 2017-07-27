@@ -6,6 +6,7 @@
 
 % MATHS
 \usepackage{amsmath, amssymb, amsfonts} % Math stuff
+
 % linenofix -------------------------------------------
 \newcommand*\patchAmsMathEnvironmentForLineno[1]{%
   \expandafter\let\csname old#1\expandafter\endcsname\csname #1\endcsname
@@ -67,7 +68,10 @@
 % Colors
 \usepackage[table]{xcolor}
 \definecolor{dgray}{gray}{0.3}
-
+\definecolor{seccol}{HTML}{4080BF}
+\definecolor{subseccol}{HTML}{336699}
+\definecolor{subsubseccol}{HTML}{264d73}
+\definecolor{parcol}{HTML}{19334d}
 % TABLES
 \usepackage{tabu}
 
@@ -98,25 +102,25 @@
 
 %% Section
 \titleformat{\section}[block]
-  {\needspace{2in}\Large \bfseries\sffamily \color{dgray}}
+  {\needspace{2in}\Large \bfseries \color{seccol}}
   {\thesection}
   {1em}
   {}
 % Subsection
 \titleformat{\subsection}[block]
-  {\large\bfseries\sffamily \color{dgray}}
+  {\large\bfseries \color{subseccol}}
   {\thesubsection}
   {1em}
   {} 
 % Subsubsection
 \titleformat{\subsubsection}[block]
-  {\bfseries\sffamily \color{dgray}}
+  {\bfseries \color{subsubseccol}}
   {\thesubsubsection}
   {1em}
   {} 
 % Paragraph
 \titleformat{\paragraph}[runin]
-  {\sffamily\normalsize\bfseries}
+  {\normalsize\bfseries \color{parcol}}
   {\theparagraph}
   {0em}
   {}
@@ -213,14 +217,17 @@
 
 \usepackage{hyphenat}
 
-\newcommand{\ein}{e_{\textrm{in}}}
-\newcommand{\eself}{e_{\textrm{self}}}
-\newcommand{\eout}{e_{\textrm{out}}}
-\newcommand{\din}{d_{\textrm{in}}}
-\newcommand{\dself}{d_{\textrm{self}}}
-\newcommand{\dout}{d_{\textrm{out}}}
-\newcommand{\Qin}{Q_{\textrm{in}}}
-\newcommand{\Qout}{Q_{\textrm{out}}}
+\newcommand{\self}{\textrm{self}}
+\newcommand{\inn}{\textrm{in}}
+\newcommand{\out}{\textrm{out}}
+\newcommand{\ein}{e_{\inn}}
+\newcommand{\eself}{e_{\self}}
+\newcommand{\eout}{e_{\out}}
+\newcommand{\din}{d_{\inn}}
+\newcommand{\dself}{d_{\self}}
+\newcommand{\dout}{d_{\out}}
+\newcommand{\Qin}{Q_{\inn}}
+\newcommand{\Qout}{Q_{\out}}
 
 \newcommand{\ndemes}{N_D}
 % FLUSH FIGURES IN THE END
@@ -237,6 +244,12 @@
 
 \begin{document}
 Mon titre 
+
+\todo[inline]{Titre!!!}
+\todo[inline]{Abstract!!!}
+\todo[inline]{Fin discussion qui est encore en notes}
+\todo[inline]{Voter model, faire figure et discuter de la deconnexion entre d et e}
+
 \clearpage
 \linenumbers
 \pagestyle{maintext}
@@ -250,7 +263,7 @@ This high dependence on life-cycle specificities highlights the difficulty of ma
 In this study, we will consider three different life-cycles: Wright-Fisher, where the whole population is renewed at each time step, and two Moran life-cycles (Birth-Death and Death-Birth), where a single individual dies and is replaced at each time step. 
 
 A large number of studies on the evolution of social behavior consider simple population structures (typically, homogeneous populations \textit{sensu} \citet[][]{TaylorDayWild2007}) and often also infinite population sizes \citep[but see][for results on any structure]{Allen2017}. 
-These studies also make use of weak selection approximations, and commonly assume rare \citep[\eg,][]{LeturqueRousset2002, Taylor2007JTB, TarnitaTaylor2014} or absent mutation (for models assuming infinite population sizes, or models concentrating on fixation probabilities\todo{refs?}). 
+These studies also make use of weak selection approximations, and commonly assume rare \citep[\eg,][]{LeturqueRousset2002, Taylor2007JTB, TarnitaTaylor2014} or absent mutation \citep[for models assuming infinite population sizes, or models concentrating on fixation probabilities][for recent reviews]{LehmannRousset2014,VanCleve2015}. 
 Often, these simplifying assumptions are a necessary step towards obtaining explicit analytical results. 
 Although artificial, simple population structures (\eg, regular graphs, or subdivided populations with demes of equal sizes) help reduce the dimensionality of the system under study, in particular when the structure of the population displays symmetries such that all sites behave the same way in expectation. 
 Weak selection approximations are crucial for disentangling spatial moments \citep{Lion2016}, that is, changes in global \vs local frequencies \citep[though they can in some cases be relaxed, as in][]{MullonLehmann2014}. 
@@ -270,7 +283,7 @@ For each of the three life-cycles that we consider, we compute the expected (\ie
 
 \subsection{Assumptions}
 
-We consider a population of size $N$, subdivided into $\ndemes$~demes, each hosting exactly $n$ individuals (\ie, containing $n$ sites, each of which is occupied by exactly one individual; we have $n \ndemes = N$). Each site has a unique label $i$, $1\leq i \leq N$. There are two types of individuals in the population, altruists and defectors. The type of the individual living at site $i$ ($1\leq i \leq N$) is given by an indicator variable $X_i$, equal to $1$ if the individual is an altruist, and to $0$ if it is a defector. The state of the entire population is given by a $N$-long vector $\mathbf{X}$. For a given population state $\mathbf{X}$, the proportion of altruists is $\overline{X} = \sum_{i=1}^N X_i$. 
+We consider a population of size $N$, subdivided into $\ndemes$~demes, each hosting exactly $n$ individuals (\ie, containing $n$ sites, each of which is occupied by exactly one individual; we have $n \ndemes = N$). Each site has a unique label $i$, $1\leq i \leq N$. There are two types of individuals in the population, altruists and defectors. The type of the individual living at site $i$ ($1\leq i \leq N$) is given by an indicator variable $X_i$, equal to $1$ if the individual is an altruist, and to $0$ if it is a defector. The state of the entire population is given by a $N$-long vector $\mathbf{X}$. For a given population state $\mathbf{X}$, the proportion of altruists is $\overline{X} = \sum_{i=1}^N X_i$. All symbols are summarized in table~\ref{tab:symbols}.
 
 Reproduction is asexual. Parents transmit their strategy to their offspring with probability $1-\mu$; this transmission can be genetic or cultural (vertical cultural transmission), but for simplicity, we refer to the parameter $\mu$ as a mutation probability. With probability $\mu$, offspring do not inherit their strategy from their parent but instead get one randomly: with probability $\mutbias$, they become altruists, with probability $1-\mutbias$ they become defectors. We call the parameter $\mutbias$ the mutation bias. 
 
@@ -311,20 +324,21 @@ The way the population is updated from one time step to the next depends on the 
 \subsection{Methods}
 \subsubsection{Analytical part}
 
-To derive the expected (\ie, long-term) proportion of altruists in the population, we use the toolbox presented in \citet{Debarre2017}, which is valid for any regular population and any life-cycle. Calculation details are given in \appname~\ref{sec:app:EX}; they go as follows. First, we write an equation for the expected frequency of altruists in the population at time $t+1$, conditional on the composition of the population at time $t$; we then take the expectation of this quantity, for large times $t$. After this, we use the assumption that selection is weak ($\omega \ll 1$) and write a first order expansion of the expression that we have obtained. By doing so, we let appear quantities that can be identified as neutral probabilities of identity by descent $Q_{ij}$, \ie, the probability that individuals living at site $i$  and $j$ share a common ancestor and that no mutation occurred on either lineage since that ancestor, in a model with no selection ($\omega=0$). 
+To derive the expected (\ie, long-term) proportion of altruists in the population, we use the toolbox presented in \citet{Debarre2017}, which is valid for any regular population and any life-cycle. Calculation details are given in \appname~\ref{sec:app:EX}; they go as follows. First, we write an equation for the expected frequency of altruists in the population at time $t+1$, conditional on the composition of the population at time $t$; we then take the expectation of this quantity, for large times $t$. After this, we use the assumption that selection is weak ($\omega \ll 1$) and write a first order expansion of the expression that we have obtained. By doing so, we let appear quantities that can be identified as neutral probabilities of identity by descent $Q_{ij}$, \ie, the probability that individuals living at site $i$  and $j$ share a common ancestor and that no mutation occurred on either lineage since that ancestor, in a model with no selection ($\omega=0$) -- this is the ``mutation definition of identity by descent \citep{RoussetBilliard2000}. 
 
-These neutral probabilities of identity by descent depend on the chosen life-cycle, and are also computed by taking the long-term expectation of conditional expectations after one time step (see \appname~\ref{sec:app:IBD}). 
+These neutral probabilities of identity by descent depend on the chosen life-cycle, and are also computed by taking the long-term expectation of conditional expectations after one time step (see \appname~\ref{sec:app:IBD} and \ref{sec:app:Qsubdiv}). 
 
-\todo[inline]{Check results with regular results}  
+All the results obtained analytically were checked numerically using specific population structures (see supplementary Mathematica file \citep{Mathematica11}.)
 
 \subsubsection{Stochastic simulations}
-We also ran stochastic simulations (coded in \texttt{C}). The simulations were run for $10^8$ generations (one generation is one time step for the Wright-Fisher life-cycle, and $N$ time steps for the Moran life-cycles). For each set of parameters and life-cycle, we estimated the long-term frequency of altruists by sampling the population every $10^3$ generations and computing the average frequency of altruists. \todo[inline]{add Code availability, github? make repo public}
+We also ran stochastic simulations (coded in \texttt{C}). The simulations were run for $10^8$ generations (one generation is one time step for the Wright-Fisher life-cycle, and $N$ time steps for the Moran life-cycles). For each set of parameters and life-cycle, using R \citep{R2015}, we estimated the long-term frequency of altruists by sampling the population every $10^3$ generations and computing the average frequency of altruists.\\
+%
+All scripts are available at \\
+{\small \url{https://github.com/flodebarre/SocEvolSubdivPop/tree/master/Programs}} 
 
 \section{Results}
 
 \subsection{Probabilities of identity by descent}
-
-%We need to find equations for the expected state of pairs of sites ($P_{ij}$) and probabilities of identity by descent ($Q_{ij}$), quantities that are evaluated in the absence of selection (\ie, for $\omega=0$). To do so, we follow the same steps as in the previous section: we first write expectations at the next time step given a current state, and we then take the expectation of this\todo{appendix}. Here we focus on identity by descent $Q_{ij}$, but expectations of the state of pairs of sites $P_{ij}$ are simply recovered using \eqref{eq:QP}. 
 
 As we will see later, the expected frequencies of altruists in the population depend on probabilities of identity by descent of pairs of sites, $Q_{ij}$. Two individuals are said to be identical by descent if there has not been any mutation on either lineage since their common ancestor.  Because of the structure of the population, there are only three types of pairs of individuals, and hence three different values of $Q_{ij}$:
 \begin{equation}
@@ -382,8 +396,9 @@ with
 M_1 = \frac{\ndemes-1}{1-\frac{(1-\mu )^2 (\ndemes (1-m)-1)^2}{(\ndemes-1)^2}} \textrm{ and }M_2 = \frac{1}{1-(1-\mu)^2}.
 \end{equation*}
 \end{subequations}
-
-Here, $\Qin^{\WF}$ decreases until $m=m_c^{\WF} = \frac{d-1}{d}$, then increases again, while $\Qout^{WF}$ follows the opposite pattern. The threshold value $m_c^{\WF}$ corresponds to an emigration probability so high that an individual's offspring is as likely to land in its parent's deme as in any other deme (\ie, $\din = \dout$).
+%
+(These formulas are compatible with, \eg, results presented by \citet{CockerhamWeir1987}, adapted for haploid individuals).\\
+In the Wright-Fisher life-cycle, $\Qin^{\WF}$ decreases until $m=m_c^{\WF} = \frac{d-1}{d}$, then increases again, while $\Qout^{WF}$ follows the opposite pattern. The threshold value $m_c^{\WF}$ corresponds to an emigration probability so high that an individual's offspring is as likely to land in its parent's deme as in any other deme (\ie, $\din = \dout$).
 
 The two probabilities of identity by descent go to $1$ when the mutation probability $\mu$ is very small ($\mu \to 0$), except if we first assume that the number of demes is very large ($\ndemes \to \infty$); for instance, with this life-cycle as well, $\lim_{\ndemes \to \infty} \Qout^{\WF} = 0$. 
 
@@ -406,12 +421,13 @@ For each of the life-cycles that we consider, the expected frequency of altruist
 \begin{equation}\label{eq:EXapprox}
 \Esp{\overline{X}} \approx \mutbias + \omega \frac{\mutbias (1-\mutbias)}{\mu} \left[ \bb \left( \beta_{\direct} - \beta_{\indirect} \right) - \cc \left( \gamma_{\direct} - \gamma_{\indirect} \right) \right].
 \end{equation}
-(Calculations leading to \eqref{eq:EXapprox} are presented in the \appname~\ref{sec:app:EX}). The mutation bias $\mutbias$ corresponds to the expected proportion of altruists in the population in the absence of selection (\ie, when $\omega = 0$); $\omega$ is the parameter that scales the effects of interactions between individuals and is assumed to be small; the subscript $_{\direct}$ refers to ``direct'' effects, and the subscript $_{\indirect}$ to ``indirect'' effects. These indirect effects correspond to (kin) competition: by providing a benefit to a deme-mate and thereby increasing its fecundity, a focal altruist indirectly harms others by reducing their relative fecundity ($\beta_{\indirect}$ term in \eqref{eq:EXapprox}); by having a reduced fecundity due to the cost of altruism, a focal altruist indirectly favors others by increasing their relative fecundity ($\gamma_{\indirect}$ term).
+(Calculations leading to \eqref{eq:EXapprox} are presented in  \appname~\ref{sec:app:EX}.)\\
+The mutation bias $\mutbias$ corresponds to the expected proportion of altruists in the population in the absence of selection (\ie, when $\omega = 0$); $\omega$ is the parameter that scales the effects of interactions between individuals, which is assumed to be small. The subscript $_{\direct}$ refers to ``direct'' effects, and the subscript $_{\indirect}$ to ``indirect'' effects. ``Direct'' effects involve effects on primary beneficiaries of the benefits~($\bb$) and costs~($\cc$) of social interactions \citep{WestGardner2010}, \ie, social interactants (for the benefits $\bb$) and the focal individuals themselves (for the costs $\cc$). ``Indirect'' effects corresponds to effects on secondary interactants, \ie, to (kin) competition. By providing a benefit to a deme-mate and thereby increasing its fecundity, a focal altruist indirectly harms others by reducing their relative fecundity ($\beta_{\indirect}$ term in \eqref{eq:EXapprox}); by having a reduced fecundity due to the cost of altruism, a focal altruist indirectly favors others by increasing their relative fecundity ($\gamma_{\indirect}$ term).
 
 We now present the values of these different terms for the three life-cycles under study.  
 
 \subsubsection{Direct effects}
-Direct effects are similar for the three life-cycles; the only difference is the value of probabilities of identity by descent $Q$ (as seen in the previous section, they differ between Moran and Wright-Fisher life-cycles):
+Direct (/primary) effects are similar for the three life-cycles; the only difference is the value of probabilities of identity by descent $Q$ (as seen in the previous section, they differ between Moran and Wright-Fisher life-cycles):
 %
 \begin{subequations}\label{eq:directeffects}
 \begin{align}
@@ -423,13 +439,13 @@ Direct effects are similar for the three life-cycles; the only difference is the
 \end{align}
 \end{subequations}
 %
-For both benefits and costs, direct effects only count when there is no mutation ($1-\mu$). 
-Direct effects of benefits $\bb$ (\eqref{eq:bBDD} and \eqref{eq:bWFD}) only count if the interaction takes place with an individual who is identical by descent. With the population structure that we consider, social interactions only occur within demes, so only $\Qin$ is present in \eqref{eq:bBDD} and \eqref{eq:bWFD}. On the other hand, the direct effect of the fecundity cost $\cc$ (\eqref{eq:cBDD}) does not depend on the type of interactant. 
+For both benefits and costs, direct effects only count when there is no mutation (hence the ($1-\mu$) factors). 
+Direct effects of benefits $\bb$ (\eqref{eq:bBDD} and \eqref{eq:bWFD}) only count if the interaction takes place with an individual who is identical by descent. With the population structure that we consider, social interactions only occur within demes, so only $\Qin$ is present in \eqref{eq:bBDD} and \eqref{eq:bWFD}. On the other hand, the direct effect of the fecundity cost $\cc$ (\eqref{eq:cBDD}) does not depend on the type of interactant, since the same cost $\cc$ is paid by altruists irrespective of the interactant's identity. 
 
-As seen in the previous section, $\Qin^{\Moran}$ and $\Qin^{\WF}$ decrease with the emigration probability $m$ (actually only until $m=\frac{d-1}{d}$ for the latter). Consequently, the magnitude of the direct (beneficial) effects of benefits $\bb$ provided by altruists ($\beta_{\direct}$) decreases when the emigration probability $m$ increases, while the direct (detrimental) effects ($\gamma_{\direct}$) due to the direct cost of altruism $\cc$ are constant. As a result, if we only consider direct effects, more emigration $m$ is detrimental to the evolution of altruistic behaviour. But there are also indirect effects at play. 
+As seen in the previous section, $\Qin^{\Moran}$ and $\Qin^{\WF}$ decrease with the emigration probability $m$ (actually only until $m=\frac{d-1}{d}$ for the latter). Consequently, the magnitude of the direct (beneficial) effects of benefits $\bb$ provided by altruists ($\beta_{\direct}$) decreases when the emigration probability $m$ increases, while the direct (detrimental) effects ($\gamma_{\direct}$) due to the direct cost of altruism $\cc$ are constant. As a result, if we only considered direct effects, we would conclude that more emigration $m$ is detrimental to the evolution of altruistic behaviour. However, there are also indirect effects at play. 
 
 \subsubsection{Indirect effects}
-Indirect effects are collateral effects on other individuals; they depend on the type of life-cycle, but always involve individuals who are identical by descent. 
+Indirect (/secondary) effects are collateral effects on other individuals; they depend on the type of life-cycle, and always involve individuals who are identical by descent. 
 
 \paragraph{Moran Birth-Death} Changing the fecundity of a focal individual has two kinds of indirect effects on others: \begin{inparaenum}[\it i\rm )]\item it changes their probability of being the one chosen to reproduce -- this affects all individuals in the population who are identical by descent to the focal, and \item it changes their probability of dying because the number of offspring landing in their site changes -- this affects individuals in the population who can send offspring at the same locations as the focal and are identical-by-descent to it. For this life-cycle, the indirect effects are: \end{inparaenum}
 %
@@ -445,7 +461,7 @@ Indirect effects are collateral effects on other individuals; they depend on the
 (Calculation details are presented in \appname~\ref{sec:app:EX}.)\\
 The formulas are the same for the indirect effects associated to $\bb$ and to $\cc$; in other words, the balance between the two indirect effects remains the same when the emigration probability changes. The term $\left(\frac{n-1}{n} \Qin^{\Moran} + \frac{1}{n}\right)$, which will appear again later, corresponds to the probability that two individuals sampled with replacement from the same deme are identical by descent. Indirect effects are indeed also felt by the focal individual itself (\eg, increasing the fecundity of another individual implies decreasing one's own relative fecundity). 
 
-Replacing $\Qin$ and $\Qout$ by their formula for the Moran life-cycle (\eqref{eq:QM}), we conclude that $\beta_{\indirect}^{\BD}=\gamma_{\indirect}^{\BD}$ are decreasing functions of the emigration probability~$m$\todo{Add Mathematica}.
+Replacing $\Qin$ and $\Qout$ by their formula for the Moran life-cycle (\eqref{eq:QM}), we conclude that $\beta_{\indirect}^{\BD}=\gamma_{\indirect}^{\BD}$ are decreasing functions of the emigration probability~$m$ (calculations in the supplementary Mathematica file).
 
 \paragraph{Moran Death-Birth} With this life-cycle,  death comes first and every individual in the population has the same survival probability ($1/N$). The indirect consequences of changing a focal individual's fecundity affect all individuals who can send their offspring to the same locations as the focal, and who are identical by descent to it. We obtain
 \begin{equation}\label{eq:bDBI}
@@ -462,14 +478,14 @@ The first term corresponds two individuals from the same deme (with replacement)
 
 Here again, $\beta_{\indirect} = \gamma_{\indirect}$, so the balance between indirect benefits and indirect costs does not change when the emigration probability $m$ increases.
 
-Replacing $\Qin$ and $\Qout$ by their formulas given in \eqref{eq:QM}, we can conclude that  $\beta_{\indirect}^{\DB}=\gamma_{\indirect}^{\DB}$ first decreases with the emigration probability $m$, and increases again after a threshold value $m_c'$ (given in the appendix\todo{Mathematica}; $m_c' < (d-1)/d$)\todo{name}.  
+Replacing $\Qin$ and $\Qout$ by their formulas given in \eqref{eq:QM}, we can conclude that  $\beta_{\indirect}^{\DB}=\gamma_{\indirect}^{\DB}$ first decreases with the emigration probability $m$, and increases again after a threshold value $m_c'$, which is smaller than $m_c^{\WF}=(d-1)/d$) (calculation details are presented in the supplementary Mathematica file).  
 
-\paragraph{Wright-Fisher} With this life-cycle, generations are synchronous and all individuals again all have the same survival probability (now equal to $0$ at all sites). As a result, the formulas for $\beta_{\indirect}^{\WF}$ and $\gamma_{\indirect}^{\WF}$ are the same as $\beta_{\indirect}^{\DB}$ and $\gamma_{\indirect}^{\WF}$, except that instead of $\Qin^{\Moran}$ and $\Qout^{\Moran}$, we need to use $\Qin^{\WF}$ and $\Qout^{\WF}$ (given in \eqref{eq:QWF}). Once this is done, we see that $\beta_{\indirect}^{\WF} = \gamma_{\indirect}^{\WF}$ first decreases with the emigration probability $m$, and increases again after the threshold value $m_c^{\WF} = (d-1)/d$ (which was identified previously as the emigration probability such that offspring have an equal chance of landing in their natal deme or in any other deme, \ie, $\din=\dout$). 
+\paragraph{Wright-Fisher} With this life-cycle, generations are synchronous and all individuals again all have the same survival probability (now equal to $0$ at all sites). As a result, the formulas for $\beta_{\indirect}^{\WF}$ and $\gamma_{\indirect}^{\WF}$ are the same as $\beta_{\indirect}^{\DB}$ and $\gamma_{\indirect}^{\WF}$, except that instead of $\Qin^{\Moran}$ and $\Qout^{\Moran}$, we need to use $\Qin^{\WF}$ and $\Qout^{\WF}$ (given in \eqref{eq:QWF}). Once this is done, we see that $\beta_{\indirect}^{\WF} = \gamma_{\indirect}^{\WF}$ first decreases with the emigration probability $m$, and increases again after the threshold value $m_c^{\WF} = (d-1)/d$. This emigration threshold was identified above as the emigration probability such that offspring have an equal chance of landing in their natal deme or in any other deme, \ie, $\din=\dout$ (calculation details are presented in the supplementary Mathematica file.)    
 \end{subequations}
 
 \subsection{Identifying threshold values of the mutation probability $\mu$}
 
-In the previous section, we investigated the impact of changes in the emigration probability $m$ on each of the terms that make up the expected frequency of altruists $\Esp{\overline{X}}$. Now we need to combine these different terms to focus on the quantity we are eventually interested in, $\Esp{\overline{X}}$. The rather lengthy formulas that we obtain are relegated to the \hl{appendix}, and we concentrate here on the results. 
+In the previous section, we investigated the impact of changes in the emigration probability $m$ on each of the terms that make up the expected frequency of altruists $\Esp{\overline{X}}$. Now we need to combine these different terms to focus on the quantity we are eventually interested in, $\Esp{\overline{X}}$. The rather lengthy formulas that we obtain are relegated to the \appname and supplementary Mathematica file, and we concentrate here on the results. 
 
 \subsubsection{Moran Birth-Death}
 
@@ -494,7 +510,7 @@ The relationship between $\Esp{\overline{X}}$ and $m$ is a bit more complicated 
 %
 In figure~\ref{fig:EX}\subref{fig:EXDB}, the parameters are such that $\mu_c^{\DB} = 0$. 
 
-The expected frequency of altruists $\Esp{\overline{X}}$ reaches a maximum at an emigration probability\todo{what about when initially decreases with m?} $m_c^{\DB}$ (whose complicated\todo{do} equation is in the \hl{appendix}), as can be seen in figure~\ref{fig:EX}\subref{fig:EXDB}. When the mutation probability gets close to $0$ ($\mu \to 0$), $m_c^{\DB}$ also gets close to $0$, 
+The expected frequency of altruists $\Esp{\overline{X}}$ then reaches a maximum at an emigration probability $m_c^{\DB}$ (whose complicated equation is given in the supplementary Mathematica file), as can be seen in figure~\ref{fig:EX}\subref{fig:EXDB}. When the mutation probability gets close to $0$ ($\mu \to 0$), $m_c^{\DB}$ also gets close to $0$, 
 
 \subsubsection{Wright-Fisher}
 
@@ -520,7 +536,7 @@ Parameters: $\omega = 0.005$, $\mutbias=0.45$, $b = 15$, $c = 1$, $n=4$ individu
 
 \subsection{Relaxing key assumptions}
 
-\todo{Cite \citep{Debarre2015evo}}To derive our analytical results, we had to make a number of simplifying assumptions, such as the fact that selection is weak ($\omega \ll 1$), and the fact that the structure of the population is regular (all demes have the same size $n$). We explored with numerical simulations the effect of relaxing these key assumptions. When selection is strong, the patterns that we identified not only still hold but are even more marked, as shown on  figure~\ref{fig:EXstrongsel}. 
+To derive our analytical results, we had to make a number of simplifying assumptions, such as the fact that selection is weak ($\omega \ll 1$), and the fact that the structure of the population is regular (all demes have the same size $n$). We explored with numerical simulations the effect of relaxing these key assumptions. When selection is strong, the patterns that we identified not only still hold but are even more marked, as shown on  figure~\ref{fig:EXstrongsel}. 
 
 To relax the assumption of equal deme sizes, we randomly drew deme sizes at the beginning of simulations, with sizes ranging from $2$ to $6$ individuals and on average $\overline{n} = 4$ individuals per deme as previously. As shown in figure~\ref{fig:EXhtg}, the patterns initially obtained with a homogeneous population structure are robust when the structure is heterogeneous. 
  
@@ -538,12 +554,16 @@ Some of our conclusions change if we switch to this qualitative measure of evolu
 However, under a Moran Death-Birth life-cycle, altruism can be favored only at intermediate emigration probabilities (figure~\ref{fig:EX}\subref{fig:EXDB}): increased emigration can still favor the evolution of altruism under this qualitative criterion.  
 
 % How to explain the result
-\subsection*{The result is due to indirect, competitive, effects}
+\subsection*{The result is due to indirect (/secondary) effects}
 To explain how the frequency of altruists can increase with the emigration probability $m$, let us go back to the decomposition of the expected frequency of altruists in the population $\Esp{\overline{X}}$ into different terms (\eqref{eq:EXapprox}). 
 For all the life-cycles that we consider, the direct effect of helping others ($\beta_{\direct}$) decreases with emigration $m$, while the direct effect of the cost of helping ($\gamma_{\direct}$) does not change with $m$. 
 If we (erroneously) considered only direct effects, we would conclude that the expected proportion of altruists decreases with the emigration probability $m$, because an increase in $m$ reduces the probability that two interactants (two deme-mates in this model) are identical by descent. 
 But this explanation ignores indirect, competitive, effects. In the three life-cycles that we considered, $\beta_{\indirect} = \gamma_{\indirect}$, so the overall indirect effects are given by $(-(\bb-\cc) \beta_{\indirect})$. Hence, any increase of $\Esp{\overline{X}}$ with $m$ is driven by $\beta_{\indirect}$. Indirect effects correspond to competition: helping another individual indirectly harms others -- even the individual who is providing help is indirectly harmed. This competition can be diluted by increasing the emigration probability $m$. 
 The overall effect of $m$ on the expected frequency of altruists depends on the balance between direct and indirect effects. This balance depends on the fidelity of parent-offspring transmission ($\mu$), in particular because probabilities of identity by descent depend on $\mu$. 
+
+Westetal2002 for review on competition. 
+Indirect effects and cancellation result Taylor1992 + \citep{Queller1994} \citep[][with $n$ player games]{Ohtsuki2010}
+Indirect effects scale of competition explain why BD DB differences \citep{GrafenArchetti2008}. Can explain the evolution of social behaviors such as spite \citep{WestGardner2010}WG10. Mitigate the effects of fecundity costs associated to a beneficial trait \citep{Debarre2015evo}.
 
 Primary and secondary recipients West and Gardner 2010. 
 
@@ -592,6 +612,10 @@ Mutation was also previously included in models investigating the maintenance of
 %  Reset the counter  
 \setcounter{figure}{0}
 
+% Tables
+\renewcommand{\thetable}{S\arabic{table}}
+%  Reset the counter  
+\setcounter{table}{0}
 \section*{Supplementary figures} 
 
 % Figure strong selection
@@ -650,6 +674,40 @@ Mutation was also previously included in models investigating the maintenance of
 \end{figure}
 
 \clearpage
+\section*{Supplementary Table}
+
+\begin{table}[h!]
+\begin{tabular}{>{$}c<{$} l}
+N & Total population size ($N = \ndemes n$) \\
+\ndemes & Number of demes \\
+n & Deme size\\
+m & Emigration probability\\
+\mu & Mutation probability\\
+\mutbias & Mutation bias: probability that mutant is altruist\\
+\bb & Fecundity benefit given by altruists to social interactants\\
+\cc & Fecundity cost paid by altruists\\
+\omega & Parameter scaling the relative effect of social interactions on fecundity\\
+X_i & Indicator variable, equal to $1$ if site $i$ is occupied by an altruist, to $0$ otherwise (r.v.)\\
+\overline{X} & Frequency of altruists in the population (r.v.)\\
+\beta & term associated to the benefits $\bb$\\
+\gamma & term associated to the costs $\cc$ \\
+\small \direct & Subscript corresponding to direct/primary effects\\
+\small \indirect & Subscript corresponding to indirect/secondary effects\\
+Q_{ij} & Probability of identity by descent of individuals at sites $i$ and $j$\\
+d_{ij} & Dispersal probability from site $i$ to site $j$\\
+e_{ij} & Interaction probability from site $i$ to site $j$ \\
+\small{\self} & Subscript used when $i=j$\\
+\small{\inn} & Subscript used when $i\neq j$ and the two sites are in the same deme\\
+\small{\out} & Subscript used when the two sites $i$ and $j$ are in different demes\\
+\small{\Moran} & Superscript corresponding to a Moran model\\
+\small{\BD} & Superscript corresponding to the Moran Birth-Death model\\
+\small{\DB} & Superscript corresponding to the Moran Death-Birth model\\
+\small{\WF} & Superscript corresponding to the Wright-Fisher model
+\end{tabular}
+\caption{List of symbols. ``r.v.'' means \textit{random variable}. }
+\label{tab:symbols}
+\end{table}
+\clearpage
 
 % Start the appendix
 \appendix
@@ -661,19 +719,9 @@ Mutation was also previously included in models investigating the maintenance of
 %  Reset the counter
 \setcounter{equation}{0}  % reset counter
  
-% Figures
-%  Redefine the command that creates the figure number: adds an S.
-\renewcommand{\thefigure}{S\arabic{figure}}
-%  Reset the counter  
-\setcounter{figure}{0}
-
-% Tables
-\renewcommand{\thetable}{S\arabic{table}}
-%  Reset the counter  
-\setcounter{table}{0} 
-% And the same can be done for tables, theorems, etc.
+%
 \begin{center}
-{\LARGE \bfseries\sffamily  \appname}
+{\color{seccol}{\LARGE \bfseries \appname}}
 \end{center}
 
 \section{Fecundity and weak selection approximation\label{sec:app:F}}
@@ -899,12 +947,12 @@ Q_{ij} = \sum_{k, \ell=1}^N d_{ki} d_{\ell j} Q_{k\ell} (1-\mu)^2.
 Again, $Q_{ij}$ corresponds to a probability of identity by descent: the individuals at sites $i$ and $j$ are identical by descent if their parents were and if neither mutated ($(1-\mu)^2$). 
 
 \clearpage
-\section{In a subdivided population}
+\section{\label{sec:app:subdiv}In a subdivided population}
 
-\subsection{$\beta$ and $\gamma$}
+\subsection{\label{sec:app:bcsubdiv}$\beta$ and $\gamma$}
 Now, we need to adapt the results presented in \appname~\ref{sec:app:EX} to our structure of interest, a subdivided population, with dispersal and interaction probabilities given by \eqref{eq:defD} and \eqref{eq:defE}. For the $\beta$ and $\gamma$ terms, we use a brute-force approach, replacing $d_{ij}$ and $e_{ij}$ by their values in a subdivided population, and simplifying the equations (for instance, there are $60$ different cases to consider for the four sums that appear in $\beta_{\indirect}^{\DB}$, shown in the table in section~\ref{sec:app:betaI} below). The calculations and subsequent simplifications are detailed in the supplementary Mathematica file, and the results are presented in the main text (\sysref{eq:directeffects}, \eqref{eq:bBDI}, and \eqref{eq:bDBI}). 
 
-\subsection{Probabilities of identity by descent}
+\subsection{\label{sec:app:Qsubdiv}Probabilities of identity by descent}
 For the probabilities of identity by descent, we could also use a brute-force approach, but calculations are faster if we use formulas derived in \citet{Debarre2017} for ``two-dimensional population structures''. The name comes from the fact that we only need two types of transformations to go from any site to any other site in the population: permutations on the deme index, and permutations on the within-deme index.  \\
 %
 We rewrite site labels ($1\leq i \leq N$) as $(\ell_1, \ell_2)$, where $\ell_1$ is the index of the deme ($1\leq \ell_1 \leq \ndemes$) and $\ell_2$ the position of the site within the deme ($1\leq \ell_2 \leq n$). Then, we introduce notations $\tilde{d}_{\substack{i_1\\i_2}}$ and $\tilde{Q}_{\substack{i_1\\i_2}}$, that correspond to the dispersal probability and probability of identity by descent to a site at distances $i_1$ and $i_2$ in the among-demes and within-deme dimensions (\eg, $\tilde{d}_{\substack{i_1\\i_2}} = d_{\substack{j_1\\j_2}, \substack{j_1+i_1\\j_2+i_2}}$.) 
@@ -1238,539 +1286,3 @@ The table below contains all combinations for $i$, $j$, $k$, $l$ involved in the
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\clearpage
-Adaptation of my equations to a subdivided population. Notation, for a quantity $Y$ that depends on two sites ($Y=e$, $d$, $Q$):
-\begin{subequations}
-\begin{align}
-Y_{\textrm{self}} &\defeq Y_{i,i} \\
-%
-Y_{\textrm{in}} &\defeq Y_{i,j}, \quad \textrm{$i$ and $j\neq i$ in the same deme;}\\
-%
-Y_{\textrm{out}} &\defeq Y_{i,j}, \quad \textrm{$i$ and $j$ in different demes.}
-\end{align}
-\end{subequations}
-For a site $i$, $G_i$ denotes the deme the site belongs to, and notation $j \in G_i$ means that sites $i$ and $j$ are in the same deme. 
-
-The expected frequency of altruists in the population is given by 
-\begin{equation}
-\Esp{\overline{X}} = \mutbias + \delta \frac{\mutbias (1-\mutbias)}{\mu} \left[ \bb \, (\beta_{D} - \beta_{I}) - \cc \, (\gamma_{D} - \gamma_{I}) \right].
-\end{equation}
-
-\paragraph{Moran, Birth-Death}
-
-\begin{subequations}
-\begin{align}
-\beta_{\BD}^{D} =& \sum_{k,\ell = 1}^N \frac{1-\mu}{N} e_{kl} Q_{lk} \nonumber \\
-%
-= & \sum_{k=1}^N \frac{1-\mu}{N} \Big( \eself + (n-1) \ein \Qin + (N-n) \eout \Qout \Big) \nonumber \\
-%
-= & (1-\mu) \Big( \eself + (n-1) \ein \Qin + (N-n) \eout \Qout \Big).
-\end{align}
-
-\begin{align}
-\beta_{\BD}^{I} =& \sum_{j,k,l=1}^N \left( \frac{d_{lj}}{N} - \frac{\mu}{N^2}\right) e_{kl} Q_{jk} \nonumber \\
-%
-= & \frac{1}{N}\sum_{j=1}^N \Bigg[ \left( \sum_{l=1}^N  d_{lj}  e_{jl}  \right)%
-+ \sum_{\substack{k \in G_j \\ k\neq j}} \left( \sum_{l=1}^N d_{lj}  e_{kl} \Qin  \Qin \right)%
-%\nonumber \\&
-+ \sum_{k \not\in G_j}\sum_{l=1}^N d_{lj}  \left( e_{kl} \Qout  \Qout \right)\Bigg] \nonumber \\
-& + \frac{\mu}{N^2} \sum_{j=1}^N \left( \sum_{l=1}^N e_{kl} \right) \left( \sum_{k=1}^N Q_{jk} \right) \nonumber \\
-%
-= & \frac{1}{N} \sum_{j=1}^N\Bigg[ \dself \eself + (n-1) \din \ein + (N-n) \dout \eout \nonumber\\
-& \quad + \sum_{\substack{k \in G_j \\ k\neq j}} \left( \din  \eself + \dself  \ein + (n-2) \din \ein + (N-n) \dout  \eout  \right) \Qin \nonumber\\
-& \quad + \sum_{k \not \in G_j} \left( \dself  \eout + (n-1) \din  \eout + \dout \eself + (n-1) \dout \ein + (N - 2n) \dout \eout \right) \Qout \nonumber \Bigg] \\
-& - \frac{\mu}{N} \left(1 + (n-1)\Qin + (N-n) \Qout\right) \left( \eself + (n-1) \ein + (N-n)\eout \right) \nonumber \\
-%
-%
-= & \dself \eself + (n-1) \din \ein + (N-n) \dout \eout \nonumber\\
-& + (n-1) \left( \din  \eself + \dself  \ein + (n-2) \din \ein + (N-n) \dout  \eout  \right) \Qin \nonumber\\
-& + (N-n) \left( \dself  \eout + (n-1) \din  \eout + \dout \eself + (n-1) \dout \ein + (N - 2n) \dout \eout \right) \Qout \nonumber  \\
-& - \frac{\mu}{N} \left(1 + (n-1)\Qin + (N-n) \Qout\right) \left( \eself + (n-1) \ein + (N-n)\eout \right).
-\end{align}
-
-\begin{align}
-\gamma_{\BD}^{D} & = 1-\mu.
-\end{align}
-
-\begin{align}
-\gamma_{\BD}^{I} & = \frac{1}{N} \sum_{j,k=1}^N \left( d_{kj} - \frac{\mu}{N}  \right) Q_{jk}\nonumber \\
-& = \frac{1}{N} \sum_{j=1}^N \left[ \dself - \frac{\mu}{N} + (n-1) \left( \din - \frac{\mu}{N} \right) \Qin + (N-n) \left( \dout - \frac{\mu}{N} \right) \Qout\right] \nonumber \\
-%
-& = \dself + (n-1) \din\Qin + (N-n)\dout \Qout \nonumber \\&\quad - \frac{\mu}{N} \left(1 + (n-1)\Qin + (N-n) \Qout\right)
-\end{align}
-\end{subequations}
-
-\paragraph{Moran, Death-Birth}
-\begin{subequations}
-\begin{align}
-\beta_{\DB}^{D} & = \frac{1-\mu}{N} \sum_{j,k=1}^N Q_{jk} e_{jk} = \beta_{\BD}^D\nonumber \\
-& = (1-\mu) \Big( \eself + (n-1) \ein \Qin + (N-n) \eout \Qout \Big).
-\end{align}
-
-\begin{align}
-\beta_{\DB}^{I} & = \frac{1-\mu}{N} \sum_{i,j,k,l=1}^N d_{ji} d_{li} e_{kl} Q_{jk} 
-\end{align}
-Presented in the table in the appendix.
-
-\begin{align}
-\gamma_{\DB}^{D} & = 1-\mu = \gamma_{\BD}^{D}.
-\end{align}
-
-\begin{align}
-\gamma_{\DB}^{I} & = (1-\mu) \sum_{i,j,k=1}^N \frac{d_{ji} d_{ki}}{N} Q_{jk} \nonumber \\
-%
-& = \frac{1-\mu}{N} \sum_{j=1}^N \sum_{i=1}^N \Big( d_{ji} d_{ji} + \sum_{\substack{k\neq j\\ k \in G_j}} d_{ji} d_{ki} \Qin + \sum_{k \not \in G_j} d_{ji} d_{ki} \Qout \Big) \nonumber \\
-%
-& = \frac{1-\mu}{N} \sum_{j=1}^N \Bigg[ \dself \dself + (n-1) \din \din + (N-n) \dout \dout \nonumber \\
-%
-& \qquad +(n-1) \Big( \dself \din + \din \dself + (n-2) \din \din + (N-n) \dout \dout \Big) \Qin \nonumber \\
-%
-& \qquad + (N-n)\Big( \dself \dout + (n-1)\din \dout + \dout \dself + (n-1)\dout \din + (N-2n) \dout \dout
-\Big)\Qout
-\Bigg]
-\end{align}
-
-\end{subequations}
-
-\subsection*{Probabilities of identity by descent}
-\hl{WF est faux. Il faut utiliser les formules Fourier...!}
-\paragraph{Moran}
-\begin{subequations}
-For $i=\neq j$,
-\begin{align}
-Q_{ij} = \frac{1-\mu}{2} \sum_{k=1}^N \left( d_{kj} Q_{ki} + d_{ki} Q_{kj} \right).
-\end{align}
-For $j\neq i$, $j\in G_i$, 
-\begin{align}
-\Qin & = \frac{1-\mu}{2} \Big( \left( \din + \dself \Qin \right)  + \left( \dself \Qin + \din \right) \nonumber \\ 
-& \qquad  + (n-2) \left( \din \Qin + \din \Qin \right) + (N-n) \left( \dout \Qout  + \dout \Qout  \right)  \Big) \nonumber \\
-% 
-& = (1-\mu) \Big( \din + \dself \Qin + (n-2) \din \Qin + (N-n) \dout \Qout  \Big).
-\end{align}
-And for $j \not \in G_i$, 
-\begin{align}
-\Qout & = \frac{1-\mu}{2} \Big( \left( \dout  + \dself \Qout \right) + (n-1) \left( \dout \Qin + \din \Qout \right) \nonumber\\
-& \qquad + \left( \dself \Qout + \dout \right) + (n-1) \left( \din \Qout + \dout \Qin \right) \nonumber \\
-& \qquad + (N-2n)\left( \dout \Qout + \dout \Qout \right)\Big) \nonumber \\
-%
-& = (1-\mu) \Big(  \dout  + \dself \Qout  + (n-1) \left( \dout \Qin + \din \Qout \right) + (N-2n) \dout \Qout \Big)
-\end{align}
-\end{subequations}
-
-\paragraph{Wright-Fisher}
-
-\begin{subequations}
-For $j\neq i$,
-\begin{align}
-Q_{ij} &= (1-\mu)^2 \sum_{k,l=1}^N d_{ki} d_{lj} Q_{kl}.
-\end{align}
-When $j\neq i$, $j\in G_i$, 
-\begin{align}
-\Qin & = (1-\mu)^2 \Bigg[ \Big( \dself \din + \din \dself + (n-2) \din \din + (N-n) \dout \dout \Big)\nonumber\\
-%
-& \qquad + \Big( \dself \dself + (n-2) \dself \din \nonumber\\ & \qquad \qquad + (n-1) \din \din + (n-2) \din \dself \nonumber\\
-& \qquad\qquad+ (n-2)(n-2) \din \din + (N-n) (n-1)\dout \dout  \Big) \Qin \nonumber \\
-%
-& \qquad + \Big((N-n) \dself \dout + (N-n)(n-1) \din \dout \nonumber \\ 
-& \qquad\qquad+ (N-n) \dout \dself + (N-n)(n-1) \dout \din \nonumber \\ 
-& \qquad\qquad+ (N-n)(N-2n) \dout \dout \Big) \Qout \Bigg]\nonumber\\
-%
-%
-%
-& = (1-\mu)^2 \Bigg[ \Big( 2 \din \dself + (n-2) \din^2 + (N-n) \dout^2 \Big) \nonumber\\
-&\qquad + \Big( \dself^2 + 2(n-2) \dself \din + (n^2 -3 n +3) \din^2 + + (N-n) (n-1)\dout^2 \Big)\Qin \nonumber \\
-& \qquad + \Big(2(N-n) \dself \dout + 2 (N-n)(n-1) \din \dout \nonumber \\ 
-& \qquad\qquad+ (N-n)(N-2n) \dout \dout \Big)\Qout
- \Bigg]
-\end{align}
-And when $j\not \in G_i$, we have
-% 
-\begin{align}
-\Qout & = (1-\mu)^2 \Bigg[ \Big( 2\dself \dout + 2(n-1) \din \dout + (N-2n) \dout^2 \Big)\nonumber \\
-& \qquad + \Big( 2(n-1) \dself \dout + 2(n-1)^2 \din \dout + (N-2n)(n-1) \dout^2  \Big)\Qin \nonumber \\
-& \qquad +\Big( \dself \dself + (n-1)\dself \din + (N-2n)\dself \dout \nonumber\\
-& \qquad \qquad+ (n-1) \din \dself + (n-1)^2 \din^2 + (n-1)(N-2n)\din \dout \nonumber \\
-& \qquad \qquad+ (N-n) \dout \dself + (N-n)(n-1) \dout \din + (N-n)(N-2n) \dout \dout \Big) \Qout \Bigg].
-\end{align}
-\hl{PAS FINI}
-\end{subequations}
-\clearpage
-\appendix
-\section*{Appendix}
-All combinations for $i$, $j$, $k$, $l$. Notation: $(i, j)$ means that $i$ and $j$ are in the same deme, but are different; $G_i$ refers to the deme containing site $i$.
-
-\begin{landscape}
-
-\rowcolors{2}{gray!25}{white}
-\begin{longtable}{>{\footnotesize $}l<{$} >{\small $}l<{$} >{\small $}l<{$} >{\small $}l<{$}   >{$}l<{$}   >{$}l<{$}   >{$}l<{$}   >{$}l<{$}  >{$}l<{$} >{$}l<{$} }
-\rowcolor{gray!60}
-%\hline
-& j & k & l & \textrm{Notation} & \textrm{Count}  & d_{ji} & d_{li} & e_{kl} & Q_{jk} \\
-%\hline
-\endhead % all the lines above this will be repeated on every page
-%
-1 & j=i & k=i & l = i & (i = j= k =l) & 1 & \dself & \dself & \eself & 1 \\*
-%
-2 & j=i & k=i & l\neq i; l \in G_i & (i=j=k, l) & n-1 & \dself & \din & \ein & 1\\*
-%
-3 & j=i & k=i & l\not \in G_i & (i=j=k), (l) & N-n & \dself & \dout & \eout & 1 \\
-%
-%
-4 & j=i & k\neq i; k\in G_i & l=i & (i=j=l, k) & n-1 & \dself & \dself & \ein & \Qin \\*
-%
-5 & j=i & k\neq i; k\in G_i & l=k & (i=j, k=l) & n-1 & \dself & \din & \eself & \Qin \\*
-%
-6 & j=i & k\neq i; k\in G_i & l\neq i, k; l\in G_i & (i=j, k, l) & (n-1)(n-2) & \dself & \din & \ein & \Qin \\*
-%
-7 & j=i & k\neq i; k\in G_i & l\not \in G_i & (i=j, k), (l) & (n-1)(N-n) & \dself &  \dout & \eout & \Qin \\
-%
-%
-8 & j=i & k\not \in G_i & l=i=j & (i=j=l), (k) & (N-n) & \dself & \dself & \eout & \Qout \\*
-%
-9 & j=i & k\not \in G_i & l\neq i, l\in G_i & (i=j, l), (k) & (N-n)(n-1) & \dself & \din & \eout & \Qout \\*
-%
-10 & j=i & k\not \in G_i & l=k & (i=j), (k=l) & (N-n) & \dself & \dout & \eself & \Qout \\*
-%
-11 & j=i & k\not \in G_i & l\neq k; l\in G_k & (i=j), (k, l) & (N-n)(n-1) & \dself & \dout & \ein & \Qout \\*
-%
-12 & j=i & k\not \in G_i & l\not \in G_i, G_k & (i=j), (k), (l) & (N-n)(N-2n) & \dself & \dout & \eout & \Qout \\
-%
-%
-%
-%
-13 & j\neq i, j\in G_i & k=i & l=i & (i=k=l, j) & (n-1) & \din & \dself & \eself & \Qin \\*
-%
-14 & j\neq i, j\in G_i & k=i & l=j & (i=k, j=l) & (n-1) & \din & \din & \ein & \Qin \\*
-%
-15 & j\neq i, j\in G_i & k=i & l\neq i, j; l\in G_i & (i=k, j, l) & (n-1)(n-2) & \din & \din & \ein & \Qin \\*
-%
-16 & j\neq i, j\in G_i & k=i & l\not \in G_i & (i=k, j), (l) & (n-1)(N-n) & \din & \dout & \eout & \Qin \\
-%
-%
-17 & j\neq i, j\in G_i & k=j & l=i & (i=l, j=k) & (n-1) & \din & \dself & \ein & 1 \\*
-%
-18 & j\neq i, j\in G_i & k=j & l=j & (i, j=k=l) & (n-1) & \din &  \din & \eself & 1\\*
-%
-19 & j\neq i, j\in G_i & k=j & l\neq i, j; l\in G_i & (i, j=k, l) & (n-1)(n-2) & \din & \din & \ein & 1\\*
-%
-20 & j\neq i, j\in G_i & k=j & l\not \in G_i & (i, j=k), (l)& (n-1)(N-n) & \din & \dout & \eout & 1\\
-%
-%
-21 & j\neq i, j\in G_i & k\neq i,j; k\in G_i & l=i & (i=l, j, k) & (n-1)(n-2) & \din & \dself & \ein & \Qin \\*
-%
-22 & j\neq i, j\in G_i & k\neq i,j; k\in G_i & l=j & (i,j=l,k) & (n-1)(n-2) & \din & \din & \ein & \Qin \\*
-%
-23 & j\neq i, j\in G_i & k\neq i,j; k\in G_i & l=k & (i,j,k=l) & (n-1)(n-2) & \din & \din & \eself & \Qin  \\*
-%
-24 & j\neq i, j\in G_i & k\neq i,j; k\in G_i & l\neq i,j,k; l
-\in G_i & (i,j,k,l) & (n-1)(n-2)(n-3) & \din & \din & \ein & \Qin \\*
-%
-25 & j\neq i, j\in G_i & k\neq i,j; k\in G_i & l\not \in G_i & (i, j, k), (l) & (n-1)(n-2)(N-n)  & \din & \dout & \eout & \Qin \\
-%
-%
-26 & j\neq i; j\in G_i & k\not\in G_i & l=i & (i=l,j),(k) & (n-1)(N-n) & \din & \dself & \eout & \Qout \\*
-%
-27 & j\neq i; j\in G_i & k\not\in G_i & l=j & (i, j=l), (k) & (n-1)(N-n) & \din & \din & \eout & \Qout \\*
-%
-28 & j\neq i; j\in G_i & k\not\in G_i & l\neq i, j; l\in G_i & (i, j, l), (k) & (n-1)(N-n)(n-2) & \din & \din & \eout & \Qout \\*
-%
-29 & j\neq i; j\in G_i & k\not\in G_i & l=k & (i, j), (k=l) & (n-1)(N-n) & \din & \dout & \eself & \Qout \\*
-%
-30 & j\neq i; j\in G_i & k\not\in G_i & l\neq k;l\in G_k & (i,j),(k,l) & (n-1)(N-n)(n-1) & \din & \dout & \ein & \Qout \\*
-%
-31 & j\neq i; j\in G_i & k\not\in G_i & l\not \in G_i, G_k & (i,j),(k),(l) & (n-1)(N-n)(N-2n) & \din & \dout & \eout & \Qout \\
-%
-%
-%
-%
-32 & j\not\in G_i & k=i & l=i & (i=k=l),(j) & (N-n) & \dout & \dself & \eself & \Qout \\*
-%
-33 & j\not\in G_i & k=i & l\neq i; l\in G_i & (i=k, l), (j) & (N-n)(n-1) & \dout & \din & \ein & \Qout \\*
-%
-34 & j\not\in G_i & k=i & l=j & (i=k), (j=l) & (N-n) & \dout & \dout & \eout & \Qout \\*
-%
-35 & j\not\in G_i & k=i & l\neq j; l\in G_j & (i=k), (j,l) & (N-n)(n-1) & \dout & \dout & \eout & \Qout \\*
-%
-36 & j\not\in G_i & k=i & l\not \in G_i, G_j & (i=k), (j), (l) & (N-n)(N-2n) & \dout & \dout & \eout & \Qout \\
-%
-%
-37 & j\not\in G_i & k\neq i; k\in G_i & l=i & (i=l, k), (j) & (N-n)(n-1) & \dout & \dself & \ein & \Qout \\*
-%
-38 & j\not\in G_i & k\neq i; k\in G_i & l=k & (i, k=l), (j) & (N-n)(n-1) & \dout & \din & \eself & \Qout \\*
-%
-39 & j\not\in G_i & k\neq i; k\in G_i & l\neq i,k; l\in G_i & (i, k, l), (j) & (N-n)(n-1)(n-2) & \dout & \din & \ein & \Qout \\*
-%
-40 & j\not\in G_i & k\neq i; k\in G_i & l=j & (i, k), (j=l) & (N-n)(n-1) & \dout & \dout & \eout & \Qout \\*
-%
-41 & j\not\in G_i & k\neq i; k\in G_i & l\neq j;l\in G_j & (i, k), (j,l) & (N-n)(n-1)(n-1) & \dout & \dout & \eout & \Qout \\*
-%
-42 & j\not\in G_i & k\neq i; k\in G_i & l\not \in G_i,G_j & (i, k), (j),(l) & (N-n)(n-1)(N-2n) & \dout & \dout & \eout & \Qout \\
-%
-%
-43 & j\not\in G_i & k=j & l=i & (i=l), (j=k) & (N-n) & \dout & \dself & \eout & 1 \\*
-%
-44 & j\not\in G_i & k=j & l\neq i; l\in G_i & (i,l), (j=k) & (N-n)(n-1) & \dout & \din & \eout & 1\\*
-%
-45 & j\not\in G_i & k=j & l=j & (i), (j=k=l) & (N-n) & \dout & \dout & \eself & 1\\*
-%
-46 & j\not\in G_i & k=j & l\neq j; l\in G_j & (i), (j=k, l) & (N-n)(n-1) & \dout & \dout & \ein & 1\\*
-%
-47 & j\not\in G_i & k=j & l\not \in G_i, G_j & (i), (j=k), (l) & (N-n)(N-2n) & \dout & \dout & \eout & 1\\
-%
-%
-48 & j\not\in G_i & k\neq j; k\in G_j & l=i & (i=l), (j, k) & (N-n)(n-1) & \dout & \dself & \eout & \Qin \\*
-%
-49 & j\not\in G_i & k\neq j; k\in G_j & l\neq i; l\in G_i & (i, l), (j, k) & (N-n)(n-1)(n-1) & \dout & \din & \eout & \Qin\\*
-%
-50 & j\not\in G_i & k\neq j; k\in G_j & l=j & (i), (j=l, k) & (N-n)(n-1) & \dout & \dout & \ein & \Qin\\*
-%
-51 & j\not\in G_i & k\neq j; k\in G_j & l=k & (i), (j, k=l) & (N-n)(n-1) & \dout & \dout & \eself & \Qin\\*
-%
-52 & j\not\in G_i & k\neq j; k\in G_j & l\neq j,k; l\in G_j & (i), (j, k, l) & (N-n)(n-1)(n-2) & \dout & \dout & \ein & \Qin\\*
-%
-53 & j\not\in G_i & k\neq j; k\in G_j & l\not \in G_i, G_j & (i), (j, k), (l) & (N-n)(n-1)(N-2n) & \dout & \dout & \eout & \Qin\\
-%
-%
-54 & j\not\in G_i & k\not\in G_i, G_j & l=i & (i=l), (j), (k) & (N-n)(N-2n) & \dout & \dself & \eout & \Qout \\*
-%
-55 & j\not\in G_i & k\not\in G_i, G_j & l\neq i; l\in G_i& (i, l), (j), (k) & (N-n)(N-2n)(n-1) & \dout & \din & \eout & \Qout \\*
-%
-56 & j\not\in G_i & k\not\in G_i, G_j & l=j & (i), (j=l), (k) & (N-n)(N-2n) & \dout & \dout & \eout & \Qout \\*
-%
-57 & j\not\in G_i & k\not\in G_i, G_j & l\neq j; l\in G_j & (i), (j, l), (k) & (N-n)(N-2n)(n-1) & \dout & \dout & \eout & \Qout \\*
-%
-58 & j\not\in G_i & k\not\in G_i, G_j & l=k & (i), (j), (k=l) & (N-n)(N-2n) & \dout & \dout & \eself & \Qout \\*
-%
-59 & j\not\in G_i & k\not\in G_i, G_j & l\neq k; l\in G_k & (i), (j), (k, l) & (N-n)(N-2n)(n-1) & \dout & \dout & \ein & \Qout \\*
-%
-60 & j\not\in G_i & k\not\in G_i, G_j & l\not \in G_i, G_j, G_k & (i), (j), (k), (l) & (N-n)(N-2n)(N-3n) & \dout & \dout & \eout & \Qout \\
-\end{longtable}
-\end{landscape}
-\section{Island model}
-With self replacement
-\begin{subequations}
-\begin{align}
-\dself &= \din = \frac{1-m}{n},\\
-\dout &= \frac{m}{N-n}. 
-\end{align}
-\end{subequations}
-Without self-replacement
-\begin{subequations}
-\begin{align}
-\dself &=0,\\
-\din &= \frac{1-m}{n-1},\\
-\dout &= \frac{m}{N-n}.
-\end{align}
-\end{subequations}
-\section{IDB}
-\subsection{Moran}
-Using the formulas for a 2D graph in REF Debarre 2017,
-%
-\begin{subequations}
-\begin{align}
-\tilde{\mathcal{D}}_{\substack{q_1 \\ q_2}} & = \sum_{\ell_1=0}^{N_1 -1} \sum_{\ell_2=0}^{N_2 -1} \tilde{d}_{\substack{\ell_1\\\ell_2}} \exp\left(-\imath \frac{2\pi q_1 \ell_1}{N_1}\right)\exp\left(-\imath \frac{2\pi q_2 \ell_2}{N_2}\right)
-\\
-\tilde{\mathcal{Q}}_{\substack{r_1\\r_2}}&= \frac{1}{N}  \sum_{q_1=0}^{N_1 -1} \sum_{q_2=0}^{N_2 -1} \frac{\mu \lambda_M'}{1 - (1-\mu) \tilde{\mathcal{D}}_{\substack{q_1\\ q_2}}} \exp\left(\imath \frac{2\pi q_1 r_1}{N_1}\right)\exp\left(\imath \frac{2\pi q_2 r_2}{N_2}\right)
-\end{align}
-\end{subequations}
-%
-We have
-%
-\begin{subequations}
-\begin{align}
-\tilde{\mathcal{D}}_{\substack{q_1 \\ q_2}} & = \dself + \sum_{\ell_2=1}^{N_2 -1} \din \exp\left(-\imath \frac{2\pi q_2 \ell_2}{N_2}\right) 
-+ \sum_{\ell_1=1}^{N_1 -1} \sum_{\ell_2=0}^{N_2 -1} \dout \exp\left(-\imath \frac{2\pi q_1 \ell_1}{N_1}\right)\exp\left(-\imath \frac{2\pi q_2 \ell_2}{N_2}\right) \nonumber \\
-%
-&= \dself + \left(\delta_{q_2} (N_2-1) + (1-\delta_{q_2}) (-1) \right) \din + \left( \delta_{q_1} (N_1 - 1) + (1-\delta_{q_1}) (-1) \right) \left( \delta_{q_2} N_2 \right) \dout \nonumber \\
-%
-&= \dself + \left( \delta_{q_2} N_2 - 1 \right) \din + \left( \delta_{q_1} N_1 - 1 \right) \delta_{q_2} N_2 \dout.
-\end{align}
-\end{subequations}
-%
-Whether there is self-replacement or not, we have $N_1 = D$ and $N_2 = n$, and
-%
-\begin{subequations}
-\begin{align}
-\tilde{\mathcal{D}}_{\substack{0\\0}} & = 1,\\
-%
-\tilde{\mathcal{D}}_{\substack{q_1\\0}} & = 1-m -  \frac{m}{d-1} \quad (q_1 \not \equiv 0 \pmod{N_1}),\\
-%
-\tilde{\mathcal{D}}_{\substack{q_1\\q_2}} & = \dself - \din \quad (q_2 \not \equiv 0 \pmod{N_2}).
-\end{align}
-\end{subequations}
-%
-So for $\tilde{\mathcal{Q}}$,
-%
-\begin{subequations}
-\begin{align}
-\tilde{\mathcal{Q}}_{\substack{r_1\\r_2}}&= \frac{\mu \lambda_M'}{N} \Bigg[  \frac{1}{1 - (1-\mu) \tilde{\mathcal{D}}_{\substack{0\\ 0}}} + \sum_{q_2 = 1}^{N_2-1}\frac{1}{1 - (1-\mu) \tilde{\mathcal{D}}_{\substack{0\\ q_2}}} \exp\left(-\imath \frac{2\pi q_2 r_2}{N_2}\right) %\nonumber \\
-%& \qquad 
-+ \sum_{q_1 =1}^{N_1 - 1} \frac{1}{1 - (1-\mu) \tilde{\mathcal{D}}_{\substack{q_1\\ 0}}} \exp\left(-\imath \frac{2\pi q_1 r_1}{N_1}\right) \nonumber \\
-& \qquad 
-+ 
- \sum_{q_1=1}^{N_1 -1} \sum_{q_2=1}^{N_2 -1} \frac{1}{1 - (1-\mu) \tilde{\mathcal{D}}_{\substack{q_1\\ q_2}}} \exp\left(-\imath \frac{2\pi q_1 r_1}{N_1}\right)\exp\left(-\imath \frac{2\pi q_2 r_2}{N_2}\right) \Bigg]\nonumber \\
- %
- %
-& = \frac{\mu \lambda_M'}{N} \Bigg[  \frac{1}{1 - (1-\mu) } 
-+ \frac{1}{1 - (1-\mu) (\dself - \din)} (\delta_{r_2} N_2 - 1) %\nonumber \\
-%& \qquad 
-+  \frac{1}{1 - (1-\mu) (1-m-\frac{m}{d-1})} (\delta_{r_1} N_1 - 1) \nonumber \\
-& \qquad 
-+ 
-\frac{1}{1 - (1-\mu) (\dself - \din) } (\delta_{r_1} N_1 - 1) (\delta_{r_2} N_2 - 1) \Bigg].
-% 
-\end{align}
-In particular, 
-\begin{align}
-\tilde{\mathcal{Q}}_{\substack{0\\0}} &= \frac{\mu \lambda_M'}{N} \Bigg[  \frac{1}{\mu } 
-+ \frac{1}{1 - (1-\mu) (\dself - \din)} (n - 1) %\nonumber \\
-%& \qquad 
-+  \frac{1}{1 - (1-\mu) (1-m-\frac{m}{d-1})} (D - 1) \nonumber \\
-& \qquad 
-+ 
-\frac{1}{1 - (1-\mu) (\dself - \din) } (D - 1) (n - 1) \Bigg]\nonumber
-\\
-& = 1.
-\end{align}
-We find $\lambda_M'$ using the above equation. 
-When $r_1=0$, the two individuals are in the same deme. They are different when $r_2 \not \equiv 0$:
-\begin{align}
-\Qin &= \frac{\mu \lambda_M'}{N} \Bigg[  \frac{1}{\mu } 
-+ \frac{1}{1 - (1-\mu) (\dself - \din)} ( - 1) %\nonumber \\
-%& \qquad 
-+  \frac{1}{1 - (1-\mu) (1-m-\frac{m}{d-1})} (D - 1) \nonumber \\
-& \qquad 
-+ 
-\frac{1}{1 - (1-\mu) (\dself - \din) } (D - 1) (- 1) \Bigg].
-\end{align}
-And when $r_1 \not \equiv 0$, the two individuals are in different demes:
-\begin{align}
-\Qout &=  \frac{\mu \lambda_M'}{N} \Bigg[  \frac{1}{\mu } 
-+ \frac{1}{1 - (1-\mu) (\dself - \din)} ( - 1) %\nonumber \\
-%& \qquad 
-+  \frac{1}{1 - (1-\mu) (1-m-\frac{m}{d-1})} ( - 1) \nonumber \\
-& \qquad 
-+ 
-\frac{1}{1 - (1-\mu) (\dself - \din) }  \Bigg].
-\end{align}
-\end{subequations} 
-
-\subsection{Wright-Fisher}
-\begin{align}
-\tilde{\mathcal{Q}}_{\substack{r_1\\r_2}} &= \frac{1}{N} \sum_{q_1=0}^{N_1-1} \sum_{q_2=0}^{N_2 -1} \frac{\mu \lambda_{WF}'}{1-(1-\mu)^2 (\tilde{\mathcal{D}}_{\substack{q_1\\q_2}})^2} \exp\left(-\imath \frac{2\pi q_1 r_1}{N_1}\right)\exp\left(-\imath \frac{2\pi q_2 r_2}{N_2}\right) \nonumber \\
-%
-& = \frac{1}{N} \Bigg[ 
-\frac{\mu \lambda_{WF}'}{1-(1-\mu)^2 (\tilde{\mathcal{D}}_{\substack{0\\0}})^2} 
-+ \sum_{q_2=1}^{N_2-1} \frac{\mu \lambda_{WF}'}{1-(1-\mu)^2 (\tilde{\mathcal{D}}_{\substack{0\\q_2}})^2} \exp\left(-\imath \frac{2\pi q_2 r_2}{N_2}\right) \nonumber \\
-& \qquad + \sum_{q_1=1}^{N_1-1} \frac{\mu \lambda_{WF}'}{1-(1-\mu)^2 (\tilde{\mathcal{D}}_{\substack{q_1\\0}})^2} \exp\left(-\imath \frac{2\pi q_1 r_1}{N_1}\right)  \nonumber \\
-& \qquad + \sum_{q_1=1}^{N_1-1} \sum_{q_2=1}^{N_2 -1} \frac{\mu \lambda_{WF}'}{1-(1-\mu)^2 (\tilde{\mathcal{D}}_{\substack{q_1\\q_2}})^2} \exp\left(-\imath \frac{2\pi q_1 r_1}{N_1}\right)\exp\left(-\imath \frac{2\pi q_2 r_2}{N_2}\right)
- \Bigg] \\
- %
- %
- %
-& = \frac{\mu \lambda_{WF}'}{N} \Bigg[ 
-\frac{1}{1-(1-\mu)^2 } 
-%
-+ \frac{1}{1-(1-\mu)^2 (\dself - \din)^2} (\delta_{q_2} N_2 - 1) \nonumber \\
-%
-& \qquad +  \frac{1}{1-(1-\mu)^2 (1-m-\frac{m}{d-1})^2} (\delta_{q_1} N_1 - 1) \nonumber \\
-%
-& \qquad +  \frac{1}{1-(1-\mu)^2 (\dself - \din)^2} (\delta_{q_1} N_1 - 1)(\delta_{q_2} N_2 - 1)
- \Bigg] \nonumber\\
- %
- %
-& = \frac{\mu \lambda_{WF}'}{N} \Bigg[ 
-\frac{1}{1-(1-\mu)^2 } 
-%
-+ \frac{1}{1-(1-\mu)^2 (\dself - \din)^2} (\delta_{q_2} N_2 - 1) \delta_{q_1} N_1 \nonumber \\
-%
-& \qquad +  \frac{1}{1-(1-\mu)^2 (1-m-\frac{m}{d-1})^2} (\delta_{q_1} N_1 - 1) 
-\Bigg] .
- %
-\end{align}
-To find $\lambda_{WF}'$, we solve
-\begin{subequations}
-\begin{equation}
-1 = \frac{\mu \lambda_{WF}'}{N} \Bigg[ 
-\frac{1}{1-(1-\mu)^2 } 
-%
-+ \frac{1}{1-(1-\mu)^2 (\dself - \din)^2} (N_2 - 1)  N_1 
-%
- +  \frac{1}{1-(1-\mu)^2 (1-m-\frac{m}{d-1})^2} ( N_1 - 1) 
-\Bigg] .
-\end{equation}
-Then,
-\begin{equation}
-\Qin = \frac{\mu \lambda_{WF}'}{N} \Bigg[ 
-\frac{1}{1-(1-\mu)^2 } 
-%
-- \frac{1}{1-(1-\mu)^2 (\dself - \din)^2} N_1 
-%
- +  \frac{1}{1-(1-\mu)^2 (1-m-\frac{m}{d-1})^2} ( N_1 - 1) 
-\Bigg] .
-\end{equation}
-and
-\begin{equation}
-\Qout = \frac{\mu \lambda_{WF}'}{N} \Bigg[ 
-\frac{1}{1-(1-\mu)^2 } 
-%
--  \frac{1}{1-(1-\mu)^2 (1-m-\frac{m}{d-1})^2}  
-\Bigg] .
-\end{equation}
-\end{subequations}
-\restoregeometry
-\end{document}

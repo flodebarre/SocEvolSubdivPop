@@ -1,4 +1,4 @@
-\begin{thebibliography}{26}
+\begin{thebibliography}{36}
 \providecommand{\natexlab}[1]{#1}
 
 \bibitem[{Alizon \& Taylor(2008)}]{Alizon2008}
@@ -22,6 +22,11 @@ Allen, B.; Traulsen, A.; Tarnita, C.~E. \& Nowak, M.~A. 2012: How mutation
 Brockhurst, M.~A.; Buckling, A. \& Gardner, A. 2007: Cooperation peaks at
   intermediate disturbance.
 \newblock Current Biology 17(9):761--765.
+
+\bibitem[{Cockerham \& Weir(1987)}]{CockerhamWeir1987}
+Cockerham, C.~C. \& Weir, B. 1987: Correlations, descent measures: drift with
+  migration and mutation.
+\newblock Proceedings of the National Academy of Sciences 84(23):8512--8514.
 
 \bibitem[{D\'ebarre(2015)}]{Debarre2015evo}
 D\'ebarre, F. 2015: Fitness costs in spatially structured environments.
@@ -48,6 +53,11 @@ Frank, S.~A. 2010: Microbial secretor--cheater dynamics.
 \newblock Philosophical Transactions of the Royal Society of London B:
   Biological Sciences 365(1552):2515--2522.
 
+\bibitem[{Grafen \& Archetti(2008)}]{GrafenArchetti2008}
+Grafen, A. \& Archetti, M. 2008: Natural selection of altruism in inelastic
+  viscous homogeneous populations.
+\newblock Journal of Theoretical Biology 252(4):694 -- 710.
+
 \bibitem[{Hamilton(1964)}]{Hamilton1964}
 Hamilton, W. 1964: The genetical evolution of social behaviour. i.
 \newblock Journal of Theoretical Biology 7(1):1 -- 16.
@@ -61,6 +71,11 @@ Hamilton, W.~D. 1975: Innate social aptitudes of man: an approach from
 Lehmann, L.; Keller, L. \& Sumpter, D. J.~T. 2007: The evolution of helping and
   harming on graphs: the return of the inclusive fitness effect.
 \newblock Journal of Evolutionary Biology 20(6):2284--2295.
+
+\bibitem[{Lehmann \& Rousset(2014)}]{LehmannRousset2014}
+Lehmann, L. \& Rousset, F. 2014: The genetical theory of social behaviour.
+\newblock Philosophical Transactions of the Royal Society of London B:
+  Biological Sciences 369(1642).
 
 \bibitem[{Leturque \& Rousset(2002)}]{LeturqueRousset2002}
 Leturque, H. \& Rousset, F. 2002: Dispersal, kin competition, and the ideal
@@ -76,16 +91,36 @@ Mullon, C. \& Lehmann, L. 2014: The robustness of the weak selection
   approximation for the evolution of altruism against strong selection.
 \newblock Journal of evolutionary biology 27(10):2272--2282.
 
+\bibitem[{Ohtsuki(2010)}]{Ohtsuki2010}
+Ohtsuki, H. 2010: Evolutionary games in {W}right's island model: kin selection
+  meets evolutionary game theory.
+\newblock Evolution 64(12):3344--3353.
+
 \bibitem[{Ohtsuki et~al.(2006)Ohtsuki, Hauert, Lieberman \&
   Nowak}]{Ohtsuki2006}
 Ohtsuki, H.; Hauert, C.; Lieberman, E. \& Nowak, M.~A. 2006: A simple rule for
   the evolution of cooperation on graphs and social networks.
 \newblock Nature 441(7092):502--505.
 
+\bibitem[{Queller(1994)}]{Queller1994}
+Queller, D.~C. 1994: Genetic relatedness in viscous populations.
+\newblock Evolutionary Ecology 8:70--73.
+\newblock 10.1007/BF01237667.
+
+\bibitem[{{R Core Team}(2015)}]{R2015}
+{R Core Team}. 2015: R: A Language and Environment for Statistical Computing.
+\newblock R Foundation for Statistical Computing, Vienna, Austria.
+
 \bibitem[{Rodrigues \& Gardner(2012)}]{RodriguesGardner2012}
 Rodrigues, A. M.~M. \& Gardner, A. 2012: Evolution of helping and harming in
   heterogeneous populations.
 \newblock Evolution 66(7):2065--2079.
+
+\bibitem[{Rousset \& Billiard(2000)}]{RoussetBilliard2000}
+Rousset, F. \& Billiard, S. 2000: A theoretical basis for measures of kin
+  selection in subdivided populations: finite populations and localized
+  dispersal.
+\newblock Journal of Evolutionary Biology 13(5):814--825.
 
 \bibitem[{Sample \& Allen(2017)}]{SampleAllen2017}
 Sample, C. \& Allen, B. 2017: The limits of weak selection and large population
@@ -122,6 +157,15 @@ Taylor, P.~D. \& Irwin, A.~J. 2000: Overlapping generations can promote
   altruistic behavior.
 \newblock Evolution 54(4):1135--1141.
 
+\bibitem[{{Van Cleve}(2015)}]{VanCleve2015}
+{Van Cleve}, J. 2015: Social evolution and genetic interactions in the short
+  and long term.
+\newblock Theoretical Population Biology 103:2 -- 26.
+
+\bibitem[{West \& Gardner(2010)}]{WestGardner2010}
+West, S.~A. \& Gardner, A. 2010: Altruism, spite, and greenbeards.
+\newblock Science 327(5971):1341--1344.
+
 \bibitem[{West et~al.(2002)West, Pen \& Griffin}]{West2002}
 West, S.~A.; Pen, I. \& Griffin, A.~S. 2002: Cooperation and competition
   between relatives.
@@ -131,5 +175,9 @@ West, S.~A.; Pen, I. \& Griffin, A.~S. 2002: Cooperation and competition
 Wilson, D.~S.; Pollock, G.~B. \& Dugatkin, L.~A. 1992: Can altruism evolve in
   purely viscous populations?
 \newblock Evolutionary Ecology 6(4):331--341.
+
+\bibitem[{{Wolfram Research, Inc.}(2017)}]{Mathematica11}
+{Wolfram Research, Inc.} 2017: Mathematica, {V}ersion 11.1.
+\newblock Champaign, IL, 2017.
 
 \end{thebibliography}

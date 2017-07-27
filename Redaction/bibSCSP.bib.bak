@@ -194,6 +194,20 @@
   Publisher                = {Institute of Mathematical Statistics}
 }
 
+@Article{CockerhamWeir1987,
+  Title                    = {Correlations, descent measures: drift with migration and mutation},
+  Author                   = {Cockerham, C Clark and Weir, BS},
+  Journal                  = {Proceedings of the National Academy of Sciences},
+  Year                     = {1987},
+  Number                   = {23},
+  Pages                    = {8512--8514},
+  Volume                   = {84},
+
+  Owner                    = {florencedebarre},
+  Publisher                = {National Acad Sciences},
+  Timestamp                = {2017.07.27}
+}
+
 @Article{CockerhamWeir1993,
   Title                    = {Estimation of Gene Flow from {F}-Statistics},
   Author                   = {Cockerham, C. Clark and Weir, Bruce S.},
@@ -1342,9 +1356,6 @@ Special cases of the model are used to show (a) that selection in the social sit
   Organization             = {R Foundation for Statistical Computing},
   Year                     = {2015},
 
-  Bdsk-url-1               = {https://www.R-project.org/},
-  Date-added               = {2016-04-20 08:31:38 +0000},
-  Date-modified            = {2016-04-20 08:31:46 +0000},
   Url                      = {https://www.R-project.org/}
 }
 
@@ -1473,20 +1484,14 @@ Special cases of the model are used to show (a) that selection in the social sit
   Timestamp                = {2012.07.24}
 }
 
-@Article{SampleAllen2016,
-  Title                    = {{The limits of weak selection and large population size in evolutionary game theory}},
+@Article{SampleAllen2017,
+  Title                    = {The limits of weak selection and large population size in evolutionary game theory},
   Author                   = {Sample, Christine and Allen, Benjamin},
-  Journal                  = {ArXiv},
-  Year                     = {2016},
+  Journal                  = {Journal of mathematical biology},
+  Year                     = {2017},
+  Pages                    = {1--33},
 
-  Abstract                 = {Evolutionary game theory is a mathematical approach to studying how social behaviors evolve. In many recent works, evolutionary competition between strategies is modeled as a stochastic process in a finite population. In this context, two limits are both mathematically convenient and biologically relevant: weak selection and large population size. These limits can be combined in different ways, leading to potentially different results. We consider two orderings: the wN limit, in which weak selection is applied before the large population limit, and the Nw limit, in which the order is reversed. Formal mathematical definitions of the Nw and wN limits are provided. Applying these definitions to the Moran process of evolutionary game theory, we obtain asymptotic expressions for fixation probability and conditions for success in these limits. We find that the asymptotic expressions for fixation probability, and the conditions for a strategy to be favored over a neutral mutation, are different in the Nw and wN limits. However, the ordering of limits does not affect the conditions for one strategy to be favored over another.},
-  Archiveprefix            = {arXiv},
-  Arxivid                  = {1610.07081},
-  Eprint                   = {1610.07081},
-  File                     = {:home/florencedebarre/ownCloud/Biblio/Articles/Sample-Allen{\_}2016{\_}arXiv{\_}ws.pdf:pdf},
-  Owner                    = {florencedebarre},
-  Timestamp                = {2017.07.04},
-  Url                      = {http://arxiv.org/abs/1610.07081}
+  Publisher                = {Springer}
 }
 
 @Article{Schneider2016,
@@ -1826,6 +1831,20 @@ Special cases of the model are used to show (a) that selection in the social sit
   Publisher                = {Elsevier}
 }
 
+@Article{WestGardner2010,
+  Title                    = {Altruism, spite, and greenbeards},
+  Author                   = {West, Stuart A and Gardner, Andy},
+  Journal                  = {Science},
+  Year                     = {2010},
+  Number                   = {5971},
+  Pages                    = {1341--1344},
+  Volume                   = {327},
+
+  Owner                    = {florencedebarre},
+  Publisher                = {American Association for the Advancement of Science},
+  Timestamp                = {2017.07.27}
+}
+
 @Article{West2007,
   Title                    = {Social semantics: altruism, cooperation, mutualism, strong reciprocity and group selection},
   Author                   = {West, S. A. and Griffin, A. S. and Gardner, A.},
@@ -1897,6 +1916,17 @@ and Dugatkin, L. A.},
   Owner                    = {florencedebarre},
   Timestamp                = {2017.05.30},
   Url                      = {http://dx.doi.org/10.1007/BF02270969}
+}
+
+@Misc{Mathematica11,
+  Title                    = {Mathematica, {V}ersion 11.1},
+
+  Author                   = {{Wolfram Research, Inc.}},
+  Note                     = {Champaign, IL, 2017},
+  Year                     = {2017},
+
+  Owner                    = {florencedebarre},
+  Timestamp                = {2017.07.27}
 }
 
 @Manual{Mathematica2015,
