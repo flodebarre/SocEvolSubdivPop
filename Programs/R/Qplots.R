@@ -2,6 +2,7 @@ rm(list = ls())
 for(i in dev.list())dev.off()
 source("../Mathematica/analyticsQ.R")
 source("globalGraphParms.R")
+
 migpoints <- seq(0, 1, length.out = 501)
 npts <- length(migpoints)
 muts <- c(0.001, 0.01, 0.1)
@@ -19,6 +20,7 @@ dopdf <- TRUE
 wpdfQ <- 5
 hpdfQ <- 4.25
 marpdfQ <- c(3, 3, 0.5, 0)+0.2
+
 initplotQ <- function(savepdf = FALSE, LC = ""){
   if(savepdf){
     filename <- paste0("Pics/Qplot", LC, ".pdf")
@@ -60,3 +62,5 @@ for(LC in c("M", "WF")){
   plotlinesQ(LC)
   closeplotQ(dopdf, LC = LC)
 }
+
+
