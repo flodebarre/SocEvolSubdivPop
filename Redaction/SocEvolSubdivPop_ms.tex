@@ -243,15 +243,47 @@
 \def \wpic {4.5cm}
 
 \begin{document}
-Mon titre 
+%TC:ignore 
+
+\paragraph{Article Type:} Letter
+
+\paragraph{Article Title:} Imperfect strategy transmission can reverse the role of population viscosity on the evolution of altruism 
+($15$ words) 
+
+\paragraph{Author:} Florence D\'ebarre -- Centre Interdisciplinaire de Recherche en Biologie (CIRB), Coll\`ege de France, CNRS UMR 7241 - Inserm U1050, 11 place Marcelin Berthelot, 75231 Paris Cedex 05, France. \texttt{florence.debarre@normalesup.org}
+
+\paragraph{Short Running Title:} Mutation and altruism in subdivided populations ($47$~characters).
+
+\paragraph{Keywords:} Altruism, Subdivided population, Mutation, Migration, Cooperation, Island model.
+%(Up to 10)
+
+\paragraph{Abstract Word Count:} Should be below 300 words
+
+
+\paragraph{Total Word Count:}a\\ Authors should aim to keep the word count below 5000 words. The Abstract, Impact statement, Acknowledgements, Author Contributions and Data Accessibility sections do not contribute towards the word count.
+
+Abstract
+
+The abstract should not exceed 300 words. The main goals, outcomes and conclusions of the work should be summarised. The abstracts should not contain citations.
+
+
+Impact Summary
+
+Authors should provide an approximately 300 word summary, explaining why the article makes an important contribution to Evolutionary Biology. It should be accessible to a wide audience, e.g. journalists, non-expert public interested in evolution, school science teachers.
+
+\clearpage
 
 \todo[inline]{Titre!!!}
 \todo[inline]{Abstract!!!}
 \todo[inline]{Fin discussion qui est encore en notes}
 \todo[inline]{Voter model, faire figure et discuter de la deconnexion entre d et e}
 
+
+
 \clearpage
 \linenumbers
+%TC:endignore 
+
 \pagestyle{maintext}
 \section{Introduction}%
 In his pioneering work on the evolution of social behavior, \citeauthor{Hamilton1964} suggested that altruistic behavior would be associated to limited dispersal \citep[p.~10]{Hamilton1964}. This notion, that tighter links between individuals favor the evolution of altruism, has been shown to hold in a number of population structures  \citep[see \eg][]{Ohtsuki2006, TaylorDayWild2007, Lehmann2007}. The rationale that altruism is favored when altruists interact more with altruists than defectors do (\citealp[p.~141]{Hamilton1975}; \citealp{Fletcher2009})%http://www.jstor.org/stable/10.1086/338945?seq=6#page_scan_tab_contents
@@ -591,6 +623,7 @@ Mutation was also previously included in models investigating the maintenance of
 
 \bibliography{bibSCSP}
 
+
 \clearpage
 % Start the appendix
 
@@ -678,30 +711,32 @@ Mutation was also previously included in models investigating the maintenance of
 
 \begin{table}[h!]
 \begin{tabular}{>{$}c<{$} l}
-N & Total population size ($N = \ndemes n$) \\
-\ndemes & Number of demes \\
-n & Deme size\\
-m & Emigration probability\\
-\mu & Mutation probability\\
-\mutbias & Mutation bias: probability that mutant is altruist\\
 \bb & Fecundity benefit given by altruists to social interactants\\
 \cc & Fecundity cost paid by altruists\\
-\omega & Parameter scaling the relative effect of social interactions on fecundity\\
-X_i & Indicator variable, equal to $1$ if site $i$ is occupied by an altruist, to $0$ otherwise (r.v.)\\
-\overline{X} & Frequency of altruists in the population (r.v.)\\
-\beta & term associated to the benefits $\bb$\\
-\gamma & term associated to the costs $\cc$ \\
-\small \direct & Subscript corresponding to direct/primary effects\\
-\small \indirect & Subscript corresponding to indirect/secondary effects\\
-Q_{ij} & Probability of identity by descent of individuals at sites $i$ and $j$\\
 d_{ij} & Dispersal probability from site $i$ to site $j$\\
 e_{ij} & Interaction probability from site $i$ to site $j$ \\
-\small{\self} & Subscript used when $i=j$\\
+n & Deme size\\
+\ndemes & Number of demes \\
+N & Total population size ($N = \ndemes n$) \\
+m & Emigration probability\\
+Q_{ij} & (Long-term) Probability of identity by descent of individuals at sites $i$ and $j$\\
+X_i & Indicator variable, equal to $1$ if site $i$ is occupied by an altruist, to $0$ otherwise (r.v.)\\
+\overline{X} & Frequency of altruists in the population (r.v.)\\
+\beta & Term associated to the benefits $\bb$\\
+\gamma & Term associated to the costs $\cc$ \\
+\mu & Mutation probability\\
+\mutbias & Mutation bias: probability that mutant is altruist\\
+\omega & Parameter scaling the relative effect of social interactions on fecundity\\
+\hline
+\small \direct & Subscript corresponding to direct/primary effects\\
+\small \indirect & Subscript corresponding to indirect/secondary effects\\
 \small{\inn} & Subscript used when $i\neq j$ and the two sites are in the same deme\\
 \small{\out} & Subscript used when the two sites $i$ and $j$ are in different demes\\
-\small{\Moran} & Superscript corresponding to a Moran model\\
+\small{\self} & Subscript used when $i=j$\\
+\hline
 \small{\BD} & Superscript corresponding to the Moran Birth-Death model\\
 \small{\DB} & Superscript corresponding to the Moran Death-Birth model\\
+\small{\Moran} & Superscript corresponding to a Moran model\\
 \small{\WF} & Superscript corresponding to the Wright-Fisher model
 \end{tabular}
 \caption{List of symbols. ``r.v.'' means \textit{random variable}. }
