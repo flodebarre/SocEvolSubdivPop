@@ -45,6 +45,10 @@
 
 \usepackage{chngcntr} % For equation counter in the appendix
 
+% Date format
+\usepackage[iso, english]{isodate}
+
+
 % HEAD AND FOOT
 \usepackage{lastpage}
 \usepackage{fancyhdr}
@@ -52,14 +56,16 @@
 \fancyhf{}
 \fancyhead[C]{}
 \fancyfoot[C]{\thepage/\pageref{LastPage}}
+\fancyfoot[R]{\today}
 \renewcommand{\headrulewidth}{0.pt}
 }
 
 \fancypagestyle{appendix}{
 \fancyhf{}
-\fancyhead[C]{{\sf Appendix \thesection{}}}
+\fancyhead[C]{{Appendix \thesection{}}}
 \fancyfoot[C]{\thepage}
-\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\headrulewidth}{0.02pt}
+\fancyfoot[R]{\today}
 }
 
 % BIBLIOGRAPHY
@@ -243,6 +249,8 @@
 \def \wpic {4.5cm}
 
 \begin{document}
+\pagestyle{maintext}
+
 %TC:ignore 
 
 \paragraph{Article Type:} Letter
@@ -279,10 +287,7 @@ The evolution of altruistic behavior has fascinated and puzzled evolutionary bio
 
 %Authors should provide an approximately 300 word summary, explaining why the article makes an important contribution to Evolutionary Biology. It should be accessible to a wide audience, e.g. journalists, non-expert public interested in evolution, school science teachers.
 
-\clearpage
 
-\todo[inline]{Titre!!!}
-\todo[inline]{Abstract!!!}
 \todo[inline]{Fin discussion qui est encore en notes}
 \todo[inline]{Voter model, faire figure et discuter de la deconnexion entre d et e}
 
@@ -292,7 +297,7 @@ The evolution of altruistic behavior has fascinated and puzzled evolutionary bio
 \linenumbers
 %TC:endignore 
 
-\pagestyle{maintext}
+
 \section{Introduction}%
 In his pioneering work on the evolution of social behavior, \citeauthor{Hamilton1964} suggested that altruistic behavior would be associated to limited dispersal \citep[p.~10]{Hamilton1964}. This notion, that tighter links between individuals favor the evolution of altruism, has been shown to hold in a number of population structures  \citep[see \eg][]{Ohtsuki2006, TaylorDayWild2007, Lehmann2007}. The rationale that altruism is favored when altruists interact more with altruists than defectors do (\citealp[p.~141]{Hamilton1975}; \citealp{Fletcher2009})%http://www.jstor.org/stable/10.1086/338945?seq=6#page_scan_tab_contents
 , a condition that is met in viscous populations, \ie, populations with limited dispersal.
@@ -601,13 +606,8 @@ If we (erroneously) considered only direct effects, we would conclude that the e
 But this explanation ignores indirect, competitive, effects. In the three life-cycles that we considered, $\beta_{\indirect} = \gamma_{\indirect}$, so the overall indirect effects are given by $(-(\bb-\cc) \beta_{\indirect})$. Hence, any increase of $\Esp{\overline{X}}$ with $m$ is driven by $\beta_{\indirect}$. Indirect effects correspond to competition: helping another individual indirectly harms others -- even the individual who is providing help is indirectly harmed. This competition can be diluted by increasing the emigration probability $m$. 
 The overall effect of $m$ on the expected frequency of altruists depends on the balance between direct and indirect effects. This balance depends on the fidelity of parent-offspring transmission ($\mu$), in particular because probabilities of identity by descent depend on $\mu$. 
 
-Westetal2002 for review on competition. 
-Indirect effects and cancellation result Taylor1992 + \citep{Queller1994} \citep[][with $n$ player games]{Ohtsuki2010}
-Indirect effects scale of competition explain why BD DB differences \citep{GrafenArchetti2008}. Can explain the evolution of social behaviors such as spite \citep{WestGardner2010}WG10. Mitigate the effects of fecundity costs associated to a beneficial trait \citep{Debarre2015evo}.
+Indirect (secondary) effects are less straightforward to understand than direct (/primary) effects, yet they play a crucial role for social evolution in spatially structured populations. Competition among relatives is for instance behind \citet{Taylor1992}'s cancellation result; similarly, the qualitative differences between the Moran Birth-Death and Moran Death-Birth life-cycles is explained by the different scales of competition that the two life-cycle produce \citep{GrafenArchetti2008, DebarreHD2014}. Secondary effects are also behind the evolution of social behaviors such as spite \citep{WestGardner2010}. 
 
-Primary and secondary recipients West and Gardner 2010. 
-
-Competitive effects are less straightforward to explain than direct
 %  To simplify the explanations, let us consider that the number of demes is large: in this case, $\Qout$ is vanishingly small. Let us also assume that there is no direct cost to being an altruist ($\cc = 0$). 
 
 % Order of limits
@@ -766,6 +766,8 @@ X_i & Indicator variable, equal to $1$ if site $i$ is occupied by an altruist, t
 \begin{center}
 {\color{seccol}{\LARGE \bfseries \appname}}
 \end{center}
+
+\pagestyle{appendix}
 
 \section{Fecundity and weak selection approximation\label{sec:app:F}}
 

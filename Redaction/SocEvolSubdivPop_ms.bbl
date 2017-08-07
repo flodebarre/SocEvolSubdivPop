@@ -1,4 +1,4 @@
-\begin{thebibliography}{36}
+\begin{thebibliography}{38}
 \providecommand{\natexlab}[1]{#1}
 
 \bibitem[{Alizon \& Taylor(2008)}]{Alizon2008}
@@ -37,6 +37,11 @@ D\'ebarre, F. 2017: Fidelity of parent-offspring transmission and the evolution
   of social behavior in structured populations.
 \newblock Journal of Theoretical Biology 420:26 -- 35.
 
+\bibitem[{D\'ebarre et~al.(2014)D\'ebarre, Hauert \& Doebeli}]{DebarreHD2014}
+D\'ebarre, F.; Hauert, C. \& Doebeli, M. 2014: Social evolution in structured
+  populations.
+\newblock Nature Communications 5.
+
 \bibitem[{Fletcher \& Doebeli(2009)}]{Fletcher2009}
 Fletcher, J.~A. \& Doebeli, M. 2009: {A simple and general explanation for the
   evolution of altruism}.
@@ -44,7 +49,7 @@ Fletcher, J.~A. \& Doebeli, M. 2009: {A simple and general explanation for the
   276(1654):13--19.
 
 \bibitem[{Frank(1997)}]{Frank1997}
-Frank, S.~A. 1997: The price equation, fisher's fundamental theorem, kin
+Frank, S.~A. 1997: The {Price} equation, {F}isher's fundamental theorem, kin
   selection, and causal analysis.
 \newblock Evolution 51(6):1712--1729.
 
@@ -132,14 +137,21 @@ Tarnita, C.~E. \& Taylor, P.~D. 2014: Measures of relative fitness of social
   behaviors in finite structured population models.
 \newblock The American Naturalist 184(4):477--488.
 
-\bibitem[{Taylor(1992)}]{Taylor1992islandmodel}
-Taylor, P. 1992: Altruism in viscous populations---an inclusive fitness model.
+\bibitem[{Taylor(1992{\natexlab{a}})}]{Taylor1992islandmodel}
+Taylor, P. 1992{\natexlab{a}}: Altruism in viscous populations---an inclusive
+  fitness model.
 \newblock Evolutionary ecology 6(4):352--356.
 
 \bibitem[{Taylor et~al.(2011)Taylor, Lillicrap \& Cownden}]{Taylor2011}
 Taylor, P.; Lillicrap, T. \& Cownden, D. 2011: Inclusive fitness analysis on
   mathematical groups.
 \newblock Evolution 65(3):849--859.
+
+\bibitem[{Taylor(1992{\natexlab{b}})}]{Taylor1992}
+Taylor, P.~D. 1992{\natexlab{b}}: Inclusive fitness in a homogeneous
+  environment.
+\newblock Proceedings of the Royal Society of London. Series B: Biological
+  Sciences 249(1326):299--302.
 
 \bibitem[{Taylor et~al.(2007{\natexlab{a}})Taylor, Day \&
   Wild}]{TaylorDayWild2007}
