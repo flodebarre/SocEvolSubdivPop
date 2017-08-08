@@ -2,7 +2,6 @@ for(i in dev.list())dev.off()
 
 source("globalGraphParms.R")
 
-
 source("../Mathematica/analytics.R")
 
 specify_decimal <- function(x, k) format(round(x, k), nsmall=k)
@@ -26,11 +25,29 @@ plotDist <- function(i){
 
   # PROPORTION OF ALTRUISTS IN THE POPULATION
   # nA / (nA + nB)
-PlotProp <- function(upd, sel, htg, ylim=c(0,1), addAnalysis=FALSE, pdf = TRUE, addTitle = FALSE, plotData = TRUE, muL = mutList, migL = migList, ids = 1, ies = 0, addMu0 = FALSE, theg = 0){
+PlotProp <- function(upd, sel, htg, ylim=c(0,1), addAnalysis=FALSE, pdf = TRUE, addTitle = FALSE, plotData = TRUE, muL = mutList, migL = migList, ids = 1, ies = 0, addMu0 = FALSE, theg = 0, sameDE = FALSE){
   
   # upd Update rule ("BD", "DB", "WF")
+  # sel value of delta, selection strength
+  # htg whether deme sizes are unequal
+  # ylim range of the y axis
+  # addAnalysis whether to add analytical curves
+  # pdf whether to save as pdf
+  # addTitle whether to add a plot title
+  # plotData whether to plot simulation data (if exists)
+  # muL vector of mutation values
+  # migL vector of migration values
   # ids Idself, whether self-replacement (d_{ii})
   # ies Ieself, whether interactions with oneself (e_{ii})
+  # addMu0 whether to add a curve corresponding to mu -> 0
+  # theg value of g, interaction graph equivalent of m (prop interactions outside deme)
+  # sameDE whether the D and E graphs are to be the same
+  
+    # Check consistency of the input
+    if(sameDE){
+      if(theg != 0) stop("You cannot specify g if you want D and E to be the same!")
+      if(ids != ies) stop("Idself and Ieself have to be equal if you want D and E to be the same!")
+    }
 
     # Initializations if not pdf
     thecex <- cexpoints <- cexlab <- 1
@@ -39,9 +56,10 @@ PlotProp <- function(upd, sel, htg, ylim=c(0,1), addAnalysis=FALSE, pdf = TRUE, 
       cexpoints <- 1.6 # cex of the points
       cexlab <- 1.6 # cex of the labels
       
-      ext <- ""
+      DEindic <- ext <- ""
       if(ids!=1) ext <- "_nodself"
-      filename <- paste0('Pics/', "EX", upd, "_sel", sel, "_htg", htg, ext) # Name of the pdf file
+      if(sameDE) DEindic <- "_sameDE"
+      filename <- paste0('Pics/', "EX", upd, "_sel", sel, "_htg", htg, ext, DEindic) # Name of the pdf file
 
       pdf(paste0(filename, ".pdf"), width = 4., height = 5., compress = FALSE) # Open pdf
       if(addTitle) martit <- 2.5 else martit <- 0
@@ -69,7 +87,13 @@ PlotProp <- function(upd, sel, htg, ylim=c(0,1), addAnalysis=FALSE, pdf = TRUE, 
     for(imu in  seq_along(muL)){
       if(addAnalysis){ # Add analytical prediction
         # Define a function of mig for the specific set of parameters
+        # Definition depends on sameDE (if TRUE, g changes as m)
+        if(!sameDE){
       tmpP <- function(x) get(paste0("p", upd))(b=mBList[1], c=1, p=p, sel=sel, mut=muL[imu], m=x, g=theg, n=4, d=thed, Idself=ids, Ieself=ies)
+        }else{
+      tmpP <- function(x) get(paste0("p", upd))(b=mBList[1], c=1, p=p, sel=sel, mut=muL[imu], m=x, g=x, n=4, d=thed, Idself=ids, Ieself=ies)
+        }
+
         # Plot it
         curve(tmpP, from=0, to=0.9,#par("usr")[2], 
               col=colMut[imu], add = TRUE, lwd = 3)
@@ -91,7 +115,11 @@ PlotProp <- function(upd, sel, htg, ylim=c(0,1), addAnalysis=FALSE, pdf = TRUE, 
     if(addMu0){
       # Add mu = 0
       epsmu <- 0.00000001
-      tmpP <- function(x) get(paste0("p", upd))(b=mBList[1], c=1, p=p, sel=sel, mut=epsmu, m=x, g=0, n=4, d=thed, Idself=ids, Ieself=ies)
+      if(!sameDE){
+        tmpP <- function(x) get(paste0("p", upd))(b=mBList[1], c=1, p=p, sel=sel, mut=epsmu, m=x, g=0, n=4, d=thed, Idself=ids, Ieself=ies)
+      }else{
+        tmpP <- function(x) get(paste0("p", upd))(b=mBList[1], c=1, p=p, sel=sel, mut=epsmu, m=x, g=x, n=4, d=thed, Idself=ids, Ieself=ies)
+      }
       # Plot it
       curve(tmpP, from=0.001, to=0.9,#par("usr")[2], 
             col='blue', add = TRUE, lwd = 2.5, lty = 2)
@@ -139,4 +167,8 @@ PlotProp("DB", 0.005, 0, muL = themutList, migL = themigList, ids = 0, plotData 
 PlotProp("BD", 0.005, 0, muL = themutList, migL = themigList, ids = 0, plotData = FALSE, addAnalysis = TRUE, ylim = ylm, addMu0 = TRUE)
 PlotProp("WF", 0.005, 0, muL = themutList, migL = themigList, ids = 0, plotData = FALSE, addAnalysis = TRUE, ylim = ylm, addMu0 = TRUE)
 
+# FIGURE S4
+PlotProp("DB", 0.005, 0, muL = themutList, migL = themigList, ids = 0, plotData = FALSE, addAnalysis = TRUE, ylim = ylm, addMu0 = TRUE, sameDE = TRUE)
+PlotProp("BD", 0.005, 0, muL = themutList, migL = themigList, ids = 0, plotData = FALSE, addAnalysis = TRUE, ylim = ylm, addMu0 = TRUE, sameDE = TRUE)
+PlotProp("WF", 0.005, 0, muL = themutList, migL = themigList, ids = 0, plotData = FALSE, addAnalysis = TRUE, ylim = ylm, addMu0 = TRUE, sameDE = TRUE)
 

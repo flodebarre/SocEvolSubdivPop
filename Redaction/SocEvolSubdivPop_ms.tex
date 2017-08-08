@@ -63,7 +63,7 @@
 \fancypagestyle{appendix}{
 \fancyhf{}
 \fancyhead[C]{{Appendix \thesection{}}}
-\fancyfoot[C]{\thepage}
+\fancyfoot[C]{\thepage/\pageref{LastPage}}
 \renewcommand{\headrulewidth}{0.02pt}
 \fancyfoot[R]{\today}
 }
@@ -166,7 +166,7 @@
 %%% STUFF TO COMMENT OUT FOR THE FINAL VERSION 
 \usepackage{soul} % Highlighting (command \hl{})
 \usepackage{todonotes} % Add Word-style comments (\todo{})
-\usepackage[]{showlabels} % To display the labels of the equations on the pdf; 
+\usepackage[final]{showlabels} % To display the labels of the equations on the pdf; 
 \usepackage[top = 1.15in, bottom = 1.25in, left = 1.75in, right = 1.75in]{geometry}
 %\geometry{textwidth=0.65\paperwidth}
 %%%
@@ -239,7 +239,7 @@
 % FLUSH FIGURES IN THE END
 %\usepackage[tablesonly]{endfloat}
 
-%\usepackage[fighead, nofiglist, nomarkers]{endfloat}
+\usepackage[fighead, nofiglist, nomarkers]{endfloat}
 %\renewcommand{\efloatseparator}{}
 
 \newcommand{\defeq}{\mathrel{\mathop:}=}
@@ -268,15 +268,17 @@
 \begin{tabular}[t]{ll}
 Abstract & $172$ \\
 Impact summary & $282$ words \\
-Total & XX
+Total & $4234$ words
 \end{tabular}
 
 %\paragraph{Abstract Word Count:} Should be below 300 words
 
 %\paragraph{Total Word Count:}a\\ Authors should aim to keep the word count below 5000 words. The Abstract, Impact statement, Acknowledgements, Author Contributions and Data Accessibility sections do not contribute towards the word count.
 
-\subsubsection*{Abstract}
 
+\linenumbers
+\subsubsection*{Abstract}
+\doublespacing
 Population viscosity, \ie, low emigration out of the natal deme, leads to high within-deme relatedness, which is beneficial to the evolution of altruistic behavior when social interactions take place among deme-mates. At the same time however, it increases competition among related individuals. The evolution of altruism depends on the balance between these opposite effects. This balance is already known to be affected by details of the life-cycle; we show here that it further depends on the fidelity of strategy transmission from parents to their offspring. We consider different life-cycles (Wright-Fisher, with synchronous non-overlapping generations, Moran Death-Birth and Moran Birth-Death, both with exactly one individual dying and reproducing at each time step) and we identify thresholds of parent-offspring strategy transmission inaccuracy, above which the effect of population viscosity on the frequency of altruists maintained in the population qualitatively changes. Analytical predictions are first obtained analytically under weak selection and equal deme sizes, then confirmed with stochastic simulations relaxing these assumptions. This result challenges the notion that the evolution of altruism requires limited dispersal. 
 
 \clearpage
@@ -288,13 +290,9 @@ The evolution of altruistic behavior has fascinated and puzzled evolutionary bio
 %Authors should provide an approximately 300 word summary, explaining why the article makes an important contribution to Evolutionary Biology. It should be accessible to a wide audience, e.g. journalists, non-expert public interested in evolution, school science teachers.
 
 
-\todo[inline]{Fin discussion qui est encore en notes}
-\todo[inline]{Voter model, faire figure et discuter de la deconnexion entre d et e}
-
-
 
 \clearpage
-\linenumbers
+
 %TC:endignore 
 
 
@@ -415,7 +413,7 @@ Given the law of total probabilities, we first consider the site that was last u
 \end{align}
 \end{subequations}
 %
-The probability that two different deme-mates are identical by descent, $\Qin^{\Moran}$, monotonically decreases with the emigration probability $m$, while  $\Qout^{\Moran}$ monotonically increases with $m$ (see figure~\ref{fig:Q}\subref{fig:sub:QM}). 
+The probability that two different deme-mates are identical by descent, $\Qin^{\Moran}$, decreases monotonically with the emigration probability $m$, while  $\Qout^{\Moran}$ monotonically increases with $m$ (see figure~\ref{fig:Q}\subref{fig:sub:QM}). 
 
 When the mutation probability $\mu$ is vanishingly small ($\mu \to 0$), both $\Qin^{\Moran}$ and $\Qout^{\Moran}$ are equal to $1$: in the absence of mutation indeed, the population ends up fixed for one of the two types, and all individuals are identical by descent. Note that we obtain a different result if we first assumed that the size of the population is infinite ($\ndemes \to \infty$), because the order of limits matters; %  ($\lim_{d\to\infty} \lim_{\mu\to0} \Qin^{M} \neq  \lim_{\mu\to0} \lim_{d\to\infty}   \Qin^{M}$).
 for instance, $\lim_{d\to \infty} \Qout^{M}=0$. 
@@ -449,7 +447,7 @@ The two probabilities of identity by descent go to $1$ when the mutation probabi
 
 Also, because more sites (all of them, actually) are updated at each time step, $\Qin$ is lower for the Wright-Fisher updating than for a Moran updating, under which only one site is updated at each time step (compare figure~\ref{fig:Q}\subref{fig:sub:QM} and \ref{fig:Q}\subref{fig:sub:QWF}). 
 
-\begin{figure}
+\begin{figure}[h]
 \begin{tabular}{cc}
 \subfigure[\label{fig:sub:QM}Moran]{\includegraphics[width = \wpic]{../Programs/R/Pics/QplotM.pdf}}
 &
@@ -621,15 +619,26 @@ Our model is mechanistic; relatedness $r$ necessarily depends on the mutation pr
 
 Mutation was also previously included in models investigating the maintenance of cooperative microorganisms in the presence of cheaters \citep{Brockhurst2007, Frank2010}. In both of these models however, only loss-of-function mutation was considered, which corresponds to setting the mutation bias at $\mutbias=0$ in our model. This means that the all-cheaters state is absorbing; no matter how favored cooperators may otherwise be, in the long run, a finite population will only consist of cheaters. 
 
-% Links votant
-\todo{Voter model Ayana Graphs et dire que on peut avoir e = d. Faire figure avant de commencer a discuter ca.} 
+\subsection*{Interactions and dispersal graphs}
+
+Compared to graphs classically used in evolutionary graph theory (\eg, regular random graphs, grids), the island model is particular because the interaction graph and the dispersal graph are different: interactions take place only within demes ($\eout = 0$), while offspring can disperse out of their natal deme ($\dout >0$). One may wonder whether our result depends on this difference between the two graphs. Figure~\ref{fig:EXsameDE} shows that the result still holds when the dispersal and interaction graphs are the same. In this figure indeed, we let a proportion $m$ (equal to the dispersal probability) of interactions occur outside of the deme where the individuals live, and set $\dself$, the probability of self replacement, equal to $0$, so that the dispersal and interactions graphs are the same. 
+
+\subsection*{Coevolution of dispersal and social behavior}
+This work also raises the question of what would happen if dispersal (\eg, the emigration probability $m$) could evolve as well. Recent work on the topic has shown that under some conditions disruptive selection could take place, leading to a polymorphism between sessile altruists and mobile defectors \citep{Parvinen2013, MullonKL2017bioRxiv}. The assumptions of these studies however  differ from ours in important ways, in that they consider continuous traits and use an adaptive dynamics framework, where, notably, mutations are assumed to be very rare. It remains to be investigated how non-rare and potentially large mutations would affect their result. 
 
 
+\singlespacing
 %%% ___ BIBLIO _____
 \clearpage
 \bibliographystyle{bibstyle}
-
 \bibliography{bibSCSP}
+\doublespacing
+
+\processdelayedfloats
+
+\makeatletter
+\efloat@restorefloats
+\makeatother
 
 
 \clearpage
@@ -714,6 +723,19 @@ Mutation was also previously included in models investigating the maintenance of
 \label{fig:EXdself}
 \end{figure}
 
+% Figure SameDE
+\begin{figure}
+\begin{tabular}{ccc}
+\subfigure[Death-Birth \label{fig:EXsameDEDB}]{\includegraphics[type=pdf,ext=.pdf,read=.pdf, width=\wpic]{../Programs/R/Pics/EXDB_sel0.005_htg0_nodself_sameDE}}
+&
+\subfigure[Birth-Death \label{fig:EXsameDEBD}]{\includegraphics[type=pdf,ext=.pdf,read=.pdf, width=\wpic]{../Programs/R/Pics/EXBD_sel0.005_htg0_nodself_sameDE}}
+&
+\subfigure[Wright-Fisher \label{fig:EXsameDEWF}]{\includegraphics[type=pdf,ext=.pdf,read=.pdf, width=\wpic]{../Programs/R/Pics/EXWF_sel0.005_htg0_nodself_sameDE}}
+\end{tabular}
+\caption{Equivalent of figure~\ref{fig:EX} (analysis only), with equal dispersal and interaction graphs (\ie, no self-replacement [$d_{ii} = \dself = 0$ for all sites], and a proportion~$m$ of the interactions occurring outside of the home deme). }
+\label{fig:EXsameDE}
+\end{figure}
+
 \clearpage
 \section*{Supplementary Table}
 
@@ -768,6 +790,7 @@ X_i & Indicator variable, equal to $1$ if site $i$ is occupied by an altruist, t
 \end{center}
 
 \pagestyle{appendix}
+\singlespace
 
 \section{Fecundity and weak selection approximation\label{sec:app:F}}
 
@@ -1045,8 +1068,8 @@ Let us first compute $\tilde{\mathcal{D}}_{\substack{q_1 \\ q_2}} $ in the case 
 So for $\tilde{\mathcal{Q}}$, using \sysref{eq:app:Dsystem} in \eqref{eq:app:Q2DM}, 
 %
 \begin{align}
-\tilde{\mathcal{Q}}_{\substack{r_1\\r_2}}&= \frac{\mu \lambda_M'}{N} \Bigg[  \frac{1}{1 - (1-\mu) \tilde{\mathcal{D}}_{\substack{0\\ 0}}} + \sum_{q_2 = 1}^{N_2-1}\frac{1}{1 - (1-\mu) \tilde{\mathcal{D}}_{\substack{0\\ q_2}}} \exp\left(-\imath \frac{2\pi q_2 r_2}{N_2}\right) %\nonumber \\
-%& \qquad 
+\tilde{\mathcal{Q}}_{\substack{r_1\\r_2}}&= \frac{\mu \lambda_M'}{N} \Bigg[  \frac{1}{1 - (1-\mu) \tilde{\mathcal{D}}_{\substack{0\\ 0}}} + \sum_{q_2 = 1}^{N_2-1}\frac{1}{1 - (1-\mu) \tilde{\mathcal{D}}_{\substack{0\\ q_2}}} \exp\left(-\imath \frac{2\pi q_2 r_2}{N_2}\right) \nonumber \\
+& \qquad 
 + \sum_{q_1 =1}^{N_1 - 1} \frac{1}{1 - (1-\mu) \tilde{\mathcal{D}}_{\substack{q_1\\ 0}}} \exp\left(-\imath \frac{2\pi q_1 r_1}{N_1}\right) \nonumber \\
 & \qquad 
 + 
@@ -1054,8 +1077,8 @@ So for $\tilde{\mathcal{Q}}$, using \sysref{eq:app:Dsystem} in \eqref{eq:app:Q2D
  %
  %
 & = \frac{\mu \lambda_M'}{N} \Bigg[  \frac{1}{1 - (1-\mu) } 
-+ \frac{1}{1 - (1-\mu) (\dself - \din)} (\delta_{r_2} N_2 - 1) %\nonumber \\
-%& \qquad 
++ \frac{1}{1 - (1-\mu) (\dself - \din)} (\delta_{r_2} N_2 - 1) \nonumber \\
+& \qquad 
 +  \frac{1}{1 - (1-\mu) (1-m-\frac{m}{d-1})} (\delta_{r_1} N_1 - 1) \nonumber \\
 & \qquad 
 + 
@@ -1170,11 +1193,11 @@ and
 With $\dself = \din = (1-m)/n$, we recover the equations given in the main text (\sysref{eq:QWF}).
 
 \clearpage
+\singlespacing
 \newgeometry{top=1.in, bottom = 1in}
 \subsection{\label{sec:app:betaI}Unpacking $\beta_{\indirect}^{\DB}$}
 
 The table below contains all combinations for $i$, $j$, $k$, $l$ involved in the four sums. $(i, j)$: means that $i$ and $j$ are different sites in the same deme; $G_i$: deme containing site $i$.
-
 %\begin{landscape}
 
 {\scriptsize

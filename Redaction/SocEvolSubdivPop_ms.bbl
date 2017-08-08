@@ -1,4 +1,4 @@
-\begin{thebibliography}{38}
+\begin{thebibliography}{37}
 \providecommand{\natexlab}[1]{#1}
 
 \bibitem[{Alizon \& Taylor(2008)}]{Alizon2008}
@@ -27,10 +27,6 @@ Brockhurst, M.~A.; Buckling, A. \& Gardner, A. 2007: Cooperation peaks at
 Cockerham, C.~C. \& Weir, B. 1987: Correlations, descent measures: drift with
   migration and mutation.
 \newblock Proceedings of the National Academy of Sciences 84(23):8512--8514.
-
-\bibitem[{D\'ebarre(2015)}]{Debarre2015evo}
-D\'ebarre, F. 2015: Fitness costs in spatially structured environments.
-\newblock Evolution 69:1329--1335.
 
 \bibitem[{D\'ebarre(2017)}]{Debarre2017}
 D\'ebarre, F. 2017: Fidelity of parent-offspring transmission and the evolution
@@ -91,15 +87,15 @@ Leturque, H. \& Rousset, F. 2002: Dispersal, kin competition, and the ideal
 Lion, S. 2016: Moment equations in spatial evolutionary ecology.
 \newblock Journal of theoretical biology 405:46--57.
 
+\bibitem[{Mullon et~al.(2017)Mullon, Keller \& Lehmann}]{MullonKL2017bioRxiv}
+Mullon, C.; Keller, L. \& Lehmann, L. 2017: Co-evolution of dispersal with
+  behaviour favours social polymorphism.
+\newblock bioRxiv .
+
 \bibitem[{Mullon \& Lehmann(2014)}]{MullonLehmann2014}
 Mullon, C. \& Lehmann, L. 2014: The robustness of the weak selection
   approximation for the evolution of altruism against strong selection.
 \newblock Journal of evolutionary biology 27(10):2272--2282.
-
-\bibitem[{Ohtsuki(2010)}]{Ohtsuki2010}
-Ohtsuki, H. 2010: Evolutionary games in {W}right's island model: kin selection
-  meets evolutionary game theory.
-\newblock Evolution 64(12):3344--3353.
 
 \bibitem[{Ohtsuki et~al.(2006)Ohtsuki, Hauert, Lieberman \&
   Nowak}]{Ohtsuki2006}
@@ -107,10 +103,10 @@ Ohtsuki, H.; Hauert, C.; Lieberman, E. \& Nowak, M.~A. 2006: A simple rule for
   the evolution of cooperation on graphs and social networks.
 \newblock Nature 441(7092):502--505.
 
-\bibitem[{Queller(1994)}]{Queller1994}
-Queller, D.~C. 1994: Genetic relatedness in viscous populations.
-\newblock Evolutionary Ecology 8:70--73.
-\newblock 10.1007/BF01237667.
+\bibitem[{Parvinen(2013)}]{Parvinen2013}
+Parvinen, K. 2013: Joint evolution of altruistic cooperation and dispersal in a
+  metapopulation of small local populations.
+\newblock Theoretical population biology 85:12--19.
 
 \bibitem[{{R Core Team}(2015)}]{R2015}
 {R Core Team}. 2015: R: A Language and Environment for Statistical Computing.
