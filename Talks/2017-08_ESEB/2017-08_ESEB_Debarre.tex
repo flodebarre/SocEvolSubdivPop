@@ -192,6 +192,9 @@ Symposium 9: Fitness and evolution in a social environment: from theory to reali
 }
 
 \end{tikzpicture}
+
+\btVFill
+{\small ($b=15, c=1, \demesize = 4, \nbdemes = 15, \selstr = 0.005$)}
 \end{center}
 
 \end{frame}
@@ -220,6 +223,9 @@ Symposium 9: Fitness and evolution in a social environment: from theory to reali
 };
 }
 \end{tikzpicture}
+\btVFill
+{\small ($b=15, c=1, \demesize = 4, \nbdemes = 15, \selstr = 0.005$)}
+
 \end{center}
 
 \end{frame}
@@ -253,8 +259,34 @@ Symposium 9: Fitness and evolution in a social environment: from theory to reali
 
 
 \end{tikzpicture}
+\alt<2>{\btVFill
+{\small ($b=15, c=1, \demesize = 4, \nbdemes = 15, \selstr = 0.1$)}
+}{\btVFill
+{\small ($b=15, c=1, \demesize = 4, \nbdemes = 15, \selstr = 0.005$)}
+}
 \end{center}
 \end{frame}
+
+
+\begin{frame}{Heterogeneous deme sizes ($\overline{n} = 4$ as before, but $2\leq n \leq 5$)}
+\begin{center}
+\begin{tikzpicture}
+\node[] (pWFs){\includegraphics[width=\wpic]{{../../Programs/R/Pics/ESEB_EXWF_sel0.005_htg1}.pdf}
+};
+\node[above= 0cm of pWFs]{Wright-Fisher};
+
+
+\node[right = 0cm of pWFs](pDBs){\includegraphics[width=\wpic]{{../../Programs/R/Pics/ESEB_EXDB_sel0.005_htg1}.pdf}
+};
+\node[above= 0cm of pDBs]{Moran Death-Birth};
+
+\end{tikzpicture}
+\btVFill
+{\small ($b=15, c=1, \overline{\demesize} = 4, \nbdemes = 15, \selstr = 0.005$)}
+
+\end{center}
+\end{frame}
+
 
 \begin{frame}{bfjdklf }
 \includegraphics[width=0.5\textwidth]{{../../Programs/R/Pics/ESEB_EXWF_sel0.005_htg0_3}.pdf}

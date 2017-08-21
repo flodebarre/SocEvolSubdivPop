@@ -176,7 +176,10 @@ PlotProp("DB", 0.005, 0, addAnalysis = TRUE, ylim = ylm, muL = themutList, migL 
 
 PlotProp("BD", 0.005, 0, addAnalysis = TRUE, ylim = ylm, muL = themutList, migL = themigList, addMu0 = TRUE)
 
-PlotProp("BD", 0.005, 0, addAnalysis = TRUE, ylim = ylm, muL = themutList, migL = themigList, addMu0 = TRUE)
+PlotProp("BD", 0.005, 0, addAnalysis = FALSE, ylim = ylm, muL = themutList, migL = themigList, addMu0 = TRUE, plotData = FALSE, suffix = "_justMu0", addLegend = FALSE)
+
+
+PlotProp("BD", 0.005, 0, addAnalysis = TRUE, ylim = ylm, muL = themutList, migL = themigList, addMu0 = TRUE, suffix="_leg", addLegend = TRUE)
 
 PlotProp("WF", 0.005, 0, addAnalysis = FALSE, ylim = ylm, muL = themutList, migL = themigList, addMu0 = TRUE, plotData = FALSE, suffix = "_justMu0", addLegend = FALSE)
 

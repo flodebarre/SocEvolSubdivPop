@@ -1,0 +1,114 @@
+\documentclass[aspectratio=169]{beamer}
+
+\input{styleESEB.tex}
+
+\begin{document}
+\begin{frame}
+
+\end{frame}
+
+\begin{frame}{Updating the population}
+\begin{center}
+
+\begin{columns}
+\begin{column}{0.5\textwidth} 
+Constant population size ($N$), so\\
+between two time steps, 
+
+\newcommand{\Ddead}{\includegraphics[height=0.75cm]{Pics/death}}
+\newcommand{\Dbaby}{\includegraphics[height=0.75cm]{Pics/birth}}
+{\Large 
+\begin{tikzpicture}
+\def \ndim {-0.25cm}
+\tikzstyle{textrec}=[rectangle, minimum width=2cm]
+\node[textrec] at (0,0) (Ge){$=$};
+\node[textrec, left of = Ge] (G1){$\# \vcenter{\hbox{\Ddead}}$};
+\node[textrec, right of =Ge] (G2){$\# \vcenter{\hbox{\Dbaby}}$};
+
+\uncover<2->{
+\node[textrec]at (0,-2) (Ae){$=$};
+\node[textrec, left of = Ae] (A1){$N \, \vcenter{\hbox{\Ddead}}$};
+\node[textrec, right of =Ae] (A2){$N \, \vcenter{\hbox{\Dbaby}}$};
+
+\node[below =\ndim of A1]{$\vdots$};
+\node[below =\ndim of A2]{$\vdots$};
+\node[below =\ndim of Ae](de){};
+
+\node[textrec, below of = de, anchor=north] (Be){$=$};
+\node[textrec, left of = Be] (B1){$k \, \vcenter{\hbox{\Ddead}}$};
+\node[textrec, right of =Be] (B2){$k \, \vcenter{\hbox{\Dbaby}}$};
+
+\node[below =\ndim of B1]{$\vdots$};
+\node[below =\ndim of B2]{$\vdots$};
+\node[below =\ndim of Be](de2){};
+
+\node[textrec, below of = de2, anchor=north] (Ce){$=$};
+\node[textrec, left of = Ce] (C1){$1 \, \vcenter{\hbox{\Ddead}}$};
+\node[textrec, right of =Ce] (C2){$1 \, \vcenter{\hbox{\Dbaby}}$};
+
+\path[->, draw, >=latex, line width=1pt] (C1.west)--(A1.west);
+}
+
+\uncover<3->{
+\node[textrec, right = 0cm of A2.east, font=\normalsize]{Wright-Fisher};
+
+\node[textrec, right = 0cm of C2.east, align=center, font=\normalsize]{Moran process};
+
+}
+\end{tikzpicture}
+}
+
+\end{column}
+
+\begin{column}{0.47\textwidth} 
+\begin{center}
+\uncover<5->{
+\textcolor{maincol}{Life-cycle}\\
+``Death-Birth'' updating
+}
+
+\vspace{1em}
+\begin{tikzpicture}
+\def \xx {2.25}
+
+\tikzstyle{lcstep}=[rectangle, rounded corners, text width=3cm, minimum height=1.25cm, align=center, fill=bgcol!20, inner sep=2pt, font=\normalsize]
+
+\tikzstyle{lcpath}=[->, draw, bend left=30, line width=1.2pt]
+
+\uncover<7->{
+\draw[lcpath] (90:\xx) arc (90:90-90+22:\xx){};
+}
+\uncover<8->{
+\draw[lcpath] (0:\xx) arc (0:0-90+45:\xx){};
+}
+\uncover<9->{
+\draw[lcpath] (180:\xx) arc (180:180-90+45:\xx){};
+\draw[lcpath] (270:\xx) arc (270:270-90+22:\xx){};
+}
+
+\uncover<6->{
+\node[lcstep](lc1) at (0,\xx){Offspring\\ production};
+}
+
+\uncover<7->{
+\node[lcstep](lc2) at (\xx,0){Offspring\\ dispersal};
+}
+\uncover<8->{
+\node[lcstep](lc3) at (0, -\xx){$k$ parents die};
+}
+\uncover<9->{
+\node[lcstep](lc4) at (-\xx, 0){Establishment of\\ $k$ offspring};
+}
+\end{tikzpicture}
+
+\end{center}
+
+\end{column}
+\end{columns}
+
+
+\end{center}
+
+\end{frame}
+
+\end{document}
