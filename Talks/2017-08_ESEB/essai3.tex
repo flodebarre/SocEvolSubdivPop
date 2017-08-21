@@ -1,0 +1,68 @@
+\documentclass[aspectratio=169]{beamer}
+
+\input{styleESEB.tex}
+
+\begin{document}
+
+\begin{frame}{Population and Social interactions}
+
+\begin{center}
+
+\begin{tikzpicture}
+\def \dx {0.75cm}
+\tikzstyle{nd}=[draw = none, font = \normalsize]
+\node[nd] (eA){$1$ \hspace{\dx}if site $i$ occupied by \includegraphics[height = 1.5em]{Pics/typeA.pdf}\hspace{0.1em} at time $t$ ($1\leq i \leq N$)};
+\node[nd, below = 0cm of eA] (eB){$0$ \hspace{\dx}if site $i$ occupied by \includegraphics[height = 1.5em]{Pics/typeB.pdf}\hspace{0.1em} at time $t$ ($1\leq i \leq N$)};
+
+\draw[decorate, decoration = {brace, mirror, amplitude = 5pt}, line width = 1.5pt](eA.north west)--(eB.south west) node[midway, anchor = east, inner sep = 10pt, nd]{$X_i(t) = $};
+
+\end{tikzpicture}
+
+\vspace{1em}
+
+\pause
+\begin{tikzpicture}
+\node[rounded corners, fill = maincol, text opacity = 1, fill opacity = 0.5, align = center]{{\large
+We are interested in 
+$ \mathbb{E}[\overline{X}]$, }\\the expected ($\mathbb{E}$) proportion ($\overline{X}$) of altruists in the population. 
+};
+\end{tikzpicture}
+
+\vspace{1em}
+\pause
+
+\begin{block}{Social interactions affect fecundity}
+\begin{center}
+\vspace{-2em}
+\begin{tikzpicture}
+\tikzstyle{nd}=[font =\large]
+\def \xcst {1.25}
+\def \xb {2.5}
+\def \xc {4.}
+\node[nd, anchor = base]at(0,0)(fA){$f_{\mathord{\includegraphics[height = 1em]{Pics/typeA.pdf}}} = $};
+\node[nd, anchor = base]at(\xcst, 0){$1 + \omega $};
+\node[nd, anchor = base]at(\xb, 0){$\Big( b \, \dfrac{k-1}{n-1} $};
+\node[nd, anchor = base]at(\xc, 0){$- c \Big)$,};
+
+\def \yy {-1}
+\node[nd, anchor = base]at(0,\yy)(fB){$f_{\mathord{\includegraphics[height = 1em]{Pics/typeB.pdf}}} = $};
+\node[nd, anchor = base]at(\xcst, \yy){$1 + \omega $};
+\node[nd, anchor = base]at(\xb, \yy){$\Big( b \, \dfrac{k}{n-1} $};
+\node[nd, anchor = base, xshift = -0.5cm]at(\xc, \yy){$\Big)$.};
+
+\def \yi {1}
+\def \hpic {1.5em}
+\node[]at(\xb, \yi){\includegraphics[height = \hpic]{Pics/gift.pdf}};
+\node[]at(\xc, \yi){\includegraphics[height = \hpic]{Pics/coins.pdf}};
+
+\node[anchor = east]at(-1, 0.2*\yy){\textcolor{maincol}{In a deme with $k$ \includegraphics[height = 1.5em]{Pics/typeA.pdf}:}};
+
+\end{tikzpicture}
+\end{center}
+
+\end{block}
+
+\end{center}
+
+\end{frame}
+\end{document}
