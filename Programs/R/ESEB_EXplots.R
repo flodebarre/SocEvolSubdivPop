@@ -134,7 +134,16 @@ PlotProp <- function(upd, sel, htg, ylim=c(0,1), addAnalysis=FALSE, pdf = TRUE, 
     if(addLegend){
       xleg <- 0.6
       yleg <- 0.65
-      legend(xleg, yleg, legend = muL, col = colMut, lwd = 3, bty = "n")
+      if(addMu0){
+        legd <- c(0, rev(muL))
+        coll <- c(colnomut, rev(colMut))
+        ltys <- c(2, rep(1, length(muL)))
+      }else{
+        legd <- muL
+        coll <- colMut
+        ltys <- rep(1,3)
+      }
+      legend(xleg, yleg, legend = legd, col = coll, lwd = 3, bty = "n", lty = ltys)
       text(xleg, yleg, labels = expression(mu * " ="), adj = c(-2, 0.5))
     }
 
@@ -167,7 +176,12 @@ PlotProp("DB", 0.005, 0, addAnalysis = TRUE, ylim = ylm, muL = themutList, migL 
 
 PlotProp("BD", 0.005, 0, addAnalysis = TRUE, ylim = ylm, muL = themutList, migL = themigList, addMu0 = TRUE)
 
-PlotProp("WF", 0.005, 0, addAnalysis = TRUE, ylim = ylm, muL = themutList, migL = themigList, addMu0 = TRUE)
+PlotProp("BD", 0.005, 0, addAnalysis = TRUE, ylim = ylm, muL = themutList, migL = themigList, addMu0 = TRUE)
+
+PlotProp("WF", 0.005, 0, addAnalysis = FALSE, ylim = ylm, muL = themutList, migL = themigList, addMu0 = TRUE, plotData = FALSE, suffix = "_justMu0", addLegend = FALSE)
+
+PlotProp("WF", 0.005, 0, addAnalysis = FALSE, ylim = ylm, muL = themutList, migL = themigList, addMu0 = TRUE, plotData = FALSE, suffix = "_justMu0", addLegend = FALSE)
+
 
 for(i in rev(seq_len(length(mutList)))){
   PlotProp("WF", 0.005, 0, addAnalysis = TRUE, ylim = ylm, muL = themutList[i:length(themutList)], migL = themigList, addMu0 = TRUE, plotData = TRUE, suffix = paste0("_", 1+length(mutList)-i), addLegend = TRUE)
