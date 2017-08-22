@@ -1,0 +1,44 @@
+
+\documentclass[aspectratio=169]{beamer}
+
+\input{styleESEB.tex}
+
+\begin{document}
+
+\begin{frame}{Spatial structure and altruism}
+\begin{center}
+
+\begin{tikzpicture}
+\tikzstyle{popn}=[ellipse, draw=maincol, line width=1.5pt, inner sep = 0pt]
+\tikzstyle{dck}=[inner sep=0pt, circle]
+\def \rad {1.75cm}
+\def \hpic {0.75cm}
+\def \theduck {\includegraphics[height=\hpic]{Pics/empty.pdf}}
+
+\def \TA {\includegraphics[height=\hpic]{Pics/typeA.pdf}}
+\def \TB {\includegraphics[height=\hpic]{Pics/typeB.pdf}}
+
+\node[dck]at(0,0) (d1){\TA};
+\foreach \i in {1,...,6}{
+\node[dck] (d1\i) at($(d1)+(\i*60:\rad)$){\TA};
+}
+
+\node[popn, fit=(d11)(d12)(d13)(d14)(d15)(d16)] (c1){};
+
+
+\foreach \i in {1,...,6}{
+\uncover<2->{
+\node[]at(30+\i*60:0.5*\rad){\includegraphics[height = 0.5cm]{Pics/gift.pdf}};
+}
+\uncover<3->{
+\node[rotate = \i*60+90]at(\i*60:0.5*\rad){\includegraphics[height = 1cm]{Pics/sword90.pdf}};
+}
+}
+
+\only<4>{
+\node[right = of c1, draw]{\includegraphics[width = 0.45\textwidth]{Pics/Taylor1992.pdf}};
+}
+\end{tikzpicture}
+\end{center}
+\end{frame}
+\end{document}
