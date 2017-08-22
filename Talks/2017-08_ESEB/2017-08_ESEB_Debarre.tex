@@ -44,7 +44,7 @@ Symposium 9: Fitness and evolution in a social environment: from theory to reali
 {
 \usebackgroundtemplate{
 \hspace{-0.2cm}\begin{tikzpicture}
-\node[opacity = 0.2]{\includegraphics[width=1.2\paperwidth]{Pics/puzzle.pdf}};
+\node[opacity = 0.6](pz){\includegraphics[width=1.2\paperwidth]{Pics/puzzle.pdf}};
 \end{tikzpicture}
 }%
 \begin{frame}
@@ -52,12 +52,16 @@ Symposium 9: Fitness and evolution in a social environment: from theory to reali
 
 \begin{center}
 \begin{tikzpicture}
+
 \def \hh {0.8cm}
 \def \rad {2.5cm}
 \tikzstyle{dck}=[inner sep=0pt, circle]
 \tikzstyle{lnk}=[line width=1.5pt, draw=fgcol]
 
 \uncover<2->{
+%Cover puzzle
+\node[minimum width = \textwidth, minimum height = \textheight, fill = white, fill opacity = 0.8]at(0,0){};
+
 % Focal individual
 \node[dck](cdc)at(-0.5*\rad,0){\includegraphics[height=\hh]{Pics/typeA.pdf}};
 
@@ -144,6 +148,49 @@ Symposium 9: Fitness and evolution in a social environment: from theory to reali
 \end{center}
 \end{frame}
 
+\subsection{Transition mutation}
+
+\begin{frame}{A common feature of models}
+\begin{center}
+\begin{tikzpicture}
+\def \TA {}
+\def \TB {\includegraphics[height = 1cm]{Pics/typeB.pdf}}
+
+\tikzstyle{dck}=[rectangle]
+\def \parnt {1cm}
+\def \offs {0.5cm}
+\def \yb {-2cm}
+\def \dpo {1.75}
+\node[dck](a1) at(0,0){\includegraphics[height = \parnt]{Pics/typeA.pdf}};
+\node[dck](d1) at(0,\yb){\includegraphics[height = \parnt]{Pics/typeB.pdf}};
+\foreach \i in {1,...,5}{
+\node[dck](ao\i)at(\dpo + 0.5*\i, 0){\includegraphics[height = \offs]{Pics/typeA.pdf}};
+\node[dck](do\i)at(\dpo + 0.5*\i, \yb){\includegraphics[height = \offs]{Pics/typeB.pdf}};
+}
+\tikzstyle{arr}=[->, line width = 1.5pt, draw]
+\path[arr] (a1)--(ao1);
+\path[arr] (d1) -- (do1);
+
+\uncover<2->{
+\tikzstyle{cvr}=[inner sep = -3pt, rectangle, fill = bgcol]
+\node[cvr, fit = (do2)]{};
+\node[dck]at(do2){\includegraphics[height = \offs]{Pics/typeA.pdf}};
+\node[cvr, fit = (ao4)]{};
+\node[dck]at(ao4){\includegraphics[height = \offs]{Pics/typeB.pdf}};
+}
+
+\end{tikzpicture}
+
+\uncover<2->{
+\vspace{1em}
+\begin{tikzpicture}
+\node[text width = 0.6\textwidth, rounded corners, text opacity = 1, fill opacity = 0.5, fill = maincol, align = center, inner sep = 10pt]{What is the effect of population viscosity on the evolution of altruism when parent-offspring strategy transmission is \textbf{imperfect}?
+};
+\end{tikzpicture}
+}
+
+\end{center}
+\end{frame}
 
 \section{Model}
 
@@ -261,7 +308,7 @@ Symposium 9: Fitness and evolution in a social environment: from theory to reali
 \draw[->, >=angle 45] (-0.5*\dx, 0)--(-0.5*\dx, -\nlines*\dy-\dy){} node [above, anchor=north east] {Time};
 
 \tikzstyle{iA}=[indivbase, fill=col2]
-\tikzstyle{iB}=[indivbase, fill=col1]
+\tikzstyle{iB}=[indivbase, fill=col4]
 
 % Genealogy
 \tikzstyle{mut}=[color=maincol, font=\small]
@@ -732,7 +779,14 @@ $\omega \ll 1$.
 
 \end{frame}
 
+\begin{frame}{``Field site''}
+\begin{center}
+\includegraphics[width = 0.6\textwidth]{Pics/fieldsite.pdf}
+\end{center}
+\end{frame}
+
 \section{Results}
+\subsection{EX}
 \begin{frame}<1-8>[label = EXframe]{Expected frequency of altruists in the population}
 \begin{center}
 \begin{tikzpicture}[node distance = 0.2cm and 0.16cm, anchor = base, baseline = 0pt]
@@ -989,21 +1043,21 @@ $\omega \ll 1$.
 \begin{frame}{Take-Home Messages}
 
 \begin{itemize}
-\item Under weak selection, it is
+\item<+-> Under weak selection, it is
 possible to compute the expected frequency of social
 individuals, for any life-cycle, any regular population structure,  any mutation probability. \hspace{\stretch{1}}{\footnotesize \textcolor{mgray}{(D\'ebarre 2017 JTB)}}
 
-\item $\mathbb{E}[\overline{X}]>\nu \Leftrightarrow \mathcal{B}\, R > \mathcal{C} \Leftrightarrow b \, \kappa > c$.
+\item<+-> $\mathbb{E}[\overline{X}]>\nu \Leftrightarrow \mathcal{B}\, R > \mathcal{C} \Leftrightarrow b \, \kappa > c$.
 
-\item In subdivided populations, $\mathbb{E}[\overline{X}]$ can increase with the emigration probability $m$ when strategy transmission is imperfect ($\mu > 0$).
+\item<+-> In subdivided populations, $\mathbb{E}[\overline{X}]$ can increase with the emigration probability $m$ when strategy transmission is imperfect ($\mu > 0$).
 
-\item This result seems to hold under stronger selection and in heterogeneous populations.
+\item<+-> This result seems to hold under stronger selection and in heterogeneous populations.
 \end{itemize}
 
+\pause
 
 
 \btVFill
-
 \hrule
 \begin{block}{Funding \& Thanks}
 \begin{center}
