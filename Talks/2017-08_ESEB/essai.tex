@@ -62,9 +62,9 @@ between two time steps,
 
 \begin{column}{0.47\textwidth} 
 \begin{center}
-\uncover<5->{
+\uncover<4->{
 \textcolor{maincol}{Life-cycle}\\
-``Death-Birth'' updating
+\uncover<8->{``Death-Birth'' updating}
 }
 
 \vspace{1em}
@@ -75,28 +75,28 @@ between two time steps,
 
 \tikzstyle{lcpath}=[->, draw, bend left=30, line width=1.2pt]
 
-\uncover<7->{
+\uncover<5->{
 \draw[lcpath] (90:\xx) arc (90:90-90+22:\xx){};
 }
-\uncover<8->{
+\uncover<6->{
 \draw[lcpath] (0:\xx) arc (0:0-90+45:\xx){};
 }
-\uncover<9->{
+\uncover<7->{
 \draw[lcpath] (180:\xx) arc (180:180-90+45:\xx){};
 \draw[lcpath] (270:\xx) arc (270:270-90+22:\xx){};
 }
 
-\uncover<6->{
+\uncover<4->{
 \node[lcstep](lc1) at (0,\xx){Offspring\\ production};
 }
 
-\uncover<7->{
+\uncover<5->{
 \node[lcstep](lc2) at (\xx,0){Offspring\\ dispersal};
 }
-\uncover<8->{
+\uncover<6->{
 \node[lcstep](lc3) at (0, -\xx){$k$ parents die};
 }
-\uncover<9->{
+\uncover<7->{
 \node[lcstep](lc4) at (-\xx, 0){Establishment of\\ $k$ offspring};
 }
 \end{tikzpicture}
