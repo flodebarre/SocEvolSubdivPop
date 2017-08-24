@@ -11,7 +11,7 @@
 \beamer@subsectionintoc {2}{2}{Population structure}{34}{0}{2}
 \beamer@subsectionintoc {2}{3}{Updating the population}{42}{0}{2}
 \beamer@subsectionintoc {2}{4}{Notation and Social interactions}{50}{0}{2}
-\beamer@sectionintoc {3}{Results}{54}{0}{3}
-\beamer@subsectionintoc {3}{1}{EX}{54}{0}{3}
-\beamer@subsectionintoc {3}{2}{Robustness}{78}{0}{3}
-\beamer@sectionintoc {4}{THM}{86}{0}{4}
+\beamer@sectionintoc {3}{Results}{55}{0}{3}
+\beamer@subsectionintoc {3}{1}{EX}{55}{0}{3}
+\beamer@subsectionintoc {3}{2}{Robustness}{79}{0}{3}
+\beamer@sectionintoc {4}{THM}{87}{0}{4}

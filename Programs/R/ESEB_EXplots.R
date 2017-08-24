@@ -81,7 +81,9 @@ PlotProp <- function(upd, sel, htg, ylim=c(0,1), addAnalysis=FALSE, pdf = TRUE, 
          xlab = "", ylab = "", axes = FALSE, frame.plot = FALSE)
     if (addTitle) title(main = paste0("sel=", sel, ", htg=", htg))
     colMut <- rev(rev(mygradient4)[1:length(muL)])#get(paste0("mygradient", length(muL)))
-    
+    pchMut <- rev(rev(pchs)[1:length(muL)])
+
+        
     # Background of the plot region
     rect(0, ylim[1], max(migL), 1, col = rectColor, border = NA)
     # Add horizontal lines
@@ -108,7 +110,7 @@ PlotProp <- function(upd, sel, htg, ylim=c(0,1), addAnalysis=FALSE, pdf = TRUE, 
         for(imig in seq_along(migL)){
           sub <- sub1[sub1$mig == migL[imig], ]
           # Plot estimated frequency
-          points(sub$mig, sub$pA, col = colMut[imu], type="p", pch=pchs[imu], cex = cexpoints, bg=MakeTransparent(colMut[imu]))
+          points(sub$mig, sub$pA, col = colMut[imu], type="p", pch=pchMut[imu], cex = cexpoints, bg=MakeTransparent(colMut[imu]))
           # Plot CI
           arrows(sub$mig, sub$pA - sub$dci, sub$mig, sub$pA + sub$dci, 
                  col = colMut[imu], angle = 90, length = 0.075, code = 3)
