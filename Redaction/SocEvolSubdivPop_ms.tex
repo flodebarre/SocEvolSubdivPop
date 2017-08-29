@@ -56,7 +56,7 @@
 \fancyhf{}
 \fancyhead[C]{}
 \fancyfoot[C]{\thepage/\pageref{LastPage}}
-\fancyfoot[R]{\today}
+\fancyfoot[R]{\footnotesize \today}
 \renewcommand{\headrulewidth}{0.pt}
 }
 
@@ -275,6 +275,7 @@ Total & $4234$ words
 
 %\paragraph{Total Word Count:}a\\ Authors should aim to keep the word count below 5000 words. The Abstract, Impact statement, Acknowledgements, Author Contributions and Data Accessibility sections do not contribute towards the word count.
 
+\todo[inline]{Check $\omega$ removes entirely + explain delta in table}
 
 \linenumbers
 \subsubsection*{Abstract}
@@ -326,26 +327,15 @@ For each of the three life-cycles that we consider, we compute the expected (\ie
 
 \subsection{Assumptions}
 
-We consider a population of size $N$, subdivided into $\ndemes$~demes, each hosting exactly $n$ individuals (\ie, containing $n$ sites, each of which is occupied by exactly one individual; we have $n \ndemes = N$). Each site has a unique label $i$, $1\leq i \leq N$. There are two types of individuals in the population, altruists and defectors. The type of the individual living at site $i$ ($1\leq i \leq N$) is given by an indicator variable $X_i$, equal to $1$ if the individual is an altruist, and to $0$ if it is a defector. The state of the entire population is given by a $N$-long vector $\mathbf{X}$. For a given population state $\mathbf{X}$, the proportion of altruists is $\overline{X} = \sum_{i=1}^N X_i$. All symbols are summarized in table~\ref{tab:symbols}.
+We consider a population of size $N$, subdivided into $\ndemes$~demes, each hosting exactly $n$ individuals (\ie, each deme contains $n$ sites, each of which is occupied by exactly one individual; we have $n \ndemes = N$). Each site has a unique label $i$, $1\leq i \leq N$. There are two types of individuals in the population, altruists and defectors. The type of the individual living at site $i$ ($1\leq i \leq N$) is given by an indicator variable $X_i$, equal to $1$ if the individual is an altruist, and to $0$ if it is a defector. The state of the entire population is given by a $N$-long vector $\mathbf{X}$. For a given population state $\mathbf{X}$, the proportion of altruists is $\overline{X} = \sum_{i=1}^N X_i$. All symbols are summarized in table~\ref{tab:symbols}.
 
 Reproduction is asexual. Parents transmit their strategy to their offspring with probability $1-\mu$; this transmission can be genetic or cultural (vertical cultural transmission), but for simplicity, we refer to the parameter $\mu$ as a mutation probability. With probability $\mu$, offspring do not inherit their strategy from their parent but instead get one randomly: with probability $\mutbias$, they become altruists, with probability $1-\mutbias$ they become defectors. We call the parameter $\mutbias$ the mutation bias. 
 
 % Social interactions and effect on fecundity (simple version). 
-Social interactions take place within each deme; each individual interacts with the $n-1$ other deme members. We assume that social interactions affect individual fecundity, whose baseline is set equal to $1$. Each interaction with an altruist increases an individual's fecundity by $\omega \, \bb$; altruists pay a fecundity cost $\omega \, \cc$ ($\cc \leq \bb$). The parameter $\omega$ scales the relative effect of social interactions on fecundity, and is assumed to be small ($\omega \ll 1$). \\
-Denoting by $e_{ij}$ the interaction probability between individuals living at sites $i$ and $j$, we have
-%
-\begin{equation}\label{eq:defE}
-e_{ij} = \begin{cases}
- 0 & \textrm{if $i=j$;}\\
- \frac{1}{n-1} & \textrm{if $i\neq j$ and both sites are in the same deme;}\\
- 0 & \textrm{if the two sites are in different demes.} 
-\end{cases}
-\end{equation}
-Given our assumptions and with this notation, the fecundity of the individual living at site $k$ is given by 
+An individual of type $X_k$ expresses a social phenotype $\phi_k = \delta X_k$, where $\delta$ is assumed to be small ($\delta \ll 1$). Social interactions take place within each deme; each individual interacts with the $n-1$ other deme members. Denoting by $e_{ij}$ the interaction probability between individuals living at sites $i$ and $j$, we have $e_{ij} = 1/(n-1)$ if $i$ and $j$ are two different sites in the same deme, and $e_{ij}=0$ otherwise. We assume that social interactions affect individual fecundity; $f_k$ denotes the fecundity of the individual at site $k$. The baseline fecundity, \ie{} individual fecundity when no altruists are present in the population, is set equal to $1$. We denote by $\bb$ the marginal effect of a deme-mate's phenotype on the fecundity of a focal individual, and by $-\cc$ the marginal effect of a focal individual's phenotype on its own fecundity ($\cc \leq \bb$). With these assumptions are notation, at the first order in $\delta$, the fecundity of the individual living at site $k$ is given by 
 \begin{equation}\label{eq:deff}
-f_k(\mathbf{X}, \omega) = 1 + \omega \left( \sum_{\ell =1}^N e_{\ell k} \bb X_{\ell} - \cc X_k \right).
+f_k(\mathbf{X}, \delta) = 1 + \delta \left( \sum_{\ell =1}^N e_{\ell k} \bb X_{\ell} - \cc X_k \right) + \bigO{\delta^2}.
 \end{equation}
-Although our assumptions may seem restrictive: we assume that fecundity benefits are unconditional, \ie, the same which ever the type of the recipient, and the fecundity effects are additive, \ie, the effect of interacting with $k$ altruists is $k$ times the effect of interacting with one altruist. And yet, the same fecundities are obtained with a generic fecundity function, after linearization, under the assumption that altruists and defectors are phenotypically close (see \appname~\ref{sec:app:F} for details).
 
 % Dispersal - emigration
 Offspring remain in the parental deme with probability $1-m$; when they do, they land on any site of the deme with equal probability (including the very site of their parent). With probability $m$, offspring emigrate to a different deme, chosen uniformly at random among the other demes. Denoting by $d_{ij}$ the probability of moving from site $i$ to site $j$, we have
@@ -357,7 +347,7 @@ d_{ij} = \begin{cases}
 \end{equation}
 
 % Life-cycles
-The way the population is updated from one time step to the next depends on the chosen life-cycle (also called updating rule). We will specifically explore three different life-cycles. At the beginning of each step of each life-cycle, all individuals produce offspring, that can be mutated; then these juveniles move, within the parental deme or outside of it, and land on a site. The next events occurring during the time step depend on the life-cycle:
+We denote by $B_i = B_i(\mathbf{X}, \delta)$ the expected number of successful offspring of the individual living at site $i$ (successful means alive at the next time step), and by $D_i = D_i(\mathbf{X}, \delta)$ the probability that the individual living at site $i$ dies. Both depend on the state of the population $\mathbf{X}$, but also on the way the population is updated from one time step to the next, \ie, on the chosen life-cycle (also called updating rule). We will specifically explore three different life-cycles. At the beginning of each step of each life-cycle, all individuals produce offspring, that can be mutated; then these juveniles move, within the parental deme or outside of it, and land on a site. The next events occurring during the time step depend on the life-cycle:
 \begin{description}
 \item[Moran Birth-Death]: One of the newly created juveniles is chosen at random; it kills the adult who was living at the site, and replaces it; all other juveniles die. 
 \item[Moran Death-Birth]: One of the adults is chosen to die (uniformly at random among all adults). It is replaced by one of the juveniles who had landed in its site. All other juveniles die. 
@@ -367,7 +357,13 @@ The way the population is updated from one time step to the next depends on the 
 \subsection{Methods}
 \subsubsection{Analytical part}
 
-To derive the expected (\ie, long-term) proportion of altruists in the population, we use the toolbox presented in \citet{Debarre2017}, which is valid for any regular population and any life-cycle. Calculation details are given in \appname~\ref{sec:app:EX}; they go as follows. First, we write an equation for the expected frequency of altruists in the population at time $t+1$, conditional on the composition of the population at time $t$; we then take the expectation of this quantity, for large times $t$. After this, we use the assumption that selection is weak ($\omega \ll 1$) and write a first order expansion of the expression that we have obtained. By doing so, we let appear quantities that can be identified as neutral probabilities of identity by descent $Q_{ij}$, \ie, the probability that individuals living at site $i$  and $j$ share a common ancestor and that no mutation occurred on either lineage since that ancestor, in a model with no selection ($\omega=0$) -- this is the ``mutation definition of identity by descent \citep{RoussetBilliard2000}. 
+To derive the expected (\ie, long-term) proportion of altruists in the population, we use the toolbox presented in \citet{Debarre2017}, which is valid for any regular population and any life-cycle. Calculation details are given in \appname~\ref{sec:app:EX}; they go as follows. First, we write an equation for the expected frequency of altruists in the population at time $t+1$, conditional on the composition of the population at time $t$:
+\begin{equation}\label{eq:condchange}
+\Esp{\overline{X}(t+1) | \mathbf{X}(t)} = %
+\frac{1}{N} \sum_{i=1}^N \underbrace{\left( B_{i} (1-\mu) + (1-D_i) \right)}_{W_i} X_i + \frac{1}{N} \sum_{i=1}^N B_i \mu \nu. 
+\end{equation}
+The first term in \eqref{eq:condchange} correspond to unmutated offspring of altruists and surviving altruists, while the second term corresponds to new altruists created by mutation. We denote by $W_i$ the expected number of individuals at the next time step who are either unmutated offspring of the individual living at site $i$, or this individual itself. We also note that the total number of births ($\sum_{i=1}^N B_i$) does not depend on population composition for the life-cycles that we consider (it is equal to $1$ for the Moran life-cycles, and to $N$ for Wright-Fisher.)\\
+We then take the expectation of \eqref{eq:condchange} over all possible compositions of the populations, and consider large times $t$. After this, we write a first order expansion of the expression that we have obtained, using the assumption that the phenotypic difference $\delta$ is small (which also implies that selection is weak). By doing so, we let appear quantities that can be identified as neutral probabilities of identity by descent $Q_{ij}$, \ie, the probability that individuals living at site $i$  and $j$ share a common ancestor and that no mutation occurred on either lineage since that ancestor, in a model with no selection ($\omega=0$) -- this is the ``mutation definition'' of identity by descent \citep{RoussetBilliard2000}. 
 
 These neutral probabilities of identity by descent depend on the chosen life-cycle, and are also computed by taking the long-term expectation of conditional expectations after one time step (see \appname~\ref{sec:app:IBD} and \ref{sec:app:Qsubdiv}). 
 
@@ -383,7 +379,7 @@ All scripts are available at \\
 
 \subsection{Probabilities of identity by descent}
 
-As we will see later, the expected frequencies of altruists in the population depend on probabilities of identity by descent of pairs of sites, $Q_{ij}$. Two individuals are said to be identical by descent if there has not been any mutation on either lineage since their common ancestor.  Because of the structure of the population, there are only three types of pairs of individuals, and hence three different values of $Q_{ij}$:
+As we will see later, the expected frequencies of altruists in the population depend on probabilities of identity by descent of pairs of sites, $Q_{ij}$. Two individuals are said to be identical by descent if there has not been any mutation on either lineage since their common ancestor.  Because of the structure of the population, there are only three types of pairs of individuals, and hence three different values of the probabilities of identity by descent of pairs of sites $Q_{ij}$:
 \begin{equation}
 Q_{ij} = 
 \begin{cases}
@@ -792,37 +788,6 @@ X_i & Indicator variable, equal to $1$ if site $i$ is occupied by an altruist, t
 \pagestyle{appendix}
 \singlespace
 
-\section{Fecundity and weak selection approximation\label{sec:app:F}}
-
-Here we show that the fecundity function presented in \eqref{eq:deff} can be obtained from a generic fecundity function, under the assumption of small phenotypic differences between altruists and defectors. 
-
-Let us denote by $\phi_i$ the phenotype of the individual living at site $i$, and assume that the phenotypic value of altruists and defectors differs by $\omega\ll 1$, so that 
-\begin{equation}\label{eq:app:phidef}
-\phi_i = \phi^{(0)} + \omega X_i,
-\end{equation}
-where $\phi^{(0)}$ is the phenotype of defectors (and $\phi_0 + \omega$ the phenotype of altruists). 
-
-We consider a generic fecundity function, that depends on the focal individual's phenotype, and on the phenotype of all the individuals that it interacts with, weighted by the probability of interaction ($e_{ki}$ for an individual at site $k$, $1\leq k\leq N$). For instance, the fecundity of an individual at site $i$ is given by a function with $N+1$ arguments
-\begin{align}
-F_i &= \mathcal{F}(e_{1,i} \phi_1, \dots, e_{N,i} \phi_N; \phi_i) \nonumber , \\
-\intertext{which, using \eqref{eq:app:phidef}, becomes}
-F_i & = \mathcal{F}\left(e_{1,i} (\phi^{(0)} + \omega X_1), \dots, e_{N,i} (\phi^{(0)} + \omega X_N); \phi^{(0)} + \omega X_i\right). \label{eq:app:Fi}
-\end{align} 
-%
-We then write a first-order expansion of \eqref{eq:app:Fi} for $\omega \ll 1$:
-\begin{align}\label{eq:app:DLF}
-F_i & = \mathcal{F}\left(e_{1,i} \phi^{(0)}, \dots, e_{N,i} \phi^{(0)}; \phi^{(0)} \right) \nonumber \\
-& \qquad + \omega \left[ \sum_{k=1}^N \left( e_{ki} X_k \, \partial_{(k)}\mathcal{F}|_{\omega=0} \right) + X_i \, \partial_{(N+1)}\mathcal{F}|_{\omega=0} \right] + \bigO{\omega^2}, 
-\end{align}
-where $\partial_{(k)}\mathcal{F}|_{\omega=0}$ is the derivative of $\mathcal{F}$ with respect to its $k^{\textrm{th}}$ argument, evaluated at $\omega=0$. The first term in \eqref{eq:app:DLF} is the fecundity of individual $i$ when there is not a single altruist in the population. 
-
-Given the chosen structure of the population, all individuals have the same number of social interactions, so they end up having the same fecundity when the population is fixed for the defector type. Without loss of generality, we set this baseline fecundity equal to $1$. If we now consider that it does not matter where the benefits of social interactions come from, only that they are received by the focal individual, then $\partial_{(k)} \mathcal{F}$ is the same for all $k$, $1\leq k \leq N$; let us denote it by $\bb$. If we denote by $-\cc$ the marginal effect of the focal individual's phenotype on its own fecundity (\ie, $-\cc = \partial_{N+1}\mathcal{F}|_{\omega = 0}$), then we obtain
-\begin{equation}
-F_i = 1 + \omega \left(\bb \sum_{k=1}^N e_{ki} X_i - \cc X_i \right) + \bigO{\omega^2}, 
-\end{equation}
-which is equal to $f_i$ as defined in \eqref{eq:deff}, neglecting terms in $\omega^2$ and higher. 
-
-\clearpage
 
 \section{Expected frequency of altruists\label{sec:app:EX}}
 
