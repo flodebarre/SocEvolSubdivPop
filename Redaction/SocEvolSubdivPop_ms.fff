@@ -1,14 +1,3 @@
-\begin{figure}[h]
-\begin{tabular}{cc}
-\subfigure[\label{fig:sub:QM}Moran]{\includegraphics[width = \wpic]{../Programs/R/Pics/QplotM.pdf}}
-&
-\subfigure[\label{fig:sub:QWF}Wight-Fisher]{\includegraphics[width = \wpic]{../Programs/R/Pics/QplotWF.pdf}}
-\end{tabular}
-\caption{Probabilities of identity by descent, for two different individuals within the same deme ($\Qin$, full curves) and two individuals in different demes ($\Qout$, dashed curves), as a function of the emigration probability $m$, for different values of the mutation probability $\mu$ ($0.001$, $0.01$, $0.1$), and for the two types of life-cycles (\subref{fig:sub:QM}: Moran, \subref{fig:sub:QWF}: Wright-Fisher). Other parameters: $n=4$ individuals per deme, $\ndemes = 15$ demes. }
-\label{fig:Q}
-\end{figure}
-\efloatseparator
- 
 \begin{figure}
 \hspace{-2cm}\begin{tabular}{ccc}
 \subfigure[Death-Birth \label{fig:EXDB}]{\includegraphics[type=pdf,ext=.pdf,read=.pdf, width=\wpic]{../Programs/R/Pics/EXDB_sel0.005_htg0}}

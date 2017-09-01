@@ -380,83 +380,7 @@ All scripts are available at \\
 
 \section{Results}
 
-\subsection{Probabilities of identity by descent}
 
-As we will see later, the expected frequencies of altruists in the population depend on probabilities of identity by descent of pairs of sites, $Q_{ij}$. Two individuals are said to be identical by descent if there has not been any mutation on either lineage since their common ancestor.  Because of the structure of the population, there are only three types of pairs of individuals, and hence three different values of the probabilities of identity by descent of pairs of sites $Q_{ij}$:
-\begin{equation}
-Q_{ij} = 
-\begin{cases}
-1 & \textrm{when $i=j$;}\\
-%
-\Qin & \textrm{when $i\neq j$ and both sites are in the same deme;}\\
-%
-\Qout & \textrm{when sites $i$ and $j$ are in different demes.}
-\end{cases}
-\end{equation}
-The values of $\Qin$ and $\Qout$ depend on the type of life-cycle that we consider. 
-
-\subsubsection{Moran updating} 
-
-Under the Moran life-cycles, probabilities of identity by descent satisfy, for any pair of sites $i$ and $j\neq i$,
-\begin{equation}
-Q_{ij}^{\Moran} = \frac{1-\mu}{2} \sum_{k=1}^N \left(d_{kj} Q_{ki}^{\Moran} + d_{ki} Q_{kj}^{\Moran}\right).
-\end{equation}
-%
-Given the law of total probabilities, we first consider the site that was last updated ($1/2$ chance that it was $j$ rather than $i$); then we consider each potential parent $k$, weighted by the dispersal probabilities $d_{kj}$. Then the individuals at sites $i$ and $j$ are identical by descent (IBD) if $i$ and $j$'s parent were IBD ($Q_{ki}^{\Moran}$) and if no mutation occurred ($1-\mu$).  Replacing the dispersal probabilities $d_{ij}$ by their values (given in \eqref{eq:defD}), we eventually obtain (see \appname~\ref{sec:app:IBD} for calculation steps):
-\begin{subequations}\label{eq:QM}
-\begin{align}
-\Qin^{\Moran} &= \frac{(1-\mu ) \left(m + \mu  (\ndemes (1-m)-1)\right)}{(1-\mu ) m (\ndemes \mu  (n-1)+1)+(\ndemes-1) \mu  (\mu  (n-1)+1)},\\
-%
-%
-\Qout^{\Moran} & = \frac{(1-\mu ) m}{(1-\mu ) m (\ndemes \mu  (n-1)+1)+(\ndemes-1) \mu  (\mu  (n-1)+1)}.
-\end{align}
-\end{subequations}
-%
-The probability that two different deme-mates are identical by descent, $\Qin^{\Moran}$, decreases monotonically with the emigration probability $m$, while  $\Qout^{\Moran}$ monotonically increases with $m$ (see figure~\ref{fig:Q}\subref{fig:sub:QM}). 
-
-When the mutation probability $\mu$ is vanishingly small ($\mu \to 0$), both $\Qin^{\Moran}$ and $\Qout^{\Moran}$ are equal to $1$: in the absence of mutation indeed, the population ends up fixed for one of the two types, and all individuals are identical by descent. Note that we obtain a different result if we first assumed that the size of the population is infinite ($\ndemes \to \infty$), because the order of limits matters; %  ($\lim_{d\to\infty} \lim_{\mu\to0} \Qin^{M} \neq  \lim_{\mu\to0} \lim_{d\to\infty}   \Qin^{M}$).
-for instance, $\lim_{d\to \infty} \Qout^{M}=0$. 
-
-
-\subsubsection{Wright-Fisher updating}
-
-Under a Wright-Fisher life-cycle, generations are synchronous: all individuals are replaced at each time step. Probabilities of identity by descent satisfy, for any pair of sites $i$ and $j \neq i$
-\begin{equation}
-Q_{ij}^{\WF} = (1-\mu)^2 \sum_{k,\ell = 1}^N d_{ki} d_{\ell j} Q_{kl}^{\WF}.
-\end{equation}
-The sum is over all possible parents $k$ and $\ell$ of $i$ and $j$, weighted by the dispersal probabilities to sites $i$ and $j$; the individuals at sites $i$ and $j$ are identical by descent if their parents were ($Q_{k\ell}$) and if neither mutated ($(1-\mu)^2$). 
-
-Replacing the dispersal probabilities $d_{ij}$ by their values (given in \eqref{eq:defD}) and skipping calculation steps (but see \appname~\ref{sec:app:IBD} for details), we obtain:
-%
-\begin{subequations}\label{eq:QWF}
-\begin{align}
-\Qin^{\WF} &= \frac{-\ndemes + M_1 + M_2}{(n-1) \ndemes +M_1 + M_2}, \\
-\Qout^{\WF} & = \frac{-\frac{1}{\ndemes-1}M_1 + M2}{(n-1) \ndemes +M_1 + M_2},
-\end{align}
-with
-\begin{equation*}
-M_1 = \frac{\ndemes-1}{1-\frac{(1-\mu )^2 (\ndemes (1-m)-1)^2}{(\ndemes-1)^2}} \textrm{ and }M_2 = \frac{1}{1-(1-\mu)^2}.
-\end{equation*}
-\end{subequations}
-%
-(These formulas are compatible with, \eg, results presented by \citet{CockerhamWeir1987}, adapted for haploid individuals).\\
-In the Wright-Fisher life-cycle, $\Qin^{\WF}$ decreases until $m=m_c^{\WF} = \frac{d-1}{d}$, then increases again, while $\Qout^{WF}$ follows the opposite pattern. The threshold value $m_c^{\WF}$ corresponds to an emigration probability so high that an individual's offspring is as likely to land in its parent's deme as in any other deme (\ie, $\din = \dout$).
-
-The two probabilities of identity by descent go to $1$ when the mutation probability $\mu$ is very small ($\mu \to 0$), except if we first assume that the number of demes is very large ($\ndemes \to \infty$); for instance, with this life-cycle as well, $\lim_{\ndemes \to \infty} \Qout^{\WF} = 0$. 
-
-Also, because more sites (all of them, actually) are updated at each time step, $\Qin$ is lower for the Wright-Fisher updating than for a Moran updating, under which only one site is updated at each time step (compare figure~\ref{fig:Q}\subref{fig:sub:QM} and \ref{fig:Q}\subref{fig:sub:QWF}). 
-
-\begin{figure}[h]
-\begin{tabular}{cc}
-\subfigure[\label{fig:sub:QM}Moran]{\includegraphics[width = \wpic]{../Programs/R/Pics/QplotM.pdf}}
-&
-\subfigure[\label{fig:sub:QWF}Wight-Fisher]{\includegraphics[width = \wpic]{../Programs/R/Pics/QplotWF.pdf}}
-\end{tabular}
-\caption{Probabilities of identity by descent, for two different individuals within the same deme ($\Qin$, full curves) and two individuals in different demes ($\Qout$, dashed curves), as a function of the emigration probability $m$, for different values of the mutation probability $\mu$ ($0.001$, $0.01$, $0.1$), and for the two types of life-cycles (\subref{fig:sub:QM}: Moran, \subref{fig:sub:QWF}: Wright-Fisher). Other parameters: $n=4$ individuals per deme, $\ndemes = 15$ demes. }
-\label{fig:Q}
-\end{figure}
-
-\clearpage
 \subsection{Expected frequencies of altruists for each life-cycle}
 
 For each of the life-cycles that we consider, the expected frequency of altruists in the population, $\Esp{\overline{X}}$, can be approximated as
@@ -946,7 +870,40 @@ Finally, we obtain a first-order approximation of the expected frequency of altr
 \end{equation}
 where $\derivv{\Esp{\overline{X}}}{\selstr}{\selstr}$ is obtained from \eqref{eq:weaksel2}. We then need to replace the $B_{i}$ and $D_{i}$ terms by their formulas for each life-cycle (given in table~\ref{tab:BD}).
 
-\subsection{Probabilities of identity by descent\label{sec:app:IBD}}
+\subsection{Derivatives for the specific life-cycles}
+
+Using the formulas presented in table~\ref{tab:BD}, and the definition of $W=W_i$ given in \eqref{eq:app:defW}, we obtain the following equations:
+
+\paragraph{Moran Birth-Death}
+\begin{subequations}\label{eq:dWBD}
+\begin{align}
+\derivv{W^{\BD}}{f_{\focal}}{\delta} &= (1-\mu) \left(\frac{1}{N} - \frac{1}{N^2}\right) - \left( \frac{1-m}{n N} - \frac{1}{N^2} \right) = \frac{1-\mu}{N} + \frac{\mu}{N^2} - \frac{1-m}{n N}, \\
+\derivv{W^{\BD}}{f_{\inn}}{\delta} &= (1-\mu) \left(- \frac{1}{N^2}\right) - \left( \frac{1-m}{n N} - \frac{1}{N^2} \right) = \frac{\mu}{N^2} - \frac{1-m}{n N}.
+\end{align}
+\end{subequations}
+
+\paragraph{Moran Death-Birth}
+\begin{subequations}\label{eq:dWDB}
+\begin{align}
+\derivv{W^{\DB}}{f_{\focal}}{\delta} &= \frac{1-\mu}{N} \left[ 1 - \left( \frac{(1-m)^2}{n} + \frac{m^2}{N-n}  \right) \right],\\
+\derivv{W^{\DB}}{f_{\inn}}{\delta} &= - \frac{1-\mu}{N} \left( \frac{(1-m)^2}{n} + \frac{m^2}{N-n}  \right). 
+\end{align}
+\end{subequations}
+%
+In addition, for both Moran life-cycles, we have $B^{*}_\Moran = 1/N$.
+\paragraph{Wright-Fisher}
+\begin{subequations}\label{eq:dWWF}
+\begin{align}
+\derivv{W^{\WF}}{f_{\focal}}{\delta} &= (1-\mu) \left[ 1 - \left( \frac{(1-m)^2}{n} + \frac{m^2}{N-n}  \right) \right],\\
+\derivv{W^{\WF}}{f_{\inn}}{\delta} &= - (1-\mu) \left( \frac{(1-m)^2}{n} + \frac{m^2}{N-n}  \right). 
+\end{align}
+\end{subequations}
+For the Wright-Fisher life-cycle, we have $B^*_{\WF} = 1$.
+
+\clearpage
+
+\section{Probabilities of identity by descent}
+\subsection{Expected state of pairs of sites and probabilities of identity by descent\label{sec:app:IBD}}
 
 Here we show the link between the expected state of a pair of sites $P_{ij}$ and probabilities of identity by descent $Q_{ij}$. In our derivation of $\Esp{\overline{X}}$, $P_{ij}$ is the quantity that appears, but most studies use $Q_{ij}$. Both are evaluated in the absence of selection ($\omega = 0$). 
 
@@ -993,13 +950,21 @@ Q_{ij} = \sum_{k, \ell=1}^N d_{ki} d_{\ell j} Q_{k\ell} (1-\mu)^2.
 Again, $Q_{ij}$ corresponds to a probability of identity by descent: the individuals at sites $i$ and $j$ are identical by descent if their parents were and if neither mutated ($(1-\mu)^2$). 
 
 \clearpage
-\section{\label{sec:app:subdiv}In a subdivided population}
+\subsection{\label{sec:app:Qsubdiv}Probabilities of identity by descent in a subdivided population}
+Two individuals are said to be identical by descent if there has not been any mutation on either lineage since their common ancestor. Because of the structure of the population, there are only three types of pairs of individuals, and hence three different values of the probabilities of identity by descent of pairs of sites $Q_{ij}$:
+\begin{equation}
+Q_{ij} = 
+\begin{cases}
+1 & \textrm{when $i=j$;}\\
+%
+\Qin & \textrm{when $i\neq j$ and both sites are in the same deme;}\\
+%
+\Qout & \textrm{when sites $i$ and $j$ are in different demes.}
+\end{cases}
+\end{equation}
+The values of $\Qin$ and $\Qout$ depend on the type of life-cycle that we consider. 
 
-\subsection{\label{sec:app:bcsubdiv}$\beta$ and $\gamma$}
-Now, we need to adapt the results presented in \appname~\ref{sec:app:EX} to our structure of interest, a subdivided population, with dispersal and interaction probabilities given by \eqref{eq:defD} and \eqref{eq:defE}. For the $\beta$ and $\gamma$ terms, we use a brute-force approach, replacing $d_{ij}$ and $e_{ij}$ by their values in a subdivided population, and simplifying the equations (for instance, there are $60$ different cases to consider for the four sums that appear in $\beta_{\indirect}^{\DB}$, shown in the table in section~\ref{sec:app:betaI} below). The calculations and subsequent simplifications are detailed in the supplementary Mathematica file, and the results are presented in the main text (\sysref{eq:directeffects}, \eqref{eq:bBDI}, and \eqref{eq:bDBI}). 
-
-\subsection{\label{sec:app:Qsubdiv}Probabilities of identity by descent}
-For the probabilities of identity by descent, we could also use a brute-force approach, but calculations are faster if we use formulas derived in \citet{Debarre2017} for ``two-dimensional population structures''. The name comes from the fact that we only need two types of transformations to go from any site to any other site in the population: permutations on the deme index, and permutations on the within-deme index.  \\
+Here, we will use formulas derived in \citet{Debarre2017} for ``two-dimensional population structures''. The name comes from the fact that we only need two types of transformations to go from any site to any other site in the population: permutations on the deme index, and permutations on the within-deme index.  \\
 %
 We rewrite site labels ($1\leq i \leq N$) as $(\ell_1, \ell_2)$, where $\ell_1$ is the index of the deme ($1\leq \ell_1 \leq \ndemes$) and $\ell_2$ the position of the site within the deme ($1\leq \ell_2 \leq n$). Then, we introduce notations $\tilde{d}_{\substack{i_1\\i_2}}$ and $\tilde{Q}_{\substack{i_1\\i_2}}$, that correspond to the dispersal probability and probability of identity by descent to a site at distances $i_1$ and $i_2$ in the among-demes and within-deme dimensions (\eg, $\tilde{d}_{\substack{i_1\\i_2}} = d_{\substack{j_1\\j_2}, \substack{j_1+i_1\\j_2+i_2}}$.) 
 
@@ -1098,7 +1063,21 @@ And when $r_1 \not \equiv 0$, the two individuals are in different demes:
 \frac{1}{1 - (1-\mu) (\dself - \din) }  \Bigg].
 \end{align}
 \end{subequations} 
-With $\dself = \din = (1-m)/n$, we recover the equations given in the main text (\sysref{eq:QM}). 
+%
+With $\dself = \din = (1-m)/n$, we eventually obtain:
+\begin{subequations}\label{eq:QM}
+\begin{align}
+\Qin^{\Moran} &= \frac{(1-\mu ) \left(m + \mu  (\ndemes (1-m)-1)\right)}{(1-\mu ) m (\ndemes \mu  (n-1)+1)+(\ndemes-1) \mu  (\mu  (n-1)+1)},\\
+%
+%
+\Qout^{\Moran} & = \frac{(1-\mu ) m}{(1-\mu ) m (\ndemes \mu  (n-1)+1)+(\ndemes-1) \mu  (\mu  (n-1)+1)}.
+\end{align}
+\end{subequations}
+%
+The probability that two different deme-mates are identical by descent, $\Qin^{\Moran}$, decreases monotonically with the emigration probability $m$, while  $\Qout^{\Moran}$ monotonically increases with $m$ (see figure~\ref{fig:Q}\subref{fig:sub:QM}). 
+
+When the mutation probability $\mu$ is vanishingly small ($\mu \to 0$), both $\Qin^{\Moran}$ and $\Qout^{\Moran}$ are equal to $1$: in the absence of mutation indeed, the population ends up fixed for one of the two types, and all individuals are identical by descent. Note that we obtain a different result if we first assumed that the size of the population is infinite ($\ndemes \to \infty$), because the order of limits matters; %  ($\lim_{d\to\infty} \lim_{\mu\to0} \Qin^{M} \neq  \lim_{\mu\to0} \lim_{d\to\infty}   \Qin^{M}$).
+for instance, $\lim_{d\to \infty} \Qout^{M}=0$. 
 
 \subsection{Wright-Fisher}
 For the Wright-Fisher updating, the equation for $\tilde{Q}$ is different:
@@ -1168,7 +1147,35 @@ and
 \Bigg] .
 \end{equation}
 \end{subequations}
-With $\dself = \din = (1-m)/n$, we recover the equations given in the main text (\sysref{eq:QWF}).
+With $\dself = \din = (1-m)/n$, we obtain:
+%
+\begin{subequations}\label{eq:QWF}
+\begin{align}
+\Qin^{\WF} &= \frac{-\ndemes + M_1 + M_2}{(n-1) \ndemes +M_1 + M_2}, \\
+\Qout^{\WF} & = \frac{-\frac{1}{\ndemes-1}M_1 + M2}{(n-1) \ndemes +M_1 + M_2},
+\end{align}
+with
+\begin{equation*}
+M_1 = \frac{\ndemes-1}{1-\frac{(1-\mu )^2 (\ndemes (1-m)-1)^2}{(\ndemes-1)^2}} \textrm{ and }M_2 = \frac{1}{1-(1-\mu)^2}.
+\end{equation*}
+\end{subequations}
+%
+(These formulas are compatible with, \eg, results presented by \citet{CockerhamWeir1987}, adapted for haploid individuals).\\
+In the Wright-Fisher life-cycle, $\Qin^{\WF}$ decreases until $m=m_c^{\WF} = \frac{\ndemes-1}{\ndemes}$, while $\Qout^{WF}$ follows the opposite pattern. The threshold value $m_c^{\WF}$ corresponds to an emigration probability so high that $\din = \dout$.
+
+The two probabilities of identity by descent go to $1$ when the mutation probability $\mu$ is very small ($\mu \to 0$), except if we first assume that the number of demes is very large ($\ndemes \to \infty$); for instance, with this life-cycle as well, $\lim_{\ndemes \to \infty} \Qout^{\WF} = 0$. 
+
+Also, because more sites (all of them, actually) are updated at each time step, $\Qin$ is lower for the Wright-Fisher updating than for a Moran updating, under which only one site is updated at each time step (compare figure~\ref{fig:Q}\subref{fig:sub:QM} and \ref{fig:Q}\subref{fig:sub:QWF}). 
+
+\begin{figure}[h]
+\begin{tabular}{cc}
+\subfigure[\label{fig:sub:QM}Moran]{\includegraphics[width = \wpic]{../Programs/R/Pics/QplotM.pdf}}
+&
+\subfigure[\label{fig:sub:QWF}Wight-Fisher]{\includegraphics[width = \wpic]{../Programs/R/Pics/QplotWF.pdf}}
+\end{tabular}
+\caption{Probabilities of identity by descent, for two different individuals within the same deme ($\Qin$, full curves) and two individuals in different demes ($\Qout$, dashed curves), as a function of the emigration probability $m$, for different values of the mutation probability $\mu$ ($0.001$, $0.01$, $0.1$), and for the two types of life-cycles (\subref{fig:sub:QM}: Moran, \subref{fig:sub:QWF}: Wright-Fisher). Other parameters: $n=4$ individuals per deme, $\ndemes = 15$ demes. }
+\label{fig:Q}
+\end{figure}
 
 %TC:endignore 
 
