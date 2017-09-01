@@ -337,10 +337,10 @@ We consider a population of size $N$, subdivided into $\ndemes$~demes, each host
 Reproduction is asexual. Parents transmit their strategy to their offspring with probability $1-\mu$; this transmission can be genetic or cultural (vertical cultural transmission), but for simplicity, we refer to the parameter $\mu$ as a mutation probability. With probability $\mu$, offspring do not inherit their strategy from their parent but instead get one randomly: with probability $\mutbias$, they become altruists, with probability $1-\mutbias$ they become defectors. We call the parameter $\mutbias$ the mutation bias. 
 
 % Social interactions and effect on fecundity (simple version). 
-An individual of type $X_k$ expresses a social phenotype $\phi_k = \delta X_k$, where $\delta$ is assumed to be small ($\delta \ll 1$). Social interactions take place within each deme; each individual interacts with the $n-1$ other deme members. Denoting by $e_{ij}$ the interaction probability between individuals living at sites $i$ and $j$, we have $e_{ij} = 1/(n-1)$ if $i$ and $j$ are two different sites in the same deme, and $e_{ij}=0$ otherwise. We assume that social interactions affect individual fecundity; $f_k$ denotes the fecundity of the individual at site $k$. The baseline fecundity, \ie{} individual fecundity when no altruists are present in the population, is set equal to $1$. We denote by $\bb$ the marginal effect of a deme-mate's phenotype on the fecundity of a focal individual, and by $-\cc$ the marginal effect of a focal individual's phenotype on its own fecundity ($\cc \leq \bb$). With these assumptions are notation, at the first order in $\delta$, the fecundity of the individual living at site $k$ is given by\todo{remove?} 
-\begin{equation}\label{eq:deff}
-f_k(\mathbf{X}, \delta) = 1 + \delta \left( \sum_{\ell =1}^N e_{\ell k} \bb X_{\ell} - \cc X_k \right) + \bigO{\delta^2}.
-\end{equation}
+An individual of type $X_k$ expresses a social phenotype $\phi_k = \delta X_k$, where $\delta$ is assumed to be small ($\delta \ll 1$). Social interactions take place within each deme, benefits are shared with the $n-1$ other deme-mates. We assume that social interactions affect individual fecundity; $f_k$ denotes the fecundity of the individual at site $k$. We denote by $\bb$ the marginal effect of a deme-mate's phenotype on the fecundity of a focal individual, and by $-\cc$ the marginal effect of a focal individual's phenotype on its own fecundity ($\cc \leq \bb$). %With these assumptions are notation, at the first order in $\delta$, the fecundity of the individual living at site $k$ is given by\todo{remove?+ remove mention of baseline} 
+%\begin{equation}\label{eq:deff}
+%f_k(\mathbf{X}, \delta) = 1 + \delta \left( \sum_{\ell =1}^N e_{\ell k} \bb X_{\ell} - \cc X_k \right) + \bigO{\delta^2}.
+%\end{equation}
 
 % Dispersal - emigration
 Offspring remain in the parental deme with probability $1-m$; when they do, they land on any site of the deme with equal probability (including the very site of their parent). With probability $m$, offspring emigrate to a different deme, chosen uniformly at random among the other demes. Denoting by $d_{ij}$ the probability of moving from site $i$ to site $j$, we have
@@ -807,25 +807,25 @@ We want to compute the expected proportion of altruists in the population. We re
 \tabulinesep=1.65mm
 \begin{tabu}{lcc}
 \hline
-Life-cycle & $B_{ij}$ & $D_i$ \\   
+Life-cycle & $B_{ji}$ & $D_i$ \\   
 \hline
 %
 Moran Birth-Death & %
-$d_{ji} \dfrac{\myphantom f_{j} \myphantom}{\sum_{k =1}^N f_{k}}$  & %
+$d_{ij} \dfrac{\myphantom f_{i} \myphantom}{\sum_{k =1}^N f_{k}}$  & %
 $\dfrac{\myphantom \sum_{j=1}^N d_{ji} f_j\myphantom }{\sum_{k=1}^N f_k}$ \vspace{0.em}\\
 %
 %
 Moran Death-Birth & %
-$\dfrac{1}{N}\dfrac{ d_{ji} f_j }{\sum_{k=1}^N d_{ki} f_k}$ & %
+$\dfrac{1}{N}\dfrac{ d_{ij} f_i }{\sum_{k=1}^N d_{kj} f_k}$ & %
 $\dfrac{1}{N}$ \vspace{0.em}
 \\
 %
 %
 Wright-Fisher & %
-$\dfrac{d_{ji} f_j}{\sum_{k=1}^N d_{ki} f_k}$ & $1$
+$\dfrac{d_{ij} f_i}{\sum_{k=1}^N d_{kj} f_k}$ & $1$
 \end{tabu}
 }
-\caption{Formulas of $B_{ij}$ and $D_{i}$ for each of the life-cycles that we consider; $f_i$ (shorthand notation for $f_i(X, \selstr)$) is the fecundity of the individual living at site $i$, as defined in \eqref{eq:deff}, and $d_{ji}$ is a dispersal probability, given in \eqref{eq:defD}.}
+\caption{Formulas of $B_{ji}$ and $D_{i}$ for each of the life-cycles that we consider; $f_i$ (shorthand notation for $f_i(X, \selstr)$) is the fecundity of the individual living at site $i$, and $d_{ji}$ is a dispersal probability, given in \eqref{eq:defD}.}
 \label{tab:BD}
 \end{table}
 Since a dead individual is immediately replaced by one new individual, 
@@ -903,7 +903,7 @@ So far, we have not used the specificities of the population structure that we c
 With this, \eqref{eq:weaksel1} becomes
 %
 \begin{equation}\label{eq:weaksel1CBRP}
-\selstr \mu B^* \derivn{\Esp{\overline{X}}}{\selstr} = \frac{\selstr}{N} \sum_{i=1}^N \Bigg( \derivn{W_i}{\phi_i} + (n-1) \derivn{W_i}{\phi_{\inn}} \frac{P_{\inn} - P_{\out}}{P_{ii} - P_{\out}} \Bigg) (P_{ii} - P_{\out}).
+\selstr \mu B^* \derivn{\Esp{\overline{X}}}{\selstr} = \frac{\selstr}{N} \sum_{i=1}^N \Bigg( \derivn{W_i}{\phi_i} + (n-1) \derivn{W_i}{\phi_{\inn}} \frac{P_{\inn} - P_{\out}}{P_{ii} - P_{\out}} \Bigg) (P_{ii} - P_{\out}) + \bigO{\selstr^2}.
 \end{equation}
 
 We can also replace the $P$ terms by 
@@ -914,61 +914,37 @@ P_{ij} = \mutbias^2 + \mutbias (1-\mutbias) Q_{ij}.
 In \appname~\ref{sec:app:IBD}, we will see that recursions on $P_{ij}$ reveal that $Q_{ij}$ can be interpreted as a probability of identity by descent, \ie, the probability that the individuals at sites $i$ and $j$ have a common ancestor and that no mutation has occurred on either lineage since the ancestor. \Eqref{eq:weaksel1CBRP} becomes
 %
 \begin{equation}\label{eq:weaksel1CBR}
-\selstr \mu B^* \derivn{\Esp{\overline{X}}}{\selstr} = \frac{\selstr}{N} \sum_{i=1}^N \Bigg( \underbrace{\derivn{W_i}{\phi_i}}_{-\mathcal{C}} + \underbrace{(n-1) \derivn{W_i}{\phi_{\inn}}}_{\mathcal{B}} \underbrace{\frac{Q_{\inn} - Q_{\out}}{1 - Q_{\out}}}_{R} \Bigg) (1 - Q_{\out}) \mutbias (1-\mutbias).
+\selstr \mu B^* \derivn{\Esp{\overline{X}}}{\selstr} = \frac{\selstr}{N} \sum_{i=1}^N \Bigg( \underbrace{\derivn{W_i}{\phi_i}}_{-\mathcal{C}} + \underbrace{(n-1) \derivn{W_i}{\phi_{\inn}}}_{\mathcal{B}} \underbrace{\frac{Q_{\inn} - Q_{\out}}{1 - Q_{\out}}}_{R} \Bigg) (1 - Q_{\out}) \mutbias (1-\mutbias) + \bigO{\selstr^2}.
+\end{equation}
+%
+
+We can further decompose the derivatives, now using the fecundities $f_{\ell}$ as intermediate variables, \ie,
+\begin{equation}
+\derivn{W_i}{\phi_k} = \sum_{\ell =1}^N \derivn{W_i}{f_{\ell}} \derivn{f_{\ell}}{\phi_k}.
 \end{equation}
 
+With our notation, and given that social interactions take place within demes and affect fecundity, we have
+\begin{subequations}\label{eq:derivf}
+\begin{align}
+\derivv{f_{\ell}}{\phi_{\ell}}{\delta} & = -\cc,\\
+\derivv{f_{\ell}}{\phi_{\inn}}{\delta} & = \frac{\bb}{n-1},\\
+\derivv{f_{\ell}}{\phi_{\out}}{\delta} & = 0.
+\end{align}
+\end{subequations}
+%
+\Eqref{eq:weaksel1CBR} then becomes (using notation $\focal$ to refer to the focal individual itself, and where $W=W_i$, since the derivatives are the same for all $i$):
+%
+\begin{equation}\label{eq:weaksel2}
+\begin{split}
+\selstr \mu B^* & \derivn{\Esp{\overline{X}}}{\selstr} = \selstr  \mutbias (1-\mutbias) (1 - Q_{\out}) \times \\
+ \Bigg( &\underbrace{ \derivn{W}{f_{\focal}} (-\cc) + \derivn{W}{f_{\inn}} \bb}_{-\mathcal{C}} + \underbrace{ \left( \derivn{W}{f_{\focal}} \bb + \derivn{W}{f_{\inn}} (-\cc) + (n-2) \derivn{W}{f_{\inn}} \bb \right) }_{\mathcal{B}} \underbrace{\frac{Q_{\inn} - Q_{\out}}{1 - Q_{\out}}}_{R} \Bigg)  + \bigO{\selstr^2}.
+\end{split}
+\end{equation}
 Finally, we obtain a first-order approximation of the expected frequency of altruists in the population with 
 \begin{equation}\label{eq:EXgeneric}
-\Esp{\overline{X}} = \mutbias + \omega \,  \derivv{\Esp{\overline{X}}}{\omega}{\omega} + \bigO{\omega^2},
+\Esp{\overline{X}} = \mutbias + \selstr \,  \derivv{\Esp{\overline{X}}}{\selstr}{\selstr} + \bigO{\selstr^2},
 \end{equation}
-where $\derivv{\Esp{\overline{X}}}{\omega}{\omega}$ is obtained from \eqref{eq:weaksel1}. We then need to replace the $B_{ij}$ and $D_{j}$ terms by their formulas for each life-cycle (given in table~\ref{tab:BD}), and the $d_{ij}$ and $e_{ij}$ terms by their formulas (given in \eqref{eq:defD}) and \eqref{eq:defE}, respectively). For each life-cycle we can group terms as
-\begin{equation}
-\derivv{\Esp{\overline{X}}}{\omega}{\omega} 
-\approx 
-\frac{\mutbias (1-\mutbias)}{\mu} \left[ \bb \, (\beta_{D} - \beta_{I}) - \cc \, (\gamma_{D} - \gamma_{I}) \right],
-\end{equation}
-%
-where $\direct$ terms come from the numerators of $B_{ij}$ and $D_i$, and $\indirect$ terms come from the denominator of $B_{ij}$ and $D_i$; replacing $B_{ij}$ and $D_i$ by their formulas given in table~\ref{tab:BD}, we obtain the following sets of equations for each life-cycle:
-
-\paragraph{Moran Birth-Death}
-\begin{subequations}\label{eq:EXBDsums}
-\begin{align}
-\beta_{\direct}^{\BD} &= \sum_{k,\ell=1}^N \frac{1-\mu}{N} e_{k\ell} \, Q_{\ell k}^{\Moran},\\
-%
-\beta_{\indirect}^{\BD} &= \sum_{j,k,\ell=1}^N \left(  \frac{d_{\ell j}}{N } - \frac{\mu}{N^2}  \right)e_{k\ell} \, Q_{jk}^{\Moran},\\
-%
-\gamma_{\direct}^{\BD} &= 1-\mu,\\
-%
-\gamma_{\indirect}^{\BD} &= \sum_{j,k=1}^N \left(  \frac{d_{kj}}{N } - \frac{\mu}{N^2}   \right) \, Q_{jk}^{\Moran} .
-\end{align}
-\end{subequations}
-
-\paragraph{Moran Death-Birth}\label{eq:EXDBsums}
-\begin{subequations}
-\begin{align}
-\beta_{\direct}^{\DB} &= \sum_{k,\ell=1}^N \frac{1-\mu}{N} e_{k\ell} \, Q_{\ell k}^{\Moran},\\
-%
-\beta_{\indirect}^{\DB} &= (1-\mu) \sum_{i,j,k,\ell=1}^{N} \frac{ d_{ji} d_{\ell i}}{N}   e_{k\ell} \, Q_{jk}^{\Moran}, \\ 
-%
-\gamma_{\direct}^{\DB} &= 1-\mu,\\
-%
-\gamma_{\indirect}^{\DB} &= (1-\mu)\sum_{i,j,k=1}^N  \frac{ d_{ji} d_{ki}}{N }  \, Q_{jk}^{\Moran}.
-\end{align}
-\end{subequations}
-
-\paragraph{Wright-Fisher}
-\begin{subequations}\label{eq:EXWFsums}
-\begin{align}
-\beta_{\direct}^{\WF} &= \sum_{k,\ell=1}^N \frac{1-\mu}{N} e_{k\ell} \, Q_{\ell k}^{\WF},\\
-%
-\beta_{\indirect}^{\WF} &= (1-\mu) \sum_{i,j,k,\ell=1}^{N} \frac{ d_{ji} d_{\ell i}}{N}   e_{k\ell} \, Q_{jk}^{\WF}, \\ 
-%
-\gamma_{\direct}^{\WF} &= 1-\mu,\\
-%
-\gamma_{\indirect}^{\WF} &= (1-\mu)\sum_{i,j,k=1}^N  \frac{ d_{ji} d_{ki}}{N }  \, Q_{jk}^{\WF}.
-\end{align}
-\end{subequations}
-\Sysref{eq:EXWFsums} is the same set of equations as for the Moran Death-Birth model (\sysref{eq:EXDBsums}), except for the values of probabilities of identity by descent\dots that we now need to compute.  
+where $\derivv{\Esp{\overline{X}}}{\selstr}{\selstr}$ is obtained from \eqref{eq:weaksel2}. We then need to replace the $B_{i}$ and $D_{i}$ terms by their formulas for each life-cycle (given in table~\ref{tab:BD}).
 
 \subsection{Probabilities of identity by descent\label{sec:app:IBD}}
 
