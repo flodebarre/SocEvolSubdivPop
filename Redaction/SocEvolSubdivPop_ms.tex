@@ -354,7 +354,14 @@ d_{ij} = \begin{cases}
 with $0 < m < 1-\frac{1}{\ndemes}$ (the upper bound implies $\din>\dout$).
 
 % Life-cycles
-We denote by $B_i = B_i(\mathbf{X}, \delta)$ the expected number of successful offspring of the individual living at site $i$ (successful means alive at the next time step), and by $D_i = D_i(\mathbf{X}, \delta)$ the probability that the individual living at site $i$ dies. Both depend on the state of the population $\mathbf{X}$, but also on the way the population is updated from one time step to the next, \ie, on the chosen life-cycle (also called updating rule). We will specifically explore three different life-cycles. At the beginning of each step of each life-cycle, all individuals produce offspring, that can be mutated; then these juveniles move, within the parental deme or outside of it, and land on a site. The next events occurring during the time step depend on the life-cycle:
+We denote by $B_i = B_i(\mathbf{X}, \delta)$ the expected number of successful offspring of the individual living at site $i$ (successful means alive at the next time step), and by $D_i = D_i(\mathbf{X}, \delta)$ the probability that the individual living at site $i$ dies. Both depend on the state of the population $\mathbf{X}$, but also on the way the population is updated from one time step to the next, \ie, on the chosen life-cycle (also called updating rule). We also define
+%
+\begin{equation}\label{eq:defW}
+W_i := (1-\mu) B_i + 1 - D_i,
+\end{equation}
+which is a definition of fitness were only unmutated offspring are counted.
+
+We will specifically explore three different life-cycles. At the beginning of each step of each life-cycle, all individuals produce offspring, that can be mutated; then these juveniles move, within the parental deme or outside of it, and land on a site. The next events occurring during the time step depend on the life-cycle:
 \begin{description}
 \item[Moran Birth-Death]: One of the newly created juveniles is chosen at random; it kills the adult who was living at the site, and replaces it; all other juveniles die. 
 \item[Moran Death-Birth]: One of the adults is chosen to die (uniformly at random among all adults). It is replaced by one of the juveniles who had landed in its site. All other juveniles die. 
@@ -385,12 +392,74 @@ All scripts are available at \\
 
 For each of the life-cycles that we consider, the expected frequency of altruists in the population, $\Esp{\overline{X}}$, can be approximated as
 \begin{equation}\label{eq:EXapprox}
-\Esp{\overline{X}} \approx \mutbias + \omega \frac{\mutbias (1-\mutbias)}{\mu} \left[ \bb \left( \beta_{\direct} - \beta_{\indirect} \right) - \cc \left( \gamma_{\direct} - \gamma_{\indirect} \right) \right].
+\begin{split}
+\Esp{\overline{X}} \approx \mutbias + 
+& \frac{\selstr}{\mu B^*}  \mutbias (1-\mutbias) (1 - Q_{\out}) \times \\
+ \Bigg[ &\underbrace{ \derivn{W}{f_{\focal}} (-\cc) + \derivn{W}{f_{\inn}} \bb}_{-\mathcal{C}} + \underbrace{ \left( \derivn{W}{f_{\focal}} \bb + (n-1) \derivn{W}{f_{\inn}} (-\cc) + (n-2) \derivn{W}{f_{\inn}} \bb \right) }_{\mathcal{B}} \underbrace{\frac{Q_{\inn} - Q_{\out}}{1 - Q_{\out}}}_{R} \Bigg],
+\end{split}
 \end{equation}
-(Calculations leading to \eqref{eq:EXapprox} are presented in  \appname~\ref{sec:app:EX}.)\\
-The mutation bias $\mutbias$ corresponds to the expected proportion of altruists in the population in the absence of selection (\ie, when $\omega = 0$); $\omega$ is the parameter that scales the effects of interactions between individuals, which is assumed to be small. The subscript $_{\direct}$ refers to ``direct'' effects, and the subscript $_{\indirect}$ to ``indirect'' effects. ``Direct'' effects involve effects on primary beneficiaries of the benefits~($\bb$) and costs~($\cc$) of social interactions \citep{WestGardner2010}, \ie, social interactants (for the benefits $\bb$) and the focal individuals themselves (for the costs $\cc$). ``Indirect'' effects corresponds to effects on secondary interactants, \ie, to (kin) competition. By providing a benefit to a deme-mate and thereby increasing its fecundity, a focal altruist indirectly harms others by reducing their relative fecundity ($\beta_{\indirect}$ term in \eqref{eq:EXapprox}); by having a reduced fecundity due to the cost of altruism, a focal altruist indirectly favors others by increasing their relative fecundity ($\gamma_{\indirect}$ term).
+%
+with $W$ as defined in \eqref{eq:defW}. (Calculations leading to \eqref{eq:EXapprox} are presented in  \appname~\ref{sec:app:EX}.)\\
+The mutation bias $\mutbias$ corresponds to the expected proportion of altruists in the population in the absence of selection (\ie, when $\selstr = 0$); $\selstr$ is the parameter that scales the effects of interactions between individuals, which is assumed to be small. The $-\mathcal{C}$ term groups the effects corresponding to the effects of a change of a focal individual's phenotype on its own fitness (with the fitness definition given in \eqref{eq:defW}.) The $\mathcal{B}$ term corresponds to effects on an individual's fitness of the change of a deme-mate's phenotype. It is multiplied by $R$, which is relatedness. Also note the overall $(1-\Qout)$ factor. All of these terms depend on the chosen life-cycle, and on parameters such as the mutation probability $\mu$ and the emigration probability $m$.
+
+For each life-cycle, we will further decompose the $-\mathcal{C}$ and $\mathcal{B}$ terms into primary and secondary effects TODO CITE Gardner . Primary effects correspond to unmediated, direct consequences of interactions (they are included in $\derivn{W}{f_{\focal}}$), while secondary effects correspond to consequences of interactions mediated by other individuals, competition. 
 
 We now present the values of these different terms for the three life-cycles under study.  
+
+\paragraph{Moran Birth-Death}
+
+\begin{equation}\label{eq:EXBD}
+\begin{split}
+\Esp{\overline{X}} \approx \mutbias + 
+& \frac{\selstr}{\mu}  \mutbias (1-\mutbias) (1 - Q_{\out}^{\Moran}) \times \\
+ &\Bigg[ \underbrace{ \begin{pmatrix}
+ (1-\mu) (-\cc) \\
+ + (\bb - \cc) \left( \dfrac{\mu}{N} - \dfrac{1-m}{n} \right) 
+ \end{pmatrix}
+}_{-\mathcal{C^{\BD}}} + \underbrace{ \begin{pmatrix}
+(1-\mu) \bb \\
++ (\bb - \cc) (n-1) \left(  \dfrac{\mu}{N} - \dfrac{1-m}{n} \right) 
+\end{pmatrix}
+}_{\mathcal{B^{\BD}}} \underbrace{\frac{Q_{\inn}^{\Moran} - Q_{\out}^{\Moran}}{1 - Q_{\out}^{\Moran}}}_{R^{\Moran}} \Bigg],
+\end{split}
+\end{equation}
+
+
+\paragraph{Moran Death-Birth}
+
+\begin{equation}\label{eq:EXDB}
+\begin{split}
+\Esp{\overline{X}} \approx \mutbias + 
+& \frac{\selstr}{\mu}  \mutbias (1-\mutbias) (1 - Q_{\out}^{\Moran}) \times \\
+ &\Bigg[ \underbrace{ \begin{pmatrix}
+ (1-\mu) (-\cc) \\
+- (\bb - \cc) (1-\mu) \left( \frac{(1-m)^2}{n} + \frac{m^2}{N-n}\right) 
+ \end{pmatrix}
+}_{-\mathcal{C^{\DB}}} + \underbrace{ \begin{pmatrix}
+(1-\mu) \bb \\
+- (\bb - \cc) (n-1) \left( \frac{(1-m)^2}{n} + \frac{m^2}{N-n} \right) 
+\end{pmatrix}
+}_{\mathcal{B^{\DB}}} \underbrace{\frac{Q_{\inn}^{\Moran} - Q_{\out}^{\Moran}}{1 - Q_{\out}^{\Moran}}}_{R^{\Moran}} \Bigg],
+\end{split}
+\end{equation}
+
+\paragraph{Wright-Fisher}
+
+\begin{equation}\label{eq:EXWF}
+\begin{split}
+\Esp{\overline{X}} \approx \mutbias + 
+& \frac{\selstr}{\mu}  \mutbias (1-\mutbias) (1 - Q_{\out}^{\WF}) \times \\
+ &\Bigg[ \underbrace{ \begin{pmatrix}
+ (1-\mu) (-\cc) \\
+- (\bb - \cc) (1-\mu) \left( \frac{(1-m)^2}{n} + \frac{m^2}{N-n}\right) 
+ \end{pmatrix}
+}_{-\mathcal{C^{\WF}}} + \underbrace{ \begin{pmatrix}
+(1-\mu) \bb \\
+- (\bb - \cc) (n-1) \left( \frac{(1-m)^2}{n} + \frac{m^2}{N-n} \right) 
+\end{pmatrix}
+}_{\mathcal{B^{\WF}}} \underbrace{\frac{Q_{\inn}^{\WF} - Q_{\out}^{\WF}}{1 - Q_{\out}^{\WF}}}_{R^{\WF}} \Bigg],
+\end{split}
+\end{equation}
 
 \subsubsection{Direct effects}
 Direct (/primary) effects are similar for the three life-cycles; the only difference is the value of probabilities of identity by descent $Q$ (as seen in the previous section, they differ between Moran and Wright-Fisher life-cycles):
@@ -861,9 +930,12 @@ With our notation, and given that social interactions take place within demes an
 \begin{equation}\label{eq:weaksel2}
 \begin{split}
 \selstr \mu B^* & \derivn{\Esp{\overline{X}}}{\selstr} = \selstr  \mutbias (1-\mutbias) (1 - Q_{\out}) \times \\
- \Bigg( &\underbrace{ \derivn{W}{f_{\focal}} (-\cc) + \derivn{W}{f_{\inn}} \bb}_{-\mathcal{C}} + \underbrace{ \left( \derivn{W}{f_{\focal}} \bb + \derivn{W}{f_{\inn}} (-\cc) + (n-2) \derivn{W}{f_{\inn}} \bb \right) }_{\mathcal{B}} \underbrace{\frac{Q_{\inn} - Q_{\out}}{1 - Q_{\out}}}_{R} \Bigg)  + \bigO{\selstr^2}.
+ \Bigg( &\underbrace{ \derivn{W}{f_{\focal}} (-\cc) + \derivn{W}{f_{\inn}} \bb}_{-\mathcal{C}} + \underbrace{ \left( \derivn{W}{f_{\focal}} \bb + (n-1) \derivn{W}{f_{\inn}} (-\cc) + (n-2) \derivn{W}{f_{\inn}} \bb \right) }_{\mathcal{B}} \underbrace{\frac{Q_{\inn} - Q_{\out}}{1 - Q_{\out}}}_{R} \Bigg)  + \bigO{\selstr^2}.
 \end{split}
 \end{equation}
+%
+(As previously, all derivatives are evaluated at $\selstr = 0$.)
+
 Finally, we obtain a first-order approximation of the expected frequency of altruists in the population with 
 \begin{equation}\label{eq:EXgeneric}
 \Esp{\overline{X}} = \mutbias + \selstr \,  \derivv{\Esp{\overline{X}}}{\selstr}{\selstr} + \bigO{\selstr^2},
