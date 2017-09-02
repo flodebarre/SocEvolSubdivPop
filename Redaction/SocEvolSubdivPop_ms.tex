@@ -404,7 +404,7 @@ For each of the life-cycles that we consider, the expected frequency of altruist
 with $W$ as defined in \eqref{eq:defW}. (Calculations leading to \eqref{eq:EXapprox} are presented in  \appname~\ref{sec:app:EX}.)\\
 The mutation bias $\mutbias$ corresponds to the expected proportion of altruists in the population in the absence of selection (\ie, when $\selstr = 0$); $\selstr$ is the parameter that scales the effects of interactions between individuals, which is assumed to be small. The $-\mathcal{C}$ term groups the effects corresponding to the effects of a change of a focal individual's phenotype on its own fitness (with the fitness definition given in \eqref{eq:defW}.) The $\mathcal{B}$ term corresponds to effects on an individual's fitness of the change of a deme-mate's phenotype. It is multiplied by $R$, which is relatedness. Also note the overall $(1-\Qout)$ factor. All of these terms depend on the chosen life-cycle, and on parameters such as the mutation probability $\mu$ and the emigration probability $m$. 
 
-We now present the values of these different terms for the three life-cycles under study. The equations are obtained by replacing the derivatives of $W$ by their specific formulas for each life-cycle, which are presented in \appname~\ref{sec:app:dW}. The formulas of  probabilities of identity by descent are more complicated, so not substituted, but they can be found in \eqref{eq:QM} and \eqref{eq:QWF}. The additional superscripts correspond to the life-cycles ($\WF$: Wright-Fisher, $\Moran$: Moran (either), $\DB$: Moran Death-Birth, $\BD$: Moran Birth-Death.) Finally, for each life-cycle, we further decompose the $-\mathcal{C}$ and $\mathcal{B}$ terms into primary (subscript $\prim$) and secondary (subscript $\secd$) effects TODO CITE Gardner. Primary effects correspond to unmediated, direct consequences of interactions (they are included in $\derivn{W}{f_{\focal}}$), while secondary effects correspond to consequences of interactions mediated by other individuals, competition. They correspond to what was called ``direct'' and ``indirect'' effects in \citep{DebarreHD2014, Debarre2017}, but the terminology was updated for more consistency with other authors. All equations are of the form
+We now present the values of these different terms for the three life-cycles under study. The equations are obtained by replacing the derivatives of $W$ by their specific formulas for each life-cycle, which are presented in \appname~\ref{sec:app:dW}. The formulas of  probabilities of identity by descent are more complicated, so not substituted, but they can be found in \eqref{eq:QM} and \eqref{eq:QWF}. The additional superscripts correspond to the life-cycles ($\WF$: Wright-Fisher, $\Moran$: Moran (either), $\DB$: Moran Death-Birth, $\BD$: Moran Birth-Death.) Finally, for each life-cycle, we further decompose the $-\mathcal{C}$ and $\mathcal{B}$ terms into primary (subscript $\prim$) and secondary (subscript $\secd$) effects \todo{CITE Gardner}. Primary effects correspond to unmediated, direct consequences of interactions (they are included in $\derivn{W}{f_{\focal}}$), while secondary effects correspond to consequences of interactions mediated by other individuals, competition. They correspond to what was called ``direct'' and ``indirect'' effects in \citep{DebarreHD2014, Debarre2017}, but the terminology was updated for more consistency with other authors. All equations are of the form
 %
 \begin{equation}\label{eq:EXBD}
 \begin{split}
@@ -465,7 +465,7 @@ With the Death-Birth life-cycle, \eqref{eq:EXapprox} becomes
 \end{split}
 \end{equation}
 %
-With this life-cycle, Death occurs first, and the probability of dying is independent from the state of the population (since we assume that social interactions affect fecundity TODO cite D and Nakam). We can therefore factor a $1-\mu$ term in all terms. The primary effects (first lines in the parentheses) remain the same as with the Birth-Death life-cycle. However, the Death-Birth life-cycle leads to different secondary effects compared to the Birth-Death life-cycle: competition occurs at a different scale \citep{GrafenArchetti2008}.
+With this life-cycle, Death occurs first, and the probability of dying is independent from the state of the population (since we assume that social interactions affect fecundity \todo{cite D and Nakam}). We can therefore factor a $1-\mu$ term in all terms. The primary effects (first lines in the parentheses) remain the same as with the Birth-Death life-cycle. However, the Death-Birth life-cycle leads to different secondary effects compared to the Birth-Death life-cycle: competition occurs at a different scale \citep{GrafenArchetti2008}.
 Finally, with this life-cycle as we defined it, the probabilities of identity by descent are the same as with the Birth-Death model. 
 
 \paragraph{Wright-Fisher}
@@ -490,92 +490,27 @@ The only -- but important -- different between \eqref{eq:EXWF} and \eqref{eq:EXD
 
 \subsection{Primary effects}
 
-Let us first focus on primary effects, shown on the first lines in the parentheses in \eqref{eq:EXBD}--\eqref{eq:EXWF}. They are the same for the three life-cycles that we consider, and they do not depend on the emigration probability $m$. At the same time, the relatedness terms $R^{\Moran}$ and $R^{\WF}$ decrease with $m$ (keeping $m<\frac{\ndemes -1}{\ndemes}$.) Consequently, ignoring secondary effects, we would conclude that even with imperfect strategy transmission ($\mu>0$), increasing the emigration probability $m$ decreases the expected frequency of altruists in the population (as our intuition may suggest already.) However, secondary effects play a role as well. 
+Let us first focus on primary effects, shown on the first lines in the parentheses in \eqref{eq:EXBD}--\eqref{eq:EXWF}. They are the same for the three life-cycles that we consider, and they do not depend on the emigration probability $m$. At the same time, the relatedness terms $R^{\Moran}$ and $R^{\WF}$ decrease with $m$ (keeping $m<\frac{\ndemes -1}{\ndemes}$.\todo{Figure R}) Consequently, ignoring secondary effects, we would conclude that even with imperfect strategy transmission ($\mu>0$), increasing the emigration probability $m$ decreases the expected frequency of altruists in the population (as our intuition may suggest already.) However, secondary effects play a role as well. 
 
 \subsection{Changes with the emigration probability $m$} 
 
-For the three life-cycles, the secondary effects are negative (with $0<m<\frac{\ndemes-1}{\ndemes}$) and they increase with the emigration probability $m$. In other words, these detrimental secondary effects weaken when the emigration probability increases. This goes against the reduction of relatedness $R$ as $m$ increases. Hence, we need to consider the entire equations to know the overall effect of the emigration probability $m$ on the expected frequency of altruists $\Esp{\overline{X}}$. 
-   
-How the secondary effects change with $m$ and combining both we cannot say anything. 
-
-Figures with both. 
-
-Identify critical values. 
-
-\subsubsection{Direct effects}
-Direct (/primary) effects are similar for the three life-cycles; the only difference is the value of probabilities of identity by descent $Q$ (as seen in the previous section, they differ between Moran and Wright-Fisher life-cycles):
-%
-\begin{subequations}\label{eq:directeffects}
-\begin{align}
-\beta_{\direct}^{\BD} = \beta_{\direct}^{\DB} &= \left( 1-\mu\right) \Qin^{\Moran}, \label{eq:bBDD}\\
-\beta_{\direct}^{\WF} &= \left( 1-\mu\right) \Qin^{\WF}; \label{eq:bWFD}\\
-%
-%
-\gamma_{\direct}^{\BD} = \gamma_{\direct}^{\BD} = \gamma_{\direct}^{\WF} &= 1-\mu.\label{eq:cBDD}
-\end{align}
-\end{subequations}
-%
-For both benefits and costs, direct effects only count when there is no mutation (hence the ($1-\mu$) factors). 
-Direct effects of benefits $\bb$ (\eqref{eq:bBDD} and \eqref{eq:bWFD}) only count if the interaction takes place with an individual who is identical by descent. With the population structure that we consider, social interactions only occur within demes, so only $\Qin$ is present in \eqref{eq:bBDD} and \eqref{eq:bWFD}. On the other hand, the direct effect of the fecundity cost $\cc$ (\eqref{eq:cBDD}) does not depend on the type of interactant, since the same cost $\cc$ is paid by altruists irrespective of the interactant's identity. 
-
-As seen in the previous section, $\Qin^{\Moran}$ and $\Qin^{\WF}$ decrease with the emigration probability $m$ (actually only until $m=\frac{d-1}{d}$ for the latter). Consequently, the magnitude of the direct (beneficial) effects of benefits $\bb$ provided by altruists ($\beta_{\direct}$) decreases when the emigration probability $m$ increases, while the direct (detrimental) effects ($\gamma_{\direct}$) due to the direct cost of altruism $\cc$ are constant. As a result, if we only considered direct effects, we would conclude that more emigration $m$ is detrimental to the evolution of altruistic behaviour. However, there are also indirect effects at play. 
-
-\subsubsection{Indirect effects}
-Indirect (/secondary) effects are collateral effects on other individuals; they depend on the type of life-cycle, and always involve individuals who are identical by descent. 
-
-\paragraph{Moran Birth-Death} Changing the fecundity of a focal individual has two kinds of indirect effects on others: \begin{inparaenum}[\it i\rm )]\item it changes their probability of being the one chosen to reproduce -- this affects all individuals in the population who are identical by descent to the focal, and \item it changes their probability of dying because the number of offspring landing in their site changes -- this affects individuals in the population who can send offspring at the same locations as the focal and are identical-by-descent to it. For this life-cycle, the indirect effects are: \end{inparaenum}
-%
-\begin{subequations}
-\begin{equation}\label{eq:bBDI}
-\begin{split}
-\beta_{\indirect}^{\BD} &=  (1-m) \left(\frac{n-1}{n} \Qin^{\Moran} + \frac{1}{n}\right) + m \, \Qout^{\Moran} %
-- \mu \frac{ 1 + (n-1) \Qin^{\Moran} + n (d-1) \Qout^{\Moran}}{n d} \\
-&= \gamma_{\indirect}^{\BD}.
-\end{split}
-\end{equation}
-%
-(Calculation details are presented in \appname~\ref{sec:app:EX}.)\\
-The formulas are the same for the indirect effects associated to $\bb$ and to $\cc$; in other words, the balance between the two indirect effects remains the same when the emigration probability changes. The term $\left(\frac{n-1}{n} \Qin^{\Moran} + \frac{1}{n}\right)$, which will appear again later, corresponds to the probability that two individuals sampled with replacement from the same deme are identical by descent. Indirect effects are indeed also felt by the focal individual itself (\eg, increasing the fecundity of another individual implies decreasing one's own relative fecundity). 
-
-Replacing $\Qin$ and $\Qout$ by their formula for the Moran life-cycle (\eqref{eq:QM}), we conclude that $\beta_{\indirect}^{\BD}=\gamma_{\indirect}^{\BD}$ are decreasing functions of the emigration probability~$m$ (calculations in the supplementary Mathematica file).
-
-\paragraph{Moran Death-Birth} With this life-cycle,  death comes first and every individual in the population has the same survival probability ($1/N$). The indirect consequences of changing a focal individual's fecundity affect all individuals who can send their offspring to the same locations as the focal, and who are identical by descent to it. We obtain
-\begin{equation}\label{eq:bDBI}
-\begin{split}
-\beta_{\indirect}^{\DB} & = (1-\mu ) \Bigg[ \left( \frac{1}{n} + \frac{ (n-1) \Qin^{\Moran} }{n} \right) \left( (1-m)^2 +  \frac{m^2}{ (d-1)} \right) \\ 
-%
-& \qquad \qquad \quad + \Qout^{\Moran} \, \left(2 m \, (1-m) +  (d-2) \frac{m^2}{(d-1)}\right)  \Bigg] \\
-& = \gamma_{\indirect}^{\DB}
-%
-\end{split}
-\end{equation}
-The brackets in \eqref{eq:bDBI} contain a sum of two terms. 
-The first term corresponds two individuals from the same deme (with replacement) whose offspring either do not emigrate, or emigrate together to the same deme. The second term corresponds to individuals initially from different demes who end up in the same deme (either one of their home demes, or a third deme). 
-
-Here again, $\beta_{\indirect} = \gamma_{\indirect}$, so the balance between indirect benefits and indirect costs does not change when the emigration probability $m$ increases.
-
-Replacing $\Qin$ and $\Qout$ by their formulas given in \eqref{eq:QM}, we can conclude that  $\beta_{\indirect}^{\DB}=\gamma_{\indirect}^{\DB}$ first decreases with the emigration probability $m$, and increases again after a threshold value $m_c'$, which is smaller than $m_c^{\WF}=(d-1)/d$) (calculation details are presented in the supplementary Mathematica file).  
-
-\paragraph{Wright-Fisher} With this life-cycle, generations are synchronous and all individuals again all have the same survival probability (now equal to $0$ at all sites). As a result, the formulas for $\beta_{\indirect}^{\WF}$ and $\gamma_{\indirect}^{\WF}$ are the same as $\beta_{\indirect}^{\DB}$ and $\gamma_{\indirect}^{\WF}$, except that instead of $\Qin^{\Moran}$ and $\Qout^{\Moran}$, we need to use $\Qin^{\WF}$ and $\Qout^{\WF}$ (given in \eqref{eq:QWF}). Once this is done, we see that $\beta_{\indirect}^{\WF} = \gamma_{\indirect}^{\WF}$ first decreases with the emigration probability $m$, and increases again after the threshold value $m_c^{\WF} = (d-1)/d$. This emigration threshold was identified above as the emigration probability such that offspring have an equal chance of landing in their natal deme or in any other deme, \ie, $\din=\dout$ (calculation details are presented in the supplementary Mathematica file.)    
-\end{subequations}
-
-\subsection{Identifying threshold values of the mutation probability $\mu$}
-
-In the previous section, we investigated the impact of changes in the emigration probability $m$ on each of the terms that make up the expected frequency of altruists $\Esp{\overline{X}}$. Now we need to combine these different terms to focus on the quantity we are eventually interested in, $\Esp{\overline{X}}$. The rather lengthy formulas that we obtain are relegated to the \appname and supplementary Mathematica file, and we concentrate here on the results. 
+For the three life-cycles, the secondary effects are negative (with $0<m<\frac{\ndemes-1}{\ndemes}$) and they increase with the emigration probability $m$. In other words, these detrimental secondary effects weaken when the emigration probability increases. This goes against the reduction of relatedness $R$ as $m$ increases. Hence, we need to consider the entire equations to know the overall effect of the emigration probability $m$ on the expected frequency of altruists $\Esp{\overline{X}}$, and on how this is affected by the (in)fideliy of parent-offspring transmission $\mu$ (see Figure~\ref{fig:EX}). 
+ 
+The rather lengthy formulas that we obtain are relegated to the \appname and supplementary Mathematica file, and we concentrate here on the results. 
 
 \subsubsection{Moran Birth-Death}
 
 For this life-cycle, we find that the expected frequency of altruists $\Esp{\overline{X}}$ is a monotonic function of the emigration probability $m$; the direction of the change depends on the value of the mutation probability $\mu$ compared to a threshold value $\mu_c^{\BD}$. When $\mu<\mu_c^{\BD}$, $\Esp{\overline{X}}$ decreases with $m$, while when $\mu>\mu_c^{\BD}$, $\Esp{\overline{X}}$  increases with $m$. The critical value $\mu_c^{\BD}$ is given by 
 \begin{equation}\label{eq:mucBD}
 \mu_c^{\BD} = %
-1 - \frac{\bb  - \cc + \sqrt{(\bb - \cc) \left(4 \bb (n d)^2 + \bb - \cc \right)} }{2 \bb n d}
+1 - \frac{\bb  - \cc + \sqrt{(\bb - \cc) \left(4 \bb N^2 + \bb - \cc \right)} }{2 \bb N}
 \end{equation}
 %
-This result is illustrated in figure~\ref{fig:EX}\subref{fig:EXBD}; with the parameters of the figure, $\mu_c^{\BD} \approx 0.026$.
+(recall that $N$ is the total size of the population, $N=n \ndemes$.) This result is illustrated in figure~\ref{fig:EX}\subref{fig:EXBD}; with the parameters of the figure, $\mu_c^{\BD} \approx 0.026$.\todo{given value for large $N$}
 
 \subsubsection{Moran Death-Birth}
 
-The relationship between $\Esp{\overline{X}}$ and $m$ is a bit more complicated for this life-cycle. For simplicity, we concentrate on what happens starting from low emigration probabilities (\ie, the sign of the slope of $\Esp{\overline{X}}$ as a function of $m$ when $m\to 0$). If the benefits $\bb$ provided by altruists are relatively low ($\bb < \cc (n+1)$), $\Esp{\overline{X}}$ initially increases with $m$ provided the mutation probability $\mu$ is greater than a threshold value $\mu_c^{\DB}$ given in \eqref{eq:mucDB} below; otherwise, when the benefits are high enough, $\Esp{\overline{X}}$ initially increases with $m$ for any value of $\mu$. Combining these results, we write
+The relationship between $\Esp{\overline{X}}$ and $m$ is a bit more complicated for this life-cycle. For simplicity, we concentrate on what happens starting from low emigration probabilities (\ie, on the sign of the slope of $\Esp{\overline{X}}$ as a function of $m$ when $m\to 0$). If the benefits $\bb$ provided by altruists are relatively low ($\bb < \cc (n+1)$), $\Esp{\overline{X}}$ initially increases with $m$ provided the mutation probability $\mu$ is greater than a threshold value $\mu_c^{\DB}$ given in \eqref{eq:mucDB} below; otherwise, when the benefits are high enough, $\Esp{\overline{X}}$ initially increases with $m$ for any value of $\mu$. Combining these results, we write
 \begin{equation}\label{eq:mucDB}
 \mu_c^{\DB} = \begin{cases}
 \dfrac{ (n+1) \cc - \bb}{ (2 n - 1) \bb - (n-1) \cc} & \textrm{if $\bb < \cc (n+1)$,} \\
@@ -584,13 +519,14 @@ The relationship between $\Esp{\overline{X}}$ and $m$ is a bit more complicated 
 \end{cases}
 \end{equation} 
 %
+\todo[inline]{comment on condition 1 whether altruist can be maintained}
 In figure~\ref{fig:EX}\subref{fig:EXDB}, the parameters are such that $\mu_c^{\DB} = 0$. 
 
 The expected frequency of altruists $\Esp{\overline{X}}$ then reaches a maximum at an emigration probability $m_c^{\DB}$ (whose complicated equation is given in the supplementary Mathematica file), as can be seen in figure~\ref{fig:EX}\subref{fig:EXDB}. When the mutation probability gets close to $0$ ($\mu \to 0$), $m_c^{\DB}$ also gets close to $0$, 
 
 \subsubsection{Wright-Fisher}
 
-The expected frequency of altruists in the population reaches an extremum when $m = m_c^{\WF} = \frac{d-1}{d}$. This extremum is a maximum when the mutation probability is higher than a threshold value $\mu_c^{\WF}$ given by 
+The expected frequency of altruists in the population reaches an extremum at the highest admissible emigration value $m = m_c^{\WF} = \frac{\ndemes-1}{\ndemes}$. This extremum is a maximum when the mutation probability is higher than a threshold value $\mu_c^{\WF}$ given by 
 \begin{equation}
 \mu_c^{\WF} = 1-\sqrt{1-\frac{\cc}{\bb}},
 \end{equation}
@@ -620,6 +556,8 @@ For the Moran model, it may seem odd that an offspring can replace its own paren
 
 \section{Discussion}
 % Summary
+\todo[inline]{remove direct/indirect effects}
+\todo[inline]{discuss effects of $n$ and $\ndemes$}
 \subsection*{The expected frequency of altruists in a subdivided population can increase with the probability of emigration}
 Assuming that the transmission of a social strategy (being an altruist or a defector) from a parent to its offspring could be imperfect, we found that the expected frequency of altruists maintained in a population could increase with the probability $m$ of emigration out of the parental deme, a parameter tuning population viscosity. This result can seem surprising, because it contradicts the conclusions obtained under the assumption of nearly perfect strategy transmission (\ie, in the case of genetic transmission, when mutation is very weak or absent). Under nearly perfect strategy transmission indeed, increased population viscosity (\ie, decreased emigration probability) is either neutral \citep[][and dashed lines in figures~\ref{fig:EX}\subref{fig:EXBD}--\subref{fig:EXWF}]{Taylor1992islandmodel} or favorable \citep[][and dashed lines in figure~\ref{fig:EX}\subref{fig:EXDB}]{TaylorDayWild2007} to the evolution of altruistic behavior. 
 
