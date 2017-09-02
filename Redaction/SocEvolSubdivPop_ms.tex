@@ -237,6 +237,8 @@
 \newcommand{\Qin}{Q_{\inn}}
 \newcommand{\Qout}{Q_{\out}}
 
+\newcommand{\prim}{\textrm{P}}
+\newcommand{\secd}{\textrm{S}}
 
 \newcommand{\ndemes}{N_D}
 
@@ -393,25 +395,41 @@ All scripts are available at \\
 For each of the life-cycles that we consider, the expected frequency of altruists in the population, $\Esp{\overline{X}}$, can be approximated as
 \begin{equation}\label{eq:EXapprox}
 \begin{split}
-\Esp{\overline{X}} \approx \mutbias + 
-& \frac{\selstr}{\mu B^*}  \mutbias (1-\mutbias) (1 - Q_{\out}) \times \\
+& \Esp{\overline{X}} \approx \mutbias + 
+\frac{\selstr}{\mu B^*}  \mutbias (1-\mutbias) (1 - Q_{\out}) \times \\
  \Bigg[ &\underbrace{ \derivn{W}{f_{\focal}} (-\cc) + \derivn{W}{f_{\inn}} \bb}_{-\mathcal{C}} + \underbrace{ \left( \derivn{W}{f_{\focal}} \bb + (n-1) \derivn{W}{f_{\inn}} (-\cc) + (n-2) \derivn{W}{f_{\inn}} \bb \right) }_{\mathcal{B}} \underbrace{\frac{Q_{\inn} - Q_{\out}}{1 - Q_{\out}}}_{R} \Bigg],
 \end{split}
 \end{equation}
 %
 with $W$ as defined in \eqref{eq:defW}. (Calculations leading to \eqref{eq:EXapprox} are presented in  \appname~\ref{sec:app:EX}.)\\
-The mutation bias $\mutbias$ corresponds to the expected proportion of altruists in the population in the absence of selection (\ie, when $\selstr = 0$); $\selstr$ is the parameter that scales the effects of interactions between individuals, which is assumed to be small. The $-\mathcal{C}$ term groups the effects corresponding to the effects of a change of a focal individual's phenotype on its own fitness (with the fitness definition given in \eqref{eq:defW}.) The $\mathcal{B}$ term corresponds to effects on an individual's fitness of the change of a deme-mate's phenotype. It is multiplied by $R$, which is relatedness. Also note the overall $(1-\Qout)$ factor. All of these terms depend on the chosen life-cycle, and on parameters such as the mutation probability $\mu$ and the emigration probability $m$.
+The mutation bias $\mutbias$ corresponds to the expected proportion of altruists in the population in the absence of selection (\ie, when $\selstr = 0$); $\selstr$ is the parameter that scales the effects of interactions between individuals, which is assumed to be small. The $-\mathcal{C}$ term groups the effects corresponding to the effects of a change of a focal individual's phenotype on its own fitness (with the fitness definition given in \eqref{eq:defW}.) The $\mathcal{B}$ term corresponds to effects on an individual's fitness of the change of a deme-mate's phenotype. It is multiplied by $R$, which is relatedness. Also note the overall $(1-\Qout)$ factor. All of these terms depend on the chosen life-cycle, and on parameters such as the mutation probability $\mu$ and the emigration probability $m$. 
 
-For each life-cycle, we will further decompose the $-\mathcal{C}$ and $\mathcal{B}$ terms into primary and secondary effects TODO CITE Gardner . Primary effects correspond to unmediated, direct consequences of interactions (they are included in $\derivn{W}{f_{\focal}}$), while secondary effects correspond to consequences of interactions mediated by other individuals, competition. 
-
-We now present the values of these different terms for the three life-cycles under study.  
+We now present the values of these different terms for the three life-cycles under study. The equations are obtained by replacing the derivatives of $W$ by their specific formulas for each life-cycle, which are presented in \appname~\ref{sec:app:dW}. The formulas of  probabilities of identity by descent are more complicated, so not substituted, but they can be found in \eqref{eq:QM} and \eqref{eq:QWF}. The additional superscripts correspond to the life-cycles ($\WF$: Wright-Fisher, $\Moran$: Moran (either), $\DB$: Moran Death-Birth, $\BD$: Moran Birth-Death.) Finally, for each life-cycle, we further decompose the $-\mathcal{C}$ and $\mathcal{B}$ terms into primary (subscript $\prim$) and secondary (subscript $\secd$) effects TODO CITE Gardner. Primary effects correspond to unmediated, direct consequences of interactions (they are included in $\derivn{W}{f_{\focal}}$), while secondary effects correspond to consequences of interactions mediated by other individuals, competition. They correspond to what was called ``direct'' and ``indirect'' effects in \citep{DebarreHD2014, Debarre2017}, but the terminology was updated for more consistency with other authors. All equations are of the form
+%
+\begin{equation}\label{eq:EXBD}
+\begin{split}
+\Esp{\overline{X}} & \approx \mutbias + 
+\frac{\selstr}{\mu}  \mutbias (1-\mutbias) (1 - Q_{\out}) 
+ \Bigg[ \underbrace{ \begin{pmatrix}
+ -\mathcal{C}_{\prim} \\
+ -\mathcal{C}_{\secd} 
+ \end{pmatrix}
+}_{-\mathcal{C}} + \underbrace{ \begin{pmatrix}
+\mathcal{B}_{\prim} \\
++ \mathcal{B}_{\secd} 
+\end{pmatrix}
+}_{\mathcal{B}} \underbrace{\frac{Q_{\inn} - Q_{\out}}{1 - Q_{\out}}}_{R} \Bigg].
+\end{split}
+\end{equation}
 
 \paragraph{Moran Birth-Death}
 
+With the Birth-Death life-cycle, \eqref{eq:EXapprox} becomes
+%
 \begin{equation}\label{eq:EXBD}
 \begin{split}
-\Esp{\overline{X}} \approx \mutbias + 
-& \frac{\selstr}{\mu}  \mutbias (1-\mutbias) (1 - Q_{\out}^{\Moran}) \times \\
+\Esp{\overline{X}} & \approx \mutbias + 
+\frac{\selstr}{\mu}  \mutbias (1-\mutbias) (1 - Q_{\out}^{\Moran}) \times \\
  &\Bigg[ \underbrace{ \begin{pmatrix}
  (1-\mu) (-\cc) \\
  + (\bb - \cc) \left( \dfrac{\mu}{N} - \dfrac{1-m}{n} \right) 
@@ -423,43 +441,66 @@ We now present the values of these different terms for the three life-cycles und
 }_{\mathcal{B^{\BD}}} \underbrace{\frac{Q_{\inn}^{\Moran} - Q_{\out}^{\Moran}}{1 - Q_{\out}^{\Moran}}}_{R^{\Moran}} \Bigg],
 \end{split}
 \end{equation}
+%
+The secondary effects (second line in the parentheses) include competitive effects on the probability of reproducing, and consequences of social interactions on the probability that a given individual dies. Note that the secondary effects remain negative for the realistic range of emigration values that we consider (\ie, $m<(\ndemes - 1)/\ndemes$).
 
 
 \paragraph{Moran Death-Birth}
 
+With the Death-Birth life-cycle, \eqref{eq:EXapprox} becomes
+%
 \begin{equation}\label{eq:EXDB}
 \begin{split}
-\Esp{\overline{X}} \approx \mutbias + 
-& \frac{\selstr}{\mu}  \mutbias (1-\mutbias) (1 - Q_{\out}^{\Moran}) \times \\
+& \Esp{\overline{X}} \approx \mutbias + 
+ \frac{\selstr}{\mu}  \mutbias (1-\mutbias) (1 - Q_{\out}^{\Moran}) \times \\
  &\Bigg[ \underbrace{ \begin{pmatrix}
  (1-\mu) (-\cc) \\
 - (\bb - \cc) (1-\mu) \left( \frac{(1-m)^2}{n} + \frac{m^2}{N-n}\right) 
  \end{pmatrix}
 }_{-\mathcal{C^{\DB}}} + \underbrace{ \begin{pmatrix}
 (1-\mu) \bb \\
-- (\bb - \cc) (n-1) \left( \frac{(1-m)^2}{n} + \frac{m^2}{N-n} \right) 
+- (\bb - \cc) (n-1) (1-\mu)\left( \frac{(1-m)^2}{n} + \frac{m^2}{N-n} \right) 
 \end{pmatrix}
 }_{\mathcal{B^{\DB}}} \underbrace{\frac{Q_{\inn}^{\Moran} - Q_{\out}^{\Moran}}{1 - Q_{\out}^{\Moran}}}_{R^{\Moran}} \Bigg],
 \end{split}
 \end{equation}
+%
+With this life-cycle, Death occurs first, and the probability of dying is independent from the state of the population (since we assume that social interactions affect fecundity TODO cite D and Nakam). We can therefore factor a $1-\mu$ term in all terms. The primary effects (first lines in the parentheses) remain the same as with the Birth-Death life-cycle. However, the Death-Birth life-cycle leads to different secondary effects compared to the Birth-Death life-cycle: competition occurs at a different scale \citep{GrafenArchetti2008}.
+Finally, with this life-cycle as we defined it, the probabilities of identity by descent are the same as with the Birth-Death model. 
 
 \paragraph{Wright-Fisher}
 
 \begin{equation}\label{eq:EXWF}
 \begin{split}
-\Esp{\overline{X}} \approx \mutbias + 
-& \frac{\selstr}{\mu}  \mutbias (1-\mutbias) (1 - Q_{\out}^{\WF}) \times \\
+& \Esp{\overline{X}}  \approx \mutbias + 
+\frac{\selstr}{\mu}  \mutbias (1-\mutbias) (1 - Q_{\out}^{\WF}) \times \\
  &\Bigg[ \underbrace{ \begin{pmatrix}
  (1-\mu) (-\cc) \\
 - (\bb - \cc) (1-\mu) \left( \frac{(1-m)^2}{n} + \frac{m^2}{N-n}\right) 
  \end{pmatrix}
 }_{-\mathcal{C^{\WF}}} + \underbrace{ \begin{pmatrix}
 (1-\mu) \bb \\
-- (\bb - \cc) (n-1) \left( \frac{(1-m)^2}{n} + \frac{m^2}{N-n} \right) 
+- (\bb - \cc) (n-1)(1-\mu) \left( \frac{(1-m)^2}{n} + \frac{m^2}{N-n} \right) 
 \end{pmatrix}
 }_{\mathcal{B^{\WF}}} \underbrace{\frac{Q_{\inn}^{\WF} - Q_{\out}^{\WF}}{1 - Q_{\out}^{\WF}}}_{R^{\WF}} \Bigg],
 \end{split}
 \end{equation}
+%
+The only -- but important -- different between \eqref{eq:EXWF} and \eqref{eq:EXDB} is the value of the probabilities of identity by descent, because the number of individuals that are updated at each time step differs. 
+
+\subsection{Primary effects}
+
+Let us first focus on primary effects, shown on the first lines in the parentheses in \eqref{eq:EXBD}--\eqref{eq:EXWF}. They are the same for the three life-cycles that we consider, and they do not depend on the emigration probability $m$. At the same time, the relatedness terms $R^{\Moran}$ and $R^{\WF}$ decrease with $m$ (keeping $m<\frac{\ndemes -1}{\ndemes}$.) Consequently, ignoring secondary effects, we would conclude that even with imperfect strategy transmission ($\mu>0$), increasing the emigration probability $m$ decreases the expected frequency of altruists in the population (as our intuition may suggest already.) However, secondary effects play a role as well. 
+
+\subsection{Changes with the emigration probability $m$} 
+
+For the three life-cycles, the secondary effects are negative (with $0<m<\frac{\ndemes-1}{\ndemes}$) and they increase with the emigration probability $m$. In other words, these detrimental secondary effects weaken when the emigration probability increases. This goes against the reduction of relatedness $R$ as $m$ increases. Hence, we need to consider the entire equations to know the overall effect of the emigration probability $m$ on the expected frequency of altruists $\Esp{\overline{X}}$. 
+   
+How the secondary effects change with $m$ and combining both we cannot say anything. 
+
+Figures with both. 
+
+Identify critical values. 
 
 \subsubsection{Direct effects}
 Direct (/primary) effects are similar for the three life-cycles; the only difference is the value of probabilities of identity by descent $Q$ (as seen in the previous section, they differ between Moran and Wright-Fisher life-cycles):
@@ -942,7 +983,7 @@ Finally, we obtain a first-order approximation of the expected frequency of altr
 \end{equation}
 where $\derivv{\Esp{\overline{X}}}{\selstr}{\selstr}$ is obtained from \eqref{eq:weaksel2}. We then need to replace the $B_{i}$ and $D_{i}$ terms by their formulas for each life-cycle (given in table~\ref{tab:BD}).
 
-\subsection{Derivatives for the specific life-cycles}
+\subsection{Derivatives for the specific life-cycles\label{sec:app:dW}}
 
 Using the formulas presented in table~\ref{tab:BD}, and the definition of $W=W_i$ given in \eqref{eq:app:defW}, we obtain the following equations:
 
@@ -1151,7 +1192,7 @@ The probability that two different deme-mates are identical by descent, $\Qin^{\
 When the mutation probability $\mu$ is vanishingly small ($\mu \to 0$), both $\Qin^{\Moran}$ and $\Qout^{\Moran}$ are equal to $1$: in the absence of mutation indeed, the population ends up fixed for one of the two types, and all individuals are identical by descent. Note that we obtain a different result if we first assumed that the size of the population is infinite ($\ndemes \to \infty$), because the order of limits matters; %  ($\lim_{d\to\infty} \lim_{\mu\to0} \Qin^{M} \neq  \lim_{\mu\to0} \lim_{d\to\infty}   \Qin^{M}$).
 for instance, $\lim_{d\to \infty} \Qout^{M}=0$. 
 
-\subsection{Wright-Fisher}
+\subsubsection{Wright-Fisher}
 For the Wright-Fisher updating, the equation for $\tilde{Q}$ is different:
 \begin{equation}
 \tilde{\mathcal{Q}}_{\substack{r_1\\r_2}} = \frac{1}{N} \sum_{q_1=0}^{N_1-1} \sum_{q_2=0}^{N_2 -1} \frac{\mu \lambda_{WF}'}{1-(1-\mu)^2 (\tilde{\mathcal{D}}_{\substack{q_1\\q_2}})^2} \exp\left(-\imath \frac{2\pi q_1 r_1}{N_1}\right)\exp\left(-\imath \frac{2\pi q_2 r_2}{N_2}\right), 
