@@ -10,7 +10,12 @@ mygradient5 <- c("#234BCD", "#4E579F", "#7A6471", "#A57043", "#D17D15")
 mygradient3 <- c("#234BCD", "#7A6471", "#D17D15")
 
 # Rev colors
-mygradient4 <- c("#FFAA00", "#AA7155", "#5538AA", "#0000FF")
+col025 <- "#FFAA00"
+col01 <- "#BF7F3F"
+col001 <- "#7F557F"
+col0001 <- "#3F2ABF"
+mygradient4 <- c(col025, col01, col001, col0001)
+col0 <- colnomut <- "#0000FF"
 
 pchs <- c(21,22,23,24,25)
 
@@ -35,3 +40,14 @@ Cm2In <- function(x){x/2.54}
 rectColor <- gray(1) # Background color
 rectLines <- gray(0.6)   # Color of the horizontal lines
 rectLlty <- 3          # Line type of the horizontal lines
+
+# Sizes
+cexplot <- 1.3
+cexlab <- 1.6
+cexaxis <- 1.2
+dopdf <- TRUE
+
+wpdfQ <- 4
+hpdfQ <- 4.25
+marpdfQ <- c(3, 3, 0.5, 0)+0.2
+hpdfDB <- 5

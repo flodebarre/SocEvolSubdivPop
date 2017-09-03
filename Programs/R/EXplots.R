@@ -1,3 +1,4 @@
+rm(list = ls())
 for(i in dev.list())dev.off()
 
 source("globalGraphParms.R")
