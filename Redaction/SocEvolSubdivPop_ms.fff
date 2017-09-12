@@ -4,7 +4,7 @@
 &
 \subfigure[\label{fig:sub:RWF}Wight-Fisher]{\includegraphics[width = \wpic]{../Programs/R/Pics/RplotWF.pdf}}
 \end{tabular}
-\caption{Within-deme relatedness of pairs of individuals, as a function of the emigration probability $m$, for different values of the mutation probability $\mu$ (TODO or see legend $0.001$, $0.01$, $0.1$), and for the two types of life-cycles (\subref{fig:sub:QM}: Moran, \subref{fig:sub:QWF}: Wright-Fisher). Other parameters: $n=4$ individuals per deme, $\ndemes = 15$ demes.}
+\caption{Within-deme relatedness of pairs of individuals, as a function of the emigration probability $m$, for different values of the mutation probability $\mu$ (from $0$ [blue] to $0.25$ [orange]), and for the two types of life-cycles (\subref{fig:sub:QM}: Moran, \subref{fig:sub:QWF}: Wright-Fisher). Other parameters: $n=4$ individuals per deme, $\ndemes = 15$ demes.}
 \label{fig:R}
 \end{figure}
 \efloatseparator
@@ -18,7 +18,7 @@
 \subfigure[Wright-Fisher \label{fig:EXWF}]{\includegraphics[type=pdf,ext=.pdf,read=.pdf, width=\wpic]{../Programs/R/Pics/EXWF_sel0.005_htg0}}
 \end{tabular}
 \caption{Expected proportion of altruists under weak selection, as a function of the emigration probability $m$, for different mutation values ($\mu = 0.001$ (blue, dots), $0.01$ (purple, squares), $0.1$ (brown, diamonds), $0.25$ (orange, triangles); the dashed blue lines correspond to $\mu=0$) and different life-cycles (\subref{fig:EXDB} Moran Death-Birth, \subref{fig:EXBD} Moran Birth Death, \subref{fig:EXWF} Wright-Fisher). The curves are the analytical results, the points are the output of numerical simulations.
-Parameters: $\omega = 0.005$, $\mutbias=0.45$, $b = 15$, $c = 1$, $n=4$ individuals per deme, $\ndemes=15$ demes.}
+Parameters: $\selstr = 0.005$, $\mutbias=0.45$, $b = 15$, $c = 1$, $n=4$ individuals per deme, $\ndemes=15$ demes.}
 \label{fig:EX}
 \end{figure}
 \efloatseparator

@@ -1,4 +1,4 @@
-\begin{thebibliography}{37}
+\begin{thebibliography}{39}
 \providecommand{\natexlab}[1]{#1}
 
 \bibitem[{Alizon \& Taylor(2008)}]{Alizon2008}
@@ -117,6 +117,10 @@ Rodrigues, A. M.~M. \& Gardner, A. 2012: Evolution of helping and harming in
   heterogeneous populations.
 \newblock Evolution 66(7):2065--2079.
 
+\bibitem[{Rousset(2004)}]{Rousset2004Book}
+Rousset, F. 2004: Genetic Structure and Selection in Subdivided Populations.
+\newblock Princeton University Press, Princeton, NJ.
+
 \bibitem[{Rousset \& Billiard(2000)}]{RoussetBilliard2000}
 Rousset, F. \& Billiard, S. 2000: A theoretical basis for measures of kin
   selection in subdivided populations: finite populations and localized
@@ -137,6 +141,10 @@ Tarnita, C.~E. \& Taylor, P.~D. 2014: Measures of relative fitness of social
 Taylor, P. 1992{\natexlab{a}}: Altruism in viscous populations---an inclusive
   fitness model.
 \newblock Evolutionary ecology 6(4):352--356.
+
+\bibitem[{Taylor(2010)}]{Taylor2010}
+Taylor, P. 2010: Birth--death symmetry in the evolution of a social trait.
+\newblock Journal of Evolutionary Biology 23(12):2569--2578.
 
 \bibitem[{Taylor et~al.(2011)Taylor, Lillicrap \& Cownden}]{Taylor2011}
 Taylor, P.; Lillicrap, T. \& Cownden, D. 2011: Inclusive fitness analysis on

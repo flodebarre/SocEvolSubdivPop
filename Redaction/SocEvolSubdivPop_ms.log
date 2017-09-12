@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.24)  12 SEP 2017 11:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.24)  12 SEP 2017 21:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1211,55 +1211,20 @@ Package hyperref Info: Option `bookmarksopen' set `true' on input line 150.
 (/usr/share/texlive/texmf-dist/tex/latex/doublestroke/dsfont.sty
 Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
 )
-(/usr/share/texlive/texmf-dist/tex/latex/soul/soul.sty
-Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
-\SOUL@word=\toks52
-\SOUL@lasttoken=\toks53
-\SOUL@cmds=\toks54
-\SOUL@buffer=\toks55
-\SOUL@token=\toks56
-\SOUL@spaceskip=\skip101
-\SOUL@ttwidth=\dimen277
-\SOUL@uldp=\dimen278
-\SOUL@ulht=\dimen279
-)
-(/usr/share/texlive/texmf-dist/tex/latex/todonotes/todonotes.sty
-Package: todonotes 2015/07/09 .dtx Todonotes source and documentation.
-Package: todonotes 2012/07/25
-
-(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
-Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
-
-(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
-(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks57
-\XKV@tempa@toks=\toks58
-)
-\XKV@depth=\count181
-File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
-))
-\c@@todonotes@numberoftodonotes=\count182
-)
-(/usr/share/texlive/texmf-dist/tex/latex/showlabels/showlabels.sty
-Package: showlabels 2015/12/08 v1.7
-
-Package: `showlabels' v1.7 <2015/12/08>
-with amsmath equation tags
-\SL@labelposition=\count183
-) (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
-\Gm@cnth=\count184
-\Gm@cntv=\count185
-\c@Gm@tempcnt=\count186
-\Gm@bindingoffset=\dimen280
-\Gm@wd@mp=\dimen281
-\Gm@odd@mp=\dimen282
-\Gm@even@mp=\dimen283
-\Gm@layoutwidth=\dimen284
-\Gm@layoutheight=\dimen285
-\Gm@layouthoffset=\dimen286
-\Gm@layoutvoffset=\dimen287
-\Gm@dimlist=\toks59
+\Gm@cnth=\count181
+\Gm@cntv=\count182
+\c@Gm@tempcnt=\count183
+\Gm@bindingoffset=\dimen277
+\Gm@wd@mp=\dimen278
+\Gm@odd@mp=\dimen279
+\Gm@even@mp=\dimen280
+\Gm@layoutwidth=\dimen281
+\Gm@layoutheight=\dimen282
+\Gm@layouthoffset=\dimen283
+\Gm@layoutvoffset=\dimen284
+\Gm@dimlist=\toks52
 )
 (/usr/share/texlive/texmf-dist/tex/latex/hyphenat/hyphenat.sty
 Package: hyphenat 2009/09/02 v2.3c hyphenation utilities
@@ -1271,18 +1236,14 @@ Package: endfloat 2011/12/25 v2.5d LaTeX2e package puts figures and tables at e
 nd (jdm)
 Package endfloat Info: `floatrow' package detected, delaying redefinitions on i
 nput line 210.
-\c@postfigure=\count187
+\c@postfigure=\count184
 \efloat@postfff=\write4
-\@ef@fffopen=\count188
-\c@posttable=\count189
+\@ef@fffopen=\count185
+\c@posttable=\count186
 \efloat@postttt=\write5
-\@ef@tttopen=\count190
+\@ef@tttopen=\count187
 )
-(./SocEvolSubdivPop_ms.aux
-
-LaTeX Warning: Label `eq:EXgeneric' multiply defined.
-
-)
+(./SocEvolSubdivPop_ms.aux)
 \openout1 = `SocEvolSubdivPop_ms.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 258.
@@ -1300,7 +1261,8 @@ LaTeX Font Info:    ... okay on input line 258.
 LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 258.
 LaTeX Font Info:    Try loading font information for FML+futm on input line 258
 .
- (/usr/share/texlive/texmf-dist/tex/latex/fourier/fmlfutm.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/fourier/fmlfutm.fd
 File: fmlfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futm.
 )
 LaTeX Font Info:    ... okay on input line 258.
@@ -1338,17 +1300,17 @@ File: t1futs.fd 2004/03/02 Fontinst v1.926 font definitions for T1/futs.
 )
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count191
-\scratchdimen=\dimen288
+\scratchcounter=\count188
+\scratchdimen=\dimen285
 \scratchbox=\box76
-\nofMPsegments=\count192
-\nofMParguments=\count193
-\everyMPshowfont=\toks60
-\MPscratchCnt=\count194
-\MPscratchDim=\dimen289
-\MPnumerator=\count195
-\makeMPintoPDFobject=\count196
-\everyMPtoPDFconversion=\toks61
+\nofMPsegments=\count189
+\nofMParguments=\count190
+\everyMPshowfont=\toks53
+\MPscratchCnt=\count191
+\MPscratchDim=\dimen286
+\MPnumerator=\count192
+\makeMPintoPDFobject=\count193
+\everyMPtoPDFconversion=\toks54
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -1379,7 +1341,7 @@ Package: fr-longtable 2007/11/28 v0.1b (beta) floatrow: additions for longtable
 
 \flrow@LT@lasthead=\box77
 \flrow@LT@prelastfoot=\box78
-\c@FBLTpage=\count197
+\c@FBLTpage=\count194
 )
 \AtBeginShipoutBox=\box79
 Package hyperref Info: Link coloring ON on input line 258.
@@ -1466,304 +1428,293 @@ LaTeX Font Info:    Font shape `U/futm/m/n' will be
 (Font)              scaled to size 7.63599pt on input line 275.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
 (Font)              scaled to size 5.51999pt on input line 275.
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 285.
-LaTeX Font Info:    Try loading font information for T1+phv on input line 288.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 286.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
-) [1
+)
+Overfull \hbox (10.82867pt too wide) in paragraph at lines 288--289
+\T1/futs/m/n/10.95 and iden-tify thresh-olds of parent-offspring strat-egy tran
+s-mis-sion in-ac-cu-racy, above
+ []
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
 
 ]
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 307.
- [4
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 305.
+ [3
 
-] [5]
+]
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 8.27998pt on input line 321.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 6.99199pt on input line 321.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 8.27998pt on input line 321.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 6.99199pt on input line 321.
+ [4]
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <12> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 335.
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 333.
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <8.3> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 337.
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 335.
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <6> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 337.
- [6] [7] [8]
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 335.
+ [5] [6]
+[7]
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 388.
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 6.99199pt on input line 388.
+(Font)              scaled to size 9.19998pt on input line 392.
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <10> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 388.
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 392.
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <7.6> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 388.
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 392.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 388.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 6.99199pt on input line 388.
- [9] [10]
-Overfull \hbox (27.24666pt too wide) in paragraph at lines 466--466
+(Font)              scaled to size 9.19998pt on input line 392.
+ [8] [9]
+Overfull \hbox (27.24666pt too wide) in paragraph at lines 470--470
+[] 
+ []
+
+[10]
+Overfull \hbox (31.9436pt too wide) in paragraph at lines 491--491
 [] 
  []
 
 [11]
-Overfull \hbox (31.9436pt too wide) in paragraph at lines 487--487
-[] 
- []
-
 \openout4 = `SocEvolSubdivPop_ms.fff'.
 
-(SocEvolSubdivPop_ms.fff)
+ (SocEvolSubdivPop_ms.fff)
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 11.03998pt on input line 505.
+(Font)              scaled to size 11.03998pt on input line 509.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 505.
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 6.43999pt on input line 505.
+(Font)              scaled to size 6.43999pt on input line 509.
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <9> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 505.
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 509.
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <7> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 505.
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 509.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 11.03998pt on input line 505.
+(Font)              scaled to size 11.03998pt on input line 509.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 505.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 6.43999pt on input line 505.
+(Font)              scaled to size 6.43999pt on input line 509.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 505.
+(hyperref)                removing `math shift' on input line 509.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 505.
+(hyperref)                removing `math shift' on input line 509.
 
 
-Overfull \hbox (3.80244pt too wide) in paragraph at lines 507--508
+Overfull \hbox (3.80244pt too wide) in paragraph at lines 511--512
 \T1/futs/m/n/10.95 men-tal sec-ondary ef-fects weaken when the em-i-gra-tion pr
 ob-a-bil-ity in-creases. This
  []
 
-[12]
-Overfull \hbox (1.40799pt too wide) in paragraph at lines 513--514
+
+Overfull \hbox (1.40799pt too wide) in paragraph at lines 517--518
 \T1/futs/m/n/10.95 For this life-cycle, we find that the ex-pected fre-quency o
 f al-tru-ists $\U/futm/m/n/10.95 E[][][]$ \T1/futs/m/n/10.95 is a mono-
  []
 
-
-Overfull \hbox (0.15439pt too wide) in paragraph at lines 521--522
+[12]
+Overfull \hbox (0.15439pt too wide) in paragraph at lines 525--526
 []\T1/futs/m/n/10.95 With this life-cycle how-ever, the ex-pected fre-quency of
  al-tru-ists $\U/futm/m/n/10.95 E[][][]$ \T1/futs/m/n/10.95 re-mains
  []
 
-[13] [14]
+[13]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 564.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 564.
+(hyperref)                removing `math shift' on input line 568.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 564.
+(hyperref)                removing `math shift' on input line 568.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\setbox' on input line 564.
+(hyperref)                removing `math shift' on input line 568.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 564.
+(hyperref)                removing `\setbox' on input line 568.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hbox' on input line 564.
+(hyperref)                removing `\z@' on input line 568.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\frozen@everymath' on input line 564.
+(hyperref)                removing `\hbox' on input line 568.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@emptytoks' on input line 564.
+(hyperref)                removing `\frozen@everymath' on input line 568.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 564.
+(hyperref)                removing `\@emptytoks' on input line 568.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 564.
+(hyperref)                removing `\mathsurround' on input line 568.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 564.
+(hyperref)                removing `\z@' on input line 568.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\nulldelimiterspace' on input line 564.
+(hyperref)                removing `math shift' on input line 568.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 564.
+(hyperref)                removing `\nulldelimiterspace' on input line 568.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\left' on input line 564.
+(hyperref)                removing `\z@' on input line 568.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\vcenter' on input line 564.
+(hyperref)                removing `\left' on input line 568.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ne' on input line 564.
+(hyperref)                removing `\vcenter' on input line 568.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\big@size' on input line 564.
+(hyperref)                removing `\@ne' on input line 568.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\right' on input line 564.
+(hyperref)                removing `\big@size' on input line 568.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 564.
+(hyperref)                removing `\right' on input line 568.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\box' on input line 564.
+(hyperref)                removing `math shift' on input line 568.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 564.
+(hyperref)                removing `\box' on input line 568.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@@overline' on input line 564.
+(hyperref)                removing `\z@' on input line 568.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\setbox' on input line 564.
+(hyperref)                removing `\@@overline' on input line 568.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 564.
+(hyperref)                removing `\setbox' on input line 568.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hbox' on input line 564.
+(hyperref)                removing `\z@' on input line 568.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\frozen@everymath' on input line 564.
+(hyperref)                removing `\hbox' on input line 568.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@emptytoks' on input line 564.
+(hyperref)                removing `\frozen@everymath' on input line 568.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 564.
+(hyperref)                removing `\@emptytoks' on input line 568.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 564.
+(hyperref)                removing `\mathsurround' on input line 568.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 564.
+(hyperref)                removing `\z@' on input line 568.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\nulldelimiterspace' on input line 564.
+(hyperref)                removing `math shift' on input line 568.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 564.
+(hyperref)                removing `\nulldelimiterspace' on input line 568.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\left' on input line 564.
+(hyperref)                removing `\z@' on input line 568.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\vcenter' on input line 564.
+(hyperref)                removing `\left' on input line 568.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ne' on input line 564.
+(hyperref)                removing `\vcenter' on input line 568.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\big@size' on input line 564.
+(hyperref)                removing `\@ne' on input line 568.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\right' on input line 564.
+(hyperref)                removing `\big@size' on input line 568.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 564.
+(hyperref)                removing `\right' on input line 568.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\box' on input line 564.
+(hyperref)                removing `math shift' on input line 568.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 564.
+(hyperref)                removing `\box' on input line 568.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 564.
+(hyperref)                removing `\z@' on input line 568.
 
 
-Overfull \hbox (24.86485pt too wide) in paragraph at lines 574--576
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 568.
+
+[14]
+Overfull \hbox (24.86485pt too wide) in paragraph at lines 579--581
 []\T1/futs/m/n/10.95 When the em-i-gra-tion prob-a-bil-ity $\FML/futmi/m/it/10.
 95 m$ \T1/futs/m/n/10.95 is van-ish-ingly small, $[][] \FML/futmi/m/it/10.95 R[
 ] \FMS/futm/m/n/10.95 ^^T [][] []$\T1/futs/m/n/10.95 ,
  []
 
-[15] [16] [17]
-Overfull \hbox (0.3057pt too wide) in paragraph at lines 615--616
-\T1/futs/m/n/10.95 per-fect. Let us now con-sider that ben-e-fits $\OT1/cmss/m/
-n/10.95 b$ \T1/futs/m/n/10.95 of so-cial in-ter-ac-tions are high enough
- []
-
-[18]
-Overfull \hbox (0.5722pt too wide) in paragraph at lines 617--618
-\T1/futs/m/n/10.95 pop-u-la-tions. Com-pe-ti-tion among rel-a-tives is for in-s
-tance be-hind [][]Tay-lor[][] ([][]1992b[][])'s
- []
-
-
-Overfull \hbox (5.9048pt too wide) in paragraph at lines 617--618
-\T1/futs/m/n/10.95 can-cel-la-tion re-sult. Sim-i-larly, the qual-i-ta-tive dif
--fer-ences be-tween the Moran Birth-
- []
-
-[19] [20]
-Overfull \hbox (8.22673pt too wide) in paragraph at lines 640--641
+[15] [16] [17] [18] [19]
+Overfull \hbox (8.22673pt too wide) in paragraph at lines 645--646
 \T1/futs/m/n/10.95 manuscript, and for sug-gest-ing the $\OMS/cmsy/m/n/10.95 B\
 FML/futmi/m/it/10.95 R \FMS/futm/m/n/10.95 ^^@ \OMS/cmsy/m/n/10.95 C$ \T1/futs/
 m/n/10.95 de-com-po-si-tion. At ESEB 2017, SÈbastien
  []
 
-[21] (./SocEvolSubdivPop_ms.bbl [22
+[20] (./SocEvolSubdivPop_ms.bbl [21
 
-]
-Underfull \hbox (badness 2181) in paragraph at lines 147--151
+] [22]
+Underfull \hbox (badness 2181) in paragraph at lines 155--159
 \T1/futs/m/n/10.95 ceed-ings of the Royal So-ci-ety of Lon-don. Se-ries B: Bi-o
 -log-i-cal Sci-ences
  []
 
-[23]) [24] (./SocEvolSubdivPop_ms.fff
-<../Programs/R/Pics/RplotM.pdf, id=465, 289.08pt x 307.1475pt>
+) [23] (./SocEvolSubdivPop_ms.fff
+<../Programs/R/Pics/RplotM.pdf, id=473, 289.08pt x 307.1475pt>
 File: ../Programs/R/Pics/RplotM.pdf Graphic file (type pdf)
 
 <use ../Programs/R/Pics/RplotM.pdf>
@@ -1772,7 +1723,7 @@ Package pdftex.def Info: ../Programs/R/Pics/RplotM.pdf used on input line 3.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <8> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 3.
 
-<../Programs/R/Pics/RplotWF.pdf, id=466, 289.08pt x 307.1475pt>
+<../Programs/R/Pics/RplotWF.pdf, id=474, 289.08pt x 307.1475pt>
 File: ../Programs/R/Pics/RplotWF.pdf Graphic file (type pdf)
 
 <use ../Programs/R/Pics/RplotWF.pdf>
@@ -1780,10 +1731,10 @@ Package pdftex.def Info: ../Programs/R/Pics/RplotWF.pdf used on input line 5.
 (pdftex.def)             Requested size: 128.0374pt x 136.03578pt.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 7.
- [25
+ [24
 
  <../Programs/R/Pics/RplotM.pdf> <../Programs/R/Pics/RplotWF.pdf>]
-<../Programs/R/Pics/EXDB_sel0.005_htg0.pdf, id=493, 289.08pt x 361.35pt>
+<../Programs/R/Pics/EXDB_sel0.005_htg0.pdf, id=500, 289.08pt x 361.35pt>
 File: ../Programs/R/Pics/EXDB_sel0.005_htg0.pdf Graphic file (type pdf)
 
 <use ../Programs/R/Pics/EXDB_sel0.005_htg0.pdf>
@@ -1791,7 +1742,7 @@ Package pdftex.def Info: ../Programs/R/Pics/EXDB_sel0.005_htg0.pdf used on inpu
 t line 14.
 (pdftex.def)             Requested size: 128.0374pt x 160.0421pt.
 
-<../Programs/R/Pics/EXBD_sel0.005_htg0.pdf, id=494, 289.08pt x 361.35pt>
+<../Programs/R/Pics/EXBD_sel0.005_htg0.pdf, id=501, 289.08pt x 361.35pt>
 File: ../Programs/R/Pics/EXBD_sel0.005_htg0.pdf Graphic file (type pdf)
 
 <use ../Programs/R/Pics/EXBD_sel0.005_htg0.pdf>
@@ -1799,7 +1750,7 @@ Package pdftex.def Info: ../Programs/R/Pics/EXBD_sel0.005_htg0.pdf used on inpu
 t line 16.
 (pdftex.def)             Requested size: 128.0374pt x 160.0421pt.
 
-<../Programs/R/Pics/EXWF_sel0.005_htg0.pdf, id=495, 289.08pt x 361.35pt>
+<../Programs/R/Pics/EXWF_sel0.005_htg0.pdf, id=502, 289.08pt x 361.35pt>
 File: ../Programs/R/Pics/EXWF_sel0.005_htg0.pdf Graphic file (type pdf)
 
 <use ../Programs/R/Pics/EXWF_sel0.005_htg0.pdf>
@@ -1811,9 +1762,9 @@ Overfull \hbox (58.76218pt too wide) in paragraph at lines 13--21
  [] 
  []
 
-[26 <../Programs/R/Pics/EXDB_sel0.005_htg0.pdf> <../Programs/R/Pics/EXBD_sel0.0
+[25 <../Programs/R/Pics/EXDB_sel0.005_htg0.pdf> <../Programs/R/Pics/EXBD_sel0.0
 05_htg0.pdf> <../Programs/R/Pics/EXWF_sel0.005_htg0.pdf>]
-<../Programs/R/Pics/explainDB.pdf, id=537, 289.08pt x 361.35pt>
+<../Programs/R/Pics/explainDB.pdf, id=545, 289.08pt x 361.35pt>
 File: ../Programs/R/Pics/explainDB.pdf Graphic file (type pdf)
 
 <use ../Programs/R/Pics/explainDB.pdf>
@@ -1821,186 +1772,192 @@ Package pdftex.def Info: ../Programs/R/Pics/explainDB.pdf used on input line 28
 .
 (pdftex.def)             Requested size: 128.0374pt x 160.0421pt.
 
-<../Programs/R/Pics/qualitDB.pdf, id=538, 289.08pt x 361.35pt>
+<../Programs/R/Pics/qualitDB.pdf, id=546, 289.08pt x 361.35pt>
 File: ../Programs/R/Pics/qualitDB.pdf Graphic file (type pdf)
 
 <use ../Programs/R/Pics/qualitDB.pdf>
 Package pdftex.def Info: ../Programs/R/Pics/qualitDB.pdf used on input line 30.
 
 (pdftex.def)             Requested size: 128.0374pt x 160.0421pt.
- [27 <../Programs/R/Pics/explainDB.pdf> <../Programs/R/Pics/qualitDB.pdf>])
-<../Programs/R/Pics/EXDB_sel0.1_htg0.pdf, id=566, 289.08pt x 361.35pt>
+ [26 <../Programs/R/Pics/explainDB.pdf> <../Programs/R/Pics/qualitDB.pdf>])
+<../Programs/R/Pics/EXDB_sel0.1_htg0.pdf, id=574, 289.08pt x 361.35pt>
 File: ../Programs/R/Pics/EXDB_sel0.1_htg0.pdf Graphic file (type pdf)
 
 <use ../Programs/R/Pics/EXDB_sel0.1_htg0.pdf>
 Package pdftex.def Info: ../Programs/R/Pics/EXDB_sel0.1_htg0.pdf used on input 
-line 686.
+line 691.
 (pdftex.def)             Requested size: 128.0374pt x 160.0421pt.
 
-<../Programs/R/Pics/EXBD_sel0.1_htg0.pdf, id=567, 289.08pt x 361.35pt>
+<../Programs/R/Pics/EXBD_sel0.1_htg0.pdf, id=575, 289.08pt x 361.35pt>
 File: ../Programs/R/Pics/EXBD_sel0.1_htg0.pdf Graphic file (type pdf)
 
 <use ../Programs/R/Pics/EXBD_sel0.1_htg0.pdf>
 Package pdftex.def Info: ../Programs/R/Pics/EXBD_sel0.1_htg0.pdf used on input 
-line 688.
+line 693.
 (pdftex.def)             Requested size: 128.0374pt x 160.0421pt.
 
-<../Programs/R/Pics/EXWF_sel0.1_htg0.pdf, id=568, 289.08pt x 361.35pt>
+<../Programs/R/Pics/EXWF_sel0.1_htg0.pdf, id=576, 289.08pt x 361.35pt>
 File: ../Programs/R/Pics/EXWF_sel0.1_htg0.pdf Graphic file (type pdf)
 
 <use ../Programs/R/Pics/EXWF_sel0.1_htg0.pdf>
 Package pdftex.def Info: ../Programs/R/Pics/EXWF_sel0.1_htg0.pdf used on input 
-line 690.
+line 695.
 (pdftex.def)             Requested size: 128.0374pt x 160.0421pt.
 
-Overfull \hbox (58.76218pt too wide) in paragraph at lines 685--692
+Overfull \hbox (58.76218pt too wide) in paragraph at lines 690--697
  [][] 
  []
 
-<../Programs/R/Pics/EXDB_sel0.005_htg1.pdf, id=573, 289.08pt x 361.35pt>
+<../Programs/R/Pics/EXDB_sel0.005_htg1.pdf, id=581, 289.08pt x 361.35pt>
 File: ../Programs/R/Pics/EXDB_sel0.005_htg1.pdf Graphic file (type pdf)
 
 <use ../Programs/R/Pics/EXDB_sel0.005_htg1.pdf>
 Package pdftex.def Info: ../Programs/R/Pics/EXDB_sel0.005_htg1.pdf used on inpu
-t line 699.
+t line 704.
 (pdftex.def)             Requested size: 128.0374pt x 160.0421pt.
 
-<../Programs/R/Pics/EXBD_sel0.005_htg1.pdf, id=574, 289.08pt x 361.35pt>
+<../Programs/R/Pics/EXBD_sel0.005_htg1.pdf, id=582, 289.08pt x 361.35pt>
 File: ../Programs/R/Pics/EXBD_sel0.005_htg1.pdf Graphic file (type pdf)
 
 <use ../Programs/R/Pics/EXBD_sel0.005_htg1.pdf>
 Package pdftex.def Info: ../Programs/R/Pics/EXBD_sel0.005_htg1.pdf used on inpu
-t line 701.
+t line 706.
 (pdftex.def)             Requested size: 128.0374pt x 160.0421pt.
 
-<../Programs/R/Pics/EXWF_sel0.005_htg1.pdf, id=575, 289.08pt x 361.35pt>
+<../Programs/R/Pics/EXWF_sel0.005_htg1.pdf, id=583, 289.08pt x 361.35pt>
 File: ../Programs/R/Pics/EXWF_sel0.005_htg1.pdf Graphic file (type pdf)
 
 <use ../Programs/R/Pics/EXWF_sel0.005_htg1.pdf>
 Package pdftex.def Info: ../Programs/R/Pics/EXWF_sel0.005_htg1.pdf used on inpu
-t line 703.
+t line 708.
 (pdftex.def)             Requested size: 128.0374pt x 160.0421pt.
 
-Overfull \hbox (58.76218pt too wide) in paragraph at lines 698--704
+Overfull \hbox (58.76218pt too wide) in paragraph at lines 703--709
  [][] 
  []
 
 
-<../Programs/R/Pics/EXDB_sel0.005_htg0_nodself.pdf, id=582, 289.08pt x 361.35pt
+<../Programs/R/Pics/EXDB_sel0.005_htg0_nodself.pdf, id=590, 289.08pt x 361.35pt
 >
 File: ../Programs/R/Pics/EXDB_sel0.005_htg0_nodself.pdf Graphic file (type pdf)
 
  <use ../Programs/R/Pics/EXDB_sel0.005_htg0_nodself.pdf>
 Package pdftex.def Info: ../Programs/R/Pics/EXDB_sel0.005_htg0_nodself.pdf used
- on input line 728.
+ on input line 733.
 (pdftex.def)             Requested size: 128.0374pt x 160.0421pt.
 
-<../Programs/R/Pics/EXBD_sel0.005_htg0_nodself.pdf, id=583, 289.08pt x 361.35pt
+<../Programs/R/Pics/EXBD_sel0.005_htg0_nodself.pdf, id=591, 289.08pt x 361.35pt
 >
 File: ../Programs/R/Pics/EXBD_sel0.005_htg0_nodself.pdf Graphic file (type pdf)
 
  <use ../Programs/R/Pics/EXBD_sel0.005_htg0_nodself.pdf>
 Package pdftex.def Info: ../Programs/R/Pics/EXBD_sel0.005_htg0_nodself.pdf used
- on input line 730.
+ on input line 735.
 (pdftex.def)             Requested size: 128.0374pt x 160.0421pt.
 
-<../Programs/R/Pics/EXWF_sel0.005_htg0_nodself.pdf, id=584, 289.08pt x 361.35pt
+<../Programs/R/Pics/EXWF_sel0.005_htg0_nodself.pdf, id=592, 289.08pt x 361.35pt
 >
 File: ../Programs/R/Pics/EXWF_sel0.005_htg0_nodself.pdf Graphic file (type pdf)
 
  <use ../Programs/R/Pics/EXWF_sel0.005_htg0_nodself.pdf>
 Package pdftex.def Info: ../Programs/R/Pics/EXWF_sel0.005_htg0_nodself.pdf used
- on input line 732.
+ on input line 737.
 (pdftex.def)             Requested size: 128.0374pt x 160.0421pt.
 
-Overfull \hbox (58.76218pt too wide) in paragraph at lines 727--734
+Overfull \hbox (58.76218pt too wide) in paragraph at lines 732--739
  [][] 
  []
 
 
-<../Programs/R/Pics/EXDB_sel0.005_htg0_nodself_sameDE.pdf, id=587, 289.08pt x 3
+<../Programs/R/Pics/EXDB_sel0.005_htg0_nodself_sameDE.pdf, id=595, 289.08pt x 3
 61.35pt>
 File: ../Programs/R/Pics/EXDB_sel0.005_htg0_nodself_sameDE.pdf Graphic file (ty
 pe pdf)
  <use ../Programs/R/Pics/EXDB_sel0.005_htg0_nodself_sameDE.pdf>
 Package pdftex.def Info: ../Programs/R/Pics/EXDB_sel0.005_htg0_nodself_sameDE.p
-df used on input line 741.
+df used on input line 746.
 (pdftex.def)             Requested size: 128.0374pt x 160.0421pt.
 
-<../Programs/R/Pics/EXBD_sel0.005_htg0_nodself_sameDE.pdf, id=588, 289.08pt x 3
+<../Programs/R/Pics/EXBD_sel0.005_htg0_nodself_sameDE.pdf, id=596, 289.08pt x 3
 61.35pt>
 File: ../Programs/R/Pics/EXBD_sel0.005_htg0_nodself_sameDE.pdf Graphic file (ty
 pe pdf)
  <use ../Programs/R/Pics/EXBD_sel0.005_htg0_nodself_sameDE.pdf>
 Package pdftex.def Info: ../Programs/R/Pics/EXBD_sel0.005_htg0_nodself_sameDE.p
-df used on input line 743.
+df used on input line 748.
 (pdftex.def)             Requested size: 128.0374pt x 160.0421pt.
 
-<../Programs/R/Pics/EXWF_sel0.005_htg0_nodself_sameDE.pdf, id=589, 289.08pt x 3
+<../Programs/R/Pics/EXWF_sel0.005_htg0_nodself_sameDE.pdf, id=597, 289.08pt x 3
 61.35pt>
 File: ../Programs/R/Pics/EXWF_sel0.005_htg0_nodself_sameDE.pdf Graphic file (ty
 pe pdf)
  <use ../Programs/R/Pics/EXWF_sel0.005_htg0_nodself_sameDE.pdf>
 Package pdftex.def Info: ../Programs/R/Pics/EXWF_sel0.005_htg0_nodself_sameDE.p
-df used on input line 745.
+df used on input line 750.
 (pdftex.def)             Requested size: 128.0374pt x 160.0421pt.
 
-Overfull \hbox (58.76218pt too wide) in paragraph at lines 740--747
+Overfull \hbox (58.76218pt too wide) in paragraph at lines 745--752
  [][] 
  []
 
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 747.
-[28
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 752.
+[27
 
 
 
 
  <../Programs/R/Pics/EXDB_sel0.1_htg0.pdf> <../Programs/R/Pics/EXBD_sel0.1_htg0
-.pdf> <../Programs/R/Pics/EXWF_sel0.1_htg0.pdf>] [29 <../Programs/R/Pics/EXDB_s
+.pdf> <../Programs/R/Pics/EXWF_sel0.1_htg0.pdf>] [28 <../Programs/R/Pics/EXDB_s
 el0.005_htg1.pdf> <../Programs/R/Pics/EXBD_sel0.005_htg1.pdf> <../Programs/R/Pi
 cs/EXWF_sel0.005_htg1.pdf> <../Programs/R/Pics/EXDB_sel0.005_htg0_nodself.pdf> 
 <../Programs/R/Pics/EXBD_sel0.005_htg0_nodself.pdf> <../Programs/R/Pics/EXWF_se
-l0.005_htg0_nodself.pdf>] [30 <../Programs/R/Pics/EXDB_sel0.005_htg0_nodself_sa
+l0.005_htg0_nodself.pdf>] [29 <../Programs/R/Pics/EXDB_sel0.005_htg0_nodself_sa
 meDE.pdf> <../Programs/R/Pics/EXBD_sel0.005_htg0_nodself_sameDE.pdf> <../Progra
 ms/R/Pics/EXWF_sel0.005_htg0_nodself_sameDE.pdf>]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 773.
+LaTeX Font Warning: Command \small invalid in math mode on input line 788.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 774.
+LaTeX Font Warning: Command \small invalid in math mode on input line 789.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 775.
+LaTeX Font Warning: Command \small invalid in math mode on input line 790.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 776.
+LaTeX Font Warning: Command \small invalid in math mode on input line 791.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 777.
+LaTeX Font Warning: Command \small invalid in math mode on input line 792.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 779.
+LaTeX Font Warning: Command \small invalid in math mode on input line 793.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 780.
+LaTeX Font Warning: Command \small invalid in math mode on input line 794.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 781.
+LaTeX Font Warning: Command \small invalid in math mode on input line 796.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 782.
+LaTeX Font Warning: Command \small invalid in math mode on input line 797.
 
 
-Overfull \hbox (48.41351pt too wide) in paragraph at lines 755--784
+LaTeX Font Warning: Command \small invalid in math mode on input line 798.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 799.
+
+
+Overfull \hbox (100.10855pt too wide) in paragraph at lines 760--801
  [][] 
  []
 
-[31
+[30
 
 ]
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 801.
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 818.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2008,10 +1965,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[32
+[31
 
 ]
-Overfull \hbox (21.88683pt too wide) in paragraph at lines 868--869
+Overfull \hbox (21.88683pt too wide) in paragraph at lines 885--886
 \T1/futs/m/n/10.95 mu-ta-tion prob-a-bil-ity $\FML/futmi/m/it/10.95 ^^V$\T1/fut
 s/m/n/10.95 . Tak-ing the ex-pec-ta-tion of eq. ([][]A.2a[][]) ($\U/futm/m/n/10
 .95 E[][][] \FMS/futm/m/n/10.95 Å [][] []\FML/futmi/m/it/10.95 ^^X\T1/futs/m/n/
@@ -2025,7 +1982,18 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
+[32]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
 [33]
+Overfull \hbox (20.35567pt too wide) in paragraph at lines 975--975
+[] 
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -2033,10 +2001,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [34]
-Overfull \hbox (20.35567pt too wide) in paragraph at lines 955--955
-[] 
- []
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -2050,14 +2014,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[36]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[37
+[36
 
 ]
 
@@ -2066,8 +2023,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[38]
-Overfull \hbox (23.14795pt too wide) in paragraph at lines 1088--1088
+[37]
+Overfull \hbox (23.14795pt too wide) in paragraph at lines 1109--1109
 [] 
  []
 
@@ -2077,7 +2034,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[39
+[38
 
 ]
 
@@ -2086,15 +2043,15 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[40]
+[39]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[41]
-Overfull \hbox (60.40791pt too wide) detected at line 1222
+[40]
+Overfull \hbox (66.46861pt too wide) detected at line 1243
 \T1/futs/m/n/10.95 1 \FMS/futm/m/n/10.95 Å [][][] Ä []\T1/futs/m/n/10.95 (\FML/
 futmi/m/it/10.95 N[] \FMS/futm/m/n/10.95 ^^@ \T1/futs/m/n/10.95 1)\FML/futmi/m/
 it/10.95 N[] \FMS/futm/m/n/10.95 Ä []\T1/futs/m/n/10.95 (\FML/futmi/m/it/10.95 
@@ -2102,7 +2059,7 @@ N[] \FMS/futm/m/n/10.95 ^^@ \T1/futs/m/n/10.95 1)[]\FML/futmi/m/it/10.95 :
  []
 
 
-Overfull \hbox (37.88972pt too wide) detected at line 1232
+Overfull \hbox (43.95042pt too wide) detected at line 1253
 \FML/futmi/m/it/10.95 Q[] \FMS/futm/m/n/10.95 Å [][][] ^^@ []\FML/futmi/m/it/10
 .95 N[] \FMS/futm/m/n/10.95 Ä []\T1/futs/m/n/10.95 (\FML/futmi/m/it/10.95 N[] \
 FMS/futm/m/n/10.95 ^^@ \T1/futs/m/n/10.95 1)[]\FML/futmi/m/it/10.95 :
@@ -2114,19 +2071,19 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[42] <../Programs/R/Pics/QplotM.pdf, id=889, 361.35pt x 307.1475pt>
+[41] <../Programs/R/Pics/QplotM.pdf, id=902, 361.35pt x 307.1475pt>
 File: ../Programs/R/Pics/QplotM.pdf Graphic file (type pdf)
 
 <use ../Programs/R/Pics/QplotM.pdf>
-Package pdftex.def Info: ../Programs/R/Pics/QplotM.pdf used on input line 1264.
+Package pdftex.def Info: ../Programs/R/Pics/QplotM.pdf used on input line 1285.
 
 (pdftex.def)             Requested size: 128.0374pt x 108.82956pt.
 
-<../Programs/R/Pics/QplotWF.pdf, id=890, 361.35pt x 307.1475pt>
+<../Programs/R/Pics/QplotWF.pdf, id=903, 361.35pt x 307.1475pt>
 File: ../Programs/R/Pics/QplotWF.pdf Graphic file (type pdf)
 
 <use ../Programs/R/Pics/QplotWF.pdf>
-Package pdftex.def Info: ../Programs/R/Pics/QplotWF.pdf used on input line 1266
+Package pdftex.def Info: ../Programs/R/Pics/QplotWF.pdf used on input line 1287
 .
 (pdftex.def)             Requested size: 128.0374pt x 108.82956pt.
 
@@ -2137,30 +2094,26 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[43 <../Programs/R/Pics/QplotM.pdf> <../Programs/R/Pics/QplotWF.pdf>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1274.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1274.
+[42 <../Programs/R/Pics/QplotM.pdf> <../Programs/R/Pics/QplotWF.pdf>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1295.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1295.
 
 (./SocEvolSubdivPop_ms.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1274.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1274.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1295.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1295.
 
 Package rerunfilecheck Info: File `SocEvolSubdivPop_ms.out' has not changed.
 (rerunfilecheck)             Checksum: 22D0845514EDBE80496D1C7D0002AF8D;1923.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1274.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1295.
  ) 
 Here is how much of TeX's memory you used:
- 26408 strings out of 494883
- 497082 string characters out of 6178693
- 610504 words of memory out of 5000000
- 28846 multiletter control sequences out of 15000+600000
+ 25642 strings out of 494883
+ 482911 string characters out of 6178693
+ 590730 words of memory out of 5000000
+ 28106 multiletter control sequences out of 15000+600000
  183420 words of font info for 196 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 55i,32n,81p,1953b,720s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,32n,71p,1953b,530s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc} </home/florencede
 barre/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.600pk> </home/florencedeb
 arre/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1095.600pk></usr/share/texlive/
@@ -2177,10 +2130,10 @@ urier-ms.pfb></usr/share/texlive/texmf-dist/fonts/type1/adobe/utopia/putb8a.pfb
 xmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 /helvetic/uhvro8a.pfb>
-Output written on SocEvolSubdivPop_ms.pdf (43 pages, 757903 bytes).
+Output written on SocEvolSubdivPop_ms.pdf (42 pages, 749332 bytes).
 PDF statistics:
- 1087 PDF objects out of 1200 (max. 8388607)
- 891 compressed objects within 9 object streams
- 234 named destinations out of 1000 (max. 500000)
+ 1077 PDF objects out of 1200 (max. 8388607)
+ 904 compressed objects within 10 object streams
+ 230 named destinations out of 1000 (max. 500000)
  326 words of extra memory for PDF output out of 10000 (max. 10000000)
 

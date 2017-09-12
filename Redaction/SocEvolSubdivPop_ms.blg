@@ -8,44 +8,44 @@ Reallocated str_pool (elt_size=1) to 260000 items from 195000.
 Reallocated str_pool (elt_size=1) to 325000 items from 260000.
 Reallocated str_pool (elt_size=1) to 390000 items from 325000.
 Database file #1: bibSCSP.bib
-You've used 37 entries,
+You've used 39 entries,
             2782 wiz_defined-function locations,
-            13393 strings with 352666 characters,
-and the built_in function-call counts, 20841 in all, are:
-= -- 1828
-> -- 714
-< -- 26
-+ -- 295
-- -- 240
-* -- 1504
-:= -- 3377
-add.period$ -- 112
-call.type$ -- 37
-change.case$ -- 266
-chr.to.int$ -- 35
-cite$ -- 37
-duplicate$ -- 1502
-empty$ -- 1569
-format.name$ -- 353
-if$ -- 4091
+            13406 strings with 352918 characters,
+and the built_in function-call counts, 21745 in all, are:
+= -- 1906
+> -- 734
+< -- 28
++ -- 303
+- -- 246
+* -- 1557
+:= -- 3530
+add.period$ -- 118
+call.type$ -- 39
+change.case$ -- 277
+chr.to.int$ -- 37
+cite$ -- 39
+duplicate$ -- 1570
+empty$ -- 1650
+format.name$ -- 361
+if$ -- 4273
 int.to.chr$ -- 3
 int.to.str$ -- 1
-missing$ -- 329
-newline$ -- 153
-num.names$ -- 148
-pop$ -- 554
+missing$ -- 344
+newline$ -- 161
+num.names$ -- 156
+pop$ -- 579
 preamble$ -- 1
-purify$ -- 228
+purify$ -- 238
 quote$ -- 0
-skip$ -- 493
+skip$ -- 521
 stack$ -- 0
-substring$ -- 1219
-swap$ -- 780
+substring$ -- 1272
+swap$ -- 809
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 333
+type$ -- 348
 warning$ -- 0
-while$ -- 165
+while$ -- 173
 width$ -- 0
-write$ -- 447
+write$ -- 470
