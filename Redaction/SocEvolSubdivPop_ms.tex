@@ -50,12 +50,11 @@
 
 
 % HEAD AND FOOT
-\usepackage{lastpage}
 \usepackage{fancyhdr}
 \fancypagestyle{maintext}{
 \fancyhf{}
 \fancyhead[C]{}
-\fancyfoot[C]{\thepage/\pageref{LastPage}}
+\fancyfoot[C]{\thepage}
 \fancyfoot[R]{\footnotesize \today}
 \renewcommand{\headrulewidth}{0.pt}
 }
@@ -63,7 +62,7 @@
 \fancypagestyle{appendix}{
 \fancyhf{}
 \fancyhead[C]{{Appendix \thesection{}}}
-\fancyfoot[C]{\thepage/\pageref{LastPage}}
+\fancyfoot[C]{\thepage}
 \renewcommand{\headrulewidth}{0.02pt}
 \fancyfoot[R]{\today}
 }
@@ -288,7 +287,7 @@ Total & $4234$ words
 \linenumbers
 \subsubsection*{Abstract}
 \doublespacing
-Population viscosity, \ie, low emigration out of the natal deme, leads to high within-deme relatedness, which is beneficial to the evolution of altruistic behavior when social interactions take place among deme-mates. At the same time however, it increases competition among related individuals. The evolution of altruism depends on the balance between these opposite effects. This balance is already known to be affected by details of the life-cycle; we show here that it further depends on the fidelity of strategy transmission from parents to their offspring. We consider different life-cycles (Wright-Fisher, with synchronous non-overlapping generations, Moran Death-Birth and Moran Birth-Death, both with exactly one individual dying and reproducing at each time step) and we identify thresholds of parent-offspring strategy transmission inaccuracy, above which the effect of population viscosity on the frequency of altruists maintained in the population qualitatively changes. Analytical predictions are first obtained analytically under weak selection and equal deme sizes, then confirmed with stochastic simulations relaxing these assumptions. This result challenges the notion that the evolution of altruism requires limited dispersal. 
+Population viscosity, \ie, low emigration out of the natal deme, leads to high within-deme relatedness, which is beneficial to the evolution of altruistic behavior when social interactions take place among deme-mates. However, a detrimental side-effect of low emigration is the increase in competition among related individuals. The evolution of altruism depends on the balance between these opposite effects. This balance is already known to be affected by details of the life-cycle; we show here that it further depends on the fidelity of strategy transmission from parents to their offspring. We consider different life-cycles (Wright-Fisher, with synchronous non-overlapping generations, Moran Death-Birth and Moran Birth-Death, both with exactly one individual dying and reproducing at each time step) and we identify thresholds of parent-offspring strategy transmission inaccuracy, above which the effect of population viscosity on the frequency of altruists maintained in the population qualitatively changes. Analytical predictions are first obtained analytically under weak selection and equal deme sizes, then confirmed with stochastic simulations relaxing these assumptions. This result challenges the notion that the evolution of altruism requires limited dispersal. 
 
 \clearpage
 \subsubsection*{Impact Summary}
@@ -570,10 +569,10 @@ The result, that higher emigration probabilities can actually favor altruistic b
 \Esp{\overline{X}} > \nu \Leftrightarrow R^{\Moran} > \frac{\mathcal{C}^{\DB}}{\mathcal{B^{\DB}}}.
 \end{equation}
 
-With this life-cycle, the $\mathcal{C}^{\DB}/\mathcal{B}^{\DB}$ ratio does not change with the mutation probability $\mu$, but it decreases with the emigration probability $m$ ($0<m<1-1/\ndemes$). This decrease of the $\mathcal{C}^{\DB}/\mathcal{B}^{\DB}$ ratio is due to secondary effects (competition) diminishing as emigration increases. Relatedness, on the other hand, decreases with both $\mu$ and $m$ (see figure~\ref{fig:DB}\subref{fig:app:explain}). 
+With this life-cycle, the $\mathcal{C}^{\DB}/\mathcal{B}^{\DB}$ ratio does not change with the mutation probability $\mu$, but it decreases with the emigration probability $m$ ($0<m<1-1/\ndemes$). This decrease of the $\mathcal{C}^{\DB}/\mathcal{B}^{\DB}$ ratio is due to secondary effects (competition) diminishing as emigration increases. Relatedness, on the other hand, decreases with both $\mu$ and $m$ (see figure~\ref{fig:DB}\subref{fig:sub:explain}). 
 
 When the emigration probability $m$ is vanishingly small, $\lim_{m\to 0} R^{\Moran} \leq \lim_{m\to 0} \frac{\mathcal{C}^{\DB}}{\mathcal{B^{\DB}}}$, the two only being equal when $\mu=0$.
-Hence, it is only when strategy transmission is perfect that condition~\eqref{eq:BCcond} is satisfied for vanishingly low $m$. Then, as $m$ increases, the $\frac{\mathcal{C}^{\DB}}{\mathcal{B^{\DB}}}$ ratio and relatedness $R$ do not decrease with the same slope. Provided $\mu$ is not too high, \ie, that the initial decrease in $R$ was not to big, there can be a range of emigration values $m$ such that condition~\eqrefnoeq{eq:BCcond} is satisfied (when the $R$ curve is higher than the $\mathcal{C}/\mathcal{B}$ curve in figure~\ref{fig:DB}\subref{fig:sub:explain}).
+Hence, it is only when strategy transmission is perfect that condition~\eqref{eq:BCcond} is satisfied for vanishingly low $m$. Then, as $m$ increases, the $\frac{\mathcal{C}^{\DB}}{\mathcal{B^{\DB}}}$ ratio and relatedness $R$ do not decrease with the same slope. Provided the mutation probability $\mu$ is not too high, \ie, that $R$ initially is not too low already, there can be a range of emigration values $m$ such that condition~\eqrefnoeq{eq:BCcond} is satisfied (\ie, the $R$ curve is higher than the $\mathcal{C}/\mathcal{B}$ curve in figure~\ref{fig:DB}\subref{fig:sub:explain}).
 
 \begin{figure}
 \begin{tabular}{cc}
@@ -610,20 +609,18 @@ Some of our conclusions change if we switch to this qualitative measure of evolu
 However, under a Moran Death-Birth life-cycle (figure~\ref{fig:EX}\subref{fig:EXDB}), altruism can be favored only at intermediate emigration probabilities: increased emigration can still favor the evolution of altruism under this qualitative criterion (see figure~\ref{fig:DB}\subref{fig:sub:qualit}.)  
 
 % How to explain the result
-\subsection*{The result is due to indirect (/secondary) effects}
-To\todo{Update} explain how the frequency of altruists can increase with the emigration probability $m$, let us go back to the decomposition of the expected frequency of altruists in the population $\Esp{\overline{X}}$ into different terms (\eqref{eq:EXapprox}). 
-For all the life-cycles that we consider, the direct effect of helping others ($\beta_{\direct}$) decreases with emigration $m$, while the direct effect of the cost of helping ($\gamma_{\direct}$) does not change with $m$. 
-If we (erroneously) considered only direct effects, we would conclude that the expected proportion of altruists decreases with the emigration probability $m$, because an increase in $m$ reduces the probability that two interactants (two deme-mates in this model) are identical by descent. 
-But this explanation ignores indirect, competitive, effects. In the three life-cycles that we considered, $\beta_{\indirect} = \gamma_{\indirect}$, so the overall indirect effects are given by $(-(\bb-\cc) \beta_{\indirect})$. Hence, any increase of $\Esp{\overline{X}}$ with $m$ is driven by $\beta_{\indirect}$. Indirect effects correspond to competition: helping another individual indirectly harms others -- even the individual who is providing help is indirectly harmed. This competition can be diluted by increasing the emigration probability $m$. 
-The overall effect of $m$ on the expected frequency of altruists depends on the balance between direct and indirect effects. This balance depends on the fidelity of parent-offspring transmission ($\mu$), in particular because probabilities of identity by descent depend on $\mu$. 
+\subsection*{The result is due to secondary effects}
+The result that frequency of altruists can increase with the emigration probability $m$, may seem counterintuitive. It is the case because verbal explanations for the evolution of altruism often rely on primary effects only. Relatedness $R$ decreases with $m$, so it may be tempting to conclude that increases in the emigration probability $m$ are necessarily detrimental to the evolution of altruism. However, secondary effects play an opposite role, as competition decreases with $m$. To further explain the relative weight of the detrimental and beneficial consequences of increases in the emigration probability $m$, let us focus on the Death-Birth life-cycle and consider the qualitative criterion for evolutionary success ($\Esp{\overline{X}}>\nu$, \ie{} $R > \mathcal{C}/\mathcal{B}$; figure~\ref{fig:DB}.)
 
-Indirect (secondary) effects are less straightforward to understand than direct (/primary) effects, yet they play a crucial role for social evolution in spatially structured populations. Competition among relatives is for instance behind \citet{Taylor1992}'s cancellation result; similarly, the qualitative differences between the Moran Birth-Death and Moran Death-Birth life-cycles is explained by the different scales of competition that the two life-cycle produce \citep{GrafenArchetti2008, DebarreHD2014}. Secondary effects are also behind the evolution of social behaviors such as spite \citep{WestGardner2010}. 
+When parent-offspring strategy transmission is nearly perfect ($\mu \to 0$), for vanishingly small emigration probabilities ($m \to 0$), both $R$ and the $\mathcal{C}/\mathcal{B}$ ratio tend to $1$. Even a slight increase in the mutation probability $\mu$ reduces $R$ while leaving $\mathcal{C}/\mathcal{B}$ unchanged. In other words, for vanishingly small emigration probabilities, altruism is favored by selection only when transmission fidelity is nearly perfect. Let us now consider that benefits $\bb$ of social interactions are high enough for altruism to be favored at low $m$ when $\mu \to 0$ (as in figure~\ref{fig:DB}\subref{fig:sub:explain}). Starting from low values of $m$, small increases in $m$ have a stronger effect on the $\mathcal{C}/\mathcal{B}$ ratio than on relatedness $R$: local competition is initially so strong that the beneficial reduction in competition caused by an increase in $m$ initially predominates over the detrimental reduction in relatedness $R$. The opposite holds for much higher values of $m$: competition is already small enough that reducing it further does not outweigh the reduction in relatedness $R$. 
+
+Secondary effects are less straightforward to understand than primary effects, and yet they play a crucial role for social evolution in spatially structured populations. Competition among relatives is for instance behind \citet{Taylor1992}'s cancellation result. Similarly, the qualitative differences between the Moran Birth-Death and Moran Death-Birth life-cycles is explained by the different scales of competition that the two life-cycle produce \citep{GrafenArchetti2008, DebarreHD2014}. Secondary effects are also behind the evolution of social behaviors such as spite \citep{WestGardner2010}. 
 
 %  To simplify the explanations, let us consider that the number of demes is large: in this case, $\Qout$ is vanishingly small. Let us also assume that there is no direct cost to being an altruist ($\cc = 0$). 
 
 % Order of limits
 \subsection*{How small is small and how large is large?}
-Our results were derived under the assumption of weak selection, assuming that the phenotypic difference between altruists and defectors is small ($\delta \ll 0$). We considered any fidelity of transmission (any $\mu$ between $0$ and $1$) and population size. However, most models considering subdivided populations assume nearly perfect strategy transmission ($\mu \to 0$) and infinite population sizes (number of demes $\ndemes \to \infty$). The order in which these limits are taken matters, \ie, one needs to specify how small $\mu$, but also $\omega$, are compared to the inverse size of the population. This remark complements findings by \citet{SampleAllen2017}, who highlighted the quantitative differences between different orders of weak selection and large population limits. 
+Our results were derived under the assumption of weak selection, assuming that the phenotypic difference between altruists and defectors is small ($\selstr \ll 0$). We considered any fidelity of transmission (any $\mu$ between $0$ and $1$) and population size. However, most models considering subdivided populations assume nearly perfect strategy transmission ($\mu \to 0$) and infinite population sizes (number of demes $\ndemes \to \infty$). The order in which these limits are taken matters, \ie, one needs to specify how small $\mu$, but also $\selstr$, are compared to the inverse size of the population. This remark complements findings by \citet{SampleAllen2017}, who highlighted the quantitative differences between different orders of weak selection and large population limits. 
 
 % Steve Frank and other models
 \subsection*{Imperfect transmission and Rebellious Children}
@@ -634,13 +631,13 @@ Mutation was also previously included in models investigating the maintenance of
 
 \subsection*{Interactions and dispersal graphs}
 
-Compared to graphs classically used in evolutionary graph theory (\eg, regular random graphs, grids), the island model is particular because the interaction graph and the dispersal graph are different: interactions take place only within demes ($\eout = 0$), while offspring can disperse out of their natal deme ($\dout >0$). One may wonder whether our result depends on this difference between the two graphs. Figure~\ref{fig:EXsameDE} shows that the result still holds when the dispersal and interaction graphs are the same. In this figure indeed, we let a proportion $m$ (equal to the dispersal probability) of interactions occur outside of the deme where the individuals live, and set $\dself$, the probability of self replacement, equal to $0$, so that the dispersal and interactions graphs are the same. 
+Compared to graphs classically used in evolutionary graph theory (\eg, regular random graphs, grids), the island model is particular because the interaction graph and the dispersal graph are different: interactions take place only within demes ($\eout = 0$), while offspring can disperse out of their natal deme ($\dout >0$). One may wonder whether our result depends on this difference between the two graphs. Figure~\ref{fig:EXsameDE} shows that the result still holds when the dispersal and interaction graphs are the same. In this figure indeed, we let a proportion $m$ (equal to the dispersal probability) of interactions occur outside of the deme where the individuals live, and set $\dself$, the probability of self replacement, equal to $0$, so that the dispersal and interactions graphs are the same. Our conclusions remain unchanged.
 
 \subsection*{Coevolution of dispersal and social behavior}
 This work also raises the question of what would happen if dispersal (\eg, the emigration probability $m$) could evolve as well. Recent work on the topic has shown that under some conditions disruptive selection could take place, leading to a polymorphism between sessile altruists and mobile defectors \citep{Parvinen2013, MullonKL2017bioRxiv}. The assumptions of these studies however  differ from ours in important ways, in that they consider continuous traits and use an adaptive dynamics framework, where, notably, mutations are assumed to be very rare. It remains to be investigated how non-rare and potentially large mutations would affect their result. 
 
 \section*{Acknowledgements}
-Thanks to Charles Mullon for detailed comments on a previous version of the manuscript, and for suggesting the $\mathcal{B} R - \mathcal{C}$ decomposition. At ESEB 2017, S\'ebastien Lion suggested using the $R$ vs. $\mathcal{C}/\mathcal{B}$ comparison to interpret the result.
+Thanks to Charles Mullon for detailed comments on a previous version of the manuscript, and for suggesting the $\mathcal{B} R - \mathcal{C}$ decomposition. At ESEB 2017, S\'ebastien Lion suggested using the $R$ vs. $\mathcal{C}/\mathcal{B}$ comparison to interpret the result. This work was funded by a ANR-14-ACHN-0003-01 grant. 
 
 \singlespacing
 %%% ___ BIBLIO _____

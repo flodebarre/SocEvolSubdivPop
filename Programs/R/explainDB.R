@@ -28,7 +28,7 @@ mmin <- 0.0005
 xvals <- seq(mmin, 1-1/thed, length.out = 501)
 thelwd <- 3
 lwdBC <- 5
-BCcol <- "#FF0000"
+BCcol <- "#000000"
 
 pdf("Pics/explainDB.pdf", width = wpdfQ, height = hpdfDB)
 par(las = 1, mgp = mgppdf, xpd = FALSE,
@@ -41,7 +41,7 @@ for(imu in seq_along(mus)){
   lines(xvals, RM(m = xvals, mut = mus[imu]), lty = 1, col = get(paste0("colmu", imu)), lwd = thelwd)
 }
 lines(xvals, RM(m = xvals, mut = 0), lty = 2, col = colnomut, lwd = thelwd)
-
+lines(c(0, 1-1/thed), rep(0, 2))
 axis(1, pos = 0, cex.axis = cexaxis)
 axis(2, pos = mmin, at = seq(0, 1, by = 0.2), cex.axis = cexaxis)
 mtext(side = 1, text = "Emigration probability m", line = 1.5, cex = cexlab)
