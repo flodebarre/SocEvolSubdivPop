@@ -275,7 +275,7 @@
 \begin{tabular}[t]{ll}
 Abstract & $148$ \\
 Impact summary & $283$ words \\
-Total & $3989$ words
+Total & $4213$ words
 \end{tabular}
 
 %\paragraph{Abstract Word Count:} Should be below 300 words
@@ -600,7 +600,11 @@ To relax the assumption of equal deme sizes, we randomly drew deme sizes at the 
  
 For the Moran model, it may seem odd that an offspring can replace its own parent (which can occur since $d_{ii} \neq 0$). Figure~\ref{fig:EXdself}, plotted with dispersal probabilities preventing immediate replacement of one's own parent (for all sites $i$, $d_{ii}=\dself=0$; $\din = (1-m)/(n-1)$ for two different sites in the same deme, $\dout$ remaining unchanged), confirms that this does affect our conclusions. 
 
-Finally, the results are obtained in a population of finite size (the figures are done with $\ndemes =15$ demes), but still hold when  the size of the population is larger (see \eg, figure~\ref{fig:DB}\subref{fig:sub:qualit}, showing the range of emigration and mutation values such that altruism is favored, plotted also for $\ndemes\to \infty$).
+The results are obtained in a population of finite size (the figures are done with $\ndemes =15$ demes), but still hold when  the size of the population is larger (see \eg, figure~\ref{fig:DB}\subref{fig:sub:qualit}, showing the range of emigration and mutation values such that altruism is favored, plotted also for $\ndemes\to \infty$).
+
+Compared to graphs classically used in evolutionary graph theory (\eg, regular random graphs, grids), the island model is particular because the interaction graph and the dispersal graph are different: interactions take place only within demes ($\eout = 0$), while offspring can disperse out of their natal deme ($\dout >0$). One may wonder whether our result depends on this difference between the two graphs. Figure~\ref{fig:EXsameDE} shows that the result still holds when the dispersal and interaction graphs are the same. In this figure indeed, we let a proportion $m$ (equal to the dispersal probability) of interactions occur outside of the deme where the individuals live, and set $\dself$, the probability of self replacement, equal to $0$, so that the dispersal and interactions graphs are the same. Our conclusions remain unchanged.
+
+
 
 \section{Discussion}
 % Summary
@@ -634,9 +638,15 @@ Our model is mechanistic; relatedness $r$ necessarily depends on the mutation pr
 
 Mutation was also previously included in models investigating the maintenance of cooperative microorganisms in the presence of cheaters \citep{Brockhurst2007, Frank2010}. In both of these models however, only loss-of-function mutation was considered, which corresponds to setting the mutation bias at $\mutbias=0$ in our model. This means that the all-cheaters state is absorbing; no matter how favored cooperators may otherwise be, in the long run, a finite population will only consist of cheaters. 
 
-\subsection*{Interactions and dispersal graphs}
+% Cultural transmission
+\subsection*{Cultural transmission}
+In the model, strategy transmission is linked with reproduction. As stressed in the Introduction, strategy transmission does not have to be genetic: it can be cultural, which justifies the exploration of non perfectly faithful transmission. Because transmission occurs upon reproduction, it is a case of vertical cultural transmission. 
 
-Compared to graphs classically used in evolutionary graph theory (\eg, regular random graphs, grids), the island model is particular because the interaction graph and the dispersal graph are different: interactions take place only within demes ($\eout = 0$), while offspring can disperse out of their natal deme ($\dout >0$). One may wonder whether our result depends on this difference between the two graphs. Figure~\ref{fig:EXsameDE} shows that the result still holds when the dispersal and interaction graphs are the same. In this figure indeed, we let a proportion $m$ (equal to the dispersal probability) of interactions occur outside of the deme where the individuals live, and set $\dself$, the probability of self replacement, equal to $0$, so that the dispersal and interactions graphs are the same. Our conclusions remain unchanged.
+The model could nevertheless be interpreted as a representation of horizontal transmission, if we describe reproduction as an individual convincing another one to update its strategy. The Moran Death-Birth model can be interpreted as a modified imitation scheme \citep{BoydRicherson2002, Ohtsuki2005}, with a specific function specifying who is imitated and with mutation \citep{Kandori1993}: first we choose uniformly at random an individual who may change its strategy; with probability $\mu$ the individual chooses a random strategy (altruistic with probability $\mutbias$), and with probability $1-\mu$ it imitates another individual. Who is imitated depends on the distance to the focal individual (with probability $m$ it is a random individual in another deme) and on the ``fecundities'' of those individuals (as shown in table~\ref{tab:BD}). With this interpretation of the updating rule however, there is not reproduction nor death anymore. 
+
+It remains to be investigated how imperfect strategy transmission would affect the effect of population viscosity on the evolution of altruism in a model implementing both reproduction and horizontal cultural transmission \citep[as in][]{Lehmann2008}. Such a model could then contrast the effects of impecfect genetic transmission and imperfect horizontal cultural transmission. 
+
+
 
 \subsection*{Coevolution of dispersal and social behavior}
 This work also raises the question of what would happen if dispersal (\eg, the emigration probability $m$) could evolve as well. Recent work on the topic has shown that under some conditions disruptive selection could take place, leading to a polymorphism between sessile altruists and mobile defectors \citep{Parvinen2013, MullonKL2017bioRxiv}. The assumptions of these studies however  differ from ours in important ways, in that they consider continuous traits and use an adaptive dynamics framework, where, notably, mutations are assumed to be very rare. It remains to be investigated how non-rare and potentially large mutations would affect their result. 

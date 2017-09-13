@@ -1,4 +1,4 @@
-\begin{thebibliography}{39}
+\begin{thebibliography}{42}
 \providecommand{\natexlab}[1]{#1}
 
 \bibitem[{Alizon \& Taylor(2008)}]{Alizon2008}
@@ -16,6 +16,11 @@ Allen, B.; Traulsen, A.; Tarnita, C.~E. \& Nowak, M.~A. 2012: How mutation
   affects evolutionary games on graphs.
 \newblock Journal of Theoretical Biology 299:97 -- 105.
 \newblock Evolution of Cooperation.
+
+\bibitem[{Boyd \& Richerson(2002)}]{BoydRicherson2002}
+Boyd, R. \& Richerson, P.~J. 2002: Group beneficial norms can spread rapidly in
+  a structured population.
+\newblock Journal of theoretical biology 215(3):287--296.
 
 \bibitem[{Brockhurst et~al.(2007)Brockhurst, Buckling \&
   Gardner}]{Brockhurst2007}
@@ -67,6 +72,17 @@ Hamilton, W. 1964: The genetical evolution of social behaviour. i.
 Hamilton, W.~D. 1975: Innate social aptitudes of man: an approach from
   evolutionary genetics.
 \newblock Biosocial anthropology 53:133--55.
+
+\bibitem[{Kandori et~al.(1993)Kandori, Mailath \& Rob}]{Kandori1993}
+Kandori, M.; Mailath, G.~J. \& Rob, R. 1993: Learning, mutation, and long run
+  equilibria in games.
+\newblock Econometrica 61(1):29--56.
+
+\bibitem[{Lehmann et~al.(2008)Lehmann, Feldman \& Foster}]{Lehmann2008}
+Lehmann, L.; Feldman, M. \& Foster, K. 2008: Cultural transmission can inhibit
+  the evolution of altruistic helping.
+\newblock The American Naturalist 172(1):12--24.
+\newblock PMID: 18500938.
 
 \bibitem[{Lehmann et~al.(2007)Lehmann, Keller \& Sumpter}]{Lehmann2007}
 Lehmann, L.; Keller, L. \& Sumpter, D. J.~T. 2007: The evolution of helping and

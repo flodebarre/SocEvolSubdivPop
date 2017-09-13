@@ -8,44 +8,46 @@ Reallocated str_pool (elt_size=1) to 260000 items from 195000.
 Reallocated str_pool (elt_size=1) to 325000 items from 260000.
 Reallocated str_pool (elt_size=1) to 390000 items from 325000.
 Database file #1: bibSCSP.bib
-You've used 39 entries,
+Warning--I didn't find a database entry for "Ohtsuki2005"
+You've used 42 entries,
             2782 wiz_defined-function locations,
-            13406 strings with 352918 characters,
-and the built_in function-call counts, 21745 in all, are:
-= -- 1906
-> -- 734
-< -- 28
-+ -- 303
-- -- 246
-* -- 1557
-:= -- 3530
-add.period$ -- 118
-call.type$ -- 39
-change.case$ -- 277
-chr.to.int$ -- 37
-cite$ -- 39
-duplicate$ -- 1570
-empty$ -- 1650
-format.name$ -- 361
-if$ -- 4273
+            13430 strings with 353447 characters,
+and the built_in function-call counts, 23549 in all, are:
+= -- 2061
+> -- 804
+< -- 29
++ -- 330
+- -- 270
+* -- 1695
+:= -- 3817
+add.period$ -- 128
+call.type$ -- 42
+change.case$ -- 301
+chr.to.int$ -- 40
+cite$ -- 42
+duplicate$ -- 1703
+empty$ -- 1781
+format.name$ -- 396
+if$ -- 4627
 int.to.chr$ -- 3
 int.to.str$ -- 1
-missing$ -- 344
-newline$ -- 161
-num.names$ -- 156
-pop$ -- 579
+missing$ -- 374
+newline$ -- 174
+num.names$ -- 168
+pop$ -- 628
 preamble$ -- 1
-purify$ -- 238
+purify$ -- 258
 quote$ -- 0
-skip$ -- 521
+skip$ -- 560
 stack$ -- 0
-substring$ -- 1272
-swap$ -- 809
+substring$ -- 1362
+swap$ -- 884
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 348
+type$ -- 375
 warning$ -- 0
-while$ -- 173
+while$ -- 186
 width$ -- 0
-write$ -- 470
+write$ -- 508
+(There was 1 warning)
