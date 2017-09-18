@@ -15,12 +15,12 @@ They are combined to form a single file, depending on the life-cycle
  -  `htg-island_onestepWF.c` [(click here to download)](https://github.com/flodebarre/SocEvolSubdivPop/raw/master/Programs/C/htg-island_onestepWF.c)
 
 ## Submission file
-The simulations were run on the Migale cluster http://migale.jouy.inra.fr, which has a `qsub` type queuing system.
+The simulations were run on the Migale cluster <http://migale.jouy.inra.fr>, which has a `qsub` type queuing system.
 
 To execute the scripts:
 
  -  Upload the entire C/ folder to the cluster,
- -  Update the value of THEPATH in the two submit_*.sh files, so that the path matches the path to the scripts in your system.
+ -  Update the value of THEPATH in the `submit_*.sh` file, so that the path matches the path to the scripts in your system.
 Type
 ```
     ./submit_all.sh
