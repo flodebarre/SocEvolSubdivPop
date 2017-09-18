@@ -15,7 +15,7 @@ They are combined to form a single file, depending on the life-cycle
  -  `htg-island_onestepWF.c` [(click here to download)](https://github.com/flodebarre/SocEvolSubdivPop/raw/master/Programs/C/htg-island_onestepWF.c)
 
 ## Submission file
-The simulations were run on the Migale cluster <http://migale.jouy.inra.fr>, which has a `qsub` type queuing system.
+The simulations were run on the [Migale cluster](http://migale.jouy.inra.fr), which has a `qsub` type queuing system.
 
 To execute the scripts:
 
