@@ -99,7 +99,9 @@
 % Helvetica for sans serif fonts
 \renewcommand{\sfdefault}{phv}
 % Make sure mathcal looks the same
-%\DeclareMathAlphabet{\mathcal}{OMS}{cmsy}{m}{n}
+\DeclareMathAlphabet{\mathcal}{OMS}{cmsy}{m}{n}
+% TT fonts
+\usepackage{nimbusmononarrow}
 
 % SECTIONS
 \usepackage{titlesec}
@@ -227,7 +229,7 @@
 \newcommand{\self}{\textrm{self}}
 \newcommand{\inn}{\textrm{in}}
 \newcommand{\out}{\textrm{out}}
-\newcommand{\focal}{o}
+\newcommand{\focal}{\bullet}
 \newcommand{\ein}{e_{\inn}}
 \newcommand{\eself}{e_{\self}}
 \newcommand{\eout}{e_{\out}}
