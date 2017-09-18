@@ -1,6 +1,6 @@
 # Scripts
 
-There are scripts in `C`, `Mathematica`, and `R`. [Link-name2](#C)
+There are scripts in [`C`](#C), [`Mathematica`](#Mathematica), and [`R`](#R). 
 
 ## C
 Stochastic simulations:
@@ -31,10 +31,16 @@ to submit all the jobs for all simulations to the cluster. The `submit_all.sh` f
 
 The results (`.txt` files) are stored in a `Results/` folder.
 
+---
+
+
 ## Mathematica
 Analytical part:
  - `.pdf` output of the Mathematica notebook [(click here to download)](https://github.com/flodebarre/SocEvolSubdivPop/raw/master/Programs/Mathematica/SI_SubdivPop.pdf)
  - `.nb` source file (same content as pdf version, but editable) [(click here to download)](https://github.com/flodebarre/SocEvolSubdivPop/raw/master/Programs/Mathematica/SI_SubdivPop.nb)
+
+---
+
 
 ## R
 To plot the figures, using simulation data and outputs from Mathematica. 
