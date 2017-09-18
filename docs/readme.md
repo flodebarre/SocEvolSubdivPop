@@ -1,4 +1,4 @@
-There are scripts in [`C`](#C), [`Mathematica`](#Mathematica), and [`R`](#R). 
+There are scripts in `C`, `Mathematica` and `R`.
 
 # C
 Stochastic simulations:
