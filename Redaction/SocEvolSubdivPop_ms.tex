@@ -99,7 +99,7 @@
 % Helvetica for sans serif fonts
 \renewcommand{\sfdefault}{phv}
 % Make sure mathcal looks the same
-\DeclareMathAlphabet{\mathcal}{OMS}{cmsy}{m}{n}
+%\DeclareMathAlphabet{\mathcal}{OMS}{cmsy}{m}{n}
 
 % SECTIONS
 \usepackage{titlesec}
@@ -227,7 +227,7 @@
 \newcommand{\self}{\textrm{self}}
 \newcommand{\inn}{\textrm{in}}
 \newcommand{\out}{\textrm{out}}
-\newcommand{\focal}{\bullet}
+\newcommand{\focal}{o}
 \newcommand{\ein}{e_{\inn}}
 \newcommand{\eself}{e_{\self}}
 \newcommand{\eout}{e_{\out}}
@@ -262,7 +262,7 @@
 
 \paragraph{Article Type:} Letter
 
-\paragraph{Article Title:} Imperfect strategy transmission can reverse the role of population viscosity on the evolution of altruism .
+\paragraph{Article Title:} Imperfect strategy transmission can reverse the role of population viscosity on the evolution of altruism.
 
 \paragraph{Author:} Florence D\'ebarre -- Centre Interdisciplinaire de Recherche en Biologie (CIRB), Coll\`ege de France, CNRS UMR 7241 - Inserm U1050, 11 place Marcelin Berthelot, 75231 Paris Cedex 05, France. \texttt{florence.debarre@normalesup.org}
 
@@ -389,7 +389,7 @@ These neutral probabilities of identity by descent depend on the chosen life-cyc
 We also ran stochastic simulations (coded in \texttt{C}). The simulations were run for $10^8$ generations (one generation is one time step for the Wright-Fisher life-cycle, and $N$ time steps for the Moran life-cycles). For each set of parameters and life-cycle, using R \citep{R2015}, we estimated the long-term frequency of altruists by sampling the population every $10^3$ generations and computing the average frequency of altruists. 
 %
 All scripts are available at \\
-{\small \url{https://github.com/flodebarre/SocEvolSubdivPop/tree/master/Programs}} 
+{\small \url{https://flodebarre.github.io/SocEvolSubdivPop/}} 
 
 \section{Results}
 
@@ -768,7 +768,7 @@ Thanks to Charles Mullon for detailed comments on a previous version of the manu
 
 \begin{table}[h!]
 \begin{tabular}{>{$}c<{$} l}
-\bb & Sum of the marginal effects of deme-mates' phenotypes on the fecundity of a focal individual (benefit)\\
+\bb & Sum of the marginal effects of deme-mates' phenotypes on focal individual's fecundity (benefit)\\
 \mathcal{B} & Sum of the marginal effects of deme-mates' phenotypes on the fitness $W$ of a focal individual\\
 B_i & Expected number of successful offspring of the individual living at site $i$ (r.v.)\\
 B^* & Value of $B_i$ for all sites, in the absence of selection ($\selstr = 0$)\\

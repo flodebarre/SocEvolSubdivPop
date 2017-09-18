@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.24)  18 SEP 2017 20:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.24)  18 SEP 2017 22:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1070,12 +1070,6 @@ LaTeX Font Info:    Redeclaring math accent \dot on input line 255.
 LaTeX Font Info:    Redeclaring math accent \mathring on input line 256.
 \symUfutm=\mathgroup8
 )
-LaTeX Font Info:    Redeclaring math alphabet \mathcal on input line 102.
-LaTeX Font Info:    Overwriting math alphabet `\mathcal' in version `normal'
-(Font)                  FMS/futm/m/n --> OMS/cmsy/m/n on input line 102.
-LaTeX Font Info:    Overwriting math alphabet `\mathcal' in version `bold'
-(Font)                  FMS/futm/m/n --> OMS/cmsy/m/n on input line 102.
-
 (/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2016/03/15 v2.10.1 Sectioning titles
 \ttl@box=\box74
@@ -1686,7 +1680,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 568.
 
 [14]
-Overfull \hbox (24.86485pt too wide) in paragraph at lines 579--581
+Overfull \hbox (26.70284pt too wide) in paragraph at lines 579--581
 []\T1/futs/m/n/10.95 When the em-i-gra-tion prob-a-bil-ity $\FML/futmi/m/it/10.
 95 m$ \T1/futs/m/n/10.95 is van-ish-ingly small, $[][] \FML/futmi/m/it/10.95 R[
 ] \FMS/futm/m/n/10.95 ^^T [][] []$\T1/futs/m/n/10.95 ,
@@ -1699,10 +1693,10 @@ l trans-mis-sion (as in [][]Lehmann
  []
 
 [20]
-Overfull \hbox (8.22673pt too wide) in paragraph at lines 655--656
-\T1/futs/m/n/10.95 manuscript, and for sug-gest-ing the $\OMS/cmsy/m/n/10.95 B\
-FML/futmi/m/it/10.95 R \FMS/futm/m/n/10.95 ^^@ \OMS/cmsy/m/n/10.95 C$ \T1/futs/
-m/n/10.95 de-com-po-si-tion. At ESEB 2017, Sébastien
+Overfull \hbox (13.74457pt too wide) in paragraph at lines 655--656
+\T1/futs/m/n/10.95 manuscript, and for sug-gest-ing the $\FMS/futm/m/n/10.95 B\
+FML/futmi/m/it/10.95 R \FMS/futm/m/n/10.95 ^^@ C$ \T1/futs/m/n/10.95 de-com-po-
+si-tion. At ESEB 2017, Sébastien
  []
 
 [21] (./SocEvolSubdivPop_ms.bbl [22
@@ -1714,7 +1708,7 @@ Underfull \hbox (badness 2181) in paragraph at lines 171--175
  []
 
 ) [24] (./SocEvolSubdivPop_ms.fff
-<../Programs/R/Pics/RplotM.pdf, id=496, 289.08pt x 307.1475pt>
+<../Programs/R/Pics/RplotM.pdf, id=495, 289.08pt x 307.1475pt>
 File: ../Programs/R/Pics/RplotM.pdf Graphic file (type pdf)
 
 <use ../Programs/R/Pics/RplotM.pdf>
@@ -1723,7 +1717,7 @@ Package pdftex.def Info: ../Programs/R/Pics/RplotM.pdf used on input line 3.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <8> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 3.
 
-<../Programs/R/Pics/RplotWF.pdf, id=497, 289.08pt x 307.1475pt>
+<../Programs/R/Pics/RplotWF.pdf, id=496, 289.08pt x 307.1475pt>
 File: ../Programs/R/Pics/RplotWF.pdf Graphic file (type pdf)
 
 <use ../Programs/R/Pics/RplotWF.pdf>
@@ -1734,7 +1728,7 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
  [25
 
  <../Programs/R/Pics/RplotM.pdf> <../Programs/R/Pics/RplotWF.pdf>]
-<../Programs/R/Pics/EXDB_sel0.005_htg0.pdf, id=525, 289.08pt x 361.35pt>
+<../Programs/R/Pics/EXDB_sel0.005_htg0.pdf, id=524, 289.08pt x 361.35pt>
 File: ../Programs/R/Pics/EXDB_sel0.005_htg0.pdf Graphic file (type pdf)
 
 <use ../Programs/R/Pics/EXDB_sel0.005_htg0.pdf>
@@ -1742,7 +1736,7 @@ Package pdftex.def Info: ../Programs/R/Pics/EXDB_sel0.005_htg0.pdf used on inpu
 t line 14.
 (pdftex.def)             Requested size: 128.0374pt x 160.0421pt.
 
-<../Programs/R/Pics/EXBD_sel0.005_htg0.pdf, id=526, 289.08pt x 361.35pt>
+<../Programs/R/Pics/EXBD_sel0.005_htg0.pdf, id=525, 289.08pt x 361.35pt>
 File: ../Programs/R/Pics/EXBD_sel0.005_htg0.pdf Graphic file (type pdf)
 
 <use ../Programs/R/Pics/EXBD_sel0.005_htg0.pdf>
@@ -1750,7 +1744,7 @@ Package pdftex.def Info: ../Programs/R/Pics/EXBD_sel0.005_htg0.pdf used on inpu
 t line 16.
 (pdftex.def)             Requested size: 128.0374pt x 160.0421pt.
 
-<../Programs/R/Pics/EXWF_sel0.005_htg0.pdf, id=527, 289.08pt x 361.35pt>
+<../Programs/R/Pics/EXWF_sel0.005_htg0.pdf, id=526, 289.08pt x 361.35pt>
 File: ../Programs/R/Pics/EXWF_sel0.005_htg0.pdf Graphic file (type pdf)
 
 <use ../Programs/R/Pics/EXWF_sel0.005_htg0.pdf>
@@ -1764,7 +1758,7 @@ Overfull \hbox (58.76218pt too wide) in paragraph at lines 13--21
 
 [26 <../Programs/R/Pics/EXDB_sel0.005_htg0.pdf> <../Programs/R/Pics/EXBD_sel0.0
 05_htg0.pdf> <../Programs/R/Pics/EXWF_sel0.005_htg0.pdf>]
-<../Programs/R/Pics/explainDB.pdf, id=568, 289.08pt x 361.35pt>
+<../Programs/R/Pics/explainDB.pdf, id=567, 289.08pt x 361.35pt>
 File: ../Programs/R/Pics/explainDB.pdf Graphic file (type pdf)
 
 <use ../Programs/R/Pics/explainDB.pdf>
@@ -1772,7 +1766,7 @@ Package pdftex.def Info: ../Programs/R/Pics/explainDB.pdf used on input line 28
 .
 (pdftex.def)             Requested size: 128.0374pt x 160.0421pt.
 
-<../Programs/R/Pics/qualitDB.pdf, id=569, 289.08pt x 361.35pt>
+<../Programs/R/Pics/qualitDB.pdf, id=568, 289.08pt x 361.35pt>
 File: ../Programs/R/Pics/qualitDB.pdf Graphic file (type pdf)
 
 <use ../Programs/R/Pics/qualitDB.pdf>
@@ -1780,7 +1774,7 @@ Package pdftex.def Info: ../Programs/R/Pics/qualitDB.pdf used on input line 30.
 
 (pdftex.def)             Requested size: 128.0374pt x 160.0421pt.
  [27 <../Programs/R/Pics/explainDB.pdf> <../Programs/R/Pics/qualitDB.pdf>])
-<../Programs/R/Pics/EXDB_sel0.1_htg0.pdf, id=597, 289.08pt x 361.35pt>
+<../Programs/R/Pics/EXDB_sel0.1_htg0.pdf, id=596, 289.08pt x 361.35pt>
 File: ../Programs/R/Pics/EXDB_sel0.1_htg0.pdf Graphic file (type pdf)
 
 <use ../Programs/R/Pics/EXDB_sel0.1_htg0.pdf>
@@ -1788,7 +1782,7 @@ Package pdftex.def Info: ../Programs/R/Pics/EXDB_sel0.1_htg0.pdf used on input
 line 701.
 (pdftex.def)             Requested size: 128.0374pt x 160.0421pt.
 
-<../Programs/R/Pics/EXBD_sel0.1_htg0.pdf, id=598, 289.08pt x 361.35pt>
+<../Programs/R/Pics/EXBD_sel0.1_htg0.pdf, id=597, 289.08pt x 361.35pt>
 File: ../Programs/R/Pics/EXBD_sel0.1_htg0.pdf Graphic file (type pdf)
 
 <use ../Programs/R/Pics/EXBD_sel0.1_htg0.pdf>
@@ -1796,7 +1790,7 @@ Package pdftex.def Info: ../Programs/R/Pics/EXBD_sel0.1_htg0.pdf used on input
 line 703.
 (pdftex.def)             Requested size: 128.0374pt x 160.0421pt.
 
-<../Programs/R/Pics/EXWF_sel0.1_htg0.pdf, id=599, 289.08pt x 361.35pt>
+<../Programs/R/Pics/EXWF_sel0.1_htg0.pdf, id=598, 289.08pt x 361.35pt>
 File: ../Programs/R/Pics/EXWF_sel0.1_htg0.pdf Graphic file (type pdf)
 
 <use ../Programs/R/Pics/EXWF_sel0.1_htg0.pdf>
@@ -1808,7 +1802,7 @@ Overfull \hbox (58.76218pt too wide) in paragraph at lines 700--707
  [][] 
  []
 
-<../Programs/R/Pics/EXDB_sel0.005_htg1.pdf, id=604, 289.08pt x 361.35pt>
+<../Programs/R/Pics/EXDB_sel0.005_htg1.pdf, id=603, 289.08pt x 361.35pt>
 File: ../Programs/R/Pics/EXDB_sel0.005_htg1.pdf Graphic file (type pdf)
 
 <use ../Programs/R/Pics/EXDB_sel0.005_htg1.pdf>
@@ -1816,7 +1810,7 @@ Package pdftex.def Info: ../Programs/R/Pics/EXDB_sel0.005_htg1.pdf used on inpu
 t line 714.
 (pdftex.def)             Requested size: 128.0374pt x 160.0421pt.
 
-<../Programs/R/Pics/EXBD_sel0.005_htg1.pdf, id=605, 289.08pt x 361.35pt>
+<../Programs/R/Pics/EXBD_sel0.005_htg1.pdf, id=604, 289.08pt x 361.35pt>
 File: ../Programs/R/Pics/EXBD_sel0.005_htg1.pdf Graphic file (type pdf)
 
 <use ../Programs/R/Pics/EXBD_sel0.005_htg1.pdf>
@@ -1824,7 +1818,7 @@ Package pdftex.def Info: ../Programs/R/Pics/EXBD_sel0.005_htg1.pdf used on inpu
 t line 716.
 (pdftex.def)             Requested size: 128.0374pt x 160.0421pt.
 
-<../Programs/R/Pics/EXWF_sel0.005_htg1.pdf, id=606, 289.08pt x 361.35pt>
+<../Programs/R/Pics/EXWF_sel0.005_htg1.pdf, id=605, 289.08pt x 361.35pt>
 File: ../Programs/R/Pics/EXWF_sel0.005_htg1.pdf Graphic file (type pdf)
 
 <use ../Programs/R/Pics/EXWF_sel0.005_htg1.pdf>
@@ -1837,7 +1831,7 @@ Overfull \hbox (58.76218pt too wide) in paragraph at lines 713--719
  []
 
 
-<../Programs/R/Pics/EXDB_sel0.005_htg0_nodself.pdf, id=613, 289.08pt x 361.35pt
+<../Programs/R/Pics/EXDB_sel0.005_htg0_nodself.pdf, id=612, 289.08pt x 361.35pt
 >
 File: ../Programs/R/Pics/EXDB_sel0.005_htg0_nodself.pdf Graphic file (type pdf)
 
@@ -1846,7 +1840,7 @@ Package pdftex.def Info: ../Programs/R/Pics/EXDB_sel0.005_htg0_nodself.pdf used
  on input line 743.
 (pdftex.def)             Requested size: 128.0374pt x 160.0421pt.
 
-<../Programs/R/Pics/EXBD_sel0.005_htg0_nodself.pdf, id=614, 289.08pt x 361.35pt
+<../Programs/R/Pics/EXBD_sel0.005_htg0_nodself.pdf, id=613, 289.08pt x 361.35pt
 >
 File: ../Programs/R/Pics/EXBD_sel0.005_htg0_nodself.pdf Graphic file (type pdf)
 
@@ -1855,7 +1849,7 @@ Package pdftex.def Info: ../Programs/R/Pics/EXBD_sel0.005_htg0_nodself.pdf used
  on input line 745.
 (pdftex.def)             Requested size: 128.0374pt x 160.0421pt.
 
-<../Programs/R/Pics/EXWF_sel0.005_htg0_nodself.pdf, id=615, 289.08pt x 361.35pt
+<../Programs/R/Pics/EXWF_sel0.005_htg0_nodself.pdf, id=614, 289.08pt x 361.35pt
 >
 File: ../Programs/R/Pics/EXWF_sel0.005_htg0_nodself.pdf Graphic file (type pdf)
 
@@ -1869,7 +1863,7 @@ Overfull \hbox (58.76218pt too wide) in paragraph at lines 742--749
  []
 
 
-<../Programs/R/Pics/EXDB_sel0.005_htg0_nodself_sameDE.pdf, id=618, 289.08pt x 3
+<../Programs/R/Pics/EXDB_sel0.005_htg0_nodself_sameDE.pdf, id=617, 289.08pt x 3
 61.35pt>
 File: ../Programs/R/Pics/EXDB_sel0.005_htg0_nodself_sameDE.pdf Graphic file (ty
 pe pdf)
@@ -1878,7 +1872,7 @@ Package pdftex.def Info: ../Programs/R/Pics/EXDB_sel0.005_htg0_nodself_sameDE.p
 df used on input line 756.
 (pdftex.def)             Requested size: 128.0374pt x 160.0421pt.
 
-<../Programs/R/Pics/EXBD_sel0.005_htg0_nodself_sameDE.pdf, id=619, 289.08pt x 3
+<../Programs/R/Pics/EXBD_sel0.005_htg0_nodself_sameDE.pdf, id=618, 289.08pt x 3
 61.35pt>
 File: ../Programs/R/Pics/EXBD_sel0.005_htg0_nodself_sameDE.pdf Graphic file (ty
 pe pdf)
@@ -1887,7 +1881,7 @@ Package pdftex.def Info: ../Programs/R/Pics/EXBD_sel0.005_htg0_nodself_sameDE.p
 df used on input line 758.
 (pdftex.def)             Requested size: 128.0374pt x 160.0421pt.
 
-<../Programs/R/Pics/EXWF_sel0.005_htg0_nodself_sameDE.pdf, id=620, 289.08pt x 3
+<../Programs/R/Pics/EXWF_sel0.005_htg0_nodself_sameDE.pdf, id=619, 289.08pt x 3
 61.35pt>
 File: ../Programs/R/Pics/EXWF_sel0.005_htg0_nodself_sameDE.pdf Graphic file (ty
 pe pdf)
@@ -1949,7 +1943,7 @@ LaTeX Font Warning: Command \small invalid in math mode on input line 808.
 LaTeX Font Warning: Command \small invalid in math mode on input line 809.
 
 
-Overfull \hbox (100.10855pt too wide) in paragraph at lines 770--811
+Overfull \hbox (111.81407pt too wide) in paragraph at lines 770--811
  [][] 
  []
 
@@ -2024,7 +2018,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [38]
-Overfull \hbox (23.14795pt too wide) in paragraph at lines 1119--1119
+Overfull \hbox (22.63995pt too wide) in paragraph at lines 1119--1119
 [] 
  []
 
@@ -2071,7 +2065,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[42] <../Programs/R/Pics/QplotM.pdf, id=924, 361.35pt x 307.1475pt>
+[42] <../Programs/R/Pics/QplotM.pdf, id=923, 361.35pt x 307.1475pt>
 File: ../Programs/R/Pics/QplotM.pdf Graphic file (type pdf)
 
 <use ../Programs/R/Pics/QplotM.pdf>
@@ -2079,7 +2073,7 @@ Package pdftex.def Info: ../Programs/R/Pics/QplotM.pdf used on input line 1295.
 
 (pdftex.def)             Requested size: 128.0374pt x 108.82956pt.
 
-<../Programs/R/Pics/QplotWF.pdf, id=925, 361.35pt x 307.1475pt>
+<../Programs/R/Pics/QplotWF.pdf, id=924, 361.35pt x 307.1475pt>
 File: ../Programs/R/Pics/QplotWF.pdf Graphic file (type pdf)
 
 <use ../Programs/R/Pics/QplotWF.pdf>
@@ -2111,33 +2105,32 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1305.
  ) 
 Here is how much of TeX's memory you used:
- 25655 strings out of 494883
- 483161 string characters out of 6178693
- 590881 words of memory out of 5000000
- 28115 multiletter control sequences out of 15000+600000
- 183420 words of font info for 196 fonts, out of 8000000 for 9000
+ 25641 strings out of 494883
+ 482978 string characters out of 6178693
+ 590887 words of memory out of 5000000
+ 28106 multiletter control sequences out of 15000+600000
+ 181723 words of font info for 189 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 55i,32n,71p,1976b,530s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,32n,71p,1976b,524s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc} </home/florencede
 barre/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.600pk> </home/florencedeb
 arre/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1095.600pk></usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/fourier/fourier-bb.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/fourier/fourier-mex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-fourier/fourier-ml.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/fourie
-r/fourier-mlit.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/fourier/fo
-urier-ms.pfb></usr/share/texlive/texmf-dist/fonts/type1/adobe/utopia/putb8a.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/adobe/utopia/putri8a.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
-/helvetic/uhvro8a.pfb>
-Output written on SocEvolSubdivPop_ms.pdf (43 pages, 728061 bytes).
+dist/fonts/type1/public/fourier/fourier-bb.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/fourier/fourier-mcl.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/fourier/fourier-mex.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/fourier/fourier-ml.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/fourier/fourier-mlit.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/fo
+urier/fourier-ms.pfb></usr/share/texlive/texmf-dist/fonts/type1/adobe/utopia/pu
+tb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/adobe/utopia/putri8a.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/urw/helvetic/uhvro8a.pfb>
+Output written on SocEvolSubdivPop_ms.pdf (43 pages, 740506 bytes).
 PDF statistics:
- 1100 PDF objects out of 1200 (max. 8388607)
- 926 compressed objects within 10 object streams
+ 1095 PDF objects out of 1200 (max. 8388607)
+ 923 compressed objects within 10 object streams
  234 named destinations out of 1000 (max. 500000)
  326 words of extra memory for PDF output out of 10000 (max. 10000000)
 
