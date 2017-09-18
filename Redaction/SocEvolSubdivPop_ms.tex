@@ -768,7 +768,7 @@ Thanks to Charles Mullon for detailed comments on a previous version of the manu
 
 \begin{table}[h!]
 \begin{tabular}{>{$}c<{$} l}
-\bb & Marginal effect of a deme-mate's phenotype on the fecundity of a focal individual (benefit)\\
+\bb & Sum of the marginal effects of deme-mates' phenotypes on the fecundity of a focal individual (benefit)\\
 \mathcal{B} & Sum of the marginal effects of deme-mates' phenotypes on the fitness $W$ of a focal individual\\
 B_i & Expected number of successful offspring of the individual living at site $i$ (r.v.)\\
 B^* & Value of $B_i$ for all sites, in the absence of selection ($\selstr = 0$)\\
@@ -926,7 +926,7 @@ Now, we use a first time the law of total probabilities, taking individual pheno
 \label{eq:totalproba1}
 \end{align}
 %
-by definition of $\phi_k$, and where the first derivative is evaluated for all $\phi_i = 0$. With the notation $P_{ij} = \Espzero{X_i X_j}$, \eqref{eq:weaksel0reorg} becomes
+by definition of $\phi_k$, and where the derivatives are evaluated for all $\phi_i = 0$. With the notation $P_{ij} = \Espzero{X_i X_j}$, \eqref{eq:weaksel0reorg} becomes
 %
 \begin{equation}\label{eq:weaksel1}
 \selstr \mu B^* \derivn{\Esp{\overline{X}}}{\selstr} = \frac{\selstr}{N} \sum_{i=1}^N \sum_{k=1}^N \derivn{W_i}{\phi_k} P_{ik} + \bigO{\selstr^2}.
@@ -954,7 +954,7 @@ P_{ij} &= Q_{ij} \mutbias + (1-Q_{ij}) \mutbias^2\\
 \end{split}
 \end{equation}
 %
-In \appname~\ref{sec:app:IBD}, we will see that recursions on $P_{ij}$ reveal that $Q_{ij}$ can be interpreted as a probability of identity by descent, \ie, the probability that the individuals at sites $i$ and $j$ have a common ancestor and that no mutation has occurred on either lineage since the ancestor. \Eqref{eq:weaksel1CBRP} becomes
+In \appname~\ref{sec:app:IBD}, we will see using recursions on $P_{ij}$ that $Q_{ij}$ can be interpreted as a probability of identity by descent, \ie, the probability that the individuals at sites $i$ and $j$ have a common ancestor and that no mutation has occurred on either lineage since the ancestor. \Eqref{eq:weaksel1CBRP} becomes
 %
 \begin{equation}\label{eq:weaksel1CBR}
 \selstr \mu B^* \derivn{\Esp{\overline{X}}}{\selstr} = \frac{\selstr}{N} \sum_{i=1}^N \Bigg( \underbrace{\derivn{W_i}{\phi_i}}_{-\mathcal{C}} + \underbrace{(n-1) \derivn{W_i}{\phi_{\inn}}}_{\mathcal{B}} \underbrace{\frac{Q_{\inn} - Q_{\out}}{1 - Q_{\out}}}_{R} \Bigg) (1 - Q_{\out}) \mutbias (1-\mutbias) + \bigO{\selstr^2}.
@@ -1164,8 +1164,8 @@ In particular,
 \\
 & = 1.\label{eq:app:Q2D1}
 \end{align}
-We find $\lambda_M'$ using the \eqref{eq:app:Q2D1}. 
-Going back to \eqref{eq:app:Q2DMsol}, when $r_1=0$, the two individuals are in the same deme. They are different when $r_2 \not \equiv 0$, and so:
+We find $\lambda_M'$ using \eqref{eq:app:Q2D1}. Let's now
+go back to \eqref{eq:app:Q2DMsol}: when $r_1=0$, the two individuals are in the same deme. They are different when $r_2 \not \equiv 0$, and so:
 \begin{align}
 \Qin &= \frac{\mu \lambda_M'}{N} \Bigg[  \frac{1}{\mu } 
 + \frac{1}{1 - (1-\mu) (\dself - \din)} ( - 1) %\nonumber \\
