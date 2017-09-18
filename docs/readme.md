@@ -1,22 +1,20 @@
-# Scripts
-
 There are scripts in [`C`](#C), [`Mathematica`](#Mathematica), and [`R`](#R). 
 
-## C
+# C
 Stochastic simulations:
 
-### Folders
+## Folders
  - `Scripts/` will store the combined scripts;
  - `Results/` will store the outputs of the simulations. 
 
-### `C` files
+## `C` files
 They are combined to form a single file, depending on the life-cycle
  -  `htg-island_base.c` [(click here to download)](https://github.com/flodebarre/SocEvolSubdivPop/raw/master/Programs/C/htg-island_base.c)
  -  `htg-island_onestepBD.c` [(click here to download)](https://github.com/flodebarre/SocEvolSubdivPop/raw/master/Programs/C/htg-island_onestepBD.c)
  -  `htg-island_onestepDB.c` [(click here to download)](https://github.com/flodebarre/SocEvolSubdivPop/raw/master/Programs/C/htg-island_onestepDB.c)
  -  `htg-island_onestepWF.c` [(click here to download)](https://github.com/flodebarre/SocEvolSubdivPop/raw/master/Programs/C/htg-island_onestepWF.c)
 
-### Submission file
+## Submission file
 The simulations were run on the Migale cluster http://migale.jouy.inra.fr, which has a `qsub` type queuing system.
 
 To execute the scripts:
@@ -34,7 +32,7 @@ The results (`.txt` files) are stored in a `Results/` folder.
 ---
 
 
-## Mathematica
+# Mathematica
 Analytical part:
  - `.pdf` output of the Mathematica notebook [(click here to download)](https://github.com/flodebarre/SocEvolSubdivPop/raw/master/Programs/Mathematica/SI_SubdivPop.pdf)
  - `.nb` source file (same content as pdf version, but editable) [(click here to download)](https://github.com/flodebarre/SocEvolSubdivPop/raw/master/Programs/Mathematica/SI_SubdivPop.nb)
@@ -42,7 +40,7 @@ Analytical part:
 ---
 
 
-## R
+# R
 To plot the figures, using simulation data and outputs from Mathematica. 
 
    - `AllFigs.R` is a script to plot all Figures at once [(click here to download)](https://github.com/flodebarre/SocEvolSubdivPop/raw/master/Programs/R/AllFigs.R),
@@ -55,6 +53,6 @@ To plot the figures, using simulation data and outputs from Mathematica.
  
 You also need a `Pics/` folder, that will contain the pdf of the generated figures.
 
-*NB* There are commands to open the newly created figures (`system("xdg-open...")`). This only works with Unix. With a Mac, you need to replace `xdg-open` by `open`. On Windows... I don't know! But it does not matter, you can always open the files manually!
+*NB*: There are commands to open the newly created figures (`system("xdg-open...")`). This only works with Unix. With a Mac, you need to replace `xdg-open` by `open`. On Windows... I don't know! But it does not matter, you can always open the files manually!
 
 
