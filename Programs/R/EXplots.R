@@ -1,8 +1,10 @@
+# Clean memory and close windows
 rm(list = ls())
-for(i in dev.list())dev.off()
 
+# Load graphical parameters
 source("globalGraphParms.R")
 
+# Load functions exported from Mathematical
 source("../Mathematica/analytics.R")
 
 specify_decimal <- function(x, k) format(round(x, k), nsmall=k)
