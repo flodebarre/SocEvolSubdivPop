@@ -1,5 +1,6 @@
+# The file has a structure equivalent to Rplots.R, so it lightly commented only. 
+
 rm(list = ls())
-for(i in dev.list())dev.off()
 source("../Mathematica/analyticsQ.R")
 source("globalGraphParms.R")
 
