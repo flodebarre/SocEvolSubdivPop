@@ -4,6 +4,6 @@ The names of the folders are quite self-explanatory! :-) The different scripts a
 
 - `C/` scripts for the stochastic individual-based simulations,
 - `Mathematica/` for the analytical part,
-- `R/` to plot the figures.  
+- `R/` to plot the figures.
 
 Each folder has its own `README.md` file. 

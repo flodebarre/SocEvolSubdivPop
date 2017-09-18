@@ -12,6 +12,4 @@
  
 - `Pics/` folder, contains the pdf of the generated figures.
 
-- `oldies/` folder, old scripts not used in the paper, kept for the record (won't be uploaded on Dryad). 
-
 *NB* There are commands to open the newly created figures (`system("xdg-open...")`). This only works with Unix. With a Mac, you need to replace `xdg-open` by `open`. On Windows... I don't know! But it does not matter, you can always open the files manually!

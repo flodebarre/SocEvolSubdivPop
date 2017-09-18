@@ -9,10 +9,6 @@ README file for the C/ folder
 - `Scripts/` folder, where the concatenated scripts and executables are stored,
 - `Results/` folder, where the simulation results (`.txt`) are stored,
 
-But also folders containing scripts not used in the paper but kept for the record:
-
-- `Oldies/`     folder, old versions of the script (can only do homogeneous population), experimental scripts (not to be shared on Dryad).
-
 # To execute
 
 The simulations were run on the Migale cluster <http://migale.jouy.inra.fr>, which has a `qsub` type queuing system.
