@@ -11,8 +11,7 @@ README file for the C/ folder
 
 But also folders containing scripts not used in the paper but kept for the record:
 
-- `Oldies/`     folder, old versions of the script (can only do homogeneous population),
-- `EmptySites/` folder, with scripts for simulations with empty sites (to be improved).
+- `Oldies/`     folder, old versions of the script (can only do homogeneous population), experimental scripts (not to be shared on Dryad).
 
 # To execute
 
@@ -26,7 +25,7 @@ To execute the scripts:
 - Type
 ```
     ./submit_all.sh
-```    
+```
    to submit all the jobs for all simulations to the cluster.
 - The results (`.txt` files) are stored in the `Results/` folder.
 

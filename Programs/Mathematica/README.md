@@ -12,4 +12,4 @@
 - `analytics*.R` files, `R` outputs of the Mathematica file,
    that will be used to plot figures with `R` (corresponding scripts in the `../R/` folder). 
 
-- `oldies/` folder with files that are not used in the paper, kept for the record. 
+- `oldies/` folder with files that are not used in the paper, kept for the record (won't be uploaded on Dryad). 
