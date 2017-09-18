@@ -108,7 +108,7 @@ PlotProp <- function(upd, sel, htg, ylim=c(0,1), addAnalysis=FALSE, pdf = TRUE, 
         for(imig in seq_along(migL)){
           sub <- sub1[sub1$mig == migL[imig], ]
           # Plot estimated frequency
-          points(sub$mig, sub$pA, col = colMut[imu], type="p", pch=rev(pchs)[imu], cex = cexpoints, bg=MakeTransparent(colMut[imu]))
+          points(sub$mig, sub$pA, col = colMut[imu], type="p", pch=rev(pchs)[imu+1], cex = cexpoints, bg=MakeTransparent(colMut[imu]))
           # Plot CI
           arrows(sub$mig, sub$pA - sub$dci, sub$mig, sub$pA + sub$dci, 
                  col = colMut[imu], angle = 90, length = 0.075, code = 3)
