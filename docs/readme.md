@@ -1,5 +1,7 @@
 # Scripts
 
+There are scripts in `C`, `Mathematica`, and `R`.
+
 ## C
 Stochastic simulations:
 
