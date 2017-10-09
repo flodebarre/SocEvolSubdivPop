@@ -846,6 +846,11 @@ $ \mathbb{E}[\overline{X}]$, }\\the expected ($\mathbb{E}$) proportion ($\overli
 
 \begin{frame}{Social interactions}
 
+\begin{block}{Phenotype}
+\begin{displaymath}
+\phi_i = \delta X_i.
+\end{displaymath}
+\end{block}
 \begin{block}{Social interactions affect fecundity}
 \begin{center}
 \vspace{-2em}
@@ -886,13 +891,78 @@ $\delta \ll 1$.
 }
 \end{frame}
 
-\begin{frame}{``Field site''}
-\begin{center}
-\includegraphics[width = 0.6\textwidth]{../Pics/fieldsite.pdf}
-\end{center}
-\end{frame}
 
 \section{Results}
+\subsection{Calculations}
+
+
+\begin{frame}{Calculations}
+\begin{block}{Notation}
+\begin{description}
+\item[$B_i$] = $B_i(\mathbf{X}, \delta)$: expected \# of offspring of individual $i$;
+\item[$D_i$] = $D_i(\mathbf{X}, \delta)$: probability that $i$ dies.
+\end{description}
+\end{block}
+\pause
+\begin{itemize}[<+->]
+\item Expected proportion of altruists at $t+1$ in the proportion of altruists, conditional on the state of the population at time $t$:
+%
+\begin{displaymath}
+\mathbb{E}[\overline{X}(t+1)|\mathbf{X}(t)] = \frac{1}{N}\sum_{i=1}^N \left[ B_i (1-\mu) X_i + (1-D_i)X_i + B_i \mu \nu \right]
+\end{displaymath}
+
+\item Take expectation and let $t\to \infty$; stationary distribution $\xi$
+%
+\begin{displaymath}
+0 = \frac{1}{N} \sum_{X \in \Omega}\left[ \sum_{i=1}^N \underbrace{B_i (1-\mu) - D_i)}_{W_i} X_i + \sum_{i=1}^N B_i \mu \nu \right]\xi(\mathbf{X}, \delta, \mu)
+\end{displaymath}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Calculations (2)}
+\begin{itemize}[<+->]
+\item Selection is weak ($\delta\ll 1$) and reproductive values are all equal:
+\begin{displaymath}
+0 = \frac{\delta}{N} \sum_{i=1}^N \left[  \sum_{X\in\Omega}\frac{\partial W_i}{\partial \delta} X_i \xi(\mathbf{X}, 0, \mu) - \sum_{X \in \Omega} \mu B^* X_i \frac{\partial \xi}{\partial \delta} \right] + O(\delta^2),
+\end{displaymath}
+which we rewrite as
+\begin{displaymath}
+\delta \mu B^* \frac{\partial \mathbb{E}[\overline{X}]}{\partial \delta} = \frac{\delta}{N} \, \sum_{i=1}^N\mathbb{E}_0\left[ \frac{\partial W_i}{\partial \delta} X_i \right]  + O(\delta^2).
+\end{displaymath}
+\item Using partial derivatives: phenotypes
+\begin{displaymath}
+\frac{\partial W_i}{\partial \delta} = \sum_{k=1}^N \frac{\partial W_i}{\partial \phi_k} \frac{\partial \phi_k}{\partial \delta} = \sum_{k=1}^N \frac{\partial W_i}{\partial \phi_k} X_k.
+\end{displaymath}
+\item We obtain
+\begin{displaymath}
+\delta \mu B^* \frac{\partial \mathbb{E}[\overline{X}]}{\partial \delta} = \frac{\delta}{N} \, \sum_{i=1}^N \sum_{k=1}^N\frac{\partial W_i}{\partial \phi_k} \underbrace{\mathbb{E}_0\left[  X_i X_k \right]}_{P_{ik}}  + O(\delta^2).
+\end{displaymath}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Calculations (3)}
+\begin{itemize}[<+->]
+\item In a subdivided population, \footnote{\citeref{Rousset \& Billiard (2000)  }}
+\begin{displaymath}
+\frac{\partial W_i}{\partial \phi_i} + (n-1) \frac{\partial W_i}{\partial \phi_{\textsf{in}}} + (N-n)\frac{\partial W_i}{\partial \phi_{\textsf{out}}} = 0,
+\end{displaymath}
+\item So
+\begin{displaymath}
+\hspace{-0.75cm}\delta \mu B^* \frac{\partial \mathbb{E}[\overline{X}]}{\partial \delta} = \frac{\delta}{N} \, \sum_{i=1}^N \left( \underbrace{\frac{\partial W_i}{\partial \phi_i}}_{-\mathcal{C}} + \underbrace{(n-1) \frac{\partial W_i}{\partial \phi_{\textsf{in}}}}_{\mathcal{B}} \underbrace{\frac{P_{\textsf{in}} - P_{\textsf{out}}}{P_{ii} - P_{\textsf{out}}}}_{R} \right) (P_{ii} - P_{\textsf{out}}) + O(\delta^2).
+\end{displaymath}
+\item Then further decompose with partial derivatives:
+\begin{displaymath}
+\frac{\partial W_i}{\partial \phi_k} = \sum_{\ell = 1}^N \frac{\partial W_i}{\partial f_{\ell}} \frac{\partial f_{\ell}}{\partial \phi_k}
+\end{displaymath}
+\begin{displaymath}
+\frac{\partial f_{\ell}}{\partial \phi_{\ell}} = - c; \quad
+\frac{\partial f_{\ell}}{\partial \phi_{\textsf{in}}} = \frac{b}{n-1} ; \quad
+\frac{\partial f_{\ell}}{\partial \phi_{\textsf{out}}} = 0.
+\end{displaymath}
+\end{itemize}
+\end{frame}
+
+
 \subsection{EX}\begin{frame}<1-8>[label = EXframe]{Expected frequency of altruists in the population}
 \begin{center}
 \begin{tikzpicture}[node distance = 0.2cm and 0.16cm, anchor = base, baseline = 0pt]
@@ -1012,7 +1082,7 @@ $\delta \ll 1$.
 \node[](pWF){\includegraphics[width=\wpic]{{../../Programs/R/Pics/ESEB_EXWF_sel0.005_htg0_justMu0}.pdf}};
 }
 
-\node[above = 0cm of pWF]{Wright-Fisher ($N$ deaths \& $N$ births)};
+\node[above = 0cm of pWF, align = center]{Wright-Fisher \\($N$ deaths \& $N$ births)};
 
 \uncover<2>{
 \node[]at(pWF) (pWFp){\includegraphics[width=\wpic]{{../../Programs/R/Pics/ESEB_EXWF_sel0.005_htg0_1}.pdf}};
@@ -1031,7 +1101,7 @@ $\delta \ll 1$.
 \node[right = 1ex of pWF](pM){\includegraphics[width=\wpic]{{../../Programs/R/Pics/ESEB_EXDB_sel0.005_htg0_justMu0}.pdf}};
 }
 \uncover<6->{
-\node[above = 0cm of pM]{Moran Death-Birth ($1$ death \& $1$ birth)};
+\node[above = 0cm of pM, align = center]{Moran Death-Birth \\($1$ death \& $1$ birth)};
 }
 \uncover<7>{
 \node[]at(pM) (pMp){\includegraphics[width=\wpic]{{../../Programs/R/Pics/ESEB_EXDB_sel0.005_htg0_1}.pdf}};
@@ -1054,6 +1124,29 @@ $\delta \ll 1$.
 
 \end{frame}
 
+\subsection{Explanation}
+
+\begin{frame}{How to explain this result? (Moran Death-Birth)}
+
+\begin{displaymath}
+-\mathcal{C} + \mathcal{B} R > 0 \Leftrightarrow R > \mathcal{C}/\mathcal{B}
+\end{displaymath}
+
+\uncover<2->{
+\begin{columns}[T]
+\begin{column}{0.5\textwidth} 
+\alt<3->{\includegraphics[width=0.9\columnwidth]{../../Programs/R/Pics/explainDB.pdf}}{\includegraphics[width=0.9\columnwidth]{../Pics/explainDB_justR.pdf}}
+\end{column}
+\uncover<4->{
+\begin{column}{0.5\textwidth} 
+\includegraphics[width=0.9\columnwidth]{../../Programs/R/Pics/qualitDB.pdf}
+\end{column}
+}
+\end{columns}
+}
+
+\end{frame}
+
 \subsection{Robustness}
 
 \begin{frame}
@@ -1073,7 +1166,7 @@ $\delta \ll 1$.
 };
 }
 
-\node[above = 0cm of pBD]{Moran Birth-Death ($1$ birth \& $1$ death)};
+\node[above = 0cm of pBD, align = center]{Moran Birth-Death \\($1$ birth \& $1$ death)};
 \uncover<3>{\node[]at(pBD){\includegraphics[width=\wpic]{{../../Programs/R/Pics/ESEB_EXBD_sel0.005_htg0_leg}.pdf}
 };
 }
@@ -1142,32 +1235,44 @@ $\delta \ll 1$.
 \end{center}
 \end{frame}
 
-\begin{frame}
-\begin{center}
-\Large \color{maincol} From theory to reality\dots
-\end{center}
+
+\begin{frame}{Political implications}
+\vspace{-\baselineskip}
+\uncover<2->{
+\begin{tikzpicture}
+\node[anchor=center]at(0,0)(abs){\includegraphics[width=\textwidth]{../Pics/Kummerli1.pdf}
+};
+\tikzstyle{exc}=[draw, inner sep = 0pt, drop shadow, line width=1.5pt]
+
+\uncover<3->{
+\node[exc]at(-1,0.85){\includegraphics[width=0.8\textwidth]{../Pics/Kummerli2.pdf}};
+
+\node[exc]at(1,-2){\includegraphics[width=0.8\textwidth]{../Pics/Kummerli3.pdf}};
+}
+\end{tikzpicture}
+}
 \end{frame}
 
-\section{THM}
 
+\section{THM}
 
 \begin{frame}{Take-Home Messages}
 
 \begin{itemize}
 \item<+-> Under weak selection, it is
 possible to compute the expected frequency of social
-individuals, for any life-cycle, any regular population structure,  any mutation probability. \hspace{\stretch{1}}{\footnotesize \textcolor{mgray}{(D\'ebarre, 2017, JTB)}}
+individuals, for any life-cycle, any regular population structure,  any mutation probability. {\footnotesize \textcolor{mgray}{(D., 2017, JTB)}}
 
 \item<+-> $\mathbb{E}[\overline{X}]>\nu \Leftrightarrow \mathcal{B}\, R > \mathcal{C} \Leftrightarrow b \, \kappa > c$.
 
-\item<+-> In subdivided populations, $\mathbb{E}[\overline{X}]$ can increase with the emigration probability $m$ when strategy transmission is imperfect ($\mu > 0$).  \hspace{\stretch{1}}{\footnotesize \textcolor{mgray}{D., (\textit{in prep.})}}
+\item<+-> In subdivided populations, $\mathbb{E}[\overline{X}]$ can increase with the emigration probability $m$ when strategy transmission is imperfect ($\mu > 0$).  {\footnotesize \textcolor{mgray}{(D., \textit{in review.})}}
 
 
 \item<+-> This result seems to hold under stronger selection and in heterogeneous populations.
 \end{itemize}
 
-\uncover<+->{
-
+\uncover<+->
+{
 
 \btVFill
 \hrule
@@ -1176,12 +1281,14 @@ individuals, for any life-cycle, any regular population structure,  any mutation
 \vspace{-0.25cm}
 
 \begin{tikzpicture}
-\node[](anr){\includegraphics[height = 1cm]{/home/florencedebarre/Dropbox/Presentations/GlobalPics/logo_anr.pdf}};
-\node[below = 0cm of anr, font = \small](anrn){ANR-14-ACHN-0003-01};
+\node[](anr){\includegraphics[height = 1.2cm]{/home/florencedebarre/Dropbox/Presentations/GlobalPics/logo_anr.pdf}};
+\node[below = -0.3cm of anr, font = \scriptsize](anrn){ANR-14-ACHN-0003-01};
 
-\node[right = of anrn.south east, align = center, anchor = south west](Ch){ L. Kruuk \& J. Reid \\ \small + Ch. Mullon\\ \small for comments};
+\node[right = 0cm of anr, align = center, text width=3cm, font=\small](Ch){ R. Aguil\'ee, \\M. Costa,\\ G. Faye, \\S. Gandon, \\S. Mirrahimi,};
 
-\node[right = of Ch, color = maincol, text width = 4cm, font = \large, align = center]{and thank you for your attention!};
+\node[right=-0.5cm of Ch, align =center, font=\small](ML){Ch. Mullon, \\S. Lion};
+
+\node[right = 0cm of ML, color = maincol, font = \normalsize, align = center]{and thank you\\ for your attention!};
 
 \end{tikzpicture}
 \end{center}
