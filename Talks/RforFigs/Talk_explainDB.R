@@ -2,7 +2,7 @@
 rm(list = ls())
 
 # Source graphical parameters
-source("globalGraphParms.R")
+source("Talk_globalGraphParms.R")
 
 # Define Power function for easier export from Mathematica
 Power <- function(a, b) return(a^b)
@@ -41,7 +41,7 @@ BCcol <- "#000000" # Color of the C/B ratio
 
 # PLOTTING!
 # PANEL a)
-pdf("Pics/explainDB.pdf", width = wpdfQ, height = hpdfDB)
+pdf("../Pics/explainDB.pdf", width = wpdfQ, height = hpdfDB)
 
   par(las = 1, mgp = mgppdf, xpd = FALSE,
       mar = marpdfQ)
@@ -78,7 +78,7 @@ pdf("Pics/explainDB.pdf", width = wpdfQ, height = hpdfDB)
          seg.len = 2)
 dev.off()
 
-system("xdg-open Pics/explainDB.pdf")
+system("xdg-open ../Pics/explainDB.pdf")
 
 ###############################################################
 # Panel b)
@@ -112,7 +112,7 @@ plotpoly <- function(muvals, color, ...){
 fillcol <- "#009999" # Filling color
 
 # Initialize plot
-pdf("Pics/qualitDB.pdf", width = wpdfQ, height = hpdfDB)
+pdf("../Pics/qualitDB.pdf", width = wpdfQ, height = hpdfDB)
 
   par(las = 1, mgp = mgppdf, xpd = FALSE,
       mar = marpdfQ)
@@ -149,4 +149,4 @@ pdf("Pics/qualitDB.pdf", width = wpdfQ, height = hpdfDB)
   
 dev.off()
 
-system("xdg-open Pics/qualitDB.pdf")
+system("xdg-open ../Pics/qualitDB.pdf")

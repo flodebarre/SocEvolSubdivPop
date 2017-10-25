@@ -2,12 +2,12 @@
 rm(list = ls())
 
 # Load analytical expressions exported from Mathematica
-source("../Mathematica/analyticsQ.R")
+source("../../Programs/Mathematica/analyticsQ.R")
 # Global parameters
-source("globalGraphParms.R")
+source("Talk_globalGraphParms.R")
 
 # File names of the figures
-prefix <- "Pics/Rplot"
+prefix <- "../Pics/Rplot"
 
 # Mutation values used in the figure
 muts <- c(0.0000000001, 0.001, 0.01, 0.1, 0.25)
@@ -23,9 +23,9 @@ ltys <- c(2, rep(1, length(muts)-1))
 lwdfig <- c(3.5, 2)
 
 # Initialize plot
-initplotR <- function(savepdf = FALSE, LC = ""){
+initplotR <- function(savepdf = FALSE, LC = "", ext = ""){
   if(savepdf){
-    filename <- paste0(prefix, LC, ".pdf")
+    filename <- paste0(prefix, LC, ext, ".pdf")
     pdf(filename, width = wpdfQ, height = hpdfQ)
   }
   par(las = 1, fg = fgcol, bg = bgcol, mar = marpdfQ, cex = cexplot, cex.axis <- cexaxis)
@@ -39,17 +39,17 @@ initplotR <- function(savepdf = FALSE, LC = ""){
 }
 
 # Close plot
-closeplotR <- function(savepdf = FALSE, LC = ""){
+closeplotR <- function(savepdf = FALSE, LC = "", ext = ""){
   if(savepdf){
     dev.off()
-    system(paste0("xdg-open ", prefix, LC, ".pdf"))
+    system(paste0("xdg-open ", prefix, LC, ext, ".pdf"))
     }
 }
 
 # Plot the R curves
-plotlinesR <- function(LC){
+plotlinesR <- function(LC, seqi = rev(seq_along(muts))){
   yI <- yO <- as.list(muts) # Initialize lists for Qin and Qout
-  for (i in rev(seq_along(muts))){
+  for (i in seqi){
     # Load functions exported from Mathematica, with our parameters
     yI[[i]][1:npts] <- get(paste0("Qin", LC))(p = 0.45, sel = 0, mut = muts[i], g = 0, n = 4, d = thed, Idself = 1, Ieself = 0, m = migpoints)
     yO[[i]][1:npts] <- get(paste0("Qout", LC))(p = 0.45, sel = 0, mut = muts[i], g = 0, n = 4, d = thed, Idself = 1, Ieself = 0, m = migpoints)
@@ -59,16 +59,19 @@ plotlinesR <- function(LC){
   # Add legend
   xleg <- 0.5 # x position
   yleg <- 0.9 # y position
-  legend(xleg, yleg, col = colmut, legend = round(muts, 5), lty = ltys, lwd = rep(lwdfig[1], 3), bty = "n", cex = 1)
+  legend(xleg, yleg, col = colmut, legend = round(muts[seqi], 5), lty = ltys[seqi], lwd = rep(lwdfig[1], 3), bty = "n", cex = 1)
   # Add title to the legend box
   text(xleg, yleg, adj = c(-2, 0.5), labels = expression(mu * " ="))
 }
 
+seqs <- list(c(1), c(1,2), c(1,2,3), c(1,2,3,4), c(1,2,3,4,5))
 # Plot for each life-cycle
 for(LC in c("M", "WF")){
-  initplotR(dopdf, LC = LC)
-  plotlinesR(LC)
-  closeplotR(dopdf, LC = LC)
+ for(j in seq_along(seqs)){
+    initplotR(dopdf, LC = LC, ext = j)
+    plotlinesR(LC, seqi = seqs[[j]])
+    closeplotR(dopdf, LC = LC, ext = j)
+ }
 }
 
 

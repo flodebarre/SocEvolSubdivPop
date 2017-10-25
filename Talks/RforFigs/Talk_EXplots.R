@@ -2,16 +2,16 @@
 rm(list = ls())
 
 # Load graphical parameters
-source("globalGraphParms.R")
+source("Talk_globalGraphParms.R")
 
 # Load functions exported from Mathematical
-source("../Mathematica/analytics.R")
+source("../../Programs/Mathematica/analytics.R")
 
 specify_decimal <- function(x, k) format(round(x, k), nsmall=k)
 
 ## Load the data
 thed <- 15 # Number of demes in the population
-source("loadData.R")
+source("Talk_loadData.R")
 
 alldata[is.na(alldata$pA),] # Check if failed simulations
 
@@ -28,7 +28,7 @@ plotDist <- function(i){
 
   # PROPORTION OF ALTRUISTS IN THE POPULATION
   # nA / (nA + nB)
-PlotProp <- function(upd, sel, htg, ylim=c(0,1), addAnalysis=FALSE, pdf = TRUE, addTitle = FALSE, plotData = TRUE, muL = mutList, migL = migList, ids = 1, ies = 0, addMu0 = FALSE, theg = 0, sameDE = FALSE){
+PlotProp <- function(upd, sel, htg, ylim=c(0,1), addAnalysis=FALSE, pdf = TRUE, addTitle = FALSE, plotData = TRUE, muL = mutList, migL = migList, ids = 1, ies = 0, addMu0 = FALSE, theg = 0, sameDE = FALSE, colMut = mygradient4, col0 = 'blue', pchMut = rev(pchs)[2:5], finalext = ""){
   
   # upd Update rule ("BD", "DB", "WF")
   # sel value of delta, selection strength
@@ -45,6 +45,9 @@ PlotProp <- function(upd, sel, htg, ylim=c(0,1), addAnalysis=FALSE, pdf = TRUE, 
   # addMu0 whether to add a curve corresponding to mu -> 0
   # theg value of g, interaction graph equivalent of m (prop interactions outside deme)
   # sameDE whether the D and E graphs are to be the same
+  # colMut vector of colors, same length as the mutation vector muL
+  # col0 color of the mu=0 curve
+  # finalext filename extension for animated figures
   
     # Check consistency of the input
     if(sameDE){
@@ -62,7 +65,7 @@ PlotProp <- function(upd, sel, htg, ylim=c(0,1), addAnalysis=FALSE, pdf = TRUE, 
       DEindic <- ext <- ""
       if(ids!=1) ext <- "_nodself"
       if(sameDE) DEindic <- "_sameDE"
-      filename <- paste0('Pics/', "EX", upd, "_sel", sel, "_htg", htg, ext, DEindic) # Name of the pdf file
+      filename <- paste0('../Pics/', "EX", upd, "_sel", sel, "_htg", htg, ext, DEindic, finalext) # Name of the pdf file
 
       pdf(paste0(filename, ".pdf"), width = 4., height = 5., compress = FALSE) # Open pdf
       if(addTitle) martit <- 2.5 else martit <- 0
@@ -80,7 +83,7 @@ PlotProp <- function(upd, sel, htg, ylim=c(0,1), addAnalysis=FALSE, pdf = TRUE, 
     plot(0, type = "n", xlim = c(0,max(migL)), ylim = ylim, 
          xlab = "", ylab = "", axes = FALSE, frame.plot = FALSE)
     if (addTitle) title(main = paste0("sel=", sel, ", htg=", htg))
-    colMut <- get(paste0("mygradient", length(muL)))
+    #colMut <- get(paste0("mygradient", length(muL)))
     
     # Background of the plot region
     rect(0, ylim[1], max(migL), 1, col = rectColor, border = NA)
@@ -108,7 +111,7 @@ PlotProp <- function(upd, sel, htg, ylim=c(0,1), addAnalysis=FALSE, pdf = TRUE, 
         for(imig in seq_along(migL)){
           sub <- sub1[sub1$mig == migL[imig], ]
           # Plot estimated frequency
-          points(sub$mig, sub$pA, col = colMut[imu], type="p", pch=rev(pchs)[imu+1], cex = cexpoints, bg=MakeTransparent(colMut[imu]))
+          points(sub$mig, sub$pA, col = colMut[imu], type="p", pch=pchMut[imu], cex = cexpoints, bg=MakeTransparent(colMut[imu]))
           # Plot CI
           arrows(sub$mig, sub$pA - sub$dci, sub$mig, sub$pA + sub$dci, 
                  col = colMut[imu], angle = 90, length = 0.075, code = 3)
@@ -139,7 +142,7 @@ PlotProp <- function(upd, sel, htg, ylim=c(0,1), addAnalysis=FALSE, pdf = TRUE, 
     mtext(side = 1, expression(paste("Emigration probability (",italic(m),")")), line = 1.5, las=0, cex=cexlab)
     if(pdf){
       dev.off()
-      #system(paste0("xdg-open ", paste0(filename, ".pdf")))
+     # system(paste0("xdg-open ", paste0(filename, ".pdf")))
     }
 }
 
@@ -148,30 +151,48 @@ themigList <- migList #c(0.01, 0.05, 0.10, 0.15, 0.20, 0.30, 0.40, 0.50, 0.60, 0
 dylm <- 0.2
 ylm <- p + c(-dylm, dylm)
 
-# FIGURE 2
-PlotProp("DB", 0.005, 0, addAnalysis = TRUE, ylim = ylm, muL = themutList, migL = themigList, addMu0 = TRUE)
+# Legend for animated plots
+PlotLegend <- function(mus, cols, pchs, ltys, ext){
+  filename <- paste0("../Pics/Legend_", ext)
+  pdf(paste0(filename, ".pdf"), width = 1.5, height = 1.5)
+  par(mar = rep(0.1,4))
+  plot(1, type = "n", axes = FALSE, ylim = c(0,1))
+  legend(1, 1, col = cols, pch = pchs, legend = mus, lwd = 2, lty = ltys, bty = "n", title = expression(mu*"="), xjust = 0.5, yjust = 1)
+  dev.off()
+  system(paste0("xdg-open ", paste0(filename, ".pdf")))
+}
 
-PlotProp("BD", 0.005, 0, addAnalysis = TRUE, ylim = ylm, muL = themutList, migL = themigList, addMu0 = TRUE)
+ltyL <- c(2, rep(1, 4))
+colL <- c("blue", rev(mygradient4))
+pchL <- c(NA, pchs[1:4])
+muL <- c(0, themutList)
 
-PlotProp("WF", 0.005, 0, addAnalysis = TRUE, ylim = ylm, muL = themutList, migL = themigList, addMu0 = TRUE)
+for(i in 0:4){
+  PlotLegend(muL[1:(i+1)], cols = colL[1:(i+1)], pchs=pchL[1:(i+1)], ext=toString(i+1), ltys = ltyL[1:(i+1)])
+}
 
-# FIGURE S1
-PlotProp("DB", 0.1, 0, addAnalysis = FALSE, muL = themutList, migL = themigList)
-PlotProp("BD", 0.1, 0, addAnalysis = FALSE, muL = themutList, migL = themigList)
-PlotProp("WF", 0.1, 0, muL = themutList, migL = themigList)
+# ANIMATED FIGURES
+for(LC in c("DB", "BD", "WF")){
+  # just mu=0
+  PlotProp(LC, 0.005, 0, addAnalysis = FALSE, plotData = FALSE, ylim = ylm, muL = themutList, migL = themigList, addMu0 = TRUE, finalext = "_0")
+  # Add mutation curves
+  for(i in 1:4){
+    PlotProp(LC, 0.005, 0, addAnalysis = TRUE, plotData = TRUE, ylim = ylm, muL = themutList[(4-i+1):4], colMut = mygradient4[(4-i+1):4], pchMut = rev(pchs)[(4-i+1):4], migL = themigList, addMu0 = TRUE, finalext = paste0("_", i))
+  }
+}
 
-# FIGURE S2
-PlotProp("DB", 0.005, 1, muL = themutList, migL = themigList, ylim = ylm)
-PlotProp("BD", 0.005, 1, muL = themutList, migL = themigList, ylim = ylm)
-PlotProp("WF", 0.005, 1, muL = themutList, migL = themigList, ylim = ylm)
+# STRONG SELECTION
+for(LC in c("DB", "BD", "WF")){
+  PlotProp(LC, 0.1, 0, muL = themutList, migL = themigList)
+}
 
-# FIGURE S3
-PlotProp("DB", 0.005, 0, muL = themutList, migL = themigList, ids = 0, plotData = FALSE, addAnalysis = TRUE, ylim = ylm, addMu0 = TRUE)
-PlotProp("BD", 0.005, 0, muL = themutList, migL = themigList, ids = 0, plotData = FALSE, addAnalysis = TRUE, ylim = ylm, addMu0 = TRUE)
-PlotProp("WF", 0.005, 0, muL = themutList, migL = themigList, ids = 0, plotData = FALSE, addAnalysis = TRUE, ylim = ylm, addMu0 = TRUE)
+# HETEROGENEOUS POP
+for(LC in c("DB", "BD", "WF")){
+  PlotProp(LC, 0.005, 1, muL = themutList, migL = themigList, ylim = ylm)
+}
 
-# FIGURE S4
-PlotProp("DB", 0.005, 0, muL = themutList, migL = themigList, ids = 0, plotData = FALSE, addAnalysis = TRUE, ylim = ylm, addMu0 = TRUE, sameDE = TRUE)
-PlotProp("BD", 0.005, 0, muL = themutList, migL = themigList, ids = 0, plotData = FALSE, addAnalysis = TRUE, ylim = ylm, addMu0 = TRUE, sameDE = TRUE)
-PlotProp("WF", 0.005, 0, muL = themutList, migL = themigList, ids = 0, plotData = FALSE, addAnalysis = TRUE, ylim = ylm, addMu0 = TRUE, sameDE = TRUE)
+# SAME D E
+for(LC in c("DB", "BD", "WF")){
+  PlotProp(LC, 0.005, 0, muL = themutList, migL = themigList, ids = 0, plotData = FALSE, addAnalysis = TRUE, ylim = ylm, addMu0 = TRUE, sameDE = TRUE)
+}
 
