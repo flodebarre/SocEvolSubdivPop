@@ -17,3 +17,7 @@
 \beamer@subsubsectionintoc {3}{2}{1}{Genealogy}{55}{0}{3}
 \beamer@subsubsectionintoc {3}{2}{2}{PQ}{64}{0}{3}
 \beamer@subsectionintoc {3}{3}{EX}{70}{0}{3}
+\beamer@subsubsectionintoc {3}{3}{1}{R changes}{78}{0}{3}
+\beamer@subsectionintoc {3}{4}{Explanation}{98}{0}{3}
+\beamer@subsectionintoc {3}{5}{Robustness}{101}{0}{3}
+\beamer@sectionintoc {4}{THM}{108}{0}{4}

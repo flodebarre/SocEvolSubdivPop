@@ -53,8 +53,32 @@
 \headcommand {\beamer@subsectionentry {0}{3}{3}{70}{EX}}\headcommand {\beamer@subsectionpages {55}{69}}
 \headcommand {\slideentry {3}{3}{1}{70/77}{EX}{0}}
 \headcommand {\beamer@framepages {70}{77}}
-\headcommand {\beamer@partpages {1}{77}}
-\headcommand {\beamer@subsectionpages {70}{77}}
-\headcommand {\beamer@sectionpages {42}{77}}
-\headcommand {\beamer@documentpages {77}}
-\headcommand {\def \inserttotalframenumber {15}}
+\headcommand {\beamer@subsubsectionentry {0}{3}{3}{1}{78}{R changes}}
+\headcommand {\slideentry {3}{3}{2}{78/80}{EX}{0}}
+\headcommand {\beamer@framepages {78}{80}}
+\headcommand {\slideentry {3}{3}{3}{81/84}{EX}{0}}
+\headcommand {\beamer@framepages {81}{84}}
+\headcommand {\slideentry {3}{3}{4}{85/97}{EX}{0}}
+\headcommand {\beamer@framepages {85}{97}}
+\headcommand {\beamer@subsectionentry {0}{3}{4}{98}{Explanation}}\headcommand {\beamer@subsectionpages {70}{97}}
+\headcommand {\slideentry {3}{4}{1}{98/100}{Explanation}{0}}
+\headcommand {\beamer@framepages {98}{100}}
+\headcommand {\beamer@subsectionentry {0}{3}{5}{101}{Robustness}}\headcommand {\beamer@subsectionpages {98}{100}}
+\headcommand {\slideentry {3}{5}{1}{101/101}{Robustness}{0}}
+\headcommand {\beamer@framepages {101}{101}}
+\headcommand {\slideentry {3}{5}{2}{102/103}{Robustness}{0}}
+\headcommand {\beamer@framepages {102}{103}}
+\headcommand {\slideentry {3}{5}{3}{104/104}{Robustness}{0}}
+\headcommand {\beamer@framepages {104}{104}}
+\headcommand {\slideentry {3}{5}{4}{105/107}{Robustness}{0}}
+\headcommand {\beamer@framepages {105}{107}}
+\headcommand {\sectionentry {4}{THM}{108}{THM}{0}}
+\headcommand {\beamer@sectionpages {42}{107}}
+\headcommand {\beamer@subsectionpages {101}{107}}
+\headcommand {\slideentry {4}{0}{1}{108/112}{}{0}}
+\headcommand {\beamer@framepages {108}{112}}
+\headcommand {\beamer@partpages {1}{112}}
+\headcommand {\beamer@subsectionpages {108}{112}}
+\headcommand {\beamer@sectionpages {108}{112}}
+\headcommand {\beamer@documentpages {112}}
+\headcommand {\def \inserttotalframenumber {24}}

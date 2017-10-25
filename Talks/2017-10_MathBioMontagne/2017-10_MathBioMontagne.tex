@@ -978,18 +978,29 @@ At neutrality (i.e., in the absence of selection, $\delta = 0$),
 \end{frame}
 
 
-\end{document}
 
+\subsubsection{R changes}
 \begin{frame}{How does relatedness $R$ change with the emigration probability $m$?}
-\pause 
 
 \begin{center}
 \begin{tikzpicture}
-\node[](pWF){\includegraphics[width = 0.45\textwidth]{../../Programs/R/Pics/ESEB_RplotWF.pdf}};
-\node[above = 0cm of pWF]{Wright-Fisher (N deaths)};
+\def \wpic {0.35\textwidth}
 
-\node[right = 0cm of pWF](pM){\includegraphics[width = 0.45\textwidth]{../../Programs/R/Pics/ESEB_RplotM.pdf}};
+\node[](pWF){\includegraphics[width = \wpic]{../Pics/RplotWF1.pdf}};
+\node[right = 2cm of pWF](pM){\includegraphics[width = \wpic]{../Pics/RplotM1.pdf}};
+
+
+\node[above = 0cm of pWF]{Wright-Fisher (N deaths)};
 \node[above = 0cm of pM]{Moran (1 death)};
+
+
+\foreach \i in {2,5}{
+\pause
+{
+\node[fill=white]at(pWF){\includegraphics[width = \wpic]{../Pics/RplotWF\i.pdf}};
+\node[fill=white]at(pM){\includegraphics[width = \wpic]{../Pics/RplotM\i.pdf}};
+}
+}
 \end{tikzpicture}
 \btVFill 
 ($\demesize = 4, \nbdemes = 15$)
@@ -1000,56 +1011,98 @@ At neutrality (i.e., in the absence of selection, $\delta = 0$),
 \againframe<9->{EXframe}
 
 
-\def \wpic {0.45\textwidth}
+\def \wpic {0.3\textwidth}
 
 \begin{frame}{Effect of the emigration probability $m$ on the expected proportion of altruists}
 
 \begin{center}
 \begin{tikzpicture}
+\def \wL {2cm}
 \uncover<1>{
-\node[](pWF){\includegraphics[width=\wpic]{{../../Programs/R/Pics/ESEB_EXWF_sel0.005_htg0_justMu0}.pdf}};
+\node[](pWF){\includegraphics[width=\wpic]{{../Pics/EXWF_sel0.005_htg0_0}.pdf}};
+
+\node[anchor=north east]at(pWF.north east) (L) {\includegraphics[width=\wL]{{../Pics/Legend_0}.pdf}};
 }
 
-\node[above = 0cm of pWF]{Wright-Fisher ($N$ deaths \& $N$ births)};
+\node[above = 0cm of pWF, align=center]{Wright-Fisher\\($N$ deaths \& $N$ births)};
 
 \uncover<2>{
-\node[]at(pWF) (pWFp){\includegraphics[width=\wpic]{{../../Programs/R/Pics/ESEB_EXWF_sel0.005_htg0_1}.pdf}};
+\node[]at(pWF) (pWFp){\includegraphics[width=\wpic]{{../Pics/EXWF_sel0.005_htg0_1}.pdf}};
+\node[]at(L) {\includegraphics[width=\wL]{{../Pics/Legend_1}.pdf}};
 }
 \uncover<3>{
-\node[]at(pWF) (pWFp){\includegraphics[width=\wpic]{{../../Programs/R/Pics/ESEB_EXWF_sel0.005_htg0_2}.pdf}};
+\node[]at(pWF) (pWFp){\includegraphics[width=\wpic]{{../Pics/EXWF_sel0.005_htg0_2}.pdf}};
+\node[]at(L) {\includegraphics[width=\wL]{{../Pics/Legend_2}.pdf}};
 }
 \uncover<4>{
-\node[]at(pWF) (pWFp){\includegraphics[width=\wpic]{{../../Programs/R/Pics/ESEB_EXWF_sel0.005_htg0_3}.pdf}};
+\node[]at(pWF) (pWFp){\includegraphics[width=\wpic]{{../Pics/EXWF_sel0.005_htg0_3}.pdf}};
+\node[]at(L) {\includegraphics[width=\wL]{{../Pics/Legend_3}.pdf}};
 }
 \uncover<5->{
-\node[]at(pWF) (pWFp){\includegraphics[width=\wpic]{{../../Programs/R/Pics/ESEB_EXWF_sel0.005_htg0_4}.pdf}};
+\node[]at(pWF) (pWFp){\includegraphics[width=\wpic]{{../Pics/EXWF_sel0.005_htg0_4}.pdf}};
+\node[]at(L) {\includegraphics[width=\wL]{{../Pics/Legend_4}.pdf}};
 }
 
 \uncover<6>{
-\node[right = 1ex of pWF](pM){\includegraphics[width=\wpic]{{../../Programs/R/Pics/ESEB_EXDB_sel0.005_htg0_justMu0}.pdf}};
+\node[right = 1ex of pWF](pM){\includegraphics[width=\wpic]{{../Pics/EXBD_sel0.005_htg0_0}.pdf}};
 }
 \uncover<6->{
-\node[above = 0cm of pM]{Moran Death-Birth ($1$ death \& $1$ birth)};
+\node[above = 0cm of pM, align = center]{Moran Birth-Death\\ ($1$ birth \& $1$ death)};
 }
 \uncover<7>{
-\node[]at(pM) (pMp){\includegraphics[width=\wpic]{{../../Programs/R/Pics/ESEB_EXDB_sel0.005_htg0_1}.pdf}};
+\node[]at(pM) (pMp){\includegraphics[width=\wpic]{{../Pics/EXBD_sel0.005_htg0_1}.pdf}};
 }
-\uncover<8>{
-\node[]at(pM) (pMp){\includegraphics[width=\wpic]{{../../Programs/R/Pics/ESEB_EXDB_sel0.005_htg0_2}.pdf}};
-}
-\uncover<9>{
-\node[]at(pM) (pMp){\includegraphics[width=\wpic]{{../../Programs/R/Pics/ESEB_EXDB_sel0.005_htg0_3}.pdf}};
-}
-\uncover<10>{
-\node[]at(pM) (pMp){\includegraphics[width=\wpic]{{../../Programs/R/Pics/ESEB_EXDB_sel0.005_htg0_4}.pdf}};
+\uncover<8->{
+\node[]at(pM) (pMp){\includegraphics[width=\wpic]{{../Pics/EXBD_sel0.005_htg0_4}.pdf}};
 }
 
+\uncover<9>{
+\node[right = 1ex of pM](pDB){\includegraphics[width=\wpic]{{../Pics/EXDB_sel0.005_htg0_0}.pdf}};
+}
+\uncover<9->{
+\node[above = 0cm of pDB, align = center]{Moran Death-Birth\\ ($1$ death \& $1$ birth)};
+}
+
+\uncover<10>{
+\node[]at(pDB) (pDBp){\includegraphics[width=\wpic]{{../Pics/EXDB_sel0.005_htg0_1}.pdf}};
+}
+
+\uncover<11>{
+\node[]at(pDB) (pDBp){\includegraphics[width=\wpic]{{../Pics/EXDB_sel0.005_htg0_2}.pdf}};
+}
+
+\uncover<12>{
+\node[]at(pDB) (pDBp){\includegraphics[width=\wpic]{{../Pics/EXDB_sel0.005_htg0_3}.pdf}};
+}
+\uncover<13>{
+\node[]at(pDB) (pDBp){\includegraphics[width=\wpic]{{../Pics/EXDB_sel0.005_htg0_4}.pdf}};
+}
 \end{tikzpicture}
 
 \btVFill
 {\small ($b=15, c=1, \demesize = 4, \nbdemes = 15, \selstr = 0.005$)}
 \end{center}
 
+\end{frame}
+
+
+\subsection{Explanation}
+
+\begin{frame}{How to explain this result? (Moran Death-Birth)}
+
+\vspace{-0.5cm}
+
+\begin{displaymath}
+{\color{col1}-\mathcal{C}} + \color{col2}{\mathcal{B}} \color{col3}{R} \color{fgcol}> 0 \Leftrightarrow {\color{col3}R} > {\color{col1}\mathcal{C}}/{\color{col2}\mathcal{B}}
+\end{displaymath}
+
+\vspace{-0.75cm}
+
+\uncover<2->{
+\begin{center}
+\alt<3->{\includegraphics[height=0.7\textheight]{../../Programs/R/Pics/explainDB.pdf}}{\includegraphics[height=0.7\textheight]{../Pics/explainDB_justR.pdf}}
+\end{center}
+}
 \end{frame}
 
 \subsection{Robustness}
@@ -1061,53 +1114,40 @@ At neutrality (i.e., in the absence of selection, $\delta = 0$),
 \end{center}
 \end{frame}
 
-\begin{frame}{Another life-cycle}
-
-\begin{center}
-
-\begin{tikzpicture}
-\uncover<2>{
-\node[](pBD){\includegraphics[width=\wpic]{{../../Programs/R/Pics/ESEB_EXBD_sel0.005_htg0_justMu0}.pdf}
-};
-}
-
-\node[above = 0cm of pBD]{Moran Birth-Death ($1$ birth \& $1$ death)};
-\uncover<3>{\node[]at(pBD){\includegraphics[width=\wpic]{{../../Programs/R/Pics/ESEB_EXBD_sel0.005_htg0_leg}.pdf}
-};
-}
-\end{tikzpicture}
-\btVFill
-{\small ($b=15, c=1, \demesize = 4, \nbdemes = 15, \selstr = 0.005$)}
-
-\end{center}
-
-\end{frame}
-
+\def \wpic {0.3\textwidth}
 \begin{frame}{Strong selection}
 \begin{center}
 
 \begin{tikzpicture}
 
 \uncover<1>{
-\node[] (pWFs){\includegraphics[width=\wpic]{{../../Programs/R/Pics/ESEB_EXWF_sel0.005_htg0}.pdf}
+\node[] (pWFs){\includegraphics[width=\wpic]{{../Pics/EXWF_sel0.005_htg0_4}.pdf}
 };
-\node[above= 0cm of pWFs]{Wright-Fisher, weak selection};
+\node[above= 0cm of pWFs, align=center]{Wright-Fisher,\\ weak selection};
 
 
-\node[right = 0cm of pWFs](pDBs){\includegraphics[width=\wpic]{{../../Programs/R/Pics/ESEB_EXDB_sel0.005_htg0}.pdf}
+\node[right = 0cm of pWFs](pBDs){\includegraphics[width=\wpic]{{../Pics/EXBD_sel0.005_htg0_4}.pdf}
 };
-\node[above= 0cm of pDBs]{Moran Death-Birth, weak selection};
+\node[above= 0cm of pBDs, align=center]{Moran Death-Birth,\\ weak selection};
+
+\node[right = 0cm of pBDs](pDBs){\includegraphics[width=\wpic]{{../Pics/EXDB_sel0.005_htg0_4}.pdf}
+};
+\node[above= 0cm of pDBs, align=center]{Moran Death-Birth,\\ weak selection};
 }
 
 \uncover<2>{
-\node[] (pWFs){\includegraphics[width=\wpic]{{../../Programs/R/Pics/ESEB_EXWF_sel0.1_htg0}.pdf}
+\node[] (pWFs){\includegraphics[width=\wpic]{{../Pics/EXWF_sel0.1_htg0}.pdf}
 };
-\node[above= 0cm of pWFs]{Wright-Fisher, strong selection};
+\node[above= 0cm of pWFs, align=center]{Wright-Fisher,\\ strong selection};
 
 
-\node[right = 0cm of pWFs](pDBs){\includegraphics[width=\wpic]{{../../Programs/R/Pics/ESEB_EXDB_sel0.1_htg0}.pdf}
+\node[right = 0cm of pWFs](pBDs){\includegraphics[width=\wpic]{{../Pics/EXBD_sel0.1_htg0}.pdf}
 };
-\node[above= 0cm of pDBs]{Moran Death-Birth, strong selection};
+\node[above= 0cm of pBDs, align=center]{Moran Death-Birth,\\ strong selection};
+
+\node[right = 0cm of pBDs](pDBs){\includegraphics[width=\wpic]{{../Pics/EXDB_sel0.1_htg0}.pdf}
+};
+\node[above= 0cm of pDBs, align=center]{Moran Death-Birth,\\ strong selection};
 }
 
 
@@ -1121,18 +1161,23 @@ At neutrality (i.e., in the absence of selection, $\delta = 0$),
 \end{frame}
 
 
+
+
 \begin{frame}{Heterogeneous deme sizes ($\overline{n} = 4$ as before, but $2\leq n \leq 5$)}
 \begin{center}
 \begin{tikzpicture}
-\node[] (pWFs){\includegraphics[width=\wpic]{{../../Programs/R/Pics/ESEB_EXWF_sel0.005_htg1}.pdf}
+\node[] (pWFs){\includegraphics[width=\wpic]{{../Pics/EXWF_sel0.005_htg1}.pdf}
 };
-\node[above= 0cm of pWFs]{Wright-Fisher};
+\node[above= 0cm of pWFs, align=center]{Wright-Fisher\\};
 
 
-\node[right = 0cm of pWFs](pDBs){\includegraphics[width=\wpic]{{../../Programs/R/Pics/ESEB_EXDB_sel0.005_htg1}.pdf}
+\node[right = 0cm of pWFs](pBDs){\includegraphics[width=\wpic]{{../Pics/EXBD_sel0.005_htg1}.pdf}
 };
-\node[above= 0cm of pDBs]{Moran Death-Birth};
+\node[above= 0cm of pBDs, align=center]{Moran Death-Birth\\ };
 
+\node[right = 0cm of pBDs](pDBs){\includegraphics[width=\wpic]{{../Pics/EXDB_sel0.005_htg1}.pdf}
+};
+\node[above= 0cm of pDBs, align=center]{Moran Death-Birth\\ };
 \end{tikzpicture}
 \btVFill
 {\small ($b=15, c=1, \overline{\demesize} = 4, \nbdemes = 15, \selstr = 0.005$)}
@@ -1140,29 +1185,58 @@ At neutrality (i.e., in the absence of selection, $\delta = 0$),
 \end{center}
 \end{frame}
 
-\begin{frame}
+
+\begin{frame}{Political implications}
+\only<1>{
 \begin{center}
-\Large \color{maincol} From theory to reality\dots
+\includegraphics[width=0.55\textwidth]{../Pics/rBCcake.pdf}
 \end{center}
+}
+\vspace{-\baselineskip}
+\only<2->{
+\begin{center}
+\begin{tikzpicture}
+\node[anchor=center]at(0,0)(abs){\includegraphics[width=0.75\textwidth]{../Pics/Kummerli1.pdf}
+};
+\tikzstyle{exc}=[draw, inner sep = 0pt, drop shadow, line width=1.5pt]
+
+\uncover<3->{
+\node[exc]at(-1,0.85){\includegraphics[width=0.6\textwidth]{../Pics/Kummerli2.pdf}};
+
+\node[exc]at(1,-2){\includegraphics[width=0.6\textwidth]{../Pics/Kummerli3.pdf}};
+}
+\end{tikzpicture}
+\end{center}
+}
 \end{frame}
+
+
+
 
 \section{THM}
 
 
 \begin{frame}{Take-Home Messages}
 
+
+\begin{center}
+\begin{minipage}{0.9\textwidth}
+
 \begin{itemize}
 \item<+-> Under weak selection, it is
 possible to compute the expected frequency of social
-individuals, for any life-cycle, any regular population structure,  any mutation probability. \hspace{\stretch{1}}{\footnotesize \textcolor{mgray}{(D\'ebarre, 2017, JTB)}}
+individuals, for any life-cycle, any regular population structure,  any mutation probability. \hspace{\stretch{1}}{\footnotesize \textcolor{mgray}{(D., 2017, JTB)}}
 
-\item<+-> $\mathbb{E}[\overline{X}]>\nu \Leftrightarrow \mathcal{B}\, R > \mathcal{C} \Leftrightarrow b \, \kappa > c$.
+\item<+-> $\mathbb{E}[\overline{X}]>\nu \Leftrightarrow \mathcal{B}\, R > \mathcal{C}$.
 
-\item<+-> In subdivided populations, $\mathbb{E}[\overline{X}]$ can increase with the emigration probability $m$ when strategy transmission is imperfect ($\mu > 0$).  \hspace{\stretch{1}}{\footnotesize \textcolor{mgray}{D., (\textit{in prep.})}}
+\item<+-> In subdivided populations, $\mathbb{E}[\overline{X}]$ can increase with the emigration probability $m$ when strategy transmission is imperfect ($\mu > 0$).  \hspace{\stretch{1}}{\footnotesize \textcolor{mgray}{(D., \textit{in review.})}}
 
 
-\item<+-> This result seems to hold under stronger selection and in heterogeneous populations.
+\item<+-> This result seems to hold under stronger selection \\and in heterogeneous populations.
 \end{itemize}
+\end{minipage}
+\end{center}
+
 
 \uncover<+->{
 
@@ -1177,7 +1251,7 @@ individuals, for any life-cycle, any regular population structure,  any mutation
 \node[](anr){\includegraphics[height = 1cm]{/home/florencedebarre/Dropbox/Presentations/GlobalPics/logo_anr.pdf}};
 \node[below = 0cm of anr, font = \small](anrn){ANR-14-ACHN-0003-01};
 
-\node[right = of anrn.south east, align = center, anchor = south west](Ch){ L. Kruuk \& J. Reid \\ \small + Ch. Mullon\\ \small for comments};
+\node[right = of anrn.south east, align = center, anchor = south west](Ch){A. Lambert \\ {\small for organizing the workshop}};
 
 \node[right = of Ch, color = maincol, text width = 4cm, font = \large, align = center]{and thank you for your attention!};
 

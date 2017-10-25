@@ -3,35 +3,53 @@
 \input{styleMBM.tex}
 
 \begin{document}
+\def \wpic {0.3\textwidth}
 
 
-\begin{frame}{How does relatedness $R$ change with the emigration probability $m$?}
-\pause 
+\begin{frame}{Take-Home Messages}
+
 
 \begin{center}
-\begin{tikzpicture}
-\def \wpic {0.35\textwidth}
+\begin{minipage}{0.9\textwidth}
 
-\uncover<1>{
-\node[](pWF){\includegraphics[width = \wpic]{../Pics/RplotWF1.pdf}};
-\node[right = 2cm of pWF](pM){\includegraphics[width = \wpic]{../Pics/RplotM1.pdf}};
-}
+\begin{itemize}
+\item<+-> Under weak selection, it is
+possible to compute the expected frequency of social
+individuals, for any life-cycle, any regular population structure,  any mutation probability. \hspace{\stretch{1}}{\footnotesize \textcolor{mgray}{(D., 2017, JTB)}}
 
-\node[above = 0cm of pWF]{Wright-Fisher (N deaths)};
-\node[above = 0cm of pM]{Moran (1 death)};
+\item<+-> $\mathbb{E}[\overline{X}]>\nu \Leftrightarrow \mathcal{B}\, R > \mathcal{C}$.
+
+\item<+-> In subdivided populations, $\mathbb{E}[\overline{X}]$ can increase with the emigration probability $m$ when strategy transmission is imperfect ($\mu > 0$).  \hspace{\stretch{1}}{\footnotesize \textcolor{mgray}{(D., \textit{in review.})}}
 
 
-\foreach \i in {2,...,5}{
-  \pgfmathsetmacro{\j}{\i+1}
-\uncover<\j>{
-\node[]at(pWF){\includegraphics[width = \wpic]{../Pics/RplotWF\i.pdf}};
-\node[]at(pM){\includegraphics[width = \wpic]{../Pics/RplotM\i.pdf}};
-}
-}
-\end{tikzpicture}
-\btVFill 
-($\demesize = 4, \nbdemes = 15$)
+\item<+-> This result seems to hold under stronger selection \\and in heterogeneous populations.
+\end{itemize}
+\end{minipage}
 \end{center}
+
+
+\uncover<+->{
+
+
+\btVFill
+\hrule
+\begin{block}{Funding \& Thanks}
+\begin{center}
+\vspace{-0.25cm}
+
+\begin{tikzpicture}
+\node[](anr){\includegraphics[height = 1cm]{/home/florencedebarre/Dropbox/Presentations/GlobalPics/logo_anr.pdf}};
+\node[below = 0cm of anr, font = \small](anrn){ANR-14-ACHN-0003-01};
+
+\node[right = of anrn.south east, align = center, anchor = south west](Ch){A. Lambert \\ for organizing the workshop};
+
+\node[right = of Ch, color = maincol, text width = 4cm, font = \large, align = center]{and thank you for your attention!};
+
+\end{tikzpicture}
+\end{center}
+
+\end{block}
+}
 \end{frame}
 
 \begin{frame}

@@ -41,13 +41,18 @@ BCcol <- "#000000" # Color of the C/B ratio
 
 # PLOTTING!
 # PANEL a)
-pdf("../Pics/explainDB.pdf", width = wpdfQ, height = hpdfDB)
+plotExplain <- function(plotBC=TRUE){
+  suffix <- ""
 
+  if(plotBC==FALSE){suffix <- "_justR"}
+  pdf(paste0("../Pics/explainDB", suffix, ".pdf"), width = wpdfQ, height = hpdfDB)
   par(las = 1, mgp = mgppdf, xpd = FALSE,
       mar = marpdfQ)
-
+  
+  BCtype <- "l"
+  if(plotBC == FALSE){BCtype = "n"}
   # Plot C/B ratio
-  plot(xvals, CBrDB(m = xvals), type = "l", col = BCcol, log = "", 
+  plot(xvals, CBrDB(m = xvals), type = BCtype, col = BCcol, log = "", 
        axes = FALSE, ylim = c(0,1),
        ylab = "", xlab = "", lwd = lwdBC, cex.axis = cexaxis)
 
@@ -77,7 +82,10 @@ pdf("../Pics/explainDB.pdf", width = wpdfQ, height = hpdfDB)
          lty = c(2, 1, 1, 1), lwd = c(rep(thelwd, 3), lwdBC), bty = "n", cex = cexaxis,
          seg.len = 2)
 dev.off()
+}
 
+plotExplain()
+plotExplain(plotBC = FALSE)
 system("xdg-open ../Pics/explainDB.pdf")
 
 ###############################################################

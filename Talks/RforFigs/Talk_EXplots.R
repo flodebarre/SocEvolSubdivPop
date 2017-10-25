@@ -168,7 +168,7 @@ pchL <- c(NA, pchs[1:4])
 muL <- c(0, themutList)
 
 for(i in 0:4){
-  PlotLegend(muL[1:(i+1)], cols = colL[1:(i+1)], pchs=pchL[1:(i+1)], ext=toString(i+1), ltys = ltyL[1:(i+1)])
+  PlotLegend(muL[1:(i+1)], cols = colL[1:(i+1)], pchs=pchL[1:(i+1)], ext=toString(i), ltys = ltyL[1:(i+1)])
 }
 
 # ANIMATED FIGURES
@@ -177,7 +177,7 @@ for(LC in c("DB", "BD", "WF")){
   PlotProp(LC, 0.005, 0, addAnalysis = FALSE, plotData = FALSE, ylim = ylm, muL = themutList, migL = themigList, addMu0 = TRUE, finalext = "_0")
   # Add mutation curves
   for(i in 1:4){
-    PlotProp(LC, 0.005, 0, addAnalysis = TRUE, plotData = TRUE, ylim = ylm, muL = themutList[(4-i+1):4], colMut = mygradient4[(4-i+1):4], pchMut = rev(pchs)[(4-i+1):4], migL = themigList, addMu0 = TRUE, finalext = paste0("_", i))
+    PlotProp(LC, 0.005, 0, addAnalysis = TRUE, plotData = TRUE, ylim = ylm, muL = themutList[(4-i+1):4], colMut = mygradient4[(4-i+1):4], pchMut = rev(pchs)[(5-i+1):5], migL = themigList, addMu0 = TRUE, finalext = paste0("_", i))
   }
 }
 
