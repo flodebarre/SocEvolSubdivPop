@@ -13,11 +13,11 @@
 \beamer@subsubsectionintoc {2}{2}{2}{Social interactions}{37}{0}{2}
 \beamer@sectionintoc {3}{Results}{42}{0}{3}
 \beamer@subsectionintoc {3}{1}{Calculations}{42}{0}{3}
-\beamer@subsectionintoc {3}{2}{IDB}{55}{0}{3}
-\beamer@subsubsectionintoc {3}{2}{1}{Genealogy}{55}{0}{3}
-\beamer@subsubsectionintoc {3}{2}{2}{PQ}{64}{0}{3}
-\beamer@subsectionintoc {3}{3}{EX}{70}{0}{3}
-\beamer@subsubsectionintoc {3}{3}{1}{R changes}{78}{0}{3}
-\beamer@subsectionintoc {3}{4}{Explanation}{98}{0}{3}
-\beamer@subsectionintoc {3}{5}{Robustness}{101}{0}{3}
-\beamer@sectionintoc {4}{THM}{108}{0}{4}
+\beamer@subsectionintoc {3}{2}{IDB}{56}{0}{3}
+\beamer@subsubsectionintoc {3}{2}{1}{Genealogy}{56}{0}{3}
+\beamer@subsubsectionintoc {3}{2}{2}{PQ}{65}{0}{3}
+\beamer@subsectionintoc {3}{3}{EX}{71}{0}{3}
+\beamer@subsubsectionintoc {3}{3}{1}{R changes}{79}{0}{3}
+\beamer@subsectionintoc {3}{4}{Explanation}{99}{0}{3}
+\beamer@subsectionintoc {3}{5}{Robustness}{102}{0}{3}
+\beamer@sectionintoc {4}{THM}{109}{0}{4}

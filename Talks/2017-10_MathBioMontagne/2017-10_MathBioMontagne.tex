@@ -25,7 +25,7 @@
 \node[below=0cm of sFD, twee](tFD){@flodebarre};
 \node[left=0cm of tFD]{\includegraphics[height=1em]{/home/florencedebarre/Dropbox/Presentations/GlobalPics/twitter.pdf}};
 
-\node[below = 0.75cm of FD, align=center, font =\footnotesize]{ CNRS \\ Centre de Interdisciplinaire de Recherche en Biologie, Paris};
+\node[below = 0.75cm of FD, align=center, font =\footnotesize]{ CNRS \\ Centre Interdisciplinaire de Recherche en Biologie, Paris};
 \end{tikzpicture}
 
 
@@ -420,6 +420,7 @@ with effects of social interactions on \textbf{fecundity}.
 \subsubsection{Population}
 
 \begin{frame}{Notation}
+\begin{overlayarea}{\textwidth}{0.7\textheight} 
 
 \begin{center}
 
@@ -430,21 +431,22 @@ with effects of social interactions on \textbf{fecundity}.
 \node[nd] (eA){$1$ \hspace{\dx}if site $i$ occupied by \includegraphics[height = \dpic]{../Pics/typeA.pdf}\hspace{0.1em} at time $t$ ($1\leq i \leq N$)};
 \node[nd, below = 0cm of eA] (eB){$0$ \hspace{\dx}if site $i$ occupied by \includegraphics[height = \dpic]{../Pics/typeB.pdf}\hspace{0.1em} at time $t$ ($1\leq i \leq N$)};
 
-\draw[decorate, decoration = {brace, mirror, amplitude = 5pt}, line width = 1.5pt](eA.north west)--(eB.south west) node[midway, anchor = east, inner sep = 10pt, nd]{$X_i(t) = $};
+\draw[decorate, decoration = {brace, mirror, amplitude = 5pt}, line width = 1.5pt](eA.north west)--(eB.south west) node[midway, anchor = east, inner sep = 10pt, nd]{$\mathbf{X}(t); \quad X_i(t) = $};
 \end{tikzpicture}
 \end{center}
 
-\only<2>{
+\only<2-3>{
 \begin{tikzpicture}
 \node[inner sep = 0pt, draw](pic){\includegraphics[width=3.5cm]{../TeXPics/mutationscheme.pdf}};
 \node[right = 2cm of pic, yshift = 0.5cm, color = dgray](Y){$\mathbb{E}[Y_i]$};
 \node[text width = 4cm, font = \small, below = 0cm of Y, align= center]{Expected trait of the\\offspring of individual $i$};
-\node[right = 1cm of Y]{$ = (1-\mu) \, X_i + \mu \nu$.};
+\node[right = 1cm of Y]{$ = (1-\mu) \, X_i + \mu \nu \uncover<2>{\times 1 + \mu (1-\nu) \times 0}$.};
 \end{tikzpicture}
 }
 
-\uncover<3->{
+\uncover<4->{
 Proportion of altruists in the population:
+\vspace{-0.5\baselineskip}
 \begin{displaymath}
 \overline{X} = \frac{1}{N} \sum_{i=1}^N X_i.
 \end{displaymath}
@@ -460,8 +462,10 @@ $ \mathbb{E}[\overline{X}]$, }\\the expected proportion of altruists in the popu
 \end{tikzpicture}
 \end{center}
 }
+\end{overlayarea}
 
 \end{frame}
+
 
 
 
@@ -556,7 +560,12 @@ At the first order in $\delta$,
 \item Expected proportion of altruists at $t+1$ in the proportion of altruists, conditional on the state of the population at time $t$:
 %
 \begin{displaymath}
-\mathbb{E}[\overline{X}(t+1)|\mathbf{X}(t)] = \frac{1}{N}\sum_{i=1}^N \left[ B_i (1-\mu) X_i + (1-D_i)X_i + B_i \mu \nu \right]
+\tikzmark{E1}\mathbb{E}[\overline{X}(t+1)|\mathbf{X}(t)]\tikzmark{E2} = \frac{1}{N}\sum_{i=1}^N \left[ B_i (1-\mu) X_i + (\tikzmark{O1}1\tikzmark{O2}-D_i)X_i + B_i \mu \nu \right] \uncover<4->{
+\tikzstyle{stro}=[maincol, line width=1.5pt, line cap=round]
+\tikz[remember picture, overlay]{ \draw[stro] (E1.north west)++(0,0.2) --(E2.south east);
+\draw[stro] (O1.north west)++(0,0.2) --(O2.south east);
+ }
+}
 \end{displaymath}
 
 \item Take expectation and let $t\to \infty$; consider stationary distribution $\xi$
@@ -566,6 +575,7 @@ At the first order in $\delta$,
 \end{displaymath}
 \end{itemize}
 \end{frame}
+
 
 \begin{frame}{Calculations (2)}
 \vspace{-0.75\baselineskip}
@@ -888,6 +898,7 @@ At neutrality (i.e., in the absence of selection, $\delta = 0$),
 
 
 \subsection{EX}
+
 \begin{frame}<1-8>[label = EXframe]{Expected frequency of altruists in the population}
 \begin{center}
 \begin{tikzpicture}[node distance = 0.2cm and 0.16cm, anchor = base, baseline = 0pt]
@@ -969,6 +980,9 @@ At neutrality (i.e., in the absence of selection, $\delta = 0$),
 
 \node[blind, fit = (blocBI)]{};
 \node[blind, fit = (blocCI)]{};
+
+\node[anchor=center]at(blocBI){\includegraphics[height=2em]{../Pics/sword}};
+\node[anchor=center]at(blocCI){\includegraphics[height=2em]{../Pics/sword}};
 }
 
 \end{tikzpicture}
@@ -976,6 +990,7 @@ At neutrality (i.e., in the absence of selection, $\delta = 0$),
 
 \uncover<9>{\phantom{{\Huge X}}}
 \end{frame}
+
 
 
 
