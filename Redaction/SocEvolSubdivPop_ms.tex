@@ -1,8 +1,15 @@
 \documentclass[11pt, letterpaper]{article}
 
+% Taken from AmNat Class
+%\usepackage{fullpage}
+\usepackage[authoryear,sectionbib,sort]{natbib}
+\linespread{1.7}
+\usepackage[utf8]{inputenc}
+\usepackage{lineno}
+\renewcommand{\refname}{Literature Cited}
+
 % Encoding
 \usepackage[T1]{fontenc} % Output
-\usepackage[latin1]{inputenc} % Input
 
 % MATHS
 \usepackage{amsmath, amssymb, amsfonts} % Math stuff
@@ -61,14 +68,14 @@
 
 \fancypagestyle{appendix}{
 \fancyhf{}
-\fancyhead[C]{{Appendix \thesection{}}}
+\fancyhead[C]{{Appendix \thesection*{}}}
 \fancyfoot[C]{\thepage}
 \renewcommand{\headrulewidth}{0.02pt}
 \fancyfoot[R]{\today}
 }
 
 % BIBLIOGRAPHY
-\usepackage[]{natbib} % Package for the bibliography
+%\usepackage[]{natbib} % Package for the bibliography
 
 % Colors
 \usepackage[table]{xcolor}
@@ -96,41 +103,43 @@
 %% FONTS
 % Fonts of the main text
 \usepackage{fourier}
+%\usepackage[sc]{mathpazo} %Like Palatino with extensive math support in AmNat template
+
 % Helvetica for sans serif fonts
 \renewcommand{\sfdefault}{phv}
 % Make sure mathcal looks the same
 \DeclareMathAlphabet{\mathcal}{OMS}{cmsy}{m}{n}
 % TT fonts
 \usepackage{nimbusmononarrow}
-
-% SECTIONS
-\usepackage{titlesec}
-\usepackage{needspace}
-
-%% Section
-\titleformat{\section}[block]
-  {\needspace{2in}\Large \bfseries \color{seccol}}
-  {\thesection}
-  {1em}
-  {}
-% Subsection
-\titleformat{\subsection}[block]
-  {\large\bfseries \color{subseccol}}
-  {\thesubsection}
-  {1em}
-  {} 
-% Subsubsection
-\titleformat{\subsubsection}[block]
-  {\bfseries \color{subsubseccol}}
-  {\thesubsubsection}
-  {1em}
-  {} 
-% Paragraph
-\titleformat{\paragraph}[runin]
-  {\normalsize\bfseries \color{parcol}}
-  {\theparagraph}
-  {0em}
-  {}
+%
+%% SECTIONS
+%\usepackage{titlesec}
+%\usepackage{needspace}
+%
+%%% Section
+%\titleformat{\section}[block]
+%  {\needspace{2in}\Large \bfseries \color{seccol}}
+%  {\thesection}
+%  {1em}
+%  {}
+%% Subsection
+%\titleformat{\subsection}[block]
+%  {\large\bfseries \color{subseccol}}
+%  {\thesubsection}
+%  {1em}
+%  {} 
+%% Subsubsection
+%\titleformat{\subsubsection}[block]
+%  {\bfseries \color{subsubseccol}}
+%  {\thesubsubsection}
+%  {1em}
+%  {} 
+%% Paragraph
+%\titleformat{\paragraph}[runin]
+%  {\normalsize\bfseries \color{parcol}}
+%  {\theparagraph}
+%  {0em}
+%  {}
 
 % TABLES
 \usepackage{multirow}
@@ -257,10 +266,34 @@
 
 \def \wpic {4.5cm}
 
+
+\title{\Large Imperfect strategy transmission can reverse the role of population viscosity on the evolution of altruism}
+\date{}
+\author{}
 \begin{document}
 \pagestyle{maintext}
 
 %TC:ignore 
+
+\maketitle
+
+
+\bigskip
+
+\textit{Manuscript elements}: Figure~1, figure~2, table~1, online appendices~A and B (including figure~A1 and figure~A2). Figure~2 is to print in color.
+
+\bigskip
+
+\textit{Keywords}: Examples, model, template, guidelines.
+
+\bigskip
+
+\textit{Manuscript type}: Article. %Or e-article, note, e-note, natural history miscellany, e-natural history miscellany, comment, reply, invited symposium, or countdown to 150.
+
+\bigskip
+
+\noindent{\footnotesize Prepared using the suggested \LaTeX{} template for \textit{Am.\ Nat.}}
+
 
 \paragraph{Article Type:} Letter
 
@@ -304,7 +337,7 @@ The evolution of altruistic behavior has fascinated and puzzled evolutionary bio
 %TC:endignore 
 
 
-\section{Introduction}%
+\section*{Introduction}%
 In his pioneering work on the evolution of social behavior, \citeauthor{Hamilton1964} suggested that altruistic behavior would be associated to limited dispersal \citep[p.~10]{Hamilton1964}. This notion, that tighter links between individuals favor the evolution of altruism, has been shown to hold in a number of population structures  \citep[see \eg][]{Ohtsuki2006, TaylorDayWild2007, Lehmann2007}. The rationale is that altruism is favored when altruists interact more with altruists than defectors do (\citealp[p.~141]{Hamilton1975}; \citealp{Fletcher2009})%http://www.jstor.org/stable/10.1086/338945?seq=6#page_scan_tab_contents
 , a condition that is met in viscous populations, \ie, populations with limited dispersal.
 
@@ -330,9 +363,9 @@ For each of the three life-cycles that we consider, we compute the expected (\ie
 
 
 
-\section{Model and methods}
+\section*{Model and methods}
 
-\subsection{Assumptions}
+\subsection*{Assumptions}
 
 We consider a population of size $N$, subdivided into $\ndemes$~demes connected by dispersal, each deme hosting exactly $n$ individuals (\ie, each deme contains $n$ sites, each of which is occupied by exactly one individual; we have $n \ndemes = N$). Each site has a unique label $i$, $1\leq i \leq N$. There are two types of individuals in the population, altruists and defectors. The type of the individual living at site $i$ ($1\leq i \leq N$) is given by an indicator variable $X_i$, equal to $1$ if the individual is an altruist, and to $0$ if it is a defector. The state of the entire population is given by a $N$-long vector $\mathbf{X}$. For a given population state $\mathbf{X}$, the proportion of altruists is $\overline{X} = \sum_{i=1}^N X_i$. All symbols are summarized in table~\ref{tab:symbols}.
 
@@ -370,8 +403,8 @@ We will specifically explore three different life-cycles. At the beginning of ea
 \item[Wright-Fisher]: All the adults die. At each site of the entire population, one of the juveniles that landed there is chosen and establishes at the site. 
 \end{description}
   
-\subsection{Methods}
-\subsubsection{Analytical part}
+\subsection*{Methods}
+\subsubsection*{Analytical part}
 
 The calculation steps to obtain the expected (\ie, long-term) proportion of altruists are given in \appname~\ref{sec:app:EX}. They go as follows: first, we write an equation for the expected frequency of altruists in the population at time $t+1$, conditional on the composition of the population at time $t$; we then take the expectation of this quantity and consider large times $t$. After this, we write a first order expansion for phenotypic differences $\selstr$ close to $0$ (this corresponds to weak selection approximation). 
 
@@ -387,16 +420,16 @@ Q_{ij} = \begin{cases} 1 & \textrm{when $i=j$,} \\
 %
 These neutral probabilities of identity by descent depend on the chosen life-cycle, and are also computed by taking the long-term expectation of conditional expectations after one time step (see \appname~\ref{sec:app:IBD} and \ref{sec:app:Qsubdiv} and supplementary Mathematica file \citep{Mathematica11}.) 
 
-\subsubsection{Stochastic simulations}
+\subsubsection*{Stochastic simulations}
 We also ran stochastic simulations (coded in \texttt{C}). The simulations were run for $10^8$ generations (one generation is one time step for the Wright-Fisher life-cycle, and $N$ time steps for the Moran life-cycles). For each set of parameters and life-cycle, using R \citep{R2015}, we estimated the long-term frequency of altruists by sampling the population every $10^3$ generations and computing the average frequency of altruists. 
 %
 All scripts are available at \\
 {\small \url{https://flodebarre.github.io/SocEvolSubdivPop/}} 
 
-\section{Results}
+\section*{Results}
 
 
-\subsection{Expected frequencies of altruists for each life-cycle}
+\subsection*{Expected frequencies of altruists for each life-cycle}
 
 For each of the life-cycles that we consider, the expected frequency of altruists in the population, $\Esp{\overline{X}}$, can be approximated as
 \begin{equation}\label{eq:EXapprox}
@@ -494,7 +527,7 @@ Finally, with this life-cycle as we defined it, the probabilities of identity by
 %
 The only -- but important -- different between \eqref{eq:EXWF} and \eqref{eq:EXDB} is the value of the probabilities of identity by descent, because the number of individuals that are updated at each time step differs. 
 
-\subsection{Primary effects}
+\subsection*{Primary effects}
 
 Let us first focus on primary effects, shown on the first lines in the parentheses in \eqref{eq:EXBD}--\eqref{eq:EXWF}. They are the same for the three life-cycles that we consider, and they do not depend on the emigration probability $m$. At the same time, as shown on figure~\ref{fig:R}, the relatedness terms $R^{\Moran}$ and $R^{\WF}$ decrease with $m$ (keeping $m<1 - \frac{1}{\ndemes}$; see figure~\ref{fig:R}) Consequently, if we ignored secondary effects, we would conclude that even with imperfect strategy transmission ($\mu>0$), increasing the emigration probability $m$ decreases the expected frequency of altruists in the population (as our intuition may suggest already.) However, secondary effects play a role as well.
 
@@ -508,13 +541,13 @@ Let us first focus on primary effects, shown on the first lines in the parenthes
 \label{fig:R}
 \end{figure}
 
-\subsection{Changes with the emigration probability $m$} 
+\subsection*{Changes with the emigration probability $m$} 
 
 For the three life-cycles, the secondary effects are negative (with $0<m< 1- \frac{1}{\ndemes}$) and they increase with the emigration probability $m$. In other words, these detrimental secondary effects weaken when the emigration probability increases. This effect goes against the reduction of relatedness $R$ as $m$ increases. Hence, we need to consider the entire equations to know the overall effect of the emigration probability $m$ on the expected frequency of altruists $\Esp{\overline{X}}$ and on how it is affected by the (in)fideliy of parent-offspring transmission $\mu$ (see Figure~\ref{fig:EX}). 
  
 The rather lengthy formulas that we obtain are relegated to the \appname{} and supplementary Mathematica file, and we concentrate here on the results. 
 
-\subsubsection{Moran Birth-Death}
+\subsubsection*{Moran Birth-Death}
 
 For the Moran Birth-Death life-cycle, we find that the expected frequency of altruists $\Esp{\overline{X}}$ is a monotonic function of the emigration probability $m$; the direction of the change depends on the value of the mutation probability $\mu$ compared to a threshold value $\mu_c^{\BD}$. When $\mu<\mu_c^{\BD}$, $\Esp{\overline{X}}$ decreases with $m$, while when $\mu>\mu_c^{\BD}$, $\Esp{\overline{X}}$  increases with $m$. The critical value $\mu_c^{\BD}$ is given by 
 \begin{equation}\label{eq:mucBD}
@@ -526,7 +559,7 @@ For the Moran Birth-Death life-cycle, we find that the expected frequency of alt
 
 With this life-cycle however, the expected frequency of altruists $\Esp{\overline{X}}$ remains lower than $\nu$, its value in the absence of selection (\ie, when $\selstr =0$). 
 
-\subsubsection{Moran Death-Birth}
+\subsubsection*{Moran Death-Birth}
 
 The relationship between $\Esp{\overline{X}}$ and $m$ is a bit more complicated for the Moran Death-Birth life-cycle. For simplicity, we concentrate on what happens starting from low emigration probabilities (\ie, on the sign of the slope of $\Esp{\overline{X}}$ as a function of $m$ when $m\to 0$). If the benefits $\bb$ provided by altruists are relatively low ($\bb < \cc (n+1)$), $\Esp{\overline{X}}$ initially increases with $m$ provided the mutation probability $\mu$ is greater than a threshold value $\mu_c^{\DB}$ given in \eqref{eq:mucDB} below; otherwise, when the benefits are high enough, $\Esp{\overline{X}}$ initially increases with $m$ for any value of $\mu$. Combining these results, we write
 \begin{equation}\label{eq:mucDB}
@@ -543,7 +576,7 @@ When $\mu > \mu_c^{\DB}$, the expected frequency of altruists $\Esp{\overline{X}
 
 With the Death-Birth life-cycle, the expected frequency of altruists is higher than its neutral value $\nu$ for intermediate values of the emigration probability $m$ (unless $\mu \to 0$, in which case the lower bound tends to $0$).
 
-\subsubsection{Wright-Fisher}
+\subsubsection*{Wright-Fisher}
 
 Under a Wright-Fisher updating, the expected frequency of altruists in the population reaches an extremum at the highest admissible emigration value $m = 1-\frac{1}{\ndemes}$. This extremum is a maximum when the mutation probability is higher than a threshold value $\mu_c^{\WF}$ given by 
 \begin{equation}
@@ -567,7 +600,7 @@ Parameters: $\selstr = 0.005$, $\mutbias=0.45$, $b = 15$, $c = 1$, $n=4$ individ
 \label{fig:EX}
 \end{figure}
 
-\subsection{Interpreting the effect of $m$ on $\Esp{\overline{X}}$}
+\subsection*{Interpreting the effect of $m$ on $\Esp{\overline{X}}$}
 
 The result, that higher emigration probabilities can actually favor altruistic behavior, may seem surprising, even though it is confirmed by simulations. The result may appear counterintuitive because explanations for the effect of population viscosity on the evolution of altruism often focus on primary effects. The role played by secondary effects is harder to grasp. To better understand the role played by the mutation probability $\mu$, we now focus on a qualitative condition for the evolution of altruism and on the Death-Birth life-cycle:
 %
@@ -592,7 +625,7 @@ Hence, it is only when strategy transmission is perfect that condition~\eqrefnoe
 \label{fig:DB}
 \end{figure}
 
-\subsection{Relaxing key assumptions}
+\subsection*{Relaxing key assumptions}
 
 To derive our analytical results, we had to make a number of simplifying assumptions, such as the fact that selection is weak ($\selstr \ll 1$), and the fact that the structure of the population is regular (all demes have the same size $n$). We explored with numerical simulations the effect of relaxing these key assumptions. 
 
@@ -608,7 +641,7 @@ Compared to graphs classically used in evolutionary graph theory (\eg, regular r
 
 
 
-\section{Discussion}
+\section*{Discussion}
 % Summary
 \subsection*{The expected frequency of altruists in a subdivided population can increase with the probability of emigration}
 Assuming that the transmission of a social strategy (being an altruist or a defector) from a parent to its offspring could be imperfect, we found that the expected frequency of altruists maintained in a population could increase with the probability $m$ of emigration out of the parental deme, a parameter tuning population viscosity. This result can seem surprising, because it contradicts the conclusions obtained under the assumption of nearly perfect strategy transmission (\ie, in the case of genetic transmission, when mutation is very weak or absent). Under nearly perfect strategy transmission indeed, increased population viscosity (\ie, decreased emigration probability) is either neutral \citep[][and dashed lines in figures~\ref{fig:EX}\subref{fig:EXBD}--\subref{fig:EXWF}]{Taylor1992islandmodel} or favorable \citep[][and dashed lines in figure~\ref{fig:EX}\subref{fig:EXDB}]{TaylorDayWild2007} to the evolution of altruistic behavior. 
@@ -677,24 +710,15 @@ Thanks to Charles Mullon for detailed comments on a previous version of the manu
 % Ignore word count after this point
 
 \appendix
- 
-% Redefine counters
-% Equations
-%  Redefine the command that creates the equation number.
-\renewcommand{\theequation}{\thesection.\arabic{equation}}
-%  Reset the counter
-\setcounter{equation}{0}  % reset counter
- 
-% Figures
-%  Redefine the command that creates the figure number: adds an S.
-\renewcommand{\thefigure}{S\arabic{figure}}
-%  Reset the counter  
-\setcounter{figure}{0}
 
-% Tables
-\renewcommand{\thetable}{S\arabic{table}}
-%  Reset the counter  
+\renewcommand{\theequation}{A\arabic{equation}}
+% redefine the command that creates the equation number.
+\renewcommand{\thetable}{A\arabic{table}}
+\renewcommand{\thefigure}{A\arabic{figure}}
+\setcounter{equation}{0}  % reset counter 
+\setcounter{figure}{0}
 \setcounter{table}{0}
+ 
 \section*{Supplementary figures} 
 
 % Figure strong selection
@@ -718,7 +742,7 @@ Thanks to Charles Mullon for detailed comments on a previous version of the manu
 \subfigure[Birth-Death]{\includegraphics[type=pdf,ext=.pdf,read=.pdf, width=\wpic]{../Programs/R/Pics/EXBD_sel0.005_htg1}}
 &
 \subfigure[Wright-Fisher]{\includegraphics[type=pdf,ext=.pdf,read=.pdf, width=\wpic]{../Programs/R/Pics/EXWF_sel0.005_htg1}}\end{tabular}
-\caption{Equivalent of figure~\ref{fig:EX} (simulations only) but with a heterogeneous population structure: deme sizes range form $1$ to $5$ individuals per deme, the average deme size is $4$ as in figure~\ref{fig:EX};  all other parameters and legend are identical to those of figure~\ref{fig:EX}. }
+\caption{Equivalent of figure~\ref{fig:EX} (simulations only) but with a heterogeneous population structure: deme sizes range from $1$ to $5$ individuals per deme, the average deme size is $4$ as in figure~\ref{fig:EX};  all other parameters and legend are identical to those of figure~\ref{fig:EX}. }
 \label{fig:EXhtg}
 \end{figure}
 
@@ -815,24 +839,16 @@ X_i & Indicator variable, equal to $1$ if site $i$ is occupied by an altruist, t
 \end{table}
 \clearpage
 
-% Start the appendix
-\appendix
- 
-% Redefine counters
-% Equations
-%  Redefine the command that creates the equation number.
-\renewcommand{\theequation}{\thesection.\arabic{equation}}
-%  Reset the counter
-\setcounter{equation}{0}  % reset counter
- 
 %
 \begin{center}
 {\color{seccol}{\LARGE \bfseries \appname}}
 \end{center}
 
-\pagestyle{appendix}
+
 \singlespace
 
+\newpage
+\pagestyle{appendix}
 
 \section{Expected frequency of altruists\label{sec:app:EX}}
 
@@ -840,7 +856,7 @@ X_i & Indicator variable, equal to $1$ if site $i$ is occupied by an altruist, t
 
 %In this section, we work with a generic regular population structure (with symmetries such that all individuals behave the same way in expectation), of which the island model is a particular case. 
 
-\subsection{For a generic life-cycle \label{sec:app:generic}}
+\subsection*{For a generic life-cycle \label{sec:app:generic}}
 
 We want to compute the expected proportion of altruists in the population. We represent the state of the population at a given time $t$ using indicator variables $X_i(t)$, $1\leq i \leq N$, equal to~$1$ if the individual living at site $i$ at time $t$ is an altruist, and equal to~$0$ if it is a defector; these indicator variables are gathered in a $N$-long vector $\mathbf{X}(t)$. The set of all possible population states is $\Omega = \{0,1\}^N$. The proportion of altruists in the population is written $\overline{X}(t) = \sum_{i=1}^N X_i(t)$. We denote by $B_{ji}(X(t), \selstr)$, written $B_{ji}$ for simplicity, the probability that the individual at site $j$ at time $t+1$ is the newly established offspring of the individual living at site $i$ at time $t$. The expected number of successful offspring produced by the individual living at site $i$ at time $t$ is given by $B_i = \sum_{j=1}^N B_{ji}$. We denote by $D_{i}(X(t), \selstr)$ ($D_i$ for simplicity) the probability that the individual living at site $i$ at time $t$ has been replaced (\ie, died) at time $t+1$. These quantities depend on the chosen life-cycle and on the state of the population; they are given in table~\ref{tab:BD} for each of the life-cycles that we consider. 
 
@@ -994,7 +1010,7 @@ Finally, we obtain a first-order approximation of the expected frequency of altr
 \end{equation}
 where $\derivv{\Esp{\overline{X}}}{\selstr}{\selstr}$ is obtained from \eqref{eq:weaksel2}. We then need to replace the $B_{i}$ and $D_{i}$ terms by their formulas for each life-cycle (given in table~\ref{tab:BD}).
 
-\subsection{Derivatives for the specific life-cycles\label{sec:app:dW}}
+\subsection*{Derivatives for the specific life-cycles\label{sec:app:dW}}
 
 Using the formulas presented in table~\ref{tab:BD}, and the definition of $W=W_i$ given in \eqref{eq:app:defW}, we obtain the following equations:
 
@@ -1028,11 +1044,11 @@ Combining these equations with \eqref{eq:app:EXgeneric} and \eqref{eq:weaksel2} 
 \clearpage
 
 \section{Probabilities of identity by descent}
-\subsection{Expected state of pairs of sites and probabilities of identity by descent\label{sec:app:IBD}}
+\subsection*{Expected state of pairs of sites and probabilities of identity by descent\label{sec:app:IBD}}
 
 Here we show the link between the expected state of a pair of sites $P_{ij}$ and probabilities of identity by descent $Q_{ij}$. In our derivation of $\Esp{\overline{X}}$, $P_{ij}$ is the quantity that appears, but most studies use $Q_{ij}$. Both are evaluated in the absence of selection ($\selstr = 0$). 
 
-\subsubsection{Moran model}
+\subsubsection*{Moran model}
 In a Moran model, exactly one individual dies and one individual reproduces during one time step. Given a state $\mathbf{X}$ at time $t$, at time $t+1$ both sites $i$ and $j\neq i$ are occupied by altruists, if \begin{inparaenum}[\it i\rm)]\item it was the case at time $t$ and neither site was replaced by a non-altruist (first term in \eqref{eq:app:PijM1}), or \item if exactly one of the two sites was occupied by a non-altruist at time $t$, but the site was replaced by an altruist (second and third terms of \eqref{eq:app:PijM1}): \end{inparaenum}
 %
 \begin{align}\label{eq:app:PijM1}
@@ -1054,7 +1070,7 @@ Q_{ij} = \frac{1}{2} \sum_{k=1}^N (1-\mu) \left( d_{ki} Q_{kj} + d_{kj} Q_{ki}\r
 \end{equation}
 and we realize that $Q_{ij}$ is the probability that the individuals at sites $i$ and $j \neq i$ are identical by descent. To compute it indeed, we need to pick which site was last updated (equal probabilities), then who was the parent ($k$); the other individual needs to be identical by descent to the parent, and no mutation should have occurred ($1-\mu$). 
 
-\subsubsection{Wright-Fisher model}
+\subsubsection*{Wright-Fisher model}
 
 In a Wright-Fisher model, all individuals are replaced at each time step, so we directly consider the state of the parents:
 \begin{align}\label{eq:app:PijWF1}
@@ -1075,7 +1091,7 @@ Q_{ij} = \sum_{k, \ell=1}^N d_{ki} d_{\ell j} Q_{k\ell} (1-\mu)^2.
 Again, $Q_{ij}$ corresponds to a probability of identity by descent: the individuals at sites $i$ and $j$ are identical by descent if their parents were and if neither mutated ($(1-\mu)^2$). 
 
 \clearpage
-\subsection{\label{sec:app:Qsubdiv}Probabilities of identity by descent in a subdivided population}
+\subsection*{\label{sec:app:Qsubdiv}Probabilities of identity by descent in a subdivided population}
 Two individuals are said to be identical by descent if there has not been any mutation on either lineage since their common ancestor. Because of the structure of the population, there are only three types of pairs of individuals, and hence three different values of the probabilities of identity by descent of pairs of sites $Q_{ij}$:
 \begin{equation}
 Q_{ij} = 
@@ -1095,7 +1111,7 @@ We rewrite site labels ($1\leq i \leq N$) as $(\ell_1, \ell_2)$, where $\ell_1$ 
 
 Also, in this section, we distinguish between $\dself = d_{ii}$ and $\din$ (in the main text, $\dself = \din$). 
 
-\subsubsection{Moran model}
+\subsubsection*{Moran model}
 
 In \citet{Debarre2017}, it was shown that
 \begin{subequations}
@@ -1204,7 +1220,7 @@ The probability that two different deme-mates are identical by descent, $\Qin^{\
 When the mutation probability $\mu$ is vanishingly small ($\mu \to 0$), both $\Qin^{\Moran}$ and $\Qout^{\Moran}$ are equal to $1$: in the absence of mutation indeed, the population ends up fixed for one of the two types, and all individuals are identical by descent. Note that we obtain a different result if we first assumed that the size of the population is infinite ($\ndemes \to \infty$), because the order of limits matters; %  ($\lim_{d\to\infty} \lim_{\mu\to0} \Qin^{M} \neq  \lim_{\mu\to0} \lim_{d\to\infty}   \Qin^{M}$).
 for instance, $\lim_{d\to \infty} \Qout^{M}=0$. 
 
-\subsubsection{Wright-Fisher}
+\subsubsection*{Wright-Fisher}
 For the Wright-Fisher updating, the equation for $\tilde{Q}$ is different:
 \begin{equation}
 \tilde{\mathcal{Q}}_{\substack{r_1\\r_2}} = \frac{1}{N} \sum_{q_1=0}^{N_1-1} \sum_{q_2=0}^{N_2 -1} \frac{\mu \lambda_{WF}'}{1-(1-\mu)^2 (\tilde{\mathcal{D}}_{\substack{q_1\\q_2}})^2} \exp\left(-\imath \frac{2\pi q_1 r_1}{N_1}\right)\exp\left(-\imath \frac{2\pi q_2 r_2}{N_2}\right), 

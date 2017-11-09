@@ -1,26 +1,2 @@
-\BOOKMARK [1][]{section.1}{Introduction}{}% 1
-\BOOKMARK [1][]{section.2}{Model and methods}{}% 2
-\BOOKMARK [2][]{subsection.2.1}{Assumptions}{section.2}% 3
-\BOOKMARK [2][]{subsection.2.2}{Methods}{section.2}% 4
-\BOOKMARK [3][]{subsubsection.2.2.1}{Analytical part}{subsection.2.2}% 5
-\BOOKMARK [3][]{subsubsection.2.2.2}{Stochastic simulations}{subsection.2.2}% 6
-\BOOKMARK [1][]{section.3}{Results}{}% 7
-\BOOKMARK [2][]{subsection.3.1}{Expected frequencies of altruists for each life-cycle}{section.3}% 8
-\BOOKMARK [2][]{subsection.3.2}{Primary effects}{section.3}% 9
-\BOOKMARK [2][]{subsection.3.3}{Changes with the emigration probability m}{section.3}% 10
-\BOOKMARK [3][]{subsubsection.3.3.1}{Moran Birth-Death}{subsection.3.3}% 11
-\BOOKMARK [3][]{subsubsection.3.3.2}{Moran Death-Birth}{subsection.3.3}% 12
-\BOOKMARK [3][]{subsubsection.3.3.3}{Wright-Fisher}{subsection.3.3}% 13
-\BOOKMARK [2][]{subsection.3.4}{Interpreting the effect of m on E[to. X]to.}{section.3}% 14
-\BOOKMARK [2][]{subsection.3.5}{Relaxing key assumptions}{section.3}% 15
-\BOOKMARK [1][]{section.4}{Discussion}{}% 16
-\BOOKMARK [1][]{appendix.A}{Expected frequency of altruists}{}% 17
-\BOOKMARK [2][]{subsection.A.1}{For a generic life-cycle }{appendix.A}% 18
-\BOOKMARK [2][]{subsection.A.2}{Derivatives for the specific life-cycles}{appendix.A}% 19
-\BOOKMARK [1][]{appendix.B}{Probabilities of identity by descent}{}% 20
-\BOOKMARK [2][]{subsection.B.1}{Expected state of pairs of sites and probabilities of identity by descent}{appendix.B}% 21
-\BOOKMARK [3][]{subsubsection.B.1.1}{Moran model}{subsection.B.1}% 22
-\BOOKMARK [3][]{subsubsection.B.1.2}{Wright-Fisher model}{subsection.B.1}% 23
-\BOOKMARK [2][]{subsection.B.2}{Probabilities of identity by descent in a subdivided population}{appendix.B}% 24
-\BOOKMARK [3][]{subsubsection.B.2.1}{Moran model}{subsection.B.2}% 25
-\BOOKMARK [3][]{subsubsection.B.2.2}{Wright-Fisher}{subsection.B.2}% 26
+\BOOKMARK [1][]{appendix.A}{Expected frequency of altruists}{}% 1
+\BOOKMARK [1][]{appendix.B}{Probabilities of identity by descent}{}% 2
