@@ -68,7 +68,7 @@
 
 \fancypagestyle{appendix}{
 \fancyhf{}
-\fancyhead[C]{{Appendix \thesection*{}}}
+\fancyhead[C]{{Appendix \thesection{}}}
 \fancyfoot[C]{\thepage}
 \renewcommand{\headrulewidth}{0.02pt}
 \fancyfoot[R]{\today}
@@ -175,8 +175,8 @@
 
 
 %%% STUFF TO COMMENT OUT FOR THE FINAL VERSION 
-%\usepackage{soul} % Highlighting (command \hl{})
-%\usepackage{todonotes} % Add Word-style comments (\todo{})
+\usepackage{soul} % Highlighting (command \hl{})
+\usepackage{todonotes} % Add Word-style comments (\todo{})
 %\usepackage[]{showlabels} % To display the labels of the equations on the pdf; 
 \usepackage[top = 1.15in, bottom = 1.2in, left = 1.75in, right = 1.75in]{geometry}
 %\geometry{textwidth=0.65\paperwidth}
@@ -254,6 +254,9 @@
 \newcommand{\ndemes}{N_D}
 
 \newcommand{\selstr}{\delta}
+
+\newcommand{\Cov}[1]{\mathrm{Cov}\left[#1 \right]}
+
 % FLUSH FIGURES IN THE END
 %\usepackage[tablesonly]{endfloat}
 
@@ -265,6 +268,14 @@
 \newcommand{\myphantom}{\phantom{\overline{f}}}
 
 \def \wpic {4.5cm}
+
+% Footnote without marker
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
 
 
 \title{\Large Imperfect strategy transmission can reverse the role of population viscosity on the evolution of altruism}
@@ -284,7 +295,7 @@
 
 \bigskip
 
-\textit{Keywords}: Examples, model, template, guidelines.
+\textit{Keywords}: Altruism, Subdivided population, Mutation, Migration, Cooperation, Island model, Wright-Fisher, Moran.
 
 \bigskip
 
@@ -292,14 +303,7 @@
 
 \bigskip
 
-\noindent{\footnotesize Prepared using the suggested \LaTeX{} template for \textit{Am.\ Nat.}}
-
-
-\paragraph{Article Type:} Letter
-
-\paragraph{Article Title:} Imperfect strategy transmission can reverse the role of population viscosity on the evolution of altruism.
-
-\paragraph{Author:} Florence D\'ebarre -- Centre Interdisciplinaire de Recherche en Biologie (CIRB), Coll\`ege de France, CNRS UMR 7241 - Inserm U1050, 11 place Marcelin Berthelot, 75231 Paris Cedex 05, France. \texttt{florence.debarre@normalesup.org}
+\blfootnote{Prepared using the suggested \LaTeX{} template for \textit{Am.\ Nat.}}
 
 \paragraph{Short Running Title:} Mutation and altruism in subdivided populations.
 
@@ -320,25 +324,25 @@ Total & $4213$ words
 \linenumbers
 \subsubsection*{Abstract}
 \doublespacing
-Population viscosity, \ie, low emigration out of the natal deme, leads to high within-deme relatedness, which is beneficial to the evolution of altruistic behavior when social interactions take place among deme-mates. However, a detrimental side-effect of low emigration is the increase in competition among related individuals. The evolution of altruism depends on the balance between these opposite effects. This balance is already known to be affected by details of the life-cycle; we show here that it further depends on the fidelity of strategy transmission from parents to their offspring. We consider different life-cycles and identify thresholds of parent-offspring strategy transmission inaccuracy, above which higher emigration can increase the frequency of altruists maintained in the population. Predictions were first obtained analytically assuming weak selection and equal deme sizes, then confirmed with stochastic simulations relaxing these assumptions. This result challenges the notion that the evolution of altruism requires limited dispersal. 
+Population viscosity, \ie, low emigration out of the natal deme, leads to high within-deme relatedness, which is beneficial to the evolution of altruistic behavior when social interactions take place among deme-mates. However, a detrimental side-effect of low emigration is the increase in competition among related individuals. The evolution of altruism depends on the balance between these opposite effects. This balance is already known to be affected by details of the life-cycle; we show here that it further depends on the fidelity of strategy transmission from parents to their offspring. We consider different life-cycles and identify thresholds of parent-offspring strategy transmission inaccuracy, above which higher emigration can increase the frequency of altruists maintained in the population. \hl{EXPLAIN RESULT} Predictions were first obtained analytically assuming weak selection and equal deme sizes, then confirmed with stochastic simulations relaxing these assumptions. This result challenges the notion that the evolution of altruism \hl{REMOVE REQUIRE}requires limited dispersal. 
 
 \clearpage
-\subsubsection*{Impact Summary}
+%\subsubsection*{Impact Summary}
 
-The evolution of altruistic behavior has fascinated and puzzled evolutionary biologists for a long time: how can a strategy whereby individuals help others at their own cost be maintained in a population? One answer is the fact that altruists may interact with other altruists more often than non-altruists do, a situation made possible by spatial structure and low emigration. Low emigration indeed means that an individual is mostly surrounded by related individuals; when social strategies are faithfully transmitted from parents to offspring, and social interactions are local as well, then altruists interact mainly with other altruists. However, this also means that related individuals have to compete against each other. Whether altruism eventually evolves depends on the balance between these beneficial and detrimental consequences of low emigration. Previous work has shown that the balance depends on the life-cycle that the population undergoes; under nearly perfect strategy transmission, low emigration goes from being neutral to the evolution of altruism (when generations are synchronous and non-overlapping) to favorable. In this work, we show that this conclusion qualitatively changes when offspring do not necessarily adopt their parent's strategy, that is, when strategy transmission is imperfect. Such imperfect transmission can be due to mutation when transmission is genetic, but also to imperfect vertical cultural transmission. We identify thresholds of strategy transmission infidelity, above which higher emigration is more conducive to the evolution of altruism than low emigration. The predictions are first obtained mathematically under the restrictive assumptions that selection is weak and that all demes have the same size, but are then confirmed with computer simulations relaxing these assumptions. This work shows that the evolution of altruism does not require -- and even can be hampered by -- low emigration. 
+%The evolution of altruistic behavior has fascinated and puzzled evolutionary biologists for a long time: how can a strategy whereby individuals help others at their own cost be maintained in a population? One answer is the fact that altruists may interact with other altruists more often than non-altruists do, a situation made possible by spatial structure and low emigration. Low emigration indeed means that an individual is mostly surrounded by related individuals; when social strategies are faithfully transmitted from parents to offspring, and social interactions are local as well, then altruists interact mainly with other altruists. However, this also means that related individuals have to compete against each other. Whether altruism eventually evolves depends on the balance between these beneficial and detrimental consequences of low emigration. Previous work has shown that the balance depends on the life-cycle that the population undergoes; under nearly perfect strategy transmission, low emigration goes from being neutral to the evolution of altruism (when generations are synchronous and non-overlapping) to favorable. In this work, we show that this conclusion qualitatively changes when offspring do not necessarily adopt their parent's strategy, that is, when strategy transmission is imperfect. Such imperfect transmission can be due to mutation when transmission is genetic, but also to imperfect vertical cultural transmission. We identify thresholds of strategy transmission infidelity, above which higher emigration is more conducive to the evolution of altruism than low emigration. The predictions are first obtained mathematically under the restrictive assumptions that selection is weak and that all demes have the same size, but are then confirmed with computer simulations relaxing these assumptions. This work shows that the evolution of altruism does not require -- and even can be hampered by -- low emigration. 
 
 
 %Authors should provide an approximately 300 word summary, explaining why the article makes an important contribution to Evolutionary Biology. It should be accessible to a wide audience, e.g. journalists, non-expert public interested in evolution, school science teachers.
 
 
 
-\clearpage
+%\clearpage
 
 %TC:endignore 
 
 
 \section*{Introduction}%
-In his pioneering work on the evolution of social behavior, \citeauthor{Hamilton1964} suggested that altruistic behavior would be associated to limited dispersal \citep[p.~10]{Hamilton1964}. This notion, that tighter links between individuals favor the evolution of altruism, has been shown to hold in a number of population structures  \citep[see \eg][]{Ohtsuki2006, TaylorDayWild2007, Lehmann2007}. The rationale is that altruism is favored when altruists interact more with altruists than defectors do (\citealp[p.~141]{Hamilton1975}; \citealp{Fletcher2009})%http://www.jstor.org/stable/10.1086/338945?seq=6#page_scan_tab_contents
+In his pioneering work on the evolution of social behavior, \citeauthor{Hamilton1964} suggested that altruistic behavior would be associated to limited dispersal \citep[p.~10]{Hamilton1964}. This notion, that tighter links between individuals are beneficial to the evolution of altruism, has been shown to hold in a number of population structures  \citep[see \eg][]{Ohtsuki2006, TaylorDayWild2007, Lehmann2007, Allen2017}. The rationale is that altruism is favored when altruists interact more with altruists than defectors do (\citealp[p.~141]{Hamilton1975}; \citealp{Fletcher2009})%http://www.jstor.org/stable/10.1086/338945?seq=6#page_scan_tab_contents
 , a condition that is met in viscous populations, \ie, populations with limited dispersal.
 
 Yet, living next to your kin also implies competing against them \citep{West2002}, which is detrimental to the evolution of altruism. The evolution of social traits hence depends on the balance between the positive effects of interactions with related individuals and the detrimental consequences of kin competition. Under specific conditions, the two effects can even compensate each other, thereby annihilating the impact of population viscosity on the evolution of altruism. 
@@ -353,7 +357,7 @@ Although artificial, simple population structures (\eg, regular graphs, or subdi
 Weak selection approximations are crucial for disentangling spatial moments \citep{Lion2016}, that is, changes in global \vs local frequencies \citep[though they can in some cases be relaxed, as in][]{MullonLehmann2014}. 
 Mutation, however, is usually ignored by classical models of inclusive fitness because these models assume infinite population sizes, so that there is no need to add mechanisms that restore genetic diversity \citep{TarnitaTaylor2014}. In populations of finite size,  this diversifying effect can be obtained thanks to mutation. %Mutation, and more generally imperfect strategy transmission, can alter evolutionary dynamics, in particular in spatially structured populations \citep[see \eg,][for graph-structured populations]{Allen2012,Debarre2017}. The aim of this study is hence to explore whether and how imperfect strategy transmission from parents to their offspring affects the impact of population viscosity on the evolution of altruistic behavior in subdivided populations.
 
-When strategy transmission is purely genetic, it makes sense to assume that mutation is relatively weak. A social strategy can however also be culturally transmitted from parent to offspring, in which case ``rebellion'' (as in \citeauthor{Frank1997}'s Rebellious Child Model \citep{Frank1997}) does not have to be rare. Imperfect strategy transmission can alter evolutionary dynamics, in particular in spatially structured populations \citep[see \eg,][for graph-structured populations]{Allen2012,Debarre2017}. Here, we want to explore the consequences of imperfect strategy transmission from parents to their offspring on the evolution of altruistic behavior in subdivided populations\footnote{Note that for the sake of concision, we use the word ``mutation'' throughout the paper, keeping in mind that strategy transmission does not have to be genetic. }. The question was tackled by \citet{Frank1997}, but with a non fully dynamic model. His method, done ``in the spirit of comparative statics'' (p.1721), precluded the exploration of the effects of population viscosity on the evolution altruism. 
+When strategy transmission is purely genetic, it makes sense to assume that mutation is relatively weak. A social strategy can however also be culturally transmitted from parent to offspring, in which case ``rebellion'' (as in \citeauthor{Frank1997}'s Rebellious Child Model \citep{Frank1997}) does not have to be rare. Imperfect strategy transmission can alter evolutionary dynamics, in particular in spatially structured populations \citep[see \eg,][for graph-structured populations]{Allen2012,Debarre2017}. Here, we want to explore the consequences of imperfect strategy transmission from parents to their offspring on the evolution of altruistic behavior in subdivided populations\footnote{Note that for the sake of concision, we use the word ``mutation'' throughout the paper, keeping in mind that strategy transmission does not have to be genetic. }. The question was tackled by \citet{Frank1997}, but with a ``non fully'' dynamic model. His method, done ``in the spirit of comparative statics'' \citep[][p.1721]{Frank1997}\footnote{Terms with quotes are citations from  \citeauthor{Frank1997}'s article.}, precluded the exploration of the effects of population viscosity on the evolution altruism. 
 
 For each of the three life-cycles that we consider, we compute the expected (\ie, long-term) frequency of altruists maintained in a subdivided population, and investigate how this frequency is affected by mutation and emigration. We find that, contrary to what happens with perfect strategy transmission, higher emigration can increase the expected frequency of altruists in the population. 
 %imperfect strategy transmission from parent to offspring can qualitatively alter the way population viscosity affects the expected frequency of altruists in the population: emigration can 
@@ -369,7 +373,14 @@ For each of the three life-cycles that we consider, we compute the expected (\ie
 
 We consider a population of size $N$, subdivided into $\ndemes$~demes connected by dispersal, each deme hosting exactly $n$ individuals (\ie, each deme contains $n$ sites, each of which is occupied by exactly one individual; we have $n \ndemes = N$). Each site has a unique label $i$, $1\leq i \leq N$. There are two types of individuals in the population, altruists and defectors. The type of the individual living at site $i$ ($1\leq i \leq N$) is given by an indicator variable $X_i$, equal to $1$ if the individual is an altruist, and to $0$ if it is a defector. The state of the entire population is given by a $N$-long vector $\mathbf{X}$. For a given population state $\mathbf{X}$, the proportion of altruists is $\overline{X} = \sum_{i=1}^N X_i$. All symbols are summarized in table~\ref{tab:symbols}.
 
-Reproduction is asexual. Parents transmit their strategy to their offspring with probability $1-\mu$; this transmission can be genetic or cultural (vertical cultural transmission), but for simplicity, we refer to the parameter $\mu$ as a mutation probability. With probability $\mu$, offspring do not inherit their strategy from their parent but instead get one randomly: with probability $\mutbias$, they become altruists, with probability $1-\mutbias$ they become defectors. We call the parameter $\mutbias$ the mutation bias. 
+Reproduction is asexual. The offspring of altruists are altruists themselves with probability $1-\mu_{1\to 0}$, and are defectors otherwise ($0<\mu_{1\to 0}\leq 1/2$). Similarly, the offspring of defectors are defectors with probability $1-\mu_{0\to 1}$, and are altruists otherwise ($0<\mu_{0\to 1}\leq 1/2$). Our calculations will be simpler if we introduce the following change of parameters:
+\begin{subequations}
+\begin{align}
+\nu & = \frac{\mu_{0\to 1}}{\mu_{1\to 0} + \mu_{0\to 1}} \quad (0<\nu<1), \textrm{ and}\\
+\mu &= \mu_{1\to 0} + \mu_{0\to 1} \quad (0 < \mu \leq 1).
+\end{align}
+\end{subequations}
+Parents transmit their strategy to their offspring with probability $1-\mu$; this transmission can be genetic or cultural (vertical cultural transmission), but for simplicity, we refer to the parameter $\mu$ as a mutation probability. With probability $\mu$, offspring do not inherit their strategy from their parent but instead get one randomly: with probability $\mutbias$, they become altruists, with probability $1-\mutbias$ they become defectors. We call the parameter $\mutbias$ the mutation bias. 
 
 % Social interactions and effect on fecundity (simple version). 
 An individual of type $X_k$ expresses a social phenotype $\phi_k = \selstr X_k$, where $\selstr$ is assumed to be small ($\selstr \ll 1$). Social interactions take place within each deme, benefits are shared with the $n-1$ other deme-mates. We assume that social interactions affect individual fecundity; $f_k$ denotes the fecundity of the individual at site $k$. We denote by $\bb$ the sum of the marginal effects of deme-mates' phenotypes on the fecundity of a focal individual, and by $-\cc$ the marginal effect of a focal individual's phenotype on its own fecundity ($\cc \leq \bb$; see \sysref{eq:derivf} for formal definitions). %With these assumptions are notation, at the first order in $selstr$, the fecundity of the individual living at site $k$ is given by
@@ -850,6 +861,61 @@ X_i & Indicator variable, equal to $1$ if site $i$ is occupied by an altruist, t
 \newpage
 \pagestyle{appendix}
 
+
+\section{Mutation parameters\label{sec:app:mutation}}
+
+In the main text, we first introduce effective mutation parameters: $\mu_{1\to 0}$, the probability that an altruist has defector offspring, and $\mu_{0\to 1}$, the probability that a defector has altruist offspring. 
+
+\subsection{Expected frequency of altruists at the mutation drift balance}
+Let $Y$ be the type of a randomly chosen individual  in the population, and let $Y'$ be the type of a randomly chosen individual at the next time step. Given a frequency $\nu$ of altruists in the population, we have
+\begin{subequations}
+\begin{align}
+\Esp{Y} &= \nu,\\
+\Esp{Y'} &= \nu (1-\mu_{1\to 0}) + (1-\nu) \mu_{0\to 1}.
+\end{align}
+\end{subequations}
+The expected frequency of altruists is found by solving $\Esp{Y} = \Esp{Y'}$, and we obtain
+\begin{equation}
+\nu = \frac{\mu_{0\to 1}}{\mu_{1\to 0 }+\mu_{0\to 1}}. \label{eq:app:nuformula}
+\end{equation}
+
+\subsection{Parent-offspring correlation at the mutation drift balance}
+
+We can then compute the parent-offspring type correlation at the mutation-drift balance. First, let us compute the parent-offspring covariance:
+%
+\begin{equation}\label{eq:app:Cov}
+\begin{aligned}
+\Cov{Y Y'} &= \Esp{Y Y'} - \Esp{Y'}\Esp{Y}\\
+& = \nu (1-\mu_{1\to 0}) - (\nu (1-\mu_{1\to 0}) + (1-\nu) \mu_{0\to 1}) \nu \\
+%
+& = \nu (1-\nu) (1 - \mu_{1\to 0} - \mu_{0\to 1}).
+\end{aligned}
+\end{equation}
+
+Then, the standard deviations are given by 
+\begin{equation}\label{eq:app:SD1}
+\begin{aligned}
+\sigma_Y &= \sqrt{\Esp{Y^2} - \Esp{Y}^2} = \sqrt{\Esp{Y} - \Esp{Y}^2} \\
+& = \sqrt{\nu (1-\nu)},
+\end{aligned}
+\end{equation}
+and
+\begin{equation}\label{eq:app:SD2}
+\begin{aligned}
+\sigma_{Y'} &= \sqrt{\Esp{Y'^2} - \Esp{Y'}^2}  = \sqrt{\Esp{Y'} - \Esp{Y'}^2} \\
+& = \sqrt{\nu (1-\nu) (1 - \mu_{1\to 0} - \mu_{0\to 1}) - (\nu (1-\nu) (1 - \mu_{1\to 0} - \mu_{0\to 1}))^2}.
+\end{aligned}
+\end{equation}
+
+The parent-offspring correlation is given by 
+\begin{displaymath}
+\mathrm{Corr}\left[Y Y' \right] = \frac{\Cov{Y Y'}}{\sigma_Y \sigma_{Y'}};
+\end{displaymath}
+using the formulas \eqref{eq:app:Cov}--(\ref{eq:app:SD2}), and replacing $\nu$ by its value (mutation-drift equilibrium, \eqref{eq:app:nuformula}), we obtain
+\begin{equation}
+\mathrm{Corr}\left[ Y Y' \right] = 1 - (\mu_{1\to 0} + \mu_{0\to 1}).
+\end{equation}
+\clearpage
 \section{Expected frequency of altruists\label{sec:app:EX}}
 
 %\textit{Note: The calculation steps are the same as the ones presented in \citet{Debarre2017}; they are presented here so that the article is self-contained, but there are no new results in \appname~\ref{sec:app:EX}. }
