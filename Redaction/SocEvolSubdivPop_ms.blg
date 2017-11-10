@@ -8,10 +8,9 @@ Reallocated str_pool (elt_size=1) to 260000 items from 195000.
 Reallocated str_pool (elt_size=1) to 325000 items from 260000.
 Reallocated str_pool (elt_size=1) to 390000 items from 325000.
 Database file #1: bibSCSP.bib
-Warning--I didn't find a database entry for "Ohtsuki2005"
 You've used 42 entries,
             2782 wiz_defined-function locations,
-            13430 strings with 353447 characters,
+            13428 strings with 353425 characters,
 and the built_in function-call counts, 23549 in all, are:
 = -- 2061
 > -- 804
@@ -50,4 +49,3 @@ warning$ -- 0
 while$ -- 186
 width$ -- 0
 write$ -- 508
-(There was 1 warning)

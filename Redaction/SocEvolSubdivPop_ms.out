@@ -1,5 +1,14 @@
 \BOOKMARK [1][]{appendix.A}{Mutation parameters}{}% 1
 \BOOKMARK [2][]{subsection.A.1}{Expected frequency of altruists at the mutation drift balance}{appendix.A}% 2
 \BOOKMARK [2][]{subsection.A.2}{Parent-offspring correlation at the mutation drift balance}{appendix.A}% 3
-\BOOKMARK [1][]{appendix.B}{Expected frequency of altruists}{}% 4
-\BOOKMARK [1][]{appendix.C}{Probabilities of identity by descent}{}% 5
+\BOOKMARK [2][]{subsection.A.3}{Redefining the mutation scheme}{appendix.A}% 4
+\BOOKMARK [1][]{appendix.B}{Expected frequency of altruists}{}% 5
+\BOOKMARK [2][]{subsection.B.1}{For a generic life-cycle }{appendix.B}% 6
+\BOOKMARK [2][]{subsection.B.2}{Derivatives for the specific life-cycles}{appendix.B}% 7
+\BOOKMARK [1][]{appendix.C}{Probabilities of identity by descent}{}% 8
+\BOOKMARK [2][]{subsection.C.1}{Expected state of pairs of sites and probabilities of identity by descent}{appendix.C}% 9
+\BOOKMARK [3][]{subsubsection.C.1.1}{Moran model}{subsection.C.1}% 10
+\BOOKMARK [3][]{subsubsection.C.1.2}{Wright-Fisher model}{subsection.C.1}% 11
+\BOOKMARK [2][]{subsection.C.2}{Probabilities of identity by descent in a subdivided population}{appendix.C}% 12
+\BOOKMARK [3][]{subsubsection.C.2.1}{Moran model}{subsection.C.2}% 13
+\BOOKMARK [3][]{subsubsection.C.2.2}{Wright-Fisher}{subsection.C.2}% 14
