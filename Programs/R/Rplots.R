@@ -32,7 +32,8 @@ initplotR <- function(savepdf = FALSE, LC = ""){
   par(mgp=mgppdf) # Position of the tick labels
   
   plot(0, type = "n", ylim = c(0, 1), xlim = c(0, max(migpoints)), axes = FALSE, ylab = "", xlab = "")
-  axis(1, pos = 0)
+  lines(c(0, max(migpoints)), rep(0, 2)) # x axis line
+  axis(1, pos = 0, lwd = 0, lwd.ticks = 1)
   axis(2, pos = 0)
   mtext("Emigration probability m", 1, line = 1.5, cex = cexlab)
   mtext("Relatedness R", 2, line = 1.5, las = 3, cex = cexlab)
