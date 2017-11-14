@@ -2,7 +2,7 @@
 
 % Taken from AmNat Class
 \usepackage{fullpage}
-\usepackage[authoryear,sectionbib,sort]{natbib}
+\usepackage[authoryear,sectionbib]{natbib}
 \linespread{1.7}
 \usepackage[utf8]{inputenc}
 \usepackage{lineno}
@@ -382,7 +382,7 @@ Reproduction is asexual. The offspring of altruists are altruists themselves wit
 \mu &= \mu_{1\to 0} + \mu_{0\to 1} \quad (0 < \mu \leq 1)\label{eq:mu}.
 \end{align}
 \end{subequations}
-The composite parameter $\mutbias$ corresponds to the expected frequency of altruists in the population at the mutation-drift balance (\ie, in the absence of selection; see \appname~\ref{sec:app:mutation} for details). We call $\mutbias$ the ``mutation bias'' parameter. Parameter $\mu$ is the sum of the two mutation probabilities. In the absence of selection, at the mutation-drift equilibrium, the correlation between the types of offspring and the type of their parents is $1-\mu$ (see \appname~\ref{sec:app:mutation} for details for the calculation). We call $\mu$ the mutation intensity.%We can describe our scheme of strategy transmission differently, and call $\mu$ a mutation parameter: Parents transmit their strategy to their offspring with probability $1-\mu$; with probability $\mu$, offspring do not inherit their strategy from their parent but instead get one randomly: with probability $\mutbias$, they become altruists, with probability $1-\mutbias$ they become defectors.\todo{faire figure?}  
+The composite parameter $\mutbias$ corresponds to the expected frequency of altruists in the population at the mutation-drift balance (\ie, in the absence of selection; see \appname~\ref{sec:app:mutation} for details). We call $\mutbias$ the ``mutation bias'' parameter. Parameter $\mu$ is the sum of the two mutation probabilities. In the absence of selection, at the mutation-drift equilibrium, the correlation between the type of offspring and the type of their parent is $1-\mu$ (see \appname~\ref{sec:app:mutation} for details for the calculation). We call $\mu$ the mutation intensity.%We can describe our scheme of strategy transmission differently, and call $\mu$ a mutation parameter: Parents transmit their strategy to their offspring with probability $1-\mu$; with probability $\mu$, offspring do not inherit their strategy from their parent but instead get one randomly: with probability $\mutbias$, they become altruists, with probability $1-\mutbias$ they become defectors.\todo{faire figure?}  
 
 % Social interactions and effect on fecundity (simple version). 
 An individual of type $X_k$ expresses a social phenotype $\phi_k = \selstr X_k$, where $\selstr$ is assumed to be small ($\selstr \ll 1$). Social interactions take place within each deme, benefits are shared with the $n-1$ other deme-mates. We assume that social interactions affect individual fecundity; $f_k$ denotes the fecundity of the individual at site $k$. We denote by $\bb$ the sum of the marginal effects of deme-mates' phenotypes on the fecundity of a focal individual, and by $-\cc$ the marginal effect of a focal individual's phenotype on its own fecundity ($\cc \leq \bb$; see \sysref{eq:derivf} for formal definitions). %With these assumptions are notation, at the first order in $selstr$, the fecundity of the individual living at site $k$ is given by
@@ -437,7 +437,7 @@ These neutral probabilities of identity by descent depend on the chosen life-cyc
 We also ran stochastic simulations (coded in \texttt{C}). The simulations were run for $10^8$ generations (one generation is one time step for the Wright-Fisher life-cycle, and $N$ time steps for the Moran life-cycles). For each set of parameters and life-cycle, using R \citep{R2015}, we estimated the long-term frequency of altruists by sampling the population every $10^3$ generations and computing the average frequency of altruists. 
 %
 All scripts are available at \\
-{\small \url{https://flodebarre.github.io/SocEvolSubdivPop/}} 
+{\small \url{https://flodebarre.github.io/SocEvolSubdivPop/}}\todo{change address} 
 
 \section*{Results}
 
@@ -453,19 +453,19 @@ For each of the life-cycles that we consider, the expected frequency of altruist
 \end{split}
 \end{equation}
 %
-with $W$ as defined in \eqref{eq:defW}. (Calculations leading to \eqref{eq:EXapprox} are presented in  \appname~\ref{sec:app:EX}; notations are recapitulated in table~\ref{tab:symbols}.)\\ The expected frequency of altruists in the population is approximated, under weak selection ($\selstr \ll 1$), by the sum of what it would be in the absence of selection ($\Espzero{\overline{X}} =\mutbias$), plus a deviation from this value, scaled by $\selstr$. The $-\mathcal{C}$ term groups the effects corresponding to the effects of a change of a focal individual's phenotype on its own fitness (with the fitness definition given in \eqref{eq:defW}.) The $\mathcal{B}$ term corresponds to the sum of the effects on an individual's fitness of the change of deme-mates' phenotypes. It is multiplied by $R$, which is relatedness. 
+with $W$ as defined in \eqref{eq:defW}. (Calculations leading to \eqref{eq:EXapprox} are presented in  \appname~\ref{sec:app:EX}; notations are recapitulated in table~\ref{tab:symbols}.)\\ The expected frequency of altruists in the population is approximated, under weak selection ($\selstr \ll 1$), by the sum of what it would be in the absence of selection ($\Espzero{\overline{X}} =\mutbias$), plus a deviation from this value, scaled by $\selstr$. The $-\mathcal{C}$ term corresponds to the effects of a change of a focal individual's phenotype on its own fitness (with the fitness definition given in \eqref{eq:defW}). The $\mathcal{B}$ term corresponds to the sum of the effects of the change of deme-mates' phenotypes on an individual's fitness. It is multiplied by $R$, which is relatedness. 
 
 % Mutation terms in the equation
-The change of mutation parameters proposed in \eqref{eq:changemut} allows us to decouple the effects of the two new mutation parameters, $\mutbias$ and $\mu$. The mutation bias $\mutbias$, which was defined in \eqref{eq:nu}, does not affect the sign of the second (``deviation'') term in \eqref{eq:EXapprox}; it only appears in the $\mutbias (1-\mutbias)$ product. The mutation intensity $\mu$, however, affects the value of $W$, $\Qin$ and $\Qout$. The presence of $\mu$ at the denominator in \eqref{eq:EXapprox} may look ominous; however, both $R$ and $(1-\Qout)/\mu$ have a finite limit when $\mu \to 0$. 
+The parametrization proposed in \eqref{eq:changemut} allows us to decouple the effects of the two new mutation parameters, $\mutbias$ and $\mu$. The mutation bias $\mutbias$, which was defined in \eqref{eq:nu}, does not affect the sign of the second (``deviation'') term in \eqref{eq:EXapprox}; it only appears in the $\mutbias (1-\mutbias)$ product. The mutation intensity $\mu$, however, affects the values of $W$, $\Qin$ and $\Qout$. The presence of $\mu$ at the denominator in \eqref{eq:EXapprox} may look ominous; however, both $R$ and $(1-\Qout)/\mu$ have a finite limit when $\mu \to 0$. 
 
 The different terms depend on the chosen life-cycle. We first focus on relatedness $R$.
 
 
 \subsection*{Relatedness $R$}
 
-Within-deme relatedness depends on the number of individuals that are born at each time step, and hence on the chosen life-cycle. Recall that in a Moran life-cycle (denoted by $M$), one individual updated at each time step, while under a Wright-Fisher life-cycle, $N$ individuals -- the whole population -- are updated at each time step. The formulas for relatedness for any number of demes $\ndemes$ and mutation intensity $\mu$ are presented in \appname~\ref{sec:app:Qsubdiv} (\eqref{eq:app:RM} and \eqref{eq:app:RWF}). When we let the number of demes go to infinity and the intensity of mutation be vanishingly small, we recover the classical formulas for relatedness as limit cases (\eqref{eq:app:RMlim} and \eqref{eq:app:RWFlim}). 
+Within-deme relatedness depends on the number of individuals that are born at each time step, and hence on the chosen life-cycle. Recall that in a Moran life-cycle (denoted by $\Moran$), one individual is updated at each time step, while under a Wright-Fisher life-cycle (denoted by $\WF$), $N$ individuals -- the whole population -- are updated at each time step. The formulas for relatedness for any number of demes $\ndemes$ and mutation intensity $\mu$ are presented in \appname~\ref{sec:app:Qsubdiv} (\eqref{eq:app:RM} and \eqref{eq:app:RWF}). When we let the number of demes go to infinity ($\ndemes\to \infty$) and the intensity of mutation be vanishingly small ($\mu\to 0$), we recover the classical formulas for relatedness as limit cases (\eqref{eq:app:RMlim} and \eqref{eq:app:RWFlim}). 
 
-The effects of emigration $m$ and mutation intensity $\mu$ on relatedness are represented in figure~\ref{fig:R}. For $0<m<1-1/\ndemes$, within-deme relatedness is positive, decreases with $m$ and decreases with $\mu$ (the mutation bias $\nu$ has no effect). The effect of the mutation intensity $\mu$ on relatedness is strongest at low emigration probabilities $m$. As $m$ increases, the relatedness values for different mutation intensities get closer, until they all hit zero for $m=1-1/\ndemes$ (the emigration probability such that an offspring is equally likely to land in its parent's deme or in any other deme). 
+The effects of emigration $m$ and mutation intensity $\mu$ on relatedness are represented in figure~\ref{fig:R}. For $0<m<1-1/\ndemes$, within-deme relatedness is positive, and it decreases with $m$ and with $\mu$ (the mutation bias $\nu$ has no effect). The effect of the mutation intensity $\mu$ on relatedness is strongest at low emigration probabilities $m$. As $m$ increases, the relatedness values for different mutation intensities get closer, until they all hit zero for $m=1-1/\ndemes$ (the emigration probability such that an offspring is equally likely to land in its parent's deme or in any other deme, \ie, such that there is no proper population subdivision anymore). 
 
 \input{Figure_R.tex}
 
@@ -500,26 +500,26 @@ Primary effects are the same for all the life-cycles that we consider:
 %
 and they do not depend on the emigration probability $m$ (see \appname~\ref{sec:app:dW} for details of the calculations). 
 
-As we have seen above, the relatedness terms $R^{\Moran}$ and $R^{\WF}$ decrease with $m$ (keeping $m<1 - \frac{1}{\ndemes}$; see figure~\ref{fig:R}). Consequently, if we ignored secondary effects, we may conclude that the expected frequency of altruists in the population $\Esp{\overline{X}}$ decreases as the emigration probability $m$ increases. However, secondary effects play a role as well.
+As we have seen above, the relatedness terms $R^{\Moran}$ and $R^{\WF}$ decrease with $m$ (keeping $m<1 - 1/\ndemes$; see figure~\ref{fig:R}). Consequently, if we ignored secondary effects, we would conclude that the expected frequency of altruists in the population $\Esp{\overline{X}}$ decreases as the emigration probability $m$ increases. However, secondary effects play a role as well.
 
 \subsubsection*{Secondary effects}
 
-Secondary effects take competition into account, that is, how the change in the fecundity of an individual affects the fitness of another one. As shown already in models with nearly perfect strategy transmission \citep{GrafenArchetti2008}, the competition radius depends on the life-cycle. Given the way the model is formulated, we have $-\mathcal{C} = \mathcal{B}/(n-1)$ for the life-cycles that we consider (see \appname~\ref{sec:app:dW} for details of the calculations). 
+Secondary effects take competition into account, that is, how the change in the fecundity of an individual affects the fitness of another one. As shown already in models with nearly perfect strategy transmission \citep{GrafenArchetti2008}, competition terms depend on the chosen life-cycle, because life-cycle details affect the distance at which competitive effects are felt. Given the way the model is formulated, we have $-\mathcal{C} = \mathcal{B}/(n-1)$ for the life-cycles that we consider (see \appname~\ref{sec:app:dW} for details of the calculations). 
 
-Under the Moran Birth-Death life-cycle, competition is felt one dispersal step away. Note also that for this life-cycle, the probability of dying $D_i$ depends on the composition of the population: 
+Under the Moran Birth-Death life-cycle, both the probability of reproducing and the probability of dying depend on the composition of the population. We obtain the following secondary effects: 
 \begin{subequations}\label{eq:secondary}
 \begin{equation}\label{eq:BDsec}
 -\mathcal{C}_{\secd}^{\BD} = \frac{\mathcal{B}_{\secd}^{\BD}}{n-1}= - (\bb - \cc) \left( -\dfrac{\mu}{N} + \dfrac{1-m}{n} \right).
 \end{equation}
 
-The competitive effects are the same for the Moran Death-Birth and Wright-Fisher life-cycles; competition is felt two dispersal steps away. In both cases, the probabilities of dying are constant, so we can factor $(1-\mu)$ in the equations:
+The competitive effects are the same for the Moran Death-Birth and Wright-Fisher life-cycles. In both cases, the probabilities of dying are constant, so we can factor $(1-\mu)$ in the equations:
 \begin{equation}\label{eq:DBsec}
 -\mathcal{C}_{\secd}^{\DB} = \frac{\mathcal{B}_{\secd}^{\DB}}{n-1}= -\mathcal{C}_{\secd}^{\WF} = \frac{\mathcal{B}_{\secd}^{\WF}}{n-1}=
 - (\bb - \cc) (1-\mu) \left( \frac{(1-m)^2}{n} + \frac{m^2}{N-n}\right). 
 \end{equation}
 \end{subequations}
 
-These secondary effects remain negative for the range of emigration values that we consider ($0<m<1-1/\ndemes)$, and increase with $m$; in other words, the intensity of competition decreases as emigration $m$ increases.
+These secondary effects (\eqref{eq:BDsec} and \eqref{eq:DBsec}) remain negative for the range of emigration values that we consider ($0<m<1-1/\ndemes)$, and increase with $m$. In other words, the intensity of competition decreases as emigration $m$ increases.
 
 While the value of these secondary effects increases with emigration $m$, relatedness $R$, by which they are eventually multiplied in \eqref{eq:EXapprox}, decreases with $m$. We therefore cannot determine the overall effect of emigration $m$ on the expected frequency of altruists in the population by inspecting the different terms of \eqref{eq:EXapprox} in isolation. For each life-cycle, we need to consider the entire equations to know the overall effect of the emigration probability $m$ on the expected frequency of altruists $\Esp{\overline{X}}$ and on how it is affected by the (in)fideliy of parent-offspring transmission $\mu$. 
  
@@ -529,7 +529,7 @@ The rather lengthy formulas that we obtain are relegated to the \appname{} and s
 
 \subsubsection*{Moran Birth-Death}
 
-For the Moran Birth-Death life-cycle, we find that the expected frequency of altruists $\Esp{\overline{X}}$ is a monotonic function of the emigration probability $m$; the direction of the change depends on the value of the mutation probability $\mu$ compared to a threshold value $\mu_c^{\BD}$. When $\mu<\mu_c^{\BD}$, $\Esp{\overline{X}}$ decreases with $m$, while when $\mu>\mu_c^{\BD}$, $\Esp{\overline{X}}$  increases with $m$. The critical value $\mu_c^{\BD}$ is given by 
+For the Moran Birth-Death life-cycle, we find that the expected frequency of altruists $\Esp{\overline{X}}$ is a monotonic function of the emigration probability $m$. The direction of the change depends on the value of the mutation probability $\mu$ compared to a threshold value $\mu_c^{\BD}$. When $\mu<\mu_c^{\BD}$, $\Esp{\overline{X}}$ decreases with $m$, while when $\mu>\mu_c^{\BD}$, $\Esp{\overline{X}}$  increases with $m$. The critical value $\mu_c^{\BD}$ is given by 
 \begin{equation}\label{eq:mucBD}
 \mu_c^{\BD} = %
 1 - \frac{\bb  - \cc + \sqrt{(\bb - \cc) \left(4 \bb N^2 + \bb - \cc \right)} }{2 \bb N}
@@ -550,7 +550,7 @@ The relationship between $\Esp{\overline{X}}$ and $m$ is a bit more complicated 
 \end{cases}
 \end{equation} 
 %
-When $\bb < \cc (n+1)$, the mutation threshold does not depend on the number of demes $\ndemes$, but increases when the size of the demes $n$ increases. In figure~\ref{fig:EX}\subref{fig:EXDB}, the parameters are such that $\mu_c^{\DB} = 0$. 
+When $\bb < \cc (n+1)$, the mutation threshold does not depend on the number of demes $\ndemes$, but increases with deme size $n$. In figure~\ref{fig:EX}\subref{fig:EXDB}, the parameters are such that $\mu_c^{\DB} = 0$. 
 
 When $\mu > \mu_c^{\DB}$, the expected frequency of altruists $\Esp{\overline{X}}$ reaches a maximum at an emigration probability $m_c^{\DB}$ (whose complicated equation is given in the supplementary Mathematica file), as can be seen in figure~\ref{fig:EX}\subref{fig:EXDB}. When the mutation probability gets close to $0$ ($\mu \to 0$), $m_c^{\DB}$ also gets close to $0$.
 
@@ -568,36 +568,20 @@ With the Wright-Fisher life-cycle however, the expected frequency of altruists r
 
 \input{Figure_EX-weaksel.tex}
 
-\subsection*{Interpreting the effect of $m$ on $\Esp{\overline{X}}$}
-
-When strategy transmission is perfect ($\mu\to 0$, the classically studied case), emigration has either no effect of the expected frequency of altruists in the population (under Wright-Fisher and Moran Birth-Death life-cycles, dashed lines in figure~\ref{fig:EX}\subref{fig:EXBD}, \subref{fig:EXWF}), or has a negative effect (under Moran Death-Birth, figure~\ref{fig:EX}\subref{fig:EXDB}). Here, we find thresholds of transmission (in)fidelity $\mu$ such that higher emigration probabilities can favor altruistic behavior. The result may appear counterintuitive because explanations for the effect of population viscosity on the evolution of altruism often focus on primary effects. The role played by secondary effects is harder to grasp. To better understand the role played by the mutation probability $\mu$, we now focus \begin{inparaenum}[\it i\rm )] \item on a qualitative condition for the evolution of altruism: altruism is favored if the expected frequency is higher than what it would be in the absence of selection, $\Esp{\overline{X}} > \mutbias$; and since this qualitative condition is not satisfied in the two other life-cycles, \item we concentrate on the Death-Birth life-cycle.
-\end{inparaenum}
-%
-
-Having made sure that $\mathcal{B}^{\DB}>0$ (as shown in the supplementary Mathematical file), the qualitative condition for altruism to be favored is given by 
-\begin{equation}\label{eq:BCcond}
-\Esp{\overline{X}} > \mutbias \Leftrightarrow R^{\Moran} > \frac{\mathcal{C}^{\DB}}{\mathcal{B^{\DB}}}.
-\end{equation}
-%
-With the Death-Birth life-cycle, the $\mathcal{C}^{\DB}/\mathcal{B}^{\DB}$ ratio does not change with the mutation probability $\mu$, but it decreases with the emigration probability $m$ ($0<m<1-1/\ndemes$; see the thick black curve in figure~\ref{fig:DB}\subref{fig:sub:explain}). This decrease of the $\mathcal{C}^{\DB}/\mathcal{B}^{\DB}$ ratio is due to secondary effects (competition) diminishing as emigration increases. Relatedness, on the other hand, decreases with both $\mu$ and $m$ (see figure~\ref{fig:DB}\subref{fig:sub:explain}). We need to explain the effect of the emigration probability $m$ on condition~\eqrefnoeq{eq:BCcond} for different values of mutation intensity $\mu$. 
-
-When the emigration probability $m$ is high, relatedness gets closer to zero for all values of mutation intensity $\mu$, while the $\mathcal{C}^{\DB}/\mathcal{B}^{\DB}$ remains positive; condition~\eqrefnoeq{eq:BCcond} is not satisfied. On the other hand, when the emigration probability $m$ is vanishingly small, $\lim_{m\to 0} R^{\Moran} \leq \lim_{m\to 0} \frac{\mathcal{C}^{\DB}}{\mathcal{B^{\DB}}}$, the two only being equal when $\mu=0$. Hence, condition~\eqrefnoeq{eq:BCcond} is satisfied for vanishingly low $m$ only when strategy transmission is perfect. Finally, as $m$ increases to intermediate values, the $\frac{\mathcal{C}^{\DB}}{\mathcal{B^{\DB}}}$ ratio decreases with a steeper slope than relatedness $R$, so that the curves can cross provided the mutation probability $\mu$ is not too high, \ie, that $R$ initially was not too low already. Hence, for no too high mutation intensity,  there is a range of emigration values $m$ such that condition~\eqrefnoeq{eq:BCcond} is satisfied.
-
-\input{Figure_explain.tex}
 
 \subsection*{Relaxing key assumptions}
 
-To derive our analytical results, we had to make a number of simplifying assumptions, such as the fact that selection is weak ($\selstr \ll 1$), and the fact that the structure of the population is regular (all demes have the same size $n$). We explored with numerical simulations the effect of relaxing these key assumptions. 
+To derive our analytical results, we had to make a number of simplifying assumptions, such as the fact that selection is weak ($\selstr \ll 1$), and the fact that the structure of the population is regular (all demes have the same size $n$). We checked with numerical simulations the robustness of our results when these key assumptions are relaxed. 
 
-When selection is strong, the patterns that we identified not only still hold but are even more marked, as shown on figure~\ref{fig:EXstrongsel}. 
+\paragraph{Strong selection}When selection is strong, the patterns that we identified not only still hold but are even more marked, as shown on figure~\ref{fig:EXstrongsel}. 
 
-To relax the assumption of equal deme sizes, we randomly drew deme sizes at the beginning of simulations, with sizes ranging from $2$ to $6$ individuals and on average $\overline{n} = 4$ individuals per deme as previously. As shown in figure~\ref{fig:EXhtg}, the patterns initially obtained with a homogeneous population structure are robust when the structure is heterogeneous. 
+\paragraph{Heterogeneity in deme sizes}To relax the assumption of equal deme sizes, we randomly drew deme sizes at the beginning of simulations, with sizes ranging from $2$ to $6$ individuals and on average $\overline{n} = 4$ individuals per deme as previously. As shown in figure~\ref{fig:EXhtg}, the patterns initially obtained with a homogeneous population structure are robust when the structure is heterogeneous. 
  
-For the Moran model, it may seem odd that an offspring can replace its own parent (which can occur since $d_{ii} \neq 0$). Figure~\ref{fig:EXdself}, plotted with dispersal probabilities preventing immediate replacement of one's own parent (for all sites $i$, $d_{ii}=\dself=0$; $\din = (1-m)/(n-1)$ for two different sites in the same deme, $\dout$ remaining unchanged), confirms that this does affect our conclusions. 
+\paragraph{No self-replacement}For the Moran model, it may seem odd that an offspring can replace its own parent (which can occur since $d_{ii} \neq 0$). Figure~\ref{fig:EXdself}, plotted with dispersal probabilities preventing immediate replacement of one's own parent (for all sites $i$, $d_{ii}=\dself=0$; $\din = (1-m)/(n-1)$ for two different sites in the same deme, $\dout$ remaining unchanged), confirms that this does affect our conclusions. 
 
-The results are obtained in a population of finite size (the figures are done with $\ndemes =15$ demes), but still hold when  the size of the population is larger (see \eg, figure~\ref{fig:DB}\subref{fig:sub:qualit}, showing the range of emigration and mutation values such that altruism is favored, plotted also for $\ndemes\to \infty$).
+\paragraph{Infinite number of demes}Our results are obtained in a population of finite size (the figures are drawn with $\ndemes =15$ demes), but still hold when the size of the population is larger. Figure~\ref{fig:DB}\subref{fig:sub:qualit} shows the range of emigration and mutation values such that altruism is favored, plotted also for $\ndemes\to \infty$.
 
-Compared to graphs classically used in evolutionary graph theory (\eg, regular random graphs, grids), the island model is particular because the interaction graph and the dispersal graph are different: interactions take place only within demes ($\eout = 0$), while offspring can disperse out of their natal deme ($\dout >0$). One may wonder whether our result depends on this difference between the two graphs. Figure~\ref{fig:EXsameDE} shows that the result still holds when the dispersal and interaction graphs are the same. In this figure indeed, we let a proportion $m$ (equal to the dispersal probability) of interactions occur outside of the deme where the individuals live, and set $\dself$, the probability of self replacement, equal to $0$, so that the dispersal and interactions graphs are the same. Our conclusions remain unchanged.
+\paragraph{Same graphs for dispersal and social interactions} Compared to graphs classically used in evolutionary graph theory (\eg, regular random graphs, grids), the island model is particular because the interaction graph and the dispersal graph are different: interactions take place only within demes ($\eout = 0$), while offspring can disperse out of their natal deme ($\dout >0$). One may wonder whether our result depends on this difference between the two graphs. Figure~\ref{fig:EXsameDE} shows that the result still holds when the dispersal and interaction graphs are the same. In this figure indeed, we let a proportion $m$ (equal to the dispersal probability) of interactions occur outside of the deme where the individuals live, and set $\dself$, the probability of self replacement, equal to $0$, so that the dispersal and interactions graphs are the same. Our conclusions remain unchanged.
 
 
 
@@ -612,11 +596,28 @@ Often, evolutionary success is measured qualitatively, by comparing a quantity (
 Some of our conclusions change if we switch to this qualitative measure of evolutionary success: Under the Moran Birth-Death and Wright-Fisher life-cycles, population viscosity does not promote the evolution of altruism -- actually, these two life-cycles cannot ever promote altruistic behavior for any regular population structure \citep{Taylor2011}, whichever the probability of mutation \citep{Debarre2017}. 
 However, under a Moran Death-Birth life-cycle (figure~\ref{fig:EX}\subref{fig:EXDB}), altruism can be favored only at intermediate emigration probabilities. Starting for initially low values of $m$, increasing the emigration probability can still favor the evolution of altruism under this qualitative criterion (see figure~\ref{fig:DB}\subref{fig:sub:qualit}.)  
 
+
+\subsection*{Interpreting the effect of $m$ on $\Esp{\overline{X}}$}
+
+%When strategy transmission is perfect ($\mu\to 0$, the classically studied case), emigration has either no effect of the expected frequency of altruists in the population (under Wright-Fisher and Moran Birth-Death life-cycles, dashed lines in figure~\ref{fig:EX}\subref{fig:EXBD}, \subref{fig:EXWF}), or has a negative effect (under Moran Death-Birth, dashed line in figure~\ref{fig:EX}\subref{fig:EXDB}). 
+%Here, we find thresholds of transmission (in)fidelity $\mu$ such that higher emigration probabilities can favor altruistic behavior. The result may appear counterintuitive because explanations for the effect of population viscosity on the evolution of altruism often focus on primary effects. The role played by secondary effects is harder to grasp. 
+To better understand the role played by the mutation intensity $\mu$, we focus on the qualitative condition for the evolution of altruism ($\Esp{\overline{X}} > \mutbias$); and on the Death-Birth life-cycle, since this qualitative condition is not satisfied in the two other life-cycles. %
+Having made sure that $\mathcal{B}^{\DB}>0$ (as shown in the supplementary Mathematical file), the qualitative condition for altruism to be favored is given by 
+\begin{equation}\label{eq:BCcond}
+\Esp{\overline{X}} > \mutbias \Leftrightarrow R^{\Moran} > \frac{\mathcal{C}^{\DB}}{\mathcal{B^{\DB}}}.
+\end{equation}
+%
+With the Death-Birth life-cycle, the $\mathcal{C}^{\DB}/\mathcal{B}^{\DB}$ ratio does not change with the mutation probability $\mu$ (the $(1-\mu)$ factors simplified out), but the ratio decreases with the emigration probability $m$ (with $0<m<1-1/\ndemes$; see the thick black curve in figure~\ref{fig:DB}\subref{fig:sub:explain}). This decrease of the $\mathcal{C}^{\DB}/\mathcal{B}^{\DB}$ ratio is due to secondary effects (competition) diminishing as emigration increases. Relatedness, on the other hand, decreases with both $\mu$ and $m$ (see figure~\ref{fig:DB}\subref{fig:sub:explain}). We need to explain the effect of the emigration probability $m$ on condition~\eqrefnoeq{eq:BCcond} for different values of mutation intensity $\mu$. 
+
+When the emigration probability $m$ is high, relatedness gets closer to zero for all values of mutation intensity $\mu$, while the $\mathcal{C}^{\DB}/\mathcal{B}^{\DB}$ remains positive; condition~\eqrefnoeq{eq:BCcond} is not satisfied. On the other hand, when the emigration probability $m$ is vanishingly small, $\lim_{m\to 0} R^{\Moran} \leq \lim_{m\to 0} \frac{\mathcal{C}^{\DB}}{\mathcal{B^{\DB}}}$, the two only being equal when $\mu=0$. Hence, condition~\eqrefnoeq{eq:BCcond} is satisfied for vanishingly low $m$ only when strategy transmission is perfect. Finally, as $m$ increases to intermediate values, the $\frac{\mathcal{C}^{\DB}}{\mathcal{B^{\DB}}}$ ratio decreases with a steeper slope than relatedness $R$, so that the curves can cross provided the mutation probability $\mu$ is not too high, \ie, that $R$ was not initially too low already. Hence, for no too high mutation intensity,  there is a range of emigration values $m$ such that condition~\eqrefnoeq{eq:BCcond} is satisfied.
+
+\input{Figure_explain.tex}
+
 % How to explain the result
 \subsection*{The result is due to secondary effects}
-The result, that frequency of altruists can increase with the emigration probability $m$, may seem counterintuitive. It is the case because verbal explanations for the evolution of altruism often rely on primary effects only. Relatedness $R$ decreases with $m$, so it may be tempting to conclude that increases in the emigration probability $m$ are necessarily detrimental to the evolution of altruism. However, secondary effects play an opposite role, as competition decreases with $m$. To further explain the relative weight of the detrimental and beneficial consequences of increases in the emigration probability $m$, let us focus on the Death-Birth life-cycle and consider the qualitative criterion for evolutionary success ($\Esp{\overline{X}}>\mutbias$, \ie{} $R > \mathcal{C}/\mathcal{B}$; figure~\ref{fig:DB}.)
+The result, that frequency of altruists can increase with the emigration probability $m$, may seem counterintuitive. It is the case because verbal explanations for the evolution of altruism often rely on primary effects only. Relatedness $R$ decreases with $m$, so it may be tempting to conclude that increases in the emigration probability $m$ are necessarily detrimental to the evolution of altruism. However, secondary effects play an opposite role, as competition decreases with $m$, and the effect is strongest at low values of $m$ (see the black curve on figure~\ref{fig:DB}\subref{fig:sub:explain}; in the absence of secondary effects, it would just be a horizontal line). %To further explain the relative weight of the detrimental and beneficial consequences of increases in the emigration probability $m$, let us focus on the Death-Birth life-cycle and consider the qualitative criterion for evolutionary success ($\Esp{\overline{X}}>\mutbias$, \ie{} $R > \mathcal{C}/\mathcal{B}$; figure~\ref{fig:DB}.)
 
-When parent-offspring strategy transmission is nearly perfect ($\mu \to 0$), for vanishingly small emigration probabilities ($m \to 0$), both $R$ and the $\mathcal{C}/\mathcal{B}$ ratio tend to $1$. An increase in the mutation probability $\mu$ reduces $R$ while leaving $\mathcal{C}/\mathcal{B}$ unchanged. In other words, for vanishingly small emigration probabilities, altruism is favored by selection only when transmission fidelity is nearly perfect. Let us now consider that benefits $\bb$ of social interactions are high enough for altruism to be favored at low $m$ when $\mu \to 0$ (as in figure~\ref{fig:DB}\subref{fig:sub:explain}). Starting from low values of $m$, small increases in $m$ have a stronger effect on the $\mathcal{C}/\mathcal{B}$ ratio than on relatedness $R$: local competition is initially so strong that the beneficial reduction in competition caused by an increase in $m$ initially predominates over the detrimental reduction in relatedness $R$. The opposite holds for much higher values of $m$: competition is already small enough that reducing it further does not outweigh the reduction in relatedness $R$. 
+%When parent-offspring strategy transmission is nearly perfect ($\mu \to 0$), for vanishingly small emigration probabilities ($m \to 0$), both $R$ and the $\mathcal{C}/\mathcal{B}$ ratio tend to $1$. An increase in the mutation probability $\mu$ reduces $R$ while leaving $\mathcal{C}/\mathcal{B}$ unchanged. In other words, for vanishingly small emigration probabilities, altruism is favored by selection only when transmission fidelity is nearly perfect. Let us now consider that benefits $\bb$ of social interactions are high enough for altruism to be favored at low $m$ when $\mu \to 0$ (as in figure~\ref{fig:DB}\subref{fig:sub:explain}). Starting from low values of $m$, small increases in $m$ have a stronger effect on the $\mathcal{C}/\mathcal{B}$ ratio than on relatedness $R$: local competition is initially so strong that the beneficial reduction in competition caused by an increase in $m$ initially predominates over the detrimental reduction in relatedness $R$. The opposite holds for much higher values of $m$: competition is already small enough that reducing it further does not outweigh the reduction in relatedness $R$. 
 
 Secondary effects are less straightforward to understand than primary effects, and yet they play a crucial role for social evolution in spatially structured populations. Competition among relatives is for instance the reason for \citet{Taylor1992}'s cancellation result. Similarly, the qualitative differences between the Moran Birth-Death and Moran Death-Birth life-cycles is explained by the different scales of competition that the two life-cycle produce \citep{GrafenArchetti2008, DebarreHD2014}. Secondary effects are also behind the evolution of social behaviors such as spite \citep{WestGardner2010}. 
 
@@ -647,7 +648,8 @@ It remains to be investigated how imperfect strategy transmission would affect t
 This work also raises the question of what would happen if dispersal (\eg, the emigration probability $m$) could evolve as well. Recent work on the topic has shown that under some conditions disruptive selection could take place, leading to a polymorphism between sessile altruists and mobile defectors \citep{Parvinen2013, MullonKL2017bioRxiv}. The assumptions of these studies however  differ from ours in important ways, in that they consider continuous traits and use an adaptive dynamics framework, where, notably, mutations are assumed to be very rare. It remains to be investigated how non-rare and potentially large mutations would affect their result. 
 
 \section*{Acknowledgements}
-Thanks to Charles Mullon for detailed comments on a previous version of the manuscript, and for suggesting the $\mathcal{B} R - \mathcal{C}$ decomposition. At ESEB 2017, S\'ebastien Lion suggested using the $R$ vs. $\mathcal{C}/\mathcal{B}$ comparison to interpret the result. This work was funded by a ANR-14-ACHN-0003-01 grant. 
+[redacted]
+%Thanks to Charles Mullon for detailed comments on a previous version of the manuscript, and for suggesting the $\mathcal{B} R - \mathcal{C}$ decomposition. At ESEB 2017, S\'ebastien Lion suggested using the $R$ vs. $\mathcal{C}/\mathcal{B}$ comparison to interpret the result. This work was funded by a ANR-14-ACHN-0003-01 grant. 
 
 \singlespacing
 %%% ___ BIBLIO _____
