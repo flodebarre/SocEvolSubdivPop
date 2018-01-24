@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.24)  14 NOV 2017 15:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.24)  24 JAN 2018 16:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1931,26 +1931,44 @@ File: T1NimbusMonoN.fd 2016/01/08 Font definitions for T1/NimbusMonoN (msharpe)
 LaTeX Font Info:    Font shape `T1/NimbusMonoN/m/n' will be
 (Font)              scaled to size 10.0pt on input line 379.
 
-[6] [7] [8]
+[6] [7]
+Overfull \hbox (11.57326pt too wide) in paragraph at lines 419--420
+\T1/futs/m/n/10.95 With so-cial in-ter-ac-tions af-fect-ing in-di-vid-ual fe-cu
+n-dity, pre-vi-ous stud-ies have shown
+ []
+
+
+Overfull \hbox (1.80586pt too wide) in paragraph at lines 419--420
+\T1/futs/m/n/10.95 cycles, be-cause the ex-pected fre-quency of al-tru-ists un-
+der these life-cycles is lower
+ []
+
+[8]
 LaTeX Font Info:    Font shape `T1/NimbusMonoN/m/n' will be
-(Font)              scaled to size 10.95pt on input line 437.
+(Font)              scaled to size 10.95pt on input line 439.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 440.
+(Font)              scaled to size 9.19998pt on input line 442.
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <10> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 440.
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 442.
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <7.6> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 440.
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 442.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 440.
+(Font)              scaled to size 9.19998pt on input line 442.
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 440.
- [9]
+ine 442.
+ [9] [10]
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <9> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 464.
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 468.
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <7> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 464.
- [10] (./Figure_R.tex
-<../Programs/R/Pics/RplotM.pdf, id=283, 289.08pt x 307.1475pt>
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 468.
+
+Overfull \hbox (14.45155pt too wide) in paragraph at lines 470--471
+\FML/futmi/m/it/10.95 N[]$ \T1/futs/m/n/10.95 and mu-ta-tion in-ten-sity $\FML/
+futmi/m/it/10.95 ^^V$ \T1/futs/m/n/10.95 are pre-sented in Ap-pendix [][]C.2[][
+] (eq. ([][]A44[][]) and eq. ([][]A50[][])).
+ []
+
+(./Figure_R.tex <../Programs/R/Pics/RplotM.pdf, id=293, 289.08pt x 307.1475pt>
 File: ../Programs/R/Pics/RplotM.pdf Graphic file (type pdf)
 
 <use ../Programs/R/Pics/RplotM.pdf>
@@ -1959,7 +1977,7 @@ Package pdftex.def Info: ../Programs/R/Pics/RplotM.pdf used on input line 4.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <8> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 4.
 
-<../Programs/R/Pics/RplotWF.pdf, id=284, 289.08pt x 307.1475pt>
+<../Programs/R/Pics/RplotWF.pdf, id=294, 289.08pt x 307.1475pt>
 File: ../Programs/R/Pics/RplotWF.pdf Graphic file (type pdf)
 
 <use ../Programs/R/Pics/RplotWF.pdf>
@@ -1973,19 +1991,19 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 ) [11] [12 <../Programs/R/Pics/RplotM.pdf> <../Programs/R/Pics/RplotWF.pdf>]
 [13]
-Overfull \hbox (4.5058pt too wide) in paragraph at lines 526--526
+Overfull \hbox (4.5058pt too wide) in paragraph at lines 530--530
 [][]\T1/futs/b/n/12 Changes of the ex-pected fre-quency of al-tru-ists with the
  em-i-gra-tion prob-
  []
 
-
-Overfull \hbox (0.15439pt too wide) in paragraph at lines 540--541
+[14]
+Overfull \hbox (0.15439pt too wide) in paragraph at lines 544--545
 []\T1/futs/m/n/10.95 With this life-cycle how-ever, the ex-pected fre-quency of
  al-tru-ists $\U/futm/m/n/10.95 E[][][]$ \T1/futs/m/n/10.95 re-mains
  []
 
-[14] [15] (./Figure_EX-weaksel.tex
-<../Programs/R/Pics/EXDB_sel0.005_htg0.pdf, id=379, 289.08pt x 361.35pt>
+[15] (./Figure_EX-weaksel.tex
+<../Programs/R/Pics/EXDB_sel0.005_htg0.pdf, id=386, 289.08pt x 361.35pt>
 File: ../Programs/R/Pics/EXDB_sel0.005_htg0.pdf Graphic file (type pdf)
 
 <use ../Programs/R/Pics/EXDB_sel0.005_htg0.pdf>
@@ -1993,7 +2011,7 @@ Package pdftex.def Info: ../Programs/R/Pics/EXDB_sel0.005_htg0.pdf used on inpu
 t line 5.
 (pdftex.def)             Requested size: 128.0374pt x 160.0421pt.
 
-<../Programs/R/Pics/EXBD_sel0.005_htg0.pdf, id=380, 289.08pt x 361.35pt>
+<../Programs/R/Pics/EXBD_sel0.005_htg0.pdf, id=387, 289.08pt x 361.35pt>
 File: ../Programs/R/Pics/EXBD_sel0.005_htg0.pdf Graphic file (type pdf)
 
 <use ../Programs/R/Pics/EXBD_sel0.005_htg0.pdf>
@@ -2001,7 +2019,7 @@ Package pdftex.def Info: ../Programs/R/Pics/EXBD_sel0.005_htg0.pdf used on inpu
 t line 7.
 (pdftex.def)             Requested size: 128.0374pt x 160.0421pt.
 
-<../Programs/R/Pics/EXWF_sel0.005_htg0.pdf, id=381, 289.08pt x 361.35pt>
+<../Programs/R/Pics/EXWF_sel0.005_htg0.pdf, id=388, 289.08pt x 361.35pt>
 File: ../Programs/R/Pics/EXWF_sel0.005_htg0.pdf Graphic file (type pdf)
 
 <use ../Programs/R/Pics/EXWF_sel0.005_htg0.pdf>
@@ -2013,10 +2031,10 @@ Overfull \hbox (58.76218pt too wide) in paragraph at lines 4--12
  [] 
  []
 
-) [16 <../Programs/R/Pics/EXDB_sel0.005_htg0.pdf> <../Programs/R/Pics/EXBD_sel0
-.005_htg0.pdf> <../Programs/R/Pics/EXWF_sel0.005_htg0.pdf>] [17] [18] [19]
-(./Figure_explain.tex
-<../Programs/R/Pics/explainDB.pdf, id=487, 289.08pt x 361.35pt>
+) [16] [17 <../Programs/R/Pics/EXDB_sel0.005_htg0.pdf> <../Programs/R/Pics/EXBD
+_sel0.005_htg0.pdf> <../Programs/R/Pics/EXWF_sel0.005_htg0.pdf>] [18] [19]
+[20] (./Figure_explain.tex
+<../Programs/R/Pics/explainDB.pdf, id=501, 289.08pt x 361.35pt>
 File: ../Programs/R/Pics/explainDB.pdf Graphic file (type pdf)
 
 <use ../Programs/R/Pics/explainDB.pdf>
@@ -2024,28 +2042,28 @@ Package pdftex.def Info: ../Programs/R/Pics/explainDB.pdf used on input line 4.
 
 (pdftex.def)             Requested size: 128.0374pt x 160.0421pt.
 
-<../Programs/R/Pics/qualitDB.pdf, id=488, 289.08pt x 361.35pt>
+<../Programs/R/Pics/qualitDB.pdf, id=502, 289.08pt x 361.35pt>
 File: ../Programs/R/Pics/qualitDB.pdf Graphic file (type pdf)
 
 <use ../Programs/R/Pics/qualitDB.pdf>
 Package pdftex.def Info: ../Programs/R/Pics/qualitDB.pdf used on input line 6.
 (pdftex.def)             Requested size: 128.0374pt x 160.0421pt.
-) [20 <../Programs/R/Pics/explainDB.pdf> <../Programs/R/Pics/qualitDB.pdf>] [21
+) [21 <../Programs/R/Pics/explainDB.pdf> <../Programs/R/Pics/qualitDB.pdf>] [22
 ]
-Overfull \hbox (14.14653pt too wide) in paragraph at lines 643--644
+Overfull \hbox (14.14653pt too wide) in paragraph at lines 648--649
 \T1/futs/m/n/10.95 ple-ment-ing both re-pro-duc-tion and hor-i-zon-tal cul-tura
 l trans-mis-sion (as in [][]Lehmann
  []
 
-[22] [23] (./SocEvolSubdivPop_ms.bbl [24
+[23] [24] (./SocEvolSubdivPop_ms.bbl [25
 
-] [25]
+] [26]
 Underfull \hbox (badness 2173) in paragraph at lines 177--181
 \T1/futs/m/n/10.95 ceed-ings of the Royal So-ci-ety of Lon-don. Se-ries B: Bi-o
 -log-i-cal Sci-ences
  []
 
-) [26] (./Figure_R.texpdfTeX warning (ext4): destination with the same identifi
+) [27] (./Figure_R.texpdfTeX warning (ext4): destination with the same identifi
 er (name{subfigure.0.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -2124,161 +2142,149 @@ File: ../Programs/R/Pics/qualitDB.pdf Graphic file (type pdf)
 <use ../Programs/R/Pics/qualitDB.pdf>
 Package pdftex.def Info: ../Programs/R/Pics/qualitDB.pdf used on input line 6.
 (pdftex.def)             Requested size: 128.0374pt x 160.0421pt.
-) [27
+) [28
 
-] [28] [29]
-<../Programs/R/Pics/EXDB_sel0.1_htg0.pdf, id=634, 289.08pt x 361.35pt>
+] [29] [30]
+<../Programs/R/Pics/EXDB_sel0.1_htg0.pdf, id=649, 289.08pt x 361.35pt>
 File: ../Programs/R/Pics/EXDB_sel0.1_htg0.pdf Graphic file (type pdf)
 
 <use ../Programs/R/Pics/EXDB_sel0.1_htg0.pdf>
 Package pdftex.def Info: ../Programs/R/Pics/EXDB_sel0.1_htg0.pdf used on input 
-line 695.
+line 700.
 (pdftex.def)             Requested size: 128.0374pt x 160.0421pt.
 
-<../Programs/R/Pics/EXBD_sel0.1_htg0.pdf, id=635, 289.08pt x 361.35pt>
+<../Programs/R/Pics/EXBD_sel0.1_htg0.pdf, id=650, 289.08pt x 361.35pt>
 File: ../Programs/R/Pics/EXBD_sel0.1_htg0.pdf Graphic file (type pdf)
 
 <use ../Programs/R/Pics/EXBD_sel0.1_htg0.pdf>
 Package pdftex.def Info: ../Programs/R/Pics/EXBD_sel0.1_htg0.pdf used on input 
-line 697.
+line 702.
 (pdftex.def)             Requested size: 128.0374pt x 160.0421pt.
 
-<../Programs/R/Pics/EXWF_sel0.1_htg0.pdf, id=636, 289.08pt x 361.35pt>
+<../Programs/R/Pics/EXWF_sel0.1_htg0.pdf, id=651, 289.08pt x 361.35pt>
 File: ../Programs/R/Pics/EXWF_sel0.1_htg0.pdf Graphic file (type pdf)
 
 <use ../Programs/R/Pics/EXWF_sel0.1_htg0.pdf>
 Package pdftex.def Info: ../Programs/R/Pics/EXWF_sel0.1_htg0.pdf used on input 
-line 699.
+line 704.
 (pdftex.def)             Requested size: 128.0374pt x 160.0421pt.
 
-Overfull \hbox (58.76218pt too wide) in paragraph at lines 694--701
+Overfull \hbox (58.76218pt too wide) in paragraph at lines 699--706
  [][] 
  []
 
-<../Programs/R/Pics/EXDB_sel0.005_htg1.pdf, id=641, 289.08pt x 361.35pt>
+<../Programs/R/Pics/EXDB_sel0.005_htg1.pdf, id=656, 289.08pt x 361.35pt>
 File: ../Programs/R/Pics/EXDB_sel0.005_htg1.pdf Graphic file (type pdf)
 
 <use ../Programs/R/Pics/EXDB_sel0.005_htg1.pdf>
 Package pdftex.def Info: ../Programs/R/Pics/EXDB_sel0.005_htg1.pdf used on inpu
-t line 708.
+t line 713.
 (pdftex.def)             Requested size: 128.0374pt x 160.0421pt.
 
-<../Programs/R/Pics/EXBD_sel0.005_htg1.pdf, id=642, 289.08pt x 361.35pt>
+<../Programs/R/Pics/EXBD_sel0.005_htg1.pdf, id=657, 289.08pt x 361.35pt>
 File: ../Programs/R/Pics/EXBD_sel0.005_htg1.pdf Graphic file (type pdf)
 
 <use ../Programs/R/Pics/EXBD_sel0.005_htg1.pdf>
 Package pdftex.def Info: ../Programs/R/Pics/EXBD_sel0.005_htg1.pdf used on inpu
-t line 710.
+t line 715.
 (pdftex.def)             Requested size: 128.0374pt x 160.0421pt.
 
-<../Programs/R/Pics/EXWF_sel0.005_htg1.pdf, id=643, 289.08pt x 361.35pt>
+<../Programs/R/Pics/EXWF_sel0.005_htg1.pdf, id=658, 289.08pt x 361.35pt>
 File: ../Programs/R/Pics/EXWF_sel0.005_htg1.pdf Graphic file (type pdf)
 
 <use ../Programs/R/Pics/EXWF_sel0.005_htg1.pdf>
 Package pdftex.def Info: ../Programs/R/Pics/EXWF_sel0.005_htg1.pdf used on inpu
-t line 712.
+t line 717.
 (pdftex.def)             Requested size: 128.0374pt x 160.0421pt.
 
-Overfull \hbox (58.76218pt too wide) in paragraph at lines 707--713
+Overfull \hbox (58.76218pt too wide) in paragraph at lines 712--718
  [][] 
  []
 
 
-<../Programs/R/Pics/EXDB_sel0.005_htg0_nodself.pdf, id=650, 289.08pt x 361.35pt
+<../Programs/R/Pics/EXDB_sel0.005_htg0_nodself.pdf, id=665, 289.08pt x 361.35pt
 >
 File: ../Programs/R/Pics/EXDB_sel0.005_htg0_nodself.pdf Graphic file (type pdf)
 
  <use ../Programs/R/Pics/EXDB_sel0.005_htg0_nodself.pdf>
 Package pdftex.def Info: ../Programs/R/Pics/EXDB_sel0.005_htg0_nodself.pdf used
- on input line 737.
+ on input line 742.
 (pdftex.def)             Requested size: 128.0374pt x 160.0421pt.
 
-<../Programs/R/Pics/EXBD_sel0.005_htg0_nodself.pdf, id=651, 289.08pt x 361.35pt
+<../Programs/R/Pics/EXBD_sel0.005_htg0_nodself.pdf, id=666, 289.08pt x 361.35pt
 >
 File: ../Programs/R/Pics/EXBD_sel0.005_htg0_nodself.pdf Graphic file (type pdf)
 
  <use ../Programs/R/Pics/EXBD_sel0.005_htg0_nodself.pdf>
 Package pdftex.def Info: ../Programs/R/Pics/EXBD_sel0.005_htg0_nodself.pdf used
- on input line 739.
+ on input line 744.
 (pdftex.def)             Requested size: 128.0374pt x 160.0421pt.
 
-<../Programs/R/Pics/EXWF_sel0.005_htg0_nodself.pdf, id=652, 289.08pt x 361.35pt
+<../Programs/R/Pics/EXWF_sel0.005_htg0_nodself.pdf, id=667, 289.08pt x 361.35pt
 >
 File: ../Programs/R/Pics/EXWF_sel0.005_htg0_nodself.pdf Graphic file (type pdf)
 
  <use ../Programs/R/Pics/EXWF_sel0.005_htg0_nodself.pdf>
 Package pdftex.def Info: ../Programs/R/Pics/EXWF_sel0.005_htg0_nodself.pdf used
- on input line 741.
+ on input line 746.
 (pdftex.def)             Requested size: 128.0374pt x 160.0421pt.
 
-Overfull \hbox (58.76218pt too wide) in paragraph at lines 736--743
+Overfull \hbox (58.76218pt too wide) in paragraph at lines 741--748
  [][] 
  []
 
 
-<../Programs/R/Pics/EXDB_sel0.005_htg0_nodself_sameDE.pdf, id=655, 289.08pt x 3
+<../Programs/R/Pics/EXDB_sel0.005_htg0_nodself_sameDE.pdf, id=670, 289.08pt x 3
 61.35pt>
 File: ../Programs/R/Pics/EXDB_sel0.005_htg0_nodself_sameDE.pdf Graphic file (ty
 pe pdf)
  <use ../Programs/R/Pics/EXDB_sel0.005_htg0_nodself_sameDE.pdf>
 Package pdftex.def Info: ../Programs/R/Pics/EXDB_sel0.005_htg0_nodself_sameDE.p
-df used on input line 750.
+df used on input line 755.
 (pdftex.def)             Requested size: 128.0374pt x 160.0421pt.
 
-<../Programs/R/Pics/EXBD_sel0.005_htg0_nodself_sameDE.pdf, id=656, 289.08pt x 3
+<../Programs/R/Pics/EXBD_sel0.005_htg0_nodself_sameDE.pdf, id=671, 289.08pt x 3
 61.35pt>
 File: ../Programs/R/Pics/EXBD_sel0.005_htg0_nodself_sameDE.pdf Graphic file (ty
 pe pdf)
  <use ../Programs/R/Pics/EXBD_sel0.005_htg0_nodself_sameDE.pdf>
 Package pdftex.def Info: ../Programs/R/Pics/EXBD_sel0.005_htg0_nodself_sameDE.p
-df used on input line 752.
+df used on input line 757.
 (pdftex.def)             Requested size: 128.0374pt x 160.0421pt.
 
-<../Programs/R/Pics/EXWF_sel0.005_htg0_nodself_sameDE.pdf, id=657, 289.08pt x 3
+<../Programs/R/Pics/EXWF_sel0.005_htg0_nodself_sameDE.pdf, id=672, 289.08pt x 3
 61.35pt>
 File: ../Programs/R/Pics/EXWF_sel0.005_htg0_nodself_sameDE.pdf Graphic file (ty
 pe pdf)
  <use ../Programs/R/Pics/EXWF_sel0.005_htg0_nodself_sameDE.pdf>
 Package pdftex.def Info: ../Programs/R/Pics/EXWF_sel0.005_htg0_nodself_sameDE.p
-df used on input line 754.
+df used on input line 759.
 (pdftex.def)             Requested size: 128.0374pt x 160.0421pt.
 
-Overfull \hbox (58.76218pt too wide) in paragraph at lines 749--756
+Overfull \hbox (58.76218pt too wide) in paragraph at lines 754--761
  [][] 
  []
 
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 756.
-[30
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 761.
+[31
 
  <../Programs/R/Pics/EXDB_sel0.1_htg0.pdf> <../Programs/R/Pics/EXBD_sel0.1_htg0
-.pdf> <../Programs/R/Pics/EXWF_sel0.1_htg0.pdf>] [31 <../Programs/R/Pics/EXDB_s
+.pdf> <../Programs/R/Pics/EXWF_sel0.1_htg0.pdf>] [32 <../Programs/R/Pics/EXDB_s
 el0.005_htg1.pdf> <../Programs/R/Pics/EXBD_sel0.005_htg1.pdf> <../Programs/R/Pi
 cs/EXWF_sel0.005_htg1.pdf> <../Programs/R/Pics/EXDB_sel0.005_htg0_nodself.pdf> 
 <../Programs/R/Pics/EXBD_sel0.005_htg0_nodself.pdf> <../Programs/R/Pics/EXWF_se
-l0.005_htg0_nodself.pdf>] [32 <../Programs/R/Pics/EXDB_sel0.005_htg0_nodself_sa
+l0.005_htg0_nodself.pdf>] [33 <../Programs/R/Pics/EXDB_sel0.005_htg0_nodself_sa
 meDE.pdf> <../Programs/R/Pics/EXBD_sel0.005_htg0_nodself_sameDE.pdf> <../Progra
 ms/R/Pics/EXWF_sel0.005_htg0_nodself_sameDE.pdf>]
-
-LaTeX Font Warning: Command \small invalid in math mode on input line 792.
-
-
-LaTeX Font Warning: Command \small invalid in math mode on input line 793.
-
-
-LaTeX Font Warning: Command \small invalid in math mode on input line 794.
-
-
-LaTeX Font Warning: Command \small invalid in math mode on input line 795.
-
-
-LaTeX Font Warning: Command \small invalid in math mode on input line 796.
-
 
 LaTeX Font Warning: Command \small invalid in math mode on input line 797.
 
 
 LaTeX Font Warning: Command \small invalid in math mode on input line 798.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 799.
 
 
 LaTeX Font Warning: Command \small invalid in math mode on input line 800.
@@ -2293,21 +2299,40 @@ LaTeX Font Warning: Command \small invalid in math mode on input line 802.
 LaTeX Font Warning: Command \small invalid in math mode on input line 803.
 
 
-Overfull \hbox (111.81407pt too wide) in paragraph at lines 764--805
+LaTeX Font Warning: Command \small invalid in math mode on input line 805.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 806.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 807.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 808.
+
+
+Overfull \hbox (111.81407pt too wide) in paragraph at lines 769--810
  [][] 
  []
 
-[33
+[34
 
 ]
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 814.
- [34
-
-] [35] [36
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 819.
+ [35
 
 ]
-Overfull \hbox (19.21503pt too wide) in paragraph at lines 955--956
+Overfull \hbox (4.55429pt too wide) in paragraph at lines 891--892
+\T1/futs/m/n/10.95 With the new mu-ta-tion pa-ram-e-ters $\FML/futmi/m/it/10.95
+ ^^V$ \T1/futs/m/n/10.95 and $\FML/futmi/m/it/10.95 ^^W$\T1/futs/m/n/10.95 , we
+ can de-scribe the mu-ta-tion scheme
+ []
+
+[36] [37
+
+]
+Overfull \hbox (19.21503pt too wide) in paragraph at lines 973--974
 \T1/futs/m/n/10.95 mu-ta-tion prob-a-bil-ity $\FML/futmi/m/it/10.95 ^^V$\T1/fut
 s/m/n/10.95 . Tak-ing the ex-pec-ta-tion of eq. ([][]A9a[][]) ($\U/futm/m/n/10.
 95 E[][][] \FMS/futm/m/n/10.95 Å [][] []\FML/futmi/m/it/10.95 ^^X\T1/futs/m/n/1
@@ -2315,32 +2340,32 @@ s/m/n/10.95 . Tak-ing the ex-pec-ta-tion of eq. ([][]A9a[][]) ($\U/futm/m/n/10.
 ),
  []
 
-[37] [38]
-Overfull \hbox (20.35567pt too wide) in paragraph at lines 1055--1055
+[38] [39]
+Overfull \hbox (20.35567pt too wide) in paragraph at lines 1072--1072
 [] 
  []
 
-[39] [40]
-Overfull \hbox (23.13649pt too wide) in paragraph at lines 1123--1123
+[40] [41]
+Overfull \hbox (23.13649pt too wide) in paragraph at lines 1142--1142
 [] 
  []
 
 
-Overfull \hbox (27.83344pt too wide) in paragraph at lines 1153--1153
+Overfull \hbox (27.83344pt too wide) in paragraph at lines 1173--1173
 [] 
  []
 
-[41] [42
+[42] [43] [44
 
-] [43]
-Overfull \hbox (23.14795pt too wide) in paragraph at lines 1250--1250
+] [45]
+Overfull \hbox (23.14795pt too wide) in paragraph at lines 1270--1270
 [] 
  []
 
-[44
+[46
 
-] [45] [46]
-Overfull \hbox (66.46861pt too wide) detected at line 1394
+] [47] [48]
+Overfull \hbox (66.46861pt too wide) detected at line 1414
 [][]\T1/futs/m/n/10.95 1 \FMS/futm/m/n/10.95 Å [][][] Ä []\T1/futs/m/n/10.95 (\
 FML/futmi/m/it/10.95 N[] \FMS/futm/m/n/10.95 ^^@ \T1/futs/m/n/10.95 1)\FML/futm
 i/m/it/10.95 N[] \FMS/futm/m/n/10.95 Ä []\T1/futs/m/n/10.95 (\FML/futmi/m/it/10
@@ -2348,47 +2373,47 @@ i/m/it/10.95 N[] \FMS/futm/m/n/10.95 Ä []\T1/futs/m/n/10.95 (\FML/futmi/m/it/10
  []
 
 
-Overfull \hbox (43.95042pt too wide) detected at line 1404
+Overfull \hbox (43.95042pt too wide) detected at line 1424
 [][]\FML/futmi/m/it/10.95 Q[] \FMS/futm/m/n/10.95 Å [][][] ^^@ []\FML/futmi/m/i
 t/10.95 N[] \FMS/futm/m/n/10.95 Ä []\T1/futs/m/n/10.95 (\FML/futmi/m/it/10.95 N
 [] \FMS/futm/m/n/10.95 ^^@ \T1/futs/m/n/10.95 1)[]\FML/futmi/m/it/10.95 :
  []
 
-[47] <../Programs/R/Pics/QplotM.pdf, id=1010, 361.35pt x 307.1475pt>
+[49] <../Programs/R/Pics/QplotM.pdf, id=1030, 361.35pt x 307.1475pt>
 File: ../Programs/R/Pics/QplotM.pdf Graphic file (type pdf)
 
 <use ../Programs/R/Pics/QplotM.pdf>
-Package pdftex.def Info: ../Programs/R/Pics/QplotM.pdf used on input line 1436.
+Package pdftex.def Info: ../Programs/R/Pics/QplotM.pdf used on input line 1456.
 
 (pdftex.def)             Requested size: 128.0374pt x 108.82956pt.
 
-<../Programs/R/Pics/QplotWF.pdf, id=1011, 361.35pt x 307.1475pt>
+<../Programs/R/Pics/QplotWF.pdf, id=1031, 361.35pt x 307.1475pt>
 File: ../Programs/R/Pics/QplotWF.pdf Graphic file (type pdf)
 
 <use ../Programs/R/Pics/QplotWF.pdf>
-Package pdftex.def Info: ../Programs/R/Pics/QplotWF.pdf used on input line 1438
+Package pdftex.def Info: ../Programs/R/Pics/QplotWF.pdf used on input line 1458
 .
 (pdftex.def)             Requested size: 128.0374pt x 108.82956pt.
- [48 <../Programs/R/Pics/QplotM.pdf> <../Programs/R/Pics/QplotWF.pdf>] [49]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1462.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1462.
+ [50 <../Programs/R/Pics/QplotM.pdf> <../Programs/R/Pics/QplotWF.pdf>] [51]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1482.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1482.
  (./SocEvolSubdivPop_ms.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1462.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1462.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1482.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1482.
 
 Package rerunfilecheck Info: File `SocEvolSubdivPop_ms.out' has not changed.
-(rerunfilecheck)             Checksum: 5A406C18145F50029B5D6FA68D25F8BD;1175.
+(rerunfilecheck)             Checksum: DBC0940A8B79D75DD9003EC163BD8967;1176.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1462.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1482.
  ) 
 Here is how much of TeX's memory you used:
- 26400 strings out of 494883
- 494490 string characters out of 6178693
- 603963 words of memory out of 5000000
- 28754 multiletter control sequences out of 15000+600000
+ 26403 strings out of 494883
+ 494516 string characters out of 6178693
+ 604055 words of memory out of 5000000
+ 28755 multiletter control sequences out of 15000+600000
  188706 words of font info for 202 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  55i,31n,81p,1977b,718s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2408,10 +2433,10 @@ mf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/font
 s/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
 helvetic/uhvro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nimbus15
 /zcoN-Regular.pfb>
-Output written on SocEvolSubdivPop_ms.pdf (49 pages, 793320 bytes).
+Output written on SocEvolSubdivPop_ms.pdf (51 pages, 798279 bytes).
 PDF statistics:
- 1160 PDF objects out of 1200 (max. 8388607)
- 1011 compressed objects within 11 object streams
- 291 named destinations out of 1000 (max. 500000)
+ 1179 PDF objects out of 1200 (max. 8388607)
+ 1028 compressed objects within 11 object streams
+ 293 named destinations out of 1000 (max. 500000)
  230 words of extra memory for PDF output out of 10000 (max. 10000000)
 
