@@ -1,0 +1,64 @@
+\documentclass[aspectratio=169]{beamer}
+
+\input{stylePres.tex}
+
+
+
+\begin{document}
+
+\begin{frame}{Preamble: Structured populations}
+
+\begin{columns}
+\begin{column}{0.6\textwidth} 
+
+\begin{itemize}
+\item<2-> Types of structures
+\begin{itemize}
+\item Stage
+\item \textbf<6>{Spatial}
+\item Types
+\end{itemize}
+\item<3-> \textbf<6>{Homogeneous} / heterogeneous
+\item<4-> \textbf<6>{Discrete} / Continuous
+\item<5-> Demography / \textbf<6>{Evolution} / Both (evo-demo)
+\end{itemize}
+\end{column}
+%
+%
+\begin{column}{0.37\textwidth} 
+\begin{center}
+\def \wpic {4cm}
+\def \sca {1}
+\only<2>{
+\includegraphics[scale = \sca]{../TeXPics/struc_stage.pdf}
+\\
+\includegraphics[scale = \sca]{../TeXPics/struc_spa-hom.pdf}
+\\
+\includegraphics[scale = \sca]{../TeXPics/struc_type.pdf}
+}
+
+\only<3>{
+\includegraphics[scale = \sca]{../TeXPics/struc_spa-hom.pdf}
+\\
+\includegraphics[scale = \sca]{../TeXPics/struc_spa-het.pdf}
+
+}
+
+\only<4>{
+\includegraphics[scale = \sca]{../TeXPics/struc_spa-hom.pdf}
+\\
+\includegraphics[scale = \sca]{../TeXPics/struc_cont.pdf}
+}
+
+\only<6>{
+\includegraphics[scale = \sca]{../TeXPics/struc_spa-hom.pdf}
+}
+\end{center}
+
+\end{column}
+\end{columns}
+
+\end{frame}
+
+
+\end{document}

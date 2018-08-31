@@ -373,7 +373,7 @@ For each of the three life-cycles that we consider, we compute the expected (\ie
 
 \subsection*{Assumptions}
 
-We consider a population of size $N$, subdivided into $\ndemes$~demes connected by dispersal, each deme hosting exactly $n$ individuals (\ie, each deme contains $n$ sites, each of which is occupied by exactly one individual; we have $n \ndemes = N$). Each site has a unique label $i$, $1\leq i \leq N$. There are two types of individuals in the population, altruists and defectors. The type of the individual living at site $i$ ($1\leq i \leq N$) is given by an indicator variable $X_i$, equal to $1$ if the individual is an altruist, and to $0$ if it is a defector. The state of the entire population is given by a $N$-long vector $\mathbf{X}$. For a given population state $\mathbf{X}$, the proportion of altruists is $\overline{X} = \sum_{i=1}^N X_i$. All symbols are summarized in table~\ref{tab:symbols}.
+We consider a population of total size $N$, subdivided into $\ndemes$~demes connected by dispersal, each deme hosting exactly $n$ individuals (\ie, each deme contains $n$ sites, each of which is occupied by exactly one individual; $n \ndemes = N$). Each site has a unique label $i$, $1\leq i \leq N$. There are two types of individuals in the population, altruists and defectors. The type of the individual living at site $i$ ($1\leq i \leq N$) is given by an indicator variable $X_i$, equal to $1$ if the individual is an altruist, and to $0$ if it is a defector. The state of the entire population is given by a vector $\mathbf{X} = \{X_i\}_{1\leq i\leq N}$. For a given population state $\mathbf{X}$, the proportion of altruists is $\overline{X} = \sum_{i=1}^N X_i/N$. All symbols are summarized in table~\ref{tab:symbols}.
 
 Reproduction is asexual. The offspring of altruists are altruists themselves with probability $1-\mu_{1\to 0}$, and are defectors otherwise ($0<\mu_{1\to 0}\leq 1/2$). Similarly, the offspring of defectors are defectors with probability $1-\mu_{0\to 1}$, and are altruists otherwise ($0<\mu_{0\to 1}\leq 1/2$). Our calculations will be simpler if we introduce the following change of parameters:
 \begin{subequations}\label{eq:changemut}
@@ -385,7 +385,7 @@ Reproduction is asexual. The offspring of altruists are altruists themselves wit
 The composite parameter $\mutbias$ corresponds to the expected frequency of altruists in the population at the mutation-drift balance (\ie, in the absence of selection; see \appname~\ref{sec:app:mutation} for details). We call $\mutbias$ the ``mutation bias'' parameter. Parameter $\mu$ is the sum of the two mutation probabilities. In the absence of selection, at the mutation-drift equilibrium, the correlation between offspring type and their parent's type is $1-\mu$ (see \appname~\ref{sec:app:mutation} for details for the calculation). We call $\mu$ the mutation intensity.%We can describe our scheme of strategy transmission differently, and call $\mu$ a mutation parameter: Parents transmit their strategy to their offspring with probability $1-\mu$; with probability $\mu$, offspring do not inherit their strategy from their parent but instead get one randomly: with probability $\mutbias$, they become altruists, with probability $1-\mutbias$ they become defectors.\todo{faire figure?}  
 
 % Social interactions and effect on fecundity (simple version). 
-An individual of type $X_k$ expresses a social phenotype $\phi_k = \selstr X_k$, where $\selstr$ is assumed to be small ($\selstr \ll 1$). Social interactions take place within each deme, benefits are shared with the $n-1$ other deme-mates. We assume that social interactions affect individual fecundity; $f_k$ denotes the fecundity of the individual at site $k$ ($1\leq k \leq N$). We denote by $\bb$ the sum of the marginal effects of deme-mates' phenotypes on the fecundity of a focal individual, and by $-\cc$ the marginal effect of a focal individual's phenotype on its own fecundity ($\cc \leq \bb$; see \sysref{eq:derivf} for formal definitions). %With these assumptions are notation, at the first order in $selstr$, the fecundity of the individual living at site $k$ is given by
+An individual of type $X_k$ expresses a social phenotype $\phi_k = \selstr X_k$, where $\selstr$ is assumed to be small ($\selstr \ll 1$). Social interactions take place within each deme; a focal individual interacts with its $n-1$ other deme-mates. We assume that social interactions affect individual fecundity; $f_k$ denotes the fecundity of the individual at site $k$ ($1\leq k \leq N$), which depends on deme composition. We denote by $\bb$ the sum of the marginal effects of deme-mates' phenotypes on the fecundity of a focal individual, and by $-\cc$ the marginal effect of a focal individual's phenotype on its own fecundity ($\cc \leq \bb$; see \sysref{eq:derivf} for formal definitions). %With these assumptions are notation, at the first order in $selstr$, the fecundity of the individual living at site $k$ is given by
 %\begin{equation}\label{eq:deff}
 %f_k(\mathbf{X}, \selstr) = 1 + \selstr \left( \sum_{\ell =1}^N e_{\ell k} \bb X_{\ell} - \cc X_k \right) + \bigO{\selstr^2}.
 %\end{equation}
@@ -394,12 +394,12 @@ An individual of type $X_k$ expresses a social phenotype $\phi_k = \selstr X_k$,
 Offspring remain in the parental deme with probability $1-m$ and land on any site of the parental deme with equal probability (including the very site of their parent). With probability $m$, offspring emigrate to a different deme, chosen uniformly at random among the $\ndemes -1$ other demes. Denoting by $d_{ij}$ the probability of moving from site $i$ to site $j$, we have
 \begin{equation}\label{eq:defD}
 d_{ij} = \begin{cases}
- \din =  \frac{1-m}{n} & \textrm{if both sites are in the same deme;}\\
- \dout = \frac{m}{(\ndemes-1) n} & \textrm{if the two sites are in different demes,} 
+ \din =  \frac{1-m}{n} & \textrm{if sites $i$ and $j$ are in the same deme;}\\
+ \dout = \frac{m}{(\ndemes-1) n} & \textrm{if  they are in different demes,} 
 \end{cases}
 \end{equation}
 %
-with $0 < m < 1-\frac{1}{\ndemes}$. (This upper bound is here to ensure that within-deme relatedness $R$, which will be defined later in the article, remains positive.)
+with $0 < m < 1-\frac{1}{\ndemes}$. This upper bound is here to ensure that within-deme relatedness $R$, which will be defined later in the article, remains positive. When the emigration probability $m$ is equal to the upper bound $1-\frac{1}{\ndemes}$, the population is effectively well-mixed ($d_{\inn}=d_{\out}$).
 
 % Life-cycles
 We denote by $B_i = B_i(\mathbf{X}, \selstr)$ the expected number of successful offspring of the individual living at site $i$ (successful means alive at the next time step), and by $D_i = D_i(\mathbf{X}, \selstr)$ the probability that the individual living at site $i$ dies. Both depend on the state of the population $\mathbf{X}$, but also on the way the population is updated from one time step to the next, \ie, on the chosen life-cycle (also called updating rule). We also define
@@ -416,15 +416,15 @@ We will specifically explore three different life-cycles. At the beginning of ea
 \item[Wright-Fisher:] All the adults die. At each site of the entire population, one of the juveniles that landed there is chosen and establishes at the site. 
 \end{description}
 %
-With social interactions affecting individual fecundity, previous studies have shown that altruism is disfavored under the Moran Birth-Death and Wright-Fisher life-cycles, because the expected frequency of altruists under these life-cycles is lower than what it would be in the absence of selection \citep[\eg,][]{Taylor1992islandmodel, Taylor2010, Taylor2011, Debarre2017}. However, we are interested in the actual value of the expected proportion of altruists in the population, not just whether it is higher or lower than the neutral expectation. This is why we are still considering the Moran Birth-Death and Wright-Fisher life-cycles in this study. 
+Previous studies have shown that, when social interactions affect fecundity, altruism is disfavored under the Moran Birth-Death and Wright-Fisher life-cycles, because the expected frequency of altruists under these life-cycles is lower than what it would be in the absence of selection \citep[\eg,][]{Taylor1992islandmodel, Taylor2010, Taylor2011, Debarre2017}. However, we are interested in the actual value of the expected proportion of altruists in the population, not just whether it is higher or lower than the neutral expectation. This is why we are still considering the Moran Birth-Death and Wright-Fisher life-cycles in this study. 
   
 \subsection*{Methods}
 \subsubsection*{Analytical part}
 
 The calculation steps to obtain the expected (\ie, long-term) proportion of altruists are given in \appname~\ref{sec:app:EX}. They go as follows: first, we write an equation for the expected frequency of altruists in the population at time $t+1$, conditional on the composition of the population at time $t$; we then take the expectation of this quantity and consider large times $t$. After this, we write a first order expansion for phenotypic differences $\selstr$ close to $0$ (this corresponds to a weak selection approximation). 
 
-The formula involves quantities that can be identified as neutral probabilities of identity by descent $Q_{ij}$. These quantities correspond to the probability that individuals living at site $i$  and $j$ share a common ancestor and that no mutation occurred on either lineage since that ancestor, in a model with no selection ($\selstr=0$) and with mutation probability $\mu$; this is the ``mutation definition'' of identity by descent \citep{RoussetBilliard2000}. 
-In a subdivided population like ours, there are three possible values of $Q_{ij}$:
+The formula involves quantities that can be identified as neutral probabilities of identity by descent $Q_{ij}$. These quantities correspond to the probability that individuals living at site $i$  and $j$ share a common ancestor and that no mutation occurred on either lineage since that ancestor, in a model with no selection ($\selstr=0$) and with mutation intensity $\mu$; this is the ``mutation definition'' of identity by descent \citep{RoussetBilliard2000}. 
+In a subdivided population like the one we consider, there are only three possible values of $Q_{ij}$:
 %
 \begin{equation}\label{eq:Q3}
 Q_{ij} = \begin{cases} 1 & \textrm{when $i=j$,} \\
@@ -455,7 +455,7 @@ For each of the life-cycles that we consider, the expected frequency of altruist
 \end{split}
 \end{equation}
 %
-with $W$ as defined in \eqref{eq:defW}. Calculations leading to \eqref{eq:EXapprox} are presented in  \appname~\ref{sec:app:EX}; notations are recapitulated in table~\ref{tab:symbols}. In particular, $B^*$ is the expected number of offspring produced by an adult, in the absence of selection (when $\delta=0$; $B^*=1$ for the Wright-Fisher life-cycle and $B^*=1/N$ for the Moran life-cycles). Subscript ``$\focal$'' denotes a focal individual itself, and ``$\inn$'' a deme-mate. 
+with $W$ as defined in \eqref{eq:defW}. Calculations leading to \eqref{eq:EXapprox} are presented in  \appname~\ref{sec:app:EX}; notations are recapitulated in table~\ref{tab:symbols}. In particular, $B^*$ is the expected number of offspring produced by an adult, in the absence of selection (when $\delta=0$; $B^*=1$ for the Wright-Fisher life-cycle and $B^*=1/N$ for the Moran life-cycles). Subscript ``$\focal$'' denotes a focal individual itself, and ``$\inn$'' a deme-mate. Partial derivatives are evaluated for $\delta=0$.
 
 The expected frequency of altruists in the population is approximated, under weak selection ($\selstr \ll 1$), by the sum of what it would be in the absence of selection ($\Espzero{\overline{X}} =\mutbias$, first term in \eqref{eq:EXapprox}), plus a deviation from this value, scaled by $\selstr$. The $-\mathcal{C}$ term corresponds to the effects of a change of a focal individual's phenotype on its own fitness (with the fitness definition given in \eqref{eq:defW}). The $\mathcal{B}$ term corresponds to the sum of the effects of the change of deme-mates' phenotypes on an individual's fitness. It is multiplied by $R$, which is relatedness. 
 
@@ -467,13 +467,12 @@ The different terms depend on the chosen life-cycle. We first focus on relatedne
 
 \subsection*{Relatedness $R$}
 
-Within-deme relatedness depends on the number of individuals that are born at each time step, and hence on the chosen life-cycle. In a Moran life-cycle (denoted by $\Moran$), one individual is updated at each time step, while under a Wright-Fisher life-cycle (denoted by $\WF$), $N$ individuals -- the whole population -- are updated at each time step. The formulas for relatedness for any number of demes $\ndemes$ and mutation intensity $\mu$ are presented in \appname~\ref{sec:app:Qsubdiv} (\eqref{eq:app:RM} and \eqref{eq:app:RWF}). When we let the number of demes go to infinity ($\ndemes\to \infty$) and the intensity of mutation be vanishingly small ($\mu\to 0$), we recover the classical formulas for relatedness as limit cases (\eqref{eq:app:RMlim} and \eqref{eq:app:RWFlim}). 
+Within-deme relatedness $R$ depends on the number of individuals that are born at each time step, and hence on the chosen life-cycle. In a Moran life-cycle (denoted by $\Moran$), one individual is updated at each time step, while under a Wright-Fisher life-cycle (denoted by $\WF$), $N$ individuals -- the whole population -- are updated at each time step. The formulas for relatedness, $R^{\Moran}$ and $R^{\WF}$, calculated for any number of demes $\ndemes$ and mutation intensity $\mu$, are presented in \appname~\ref{sec:app:Qsubdiv} (\eqref{eq:app:RM} and \eqref{eq:app:RWF}). When we let the number of demes go to infinity ($\ndemes\to \infty$) and the intensity of mutation be vanishingly small ($\mu\to 0$), we recover the classical formulas for relatedness as limit cases (\eqref{eq:app:RMlim} and \eqref{eq:app:RWFlim}). 
 
-The effects of emigration $m$ and mutation intensity $\mu$ on relatedness are represented in figure~\ref{fig:R}. For $0<m<1-1/\ndemes$, within-deme relatedness is positive, and it decreases with $m$ and with $\mu$ (the mutation bias $\nu$ has no effect). The effect of the mutation intensity $\mu$ on relatedness is strongest at low emigration probabilities $m$. As $m$ increases, the relatedness values for different mutation intensities get closer, until they all hit zero for $m=1-1/\ndemes$ (which is the emigration probability such that an offspring is equally likely to land in its parent's deme or in any other deme, \ie, such that there is no proper population subdivision anymore). 
+The effects of emigration $m$ and mutation intensity $\mu$ on relatedness are represented in figure~\ref{fig:R}. For $0<m<1-1/\ndemes$, within-deme relatedness is positive, and it decreases with $m$ and with $\mu$ (the mutation bias $\nu$ has no effect). The effect of the mutation intensity $\mu$ on relatedness is strongest at low emigration probabilities $m$. As $m$ increases, the relatedness values for different mutation intensities get closer, until they all hit zero for $m=1-1/\ndemes$ (which is the upper bound for the emigration values that we consider, a value such that there is no proper population subdivision anymore). 
 
 \input{Figure_R.tex}
-
-    
+   
  
 %All of these terms depend on the chosen life-cycle, and on parameters such as the mutation probability $\mu$ and the emigration probability $m$. 
 

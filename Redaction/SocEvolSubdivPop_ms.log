@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.24)  24 JAN 2018 16:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.24)  25 JAN 2018 11:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1931,19 +1931,7 @@ File: T1NimbusMonoN.fd 2016/01/08 Font definitions for T1/NimbusMonoN (msharpe)
 LaTeX Font Info:    Font shape `T1/NimbusMonoN/m/n' will be
 (Font)              scaled to size 10.0pt on input line 379.
 
-[6] [7]
-Overfull \hbox (11.57326pt too wide) in paragraph at lines 419--420
-\T1/futs/m/n/10.95 With so-cial in-ter-ac-tions af-fect-ing in-di-vid-ual fe-cu
-n-dity, pre-vi-ous stud-ies have shown
- []
-
-
-Overfull \hbox (1.80586pt too wide) in paragraph at lines 419--420
-\T1/futs/m/n/10.95 cycles, be-cause the ex-pected fre-quency of al-tru-ists un-
-der these life-cycles is lower
- []
-
-[8]
+[6] [7] [8]
 LaTeX Font Info:    Font shape `T1/NimbusMonoN/m/n' will be
 (Font)              scaled to size 10.95pt on input line 439.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
@@ -1968,7 +1956,8 @@ futmi/m/it/10.95 ^^V$ \T1/futs/m/n/10.95 are pre-sented in Ap-pendix [][]C.2[][
 ] (eq. ([][]A44[][]) and eq. ([][]A50[][])).
  []
 
-(./Figure_R.tex <../Programs/R/Pics/RplotM.pdf, id=293, 289.08pt x 307.1475pt>
+[11] (./Figure_R.tex
+<../Programs/R/Pics/RplotM.pdf, id=304, 289.08pt x 307.1475pt>
 File: ../Programs/R/Pics/RplotM.pdf Graphic file (type pdf)
 
 <use ../Programs/R/Pics/RplotM.pdf>
@@ -1977,7 +1966,7 @@ Package pdftex.def Info: ../Programs/R/Pics/RplotM.pdf used on input line 4.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <8> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 4.
 
-<../Programs/R/Pics/RplotWF.pdf, id=294, 289.08pt x 307.1475pt>
+<../Programs/R/Pics/RplotWF.pdf, id=305, 289.08pt x 307.1475pt>
 File: ../Programs/R/Pics/RplotWF.pdf Graphic file (type pdf)
 
 <use ../Programs/R/Pics/RplotWF.pdf>
@@ -1985,12 +1974,7 @@ Package pdftex.def Info: ../Programs/R/Pics/RplotWF.pdf used on input line 6.
 (pdftex.def)             Requested size: 128.0374pt x 136.03578pt.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 8.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-) [11] [12 <../Programs/R/Pics/RplotM.pdf> <../Programs/R/Pics/RplotWF.pdf>]
-[13]
+) [12 <../Programs/R/Pics/RplotM.pdf> <../Programs/R/Pics/RplotWF.pdf>] [13]
 Overfull \hbox (4.5058pt too wide) in paragraph at lines 530--530
 [][]\T1/futs/b/n/12 Changes of the ex-pected fre-quency of al-tru-ists with the
  em-i-gra-tion prob-
@@ -2433,7 +2417,7 @@ mf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/font
 s/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
 helvetic/uhvro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nimbus15
 /zcoN-Regular.pfb>
-Output written on SocEvolSubdivPop_ms.pdf (51 pages, 798279 bytes).
+Output written on SocEvolSubdivPop_ms.pdf (51 pages, 798668 bytes).
 PDF statistics:
  1179 PDF objects out of 1200 (max. 8388607)
  1028 compressed objects within 11 object streams

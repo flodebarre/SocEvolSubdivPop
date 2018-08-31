@@ -1,0 +1,27 @@
+\documentclass[aspectratio=169]{beamer}
+
+\input{../2018-09_Ploen/stylePres.tex}
+
+\usepackage[active,pdftex,tightpage]{preview}
+\PreviewEnvironment[{[]}]{tikzpicture}
+
+
+\begin{document}
+
+\begin{frame}{}
+\begin{tikzpicture}
+\def \dn {0.5cm}
+\tikzstyle{stage}=[circle, minimum width = 0.8cm, draw = black, fill = maincol!10]
+\node[stage](s1){S};
+\node[stage, right = \dn of s1](s2){E};
+\node[stage, right = \dn of s2](s3){I};
+\node[stage, right = \dn of s3](s4){R};
+\tikzstyle{arr}=[->, line width = 1pt]
+\draw[arr](s1)--(s2);
+\draw[arr](s2)--(s3);
+\draw[arr](s3)--(s4);
+\path (s1) edge [loop, arr, looseness = 3] (s1);
+\path (s4) edge [arr, bend left] (s1.south);
+\end{tikzpicture}
+\end{frame}
+\end{document}

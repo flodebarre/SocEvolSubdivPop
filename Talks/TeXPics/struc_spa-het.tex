@@ -1,0 +1,30 @@
+\documentclass[aspectratio=169]{beamer}
+
+\input{../2018-09_Ploen/stylePres.tex}
+
+\usepackage[active,pdftex,tightpage]{preview}
+\PreviewEnvironment[{[]}]{tikzpicture}
+
+
+\begin{document}
+
+\begin{frame}{}
+\begin{tikzpicture}
+\tikzstyle{pop}=[circle, minimum width = 0.8cm, draw = black, fill = maincol!20]
+\def \dn {0.65cm}
+\node[pop](n1){};
+\node[pop, right = \dn of n1](n2){};
+\node[pop, below = \dn of n1](n3){};
+\node[pop, below = \dn of n2](n4){};
+\tikzstyle{edg}=[line width = 1pt]
+\draw[edg] (n1)--(n2)
+           (n2)--(n3)
+           (n3)--(n4)
+           (n4)--(n1)
+           (n1)--(n3)
+           (n2)--(n4);
+\node[pop, minimum width = 1.3cm]at(n4)(n4b){};
+\end{tikzpicture}
+\end{frame}
+
+\end{document}

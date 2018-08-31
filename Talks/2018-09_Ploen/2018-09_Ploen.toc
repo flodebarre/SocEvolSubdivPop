@@ -1,0 +1,24 @@
+\beamer@endinputifotherversion {3.36pt}
+\beamer@sectionintoc {1}{Preamble}{2}{0}{1}
+\beamer@sectionintoc {2}{Introduction}{8}{0}{2}
+\beamer@subsectionintoc {2}{1}{Puzzle of altruism}{8}{0}{2}
+\beamer@subsectionintoc {2}{2}{Relatedness and spatial structure}{12}{0}{2}
+\beamer@subsectionintoc {2}{3}{Subdivided populations}{17}{0}{2}
+\beamer@subsectionintoc {2}{4}{Previous results}{25}{0}{2}
+\beamer@subsectionintoc {2}{5}{Transition mutation}{28}{0}{2}
+\beamer@sectionintoc {3}{Model}{32}{0}{3}
+\beamer@subsectionintoc {3}{1}{Fidelity of transmission}{32}{0}{3}
+\beamer@subsubsectionintoc {3}{1}{1}{What and why}{32}{0}{3}
+\beamer@subsectionintoc {3}{2}{Notation}{39}{0}{3}
+\beamer@subsubsectionintoc {3}{2}{1}{Population}{39}{0}{3}
+\beamer@subsubsectionintoc {3}{2}{2}{Social interactions}{43}{0}{3}
+\beamer@sectionintoc {4}{Results}{48}{0}{4}
+\beamer@subsectionintoc {4}{1}{Calculations}{48}{0}{4}
+\beamer@subsectionintoc {4}{2}{IDB}{62}{0}{4}
+\beamer@subsubsectionintoc {4}{2}{1}{Genealogy}{62}{0}{4}
+\beamer@subsubsectionintoc {4}{2}{2}{PQ}{71}{0}{4}
+\beamer@subsectionintoc {4}{3}{EX}{77}{0}{4}
+\beamer@subsubsectionintoc {4}{3}{1}{R changes}{85}{0}{4}
+\beamer@subsectionintoc {4}{4}{Explanation}{105}{0}{4}
+\beamer@subsectionintoc {4}{5}{Robustness}{108}{0}{4}
+\beamer@sectionintoc {5}{THM}{115}{0}{5}
