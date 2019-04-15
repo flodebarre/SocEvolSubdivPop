@@ -1,4 +1,4 @@
-There are scripts in `C`, `Mathematica` and `R`.
+There are scripts in `C`, `Mathematica` and `R`. You can download all the scripts as a zipped file here: [click to download](https://github.com/flodebarre/SocEvolSubdivPop/archive/master.zip).
 
 # C
 Stochastic simulations:
